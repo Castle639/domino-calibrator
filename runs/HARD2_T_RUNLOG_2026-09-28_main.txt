@@ -1,0 +1,23 @@
+# The calibrator's tests on main after the merge of #44 (233d420), 2026-09-28 17:13:57 UTC
+# ADES_PYLIB, ADES_MASTER, PLAYWRIGHT_MODULE set; PATH with /opt/node22/bin
+...............[the checkout]/calibrator/estimators.py:123: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:124: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:122: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[the checkout]/calibrator/estimators.py:134: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:135: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:137: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:138: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:174: RuntimeWarning: overflow encountered in exp
+  s = float(np.exp(q[3]))
+.....................................................................................................
+----------------------------------------------------------------------
+Ran 116 tests in 44.071s
+
+OK

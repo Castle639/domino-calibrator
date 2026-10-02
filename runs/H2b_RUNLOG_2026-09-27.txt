@@ -1,0 +1,18 @@
+# H2(b) 2026-09-27 19:02:46 UTC | calibrator/runs/h2_injection.py | commit 68b73c4
+  fine render dip0.3: 34 s so far
+  fine render fade rs2": 82 s so far
+(b) chain vs direct, phase-means over 10 x 10 near-uniform phases (ground px); bar |chain - direct| <= 0.005 + 0.03 |direct| on b0, b2, b6 (x), |y| <= 0.005
+  dip0.3    seeing 1.0" 0.24"/px (FWHM 4.18 px) | G chain b0 +0.2064 b2 +0.3569 b6 +0.6212 direct +0.2063 +0.3568 +0.6212 ok | M chain b0 +0.1284 b2 +0.3570 b6 +0.7431 direct +0.1284 +0.3578 +0.7432 ok
+  dip0.3    seeing 1.0" 0.44"/px (FWHM 2.28 px) | G chain b0 +0.1131 b2 +0.2524 b6 +0.5292 direct +0.1129 +0.2523 +0.5292 ok | M chain b0 -0.0398 b2 +0.2628 b6 +0.8042 direct -0.0399 +0.2631 +0.8041 ok
+  dip0.3    seeing 1.0" 1.00"/px (FWHM 1.00 px) | G chain b0 +0.0861 b2 +0.2025 b6 +0.4488 direct +0.0859 +0.2024 +0.4490 ok | M chain b0 -0.0391 b2 +0.2567 b6 +0.8464 direct -0.0392 +0.2567 +0.8464 ok
+  dip0.3    seeing 3.0" 0.70"/px (FWHM 4.29 px) | G chain b0 +0.2753 b2 +0.4340 b6 +0.7118 direct +0.2752 +0.4340 +0.7118 ok | M chain b0 +0.2089 b2 +0.4351 b6 +0.8159 direct +0.2087 +0.4344 +0.8159 ok
+  dip0.3    seeing 3.0" 1.50"/px (FWHM 2.00 px) | G chain b0 +0.1298 b2 +0.2768 b6 +0.5730 direct +0.1296 +0.2767 +0.5731 ok | M chain b0 -0.0131 b2 +0.2911 b6 +0.8490 direct -0.0132 +0.2908 +0.8490 ok
+  dip0.3    seeing 3.0" 2.00"/px (FWHM 1.50 px) | G chain b0 +0.1129 b2 +0.2502 b6 +0.5354 direct +0.1127 +0.2502 +0.5355 ok | M chain b0 -0.0240 b2 +0.2772 b6 +0.8573 direct -0.0241 +0.2772 +0.8572 ok
+  fade rs2" seeing 1.0" 0.24"/px (FWHM 4.18 px) | G chain b0 +0.1903 b2 +0.2790 b6 +0.4373 direct +0.1902 +0.2788 +0.4373 ok | M chain b0 +0.1452 b2 +0.2785 b6 +0.5075 direct +0.1453 +0.2796 +0.5074 ok
+  fade rs2" seeing 1.0" 0.44"/px (FWHM 2.28 px) | G chain b0 +0.1236 b2 +0.1886 b6 +0.3280 direct +0.1234 +0.1885 +0.3280 ok | M chain b0 +0.0634 b2 +0.1950 b6 +0.4476 direct +0.0634 +0.1952 +0.4475 ok
+  fade rs2" seeing 1.0" 1.00"/px (FWHM 1.00 px) | G chain b0 +0.0970 b2 +0.1313 b6 +0.2153 direct +0.0968 +0.1312 +0.2153 ok | M chain b0 +0.0979 b2 +0.1575 b6 +0.3100 direct +0.0978 +0.1574 +0.3099 ok
+  fade rs2" seeing 3.0" 0.70"/px (FWHM 4.29 px) | G chain b0 +0.1978 b2 +0.2450 b6 +0.3304 direct +0.1977 +0.2449 +0.3303 ok | M chain b0 +0.1789 b2 +0.2451 b6 +0.3598 direct +0.1789 +0.2450 +0.3597 ok
+  fade rs2" seeing 3.0" 1.50"/px (FWHM 2.00 px) | G chain b0 +0.1133 b2 +0.1386 b6 +0.1993 direct +0.1132 +0.1385 +0.1993 ok | M chain b0 +0.0993 b2 +0.1429 b6 +0.2403 direct +0.0992 +0.1428 +0.2402 ok
+  fade rs2" seeing 3.0" 2.00"/px (FWHM 1.50 px) | G chain b0 +0.0972 b2 +0.1156 b6 +0.1630 direct +0.0970 +0.1154 +0.1629 ok | M chain b0 +0.0942 b2 +0.1229 b6 +0.1981 direct +0.0940 +0.1226 +0.1980 ok
+(b) verdict: PASS
+# done in 477 s

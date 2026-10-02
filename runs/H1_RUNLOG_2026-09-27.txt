@@ -1,0 +1,136 @@
+# H1 2026-09-27 19:18:50 UTC | calibrator/runs/h3_grid.py null | commit e282b0d
+# frames: ifle03geq ifle04pdq ifle05qlq ifle06tjq ifle22f7q
+# 2080 measurements in 298 s (0 errors)
+# per frame and pair: phase-mean |b| max over (b0, b2, b6; x, y) in ground px for G, M; P | max per-phase |b0|, |b2| beside
+ifle03geq seeing 0.7 0.24"/px FWHM 2.93 px | G 7.2e-11 (max|b0| 0.0017 max|b2| 0.0019) ok | M 1.3e-13 (max|b0| 0.0052 max|b2| 0.0317) ok | Ga 4.6e-11 (max|b0| 0.0009 max|b2| 0.0017) ok | P 8.9e-16 (max 0.0170) ok
+ifle03geq seeing 0.7 0.44"/px FWHM 1.60 px | G 8.9e-15 (max|b0| 0.0003 max|b2| 0.0090) ok | M 1.1e-14 (max|b0| 0.0011 max|b2| 0.0258) ok | Ga 1.6e-14 (max|b0| 0.0006 max|b2| 0.0066) ok | P 4.4e-16 (max 0.0488) ok
+ifle03geq seeing 0.7 0.70"/px FWHM 1.01 px | G 4.4e-15 (max|b0| 0.0076 max|b2| 0.0045) ok | M 9.8e-15 (max|b0| 0.0012 max|b2| 0.0202) ok | Ga 8.9e-15 (max|b0| 0.0112 max|b2| 0.0119) ok | P 0.0e+00 (max 0.0953) ok
+ifle03geq seeing 1.0 0.24"/px FWHM 4.18 px | G 6.0e-12 (max|b0| 0.0013 max|b2| 0.0008) ok | M 1.7e-13 (max|b0| 0.0078 max|b2| 0.0309) ok | Ga 3.2e-11 (max|b0| 0.0006 max|b2| 0.0007) ok | P 8.9e-16 (max 0.0086) ok
+ifle03geq seeing 1.0 0.44"/px FWHM 2.28 px | G 1.2e-14 (max|b0| 0.0015 max|b2| 0.0046) ok | M 3.7e-14 (max|b0| 0.0028 max|b2| 0.0304) ok | Ga 1.6e-14 (max|b0| 0.0007 max|b2| 0.0038) ok | P 0.0e+00 (max 0.0265) ok
+ifle03geq seeing 1.0 0.70"/px FWHM 1.43 px | G 4.4e-15 (max|b0| 0.0004 max|b2| 0.0099) ok | M 7.5e-15 (max|b0| 0.0009 max|b2| 0.0245) ok | Ga 9.8e-15 (max|b0| 0.0003 max|b2| 0.0067) ok | P 0.0e+00 (max 0.0618) ok
+ifle03geq seeing 1.0 1.00"/px FWHM 1.00 px | G 3.6e-15 (max|b0| 0.0087 max|b2| 0.0055) ok | M 7.1e-15 (max|b0| 0.0013 max|b2| 0.0203) ok | P 2.2e-16 (max 0.0977) ok
+ifle03geq seeing 1.5 0.24"/px FWHM 6.26 px | G 1.9e-11 (max|b0| 0.0008 max|b2| 0.0007) ok | M 1.8e-12 (max|b0| 0.0099 max|b2| 0.0297) ok | Ga 3.4e-11 (max|b0| 0.0003 max|b2| 0.0006) ok | P 8.9e-16 (max 0.0039) ok
+ifle03geq seeing 1.5 0.44"/px FWHM 3.41 px | G 1.1e-12 (max|b0| 0.0014 max|b2| 0.0011) ok | M 2.6e-14 (max|b0| 0.0061 max|b2| 0.0309) ok | Ga 1.9e-11 (max|b0| 0.0008 max|b2| 0.0010) ok | P 0.0e+00 (max 0.0123) ok
+ifle03geq seeing 1.5 0.70"/px FWHM 2.15 px | G 8.0e-15 (max|b0| 0.0015 max|b2| 0.0058) ok | M 1.5e-14 (max|b0| 0.0024 max|b2| 0.0309) ok | P 4.4e-16 (max 0.0318) ok
+ifle03geq seeing 1.5 1.00"/px FWHM 1.50 px | G 5.1e-15 (max|b0| 0.0004 max|b2| 0.0099) ok | M 3.3e-15 (max|b0| 0.0010 max|b2| 0.0255) ok | P 4.4e-16 (max 0.0582) ok
+ifle03geq seeing 1.5 1.50"/px FWHM 1.00 px | G 2.9e-15 (max|b0| 0.0086 max|b2| 0.0062) ok | M 3.7e-15 (max|b0| 0.0013 max|b2| 0.0205) ok | P 1.1e-16 (max 0.0958) ok
+ifle03geq seeing 2.0 0.44"/px FWHM 4.55 px | G 9.4e-12 (max|b0| 0.0011 max|b2| 0.0008) ok | M 2.8e-14 (max|b0| 0.0079 max|b2| 0.0301) ok | Ga 3.9e-10 (max|b0| 0.0005 max|b2| 0.0006) ok | P 4.4e-16 (max 0.0070) ok
+ifle03geq seeing 2.0 0.70"/px FWHM 2.86 px | G 2.3e-11 (max|b0| 0.0017 max|b2| 0.0021) ok | M 1.5e-14 (max|b0| 0.0047 max|b2| 0.0321) ok | P 4.4e-16 (max 0.0186) ok
+ifle03geq seeing 2.0 1.00"/px FWHM 2.00 px | G 5.1e-15 (max|b0| 0.0012 max|b2| 0.0069) ok | M 1.0e-14 (max|b0| 0.0020 max|b2| 0.0303) ok | P 0.0e+00 (max 0.0360) ok
+ifle03geq seeing 2.0 1.50"/px FWHM 1.33 px | G 1.7e-15 (max|b0| 0.0006 max|b2| 0.0087) ok | M 4.7e-15 (max|b0| 0.0009 max|b2| 0.0233) ok | P 2.2e-16 (max 0.0678) ok
+ifle03geq seeing 2.0 2.00"/px FWHM 1.00 px | G 2.0e-15 (max|b0| 0.0093 max|b2| 0.0073) ok | M 2.9e-15 (max|b0| 0.0013 max|b2| 0.0206) ok | P 2.2e-16 (max 0.0952) ok
+ifle03geq seeing 3.0 0.44"/px FWHM 6.82 px | G 2.9e-10 (max|b0| 0.0007 max|b2| 0.0006) ok | M 5.1e-13 (max|b0| 0.0097 max|b2| 0.0291) ok | Ga 9.2e-11 (max|b0| 0.0002 max|b2| 0.0005) ok | P 1.8e-15 (max 0.0031) ok
+ifle03geq seeing 3.0 0.70"/px FWHM 4.29 px | G 2.4e-11 (max|b0| 0.0011 max|b2| 0.0007) ok | M 3.8e-14 (max|b0| 0.0077 max|b2| 0.0311) ok | P 4.4e-16 (max 0.0084) ok
+ifle03geq seeing 3.0 1.00"/px FWHM 3.00 px | G 4.5e-11 (max|b0| 0.0016 max|b2| 0.0017) ok | M 1.6e-14 (max|b0| 0.0055 max|b2| 0.0322) ok | P 2.2e-16 (max 0.0168) ok
+ifle03geq seeing 3.0 1.50"/px FWHM 2.00 px | G 3.0e-15 (max|b0| 0.0010 max|b2| 0.0066) ok | M 7.9e-15 (max|b0| 0.0020 max|b2| 0.0303) ok | P 1.1e-16 (max 0.0354) ok
+ifle03geq seeing 3.0 2.00"/px FWHM 1.50 px | G 2.1e-15 (max|b0| 0.0004 max|b2| 0.0089) ok | M 2.1e-15 (max|b0| 0.0011 max|b2| 0.0256) ok | P 1.1e-16 (max 0.0566) ok
+ifle03geq seeing 4.0 0.70"/px FWHM 5.72 px | G 4.7e-11 (max|b0| 0.0008 max|b2| 0.0006) ok | M 2.9e-13 (max|b0| 0.0091 max|b2| 0.0302) ok | P 8.9e-16 (max 0.0048) ok
+ifle03geq seeing 4.0 1.00"/px FWHM 4.00 px | G 1.1e-11 (max|b0| 0.0012 max|b2| 0.0007) ok | M 1.9e-14 (max|b0| 0.0078 max|b2| 0.0315) ok | P 4.4e-16 (max 0.0095) ok
+ifle03geq seeing 4.0 1.50"/px FWHM 2.67 px | G 3.0e-15 (max|b0| 0.0015 max|b2| 0.0027) ok | M 9.3e-15 (max|b0| 0.0044 max|b2| 0.0321) ok | P 4.4e-16 (max 0.0208) ok
+ifle03geq seeing 4.0 2.00"/px FWHM 2.00 px | G 2.0e-15 (max|b0| 0.0009 max|b2| 0.0063) ok | M 1.8e-15 (max|b0| 0.0021 max|b2| 0.0302) ok | P 2.2e-16 (max 0.0349) ok
+ifle04pdq seeing 0.7 0.24"/px FWHM 2.93 px | G 2.1e-14 (max|b0| 0.0017 max|b2| 0.0021) ok | M 5.5e-14 (max|b0| 0.0052 max|b2| 0.0319) ok | Ga 3.8e-11 (max|b0| 0.0009 max|b2| 0.0019) ok | P 0.0e+00 (max 0.0171) ok
+ifle04pdq seeing 0.7 0.44"/px FWHM 1.60 px | G 9.8e-15 (max|b0| 0.0004 max|b2| 0.0089) ok | M 1.2e-14 (max|b0| 0.0012 max|b2| 0.0259) ok | Ga 1.2e-14 (max|b0| 0.0006 max|b2| 0.0066) ok | P 4.4e-16 (max 0.0487) ok
+ifle04pdq seeing 0.7 0.70"/px FWHM 1.01 px | G 5.8e-15 (max|b0| 0.0078 max|b2| 0.0052) ok | M 7.5e-15 (max|b0| 0.0013 max|b2| 0.0204) ok | Ga 6.7e-15 (max|b0| 0.0113 max|b2| 0.0119) ok | P 0.0e+00 (max 0.0948) ok
+ifle04pdq seeing 1.0 0.24"/px FWHM 4.18 px | G 1.5e-11 (max|b0| 0.0012 max|b2| 0.0011) ok | M 3.3e-13 (max|b0| 0.0079 max|b2| 0.0310) ok | Ga 6.8e-12 (max|b0| 0.0006 max|b2| 0.0010) ok | P 8.9e-16 (max 0.0086) ok
+ifle04pdq seeing 1.0 0.44"/px FWHM 2.28 px | G 6.7e-15 (max|b0| 0.0015 max|b2| 0.0046) ok | M 1.5e-14 (max|b0| 0.0028 max|b2| 0.0304) ok | Ga 1.1e-14 (max|b0| 0.0008 max|b2| 0.0038) ok | P 0.0e+00 (max 0.0264) ok
+ifle04pdq seeing 1.0 0.70"/px FWHM 1.43 px | G 6.7e-15 (max|b0| 0.0004 max|b2| 0.0096) ok | M 4.9e-15 (max|b0| 0.0010 max|b2| 0.0246) ok | Ga 9.3e-15 (max|b0| 0.0004 max|b2| 0.0065) ok | P 4.4e-16 (max 0.0616) ok
+ifle04pdq seeing 1.0 1.00"/px FWHM 1.00 px | G 6.0e-15 (max|b0| 0.0091 max|b2| 0.0064) ok | M 6.0e-15 (max|b0| 0.0013 max|b2| 0.0204) ok | P 4.4e-16 (max 0.0973) ok
+ifle04pdq seeing 1.5 0.24"/px FWHM 6.26 px | G 4.9e-10 (max|b0| 0.0008 max|b2| 0.0010) ok | M 1.1e-12 (max|b0| 0.0099 max|b2| 0.0297) ok | Ga 7.1e-11 (max|b0| 0.0003 max|b2| 0.0010) ok | P 8.9e-16 (max 0.0039) ok
+ifle04pdq seeing 1.5 0.44"/px FWHM 3.41 px | G 2.1e-12 (max|b0| 0.0014 max|b2| 0.0015) ok | M 9.5e-14 (max|b0| 0.0061 max|b2| 0.0309) ok | Ga 1.5e-11 (max|b0| 0.0008 max|b2| 0.0013) ok | P 4.4e-16 (max 0.0122) ok
+ifle04pdq seeing 1.5 0.70"/px FWHM 2.15 px | G 8.0e-15 (max|b0| 0.0014 max|b2| 0.0057) ok | M 7.1e-15 (max|b0| 0.0024 max|b2| 0.0309) ok | P 4.4e-16 (max 0.0318) ok
+ifle04pdq seeing 1.5 1.00"/px FWHM 1.50 px | G 4.2e-15 (max|b0| 0.0005 max|b2| 0.0095) ok | M 6.9e-15 (max|b0| 0.0011 max|b2| 0.0255) ok | P 2.2e-16 (max 0.0581) ok
+ifle04pdq seeing 1.5 1.50"/px FWHM 1.00 px | G 2.6e-15 (max|b0| 0.0093 max|b2| 0.0076) ok | M 2.7e-15 (max|b0| 0.0013 max|b2| 0.0204) ok | P 1.1e-16 (max 0.0956) ok
+ifle04pdq seeing 2.0 0.44"/px FWHM 4.55 px | G 3.9e-11 (max|b0| 0.0010 max|b2| 0.0009) ok | M 2.4e-13 (max|b0| 0.0079 max|b2| 0.0301) ok | Ga 2.8e-11 (max|b0| 0.0005 max|b2| 0.0009) ok | P 4.4e-16 (max 0.0070) ok
+ifle04pdq seeing 2.0 0.70"/px FWHM 2.86 px | G 6.7e-15 (max|b0| 0.0016 max|b2| 0.0023) ok | M 6.8e-14 (max|b0| 0.0047 max|b2| 0.0320) ok | P 0.0e+00 (max 0.0186) ok
+ifle04pdq seeing 2.0 1.00"/px FWHM 2.00 px | G 3.1e-15 (max|b0| 0.0011 max|b2| 0.0067) ok | M 8.4e-14 (max|b0| 0.0021 max|b2| 0.0302) ok | P 2.2e-16 (max 0.0360) ok
+ifle04pdq seeing 2.0 1.50"/px FWHM 1.33 px | G 3.0e-15 (max|b0| 0.0007 max|b2| 0.0080) ok | M 8.3e-15 (max|b0| 0.0010 max|b2| 0.0232) ok | P 3.3e-16 (max 0.0678) ok
+ifle04pdq seeing 2.0 2.00"/px FWHM 1.00 px | G 2.4e-15 (max|b0| 0.0101 max|b2| 0.0090) ok | M 1.9e-15 (max|b0| 0.0014 max|b2| 0.0203) ok | P 2.2e-16 (max 0.0955) ok
+ifle04pdq seeing 3.0 0.44"/px FWHM 6.82 px | G 2.3e-10 (max|b0| 0.0007 max|b2| 0.0008) ok | M 1.2e-12 (max|b0| 0.0097 max|b2| 0.0290) ok | Ga 7.3e-11 (max|b0| 0.0003 max|b2| 0.0008) ok | P 4.4e-16 (max 0.0031) ok
+ifle04pdq seeing 3.0 0.70"/px FWHM 4.29 px | G 1.5e-11 (max|b0| 0.0011 max|b2| 0.0009) ok | M 4.8e-14 (max|b0| 0.0076 max|b2| 0.0310) ok | P 4.4e-16 (max 0.0085) ok
+ifle04pdq seeing 3.0 1.00"/px FWHM 3.00 px | G 2.4e-15 (max|b0| 0.0015 max|b2| 0.0019) ok | M 4.2e-14 (max|b0| 0.0055 max|b2| 0.0320) ok | P 0.0e+00 (max 0.0168) ok
+ifle04pdq seeing 3.0 1.50"/px FWHM 2.00 px | G 1.8e-15 (max|b0| 0.0009 max|b2| 0.0064) ok | M 3.3e-15 (max|b0| 0.0020 max|b2| 0.0300) ok | P 4.4e-16 (max 0.0356) ok
+ifle04pdq seeing 3.0 2.00"/px FWHM 1.50 px | G 3.3e-15 (max|b0| 0.0005 max|b2| 0.0083) ok | M 2.9e-15 (max|b0| 0.0011 max|b2| 0.0252) ok | P 1.1e-16 (max 0.0569) ok
+ifle04pdq seeing 4.0 0.70"/px FWHM 5.72 px | G 2.1e-13 (max|b0| 0.0008 max|b2| 0.0008) ok | M 2.8e-13 (max|b0| 0.0090 max|b2| 0.0300) ok | P 1.8e-15 (max 0.0048) ok
+ifle04pdq seeing 4.0 1.00"/px FWHM 4.00 px | G 9.1e-12 (max|b0| 0.0012 max|b2| 0.0010) ok | M 3.2e-14 (max|b0| 0.0077 max|b2| 0.0312) ok | P 6.7e-16 (max 0.0096) ok
+ifle04pdq seeing 4.0 1.50"/px FWHM 2.67 px | G 2.7e-15 (max|b0| 0.0014 max|b2| 0.0027) ok | M 7.8e-15 (max|b0| 0.0042 max|b2| 0.0318) ok | P 2.2e-16 (max 0.0209) ok
+ifle04pdq seeing 4.0 2.00"/px FWHM 2.00 px | G 2.8e-15 (max|b0| 0.0008 max|b2| 0.0062) ok | M 3.8e-15 (max|b0| 0.0020 max|b2| 0.0299) ok | P 2.2e-16 (max 0.0353) ok
+ifle05qlq seeing 0.7 0.24"/px FWHM 2.93 px | G 7.2e-11 (max|b0| 0.0017 max|b2| 0.0021) ok | M 5.6e-14 (max|b0| 0.0052 max|b2| 0.0319) ok | Ga 3.4e-11 (max|b0| 0.0009 max|b2| 0.0019) ok | P 8.9e-16 (max 0.0171) ok
+ifle05qlq seeing 0.7 0.44"/px FWHM 1.60 px | G 1.0e-14 (max|b0| 0.0003 max|b2| 0.0088) ok | M 1.3e-14 (max|b0| 0.0012 max|b2| 0.0259) ok | Ga 1.4e-14 (max|b0| 0.0006 max|b2| 0.0066) ok | P 0.0e+00 (max 0.0489) ok
+ifle05qlq seeing 0.7 0.70"/px FWHM 1.01 px | G 6.7e-15 (max|b0| 0.0081 max|b2| 0.0056) ok | M 8.4e-15 (max|b0| 0.0013 max|b2| 0.0203) ok | Ga 6.2e-15 (max|b0| 0.0114 max|b2| 0.0120) ok | P 0.0e+00 (max 0.0950) ok
+ifle05qlq seeing 1.0 0.24"/px FWHM 4.18 px | G 1.5e-11 (max|b0| 0.0012 max|b2| 0.0011) ok | M 3.3e-13 (max|b0| 0.0079 max|b2| 0.0310) ok | Ga 2.3e-11 (max|b0| 0.0006 max|b2| 0.0010) ok | P 0.0e+00 (max 0.0086) ok
+ifle05qlq seeing 1.0 0.44"/px FWHM 2.28 px | G 9.8e-15 (max|b0| 0.0014 max|b2| 0.0046) ok | M 1.7e-14 (max|b0| 0.0028 max|b2| 0.0304) ok | Ga 8.0e-15 (max|b0| 0.0008 max|b2| 0.0039) ok | P 0.0e+00 (max 0.0265) ok
+ifle05qlq seeing 1.0 0.70"/px FWHM 1.43 px | G 7.1e-15 (max|b0| 0.0004 max|b2| 0.0094) ok | M 5.8e-15 (max|b0| 0.0010 max|b2| 0.0246) ok | Ga 8.0e-15 (max|b0| 0.0004 max|b2| 0.0065) ok | P 0.0e+00 (max 0.0616) ok
+ifle05qlq seeing 1.0 1.00"/px FWHM 1.00 px | G 4.7e-15 (max|b0| 0.0095 max|b2| 0.0072) ok | M 4.2e-15 (max|b0| 0.0013 max|b2| 0.0205) ok | P 2.2e-16 (max 0.0974) ok
+ifle05qlq seeing 1.5 0.24"/px FWHM 6.26 px | G 1.1e-10 (max|b0| 0.0008 max|b2| 0.0010) ok | M 4.6e-13 (max|b0| 0.0099 max|b2| 0.0297) ok | Ga 6.6e-10 (max|b0| 0.0003 max|b2| 0.0009) ok | P 8.9e-16 (max 0.0039) ok
+ifle05qlq seeing 1.5 0.44"/px FWHM 3.41 px | G 8.3e-12 (max|b0| 0.0013 max|b2| 0.0014) ok | M 2.9e-14 (max|b0| 0.0061 max|b2| 0.0309) ok | Ga 6.5e-12 (max|b0| 0.0008 max|b2| 0.0013) ok | P 4.4e-16 (max 0.0122) ok
+ifle05qlq seeing 1.5 0.70"/px FWHM 2.15 px | G 6.7e-15 (max|b0| 0.0013 max|b2| 0.0057) ok | M 1.0e-14 (max|b0| 0.0024 max|b2| 0.0309) ok | P 0.0e+00 (max 0.0318) ok
+ifle05qlq seeing 1.5 1.00"/px FWHM 1.50 px | G 3.6e-15 (max|b0| 0.0005 max|b2| 0.0093) ok | M 4.4e-15 (max|b0| 0.0011 max|b2| 0.0256) ok | P 2.2e-16 (max 0.0581) ok
+ifle05qlq seeing 1.5 1.50"/px FWHM 1.00 px | G 2.4e-15 (max|b0| 0.0097 max|b2| 0.0085) ok | M 3.7e-15 (max|b0| 0.0014 max|b2| 0.0205) ok | P 1.1e-16 (max 0.0956) ok
+ifle05qlq seeing 2.0 0.44"/px FWHM 4.55 px | G 7.7e-12 (max|b0| 0.0010 max|b2| 0.0009) ok | M 3.4e-13 (max|b0| 0.0079 max|b2| 0.0301) ok | Ga 3.3e-11 (max|b0| 0.0005 max|b2| 0.0009) ok | P 0.0e+00 (max 0.0070) ok
+ifle05qlq seeing 2.0 0.70"/px FWHM 2.86 px | G 6.7e-15 (max|b0| 0.0015 max|b2| 0.0023) ok | M 2.0e-14 (max|b0| 0.0047 max|b2| 0.0321) ok | P 4.4e-16 (max 0.0186) ok
+ifle05qlq seeing 2.0 1.00"/px FWHM 2.00 px | G 5.3e-15 (max|b0| 0.0010 max|b2| 0.0066) ok | M 6.9e-15 (max|b0| 0.0020 max|b2| 0.0303) ok | P 4.4e-16 (max 0.0360) ok
+ifle05qlq seeing 2.0 1.50"/px FWHM 1.33 px | G 3.0e-15 (max|b0| 0.0008 max|b2| 0.0077) ok | M 3.7e-15 (max|b0| 0.0010 max|b2| 0.0233) ok | P 2.2e-16 (max 0.0680) ok
+ifle05qlq seeing 2.0 2.00"/px FWHM 1.00 px | G 2.0e-15 (max|b0| 0.0107 max|b2| 0.0101) ok | M 4.1e-15 (max|b0| 0.0014 max|b2| 0.0203) ok | P 0.0e+00 (max 0.0960) ok
+ifle05qlq seeing 3.0 0.44"/px FWHM 6.82 px | G 2.3e-10 (max|b0| 0.0006 max|b2| 0.0008) ok | M 7.9e-13 (max|b0| 0.0097 max|b2| 0.0290) ok | Ga 4.0e-11 (max|b0| 0.0002 max|b2| 0.0008) ok | P 1.3e-15 (max 0.0031) ok
+ifle05qlq seeing 3.0 0.70"/px FWHM 4.29 px | G 5.5e-11 (max|b0| 0.0010 max|b2| 0.0009) ok | M 6.7e-14 (max|b0| 0.0076 max|b2| 0.0311) ok | P 4.4e-16 (max 0.0085) ok
+ifle05qlq seeing 3.0 1.00"/px FWHM 3.00 px | G 7.7e-11 (max|b0| 0.0015 max|b2| 0.0019) ok | M 6.4e-15 (max|b0| 0.0055 max|b2| 0.0321) ok | P 4.4e-16 (max 0.0169) ok
+ifle05qlq seeing 3.0 1.50"/px FWHM 2.00 px | G 3.3e-15 (max|b0| 0.0008 max|b2| 0.0063) ok | M 5.2e-15 (max|b0| 0.0020 max|b2| 0.0301) ok | P 1.1e-16 (max 0.0357) ok
+ifle05qlq seeing 3.0 2.00"/px FWHM 1.50 px | G 2.2e-15 (max|b0| 0.0005 max|b2| 0.0080) ok | M 2.1e-15 (max|b0| 0.0011 max|b2| 0.0253) ok | P 2.2e-16 (max 0.0573) ok
+ifle05qlq seeing 4.0 0.70"/px FWHM 5.72 px | G 1.0e-12 (max|b0| 0.0008 max|b2| 0.0008) ok | M 1.5e-13 (max|b0| 0.0090 max|b2| 0.0301) ok | P 4.4e-16 (max 0.0048) ok
+ifle05qlq seeing 4.0 1.00"/px FWHM 4.00 px | G 8.2e-12 (max|b0| 0.0011 max|b2| 0.0009) ok | M 6.9e-14 (max|b0| 0.0077 max|b2| 0.0313) ok | P 0.0e+00 (max 0.0096) ok
+ifle05qlq seeing 4.0 1.50"/px FWHM 2.67 px | G 3.6e-15 (max|b0| 0.0014 max|b2| 0.0027) ok | M 7.4e-15 (max|b0| 0.0042 max|b2| 0.0319) ok | P 2.2e-16 (max 0.0211) ok
+ifle05qlq seeing 4.0 2.00"/px FWHM 2.00 px | G 1.8e-15 (max|b0| 0.0007 max|b2| 0.0061) ok | M 3.6e-15 (max|b0| 0.0020 max|b2| 0.0299) ok | P 1.1e-16 (max 0.0356) ok
+ifle06tjq seeing 0.7 0.24"/px FWHM 2.93 px | G 2.0e-14 (max|b0| 0.0017 max|b2| 0.0022) ok | M 2.3e-14 (max|b0| 0.0052 max|b2| 0.0319) ok | Ga 2.9e-14 (max|b0| 0.0009 max|b2| 0.0019) ok | P 0.0e+00 (max 0.0171) ok
+ifle06tjq seeing 0.7 0.44"/px FWHM 1.60 px | G 1.1e-14 (max|b0| 0.0004 max|b2| 0.0088) ok | M 2.1e-14 (max|b0| 0.0012 max|b2| 0.0259) ok | Ga 9.3e-15 (max|b0| 0.0006 max|b2| 0.0066) ok | P 4.4e-16 (max 0.0489) ok
+ifle06tjq seeing 0.7 0.70"/px FWHM 1.01 px | G 6.2e-15 (max|b0| 0.0079 max|b2| 0.0054) ok | M 6.7e-15 (max|b0| 0.0014 max|b2| 0.0203) ok | Ga 6.2e-15 (max|b0| 0.0114 max|b2| 0.0121) ok | P 0.0e+00 (max 0.0949) ok
+ifle06tjq seeing 1.0 0.24"/px FWHM 4.18 px | G 3.4e-11 (max|b0| 0.0012 max|b2| 0.0011) ok | M 3.8e-13 (max|b0| 0.0079 max|b2| 0.0310) ok | Ga 2.2e-11 (max|b0| 0.0006 max|b2| 0.0011) ok | P 8.9e-16 (max 0.0086) ok
+ifle06tjq seeing 1.0 0.44"/px FWHM 2.28 px | G 1.1e-14 (max|b0| 0.0015 max|b2| 0.0046) ok | M 1.9e-14 (max|b0| 0.0028 max|b2| 0.0304) ok | Ga 9.3e-15 (max|b0| 0.0008 max|b2| 0.0039) ok | P 0.0e+00 (max 0.0265) ok
+ifle06tjq seeing 1.0 0.70"/px FWHM 1.43 px | G 9.3e-15 (max|b0| 0.0004 max|b2| 0.0095) ok | M 5.3e-15 (max|b0| 0.0011 max|b2| 0.0246) ok | Ga 4.9e-15 (max|b0| 0.0004 max|b2| 0.0064) ok | P 4.4e-16 (max 0.0616) ok
+ifle06tjq seeing 1.0 1.00"/px FWHM 1.00 px | G 6.4e-15 (max|b0| 0.0093 max|b2| 0.0069) ok | M 4.4e-15 (max|b0| 0.0013 max|b2| 0.0205) ok | P 0.0e+00 (max 0.0973) ok
+ifle06tjq seeing 1.5 0.24"/px FWHM 6.26 px | G 2.2e-10 (max|b0| 0.0008 max|b2| 0.0010) ok | M 1.0e-12 (max|b0| 0.0099 max|b2| 0.0297) ok | Ga 7.9e-10 (max|b0| 0.0003 max|b2| 0.0010) ok | P 0.0e+00 (max 0.0039) ok
+ifle06tjq seeing 1.5 0.44"/px FWHM 3.41 px | G 2.3e-11 (max|b0| 0.0014 max|b2| 0.0015) ok | M 5.6e-14 (max|b0| 0.0061 max|b2| 0.0309) ok | Ga 1.0e-10 (max|b0| 0.0008 max|b2| 0.0013) ok | P 4.4e-16 (max 0.0123) ok
+ifle06tjq seeing 1.5 0.70"/px FWHM 2.15 px | G 6.2e-15 (max|b0| 0.0013 max|b2| 0.0057) ok | M 8.9e-15 (max|b0| 0.0024 max|b2| 0.0309) ok | P 0.0e+00 (max 0.0318) ok
+ifle06tjq seeing 1.5 1.00"/px FWHM 1.50 px | G 7.8e-15 (max|b0| 0.0005 max|b2| 0.0093) ok | M 7.3e-15 (max|b0| 0.0011 max|b2| 0.0255) ok | P 2.2e-16 (max 0.0580) ok
+ifle06tjq seeing 1.5 1.50"/px FWHM 1.00 px | G 3.4e-15 (max|b0| 0.0096 max|b2| 0.0081) ok | M 2.4e-15 (max|b0| 0.0014 max|b2| 0.0204) ok | P 2.2e-16 (max 0.0955) ok
+ifle06tjq seeing 2.0 0.44"/px FWHM 4.55 px | G 5.8e-11 (max|b0| 0.0010 max|b2| 0.0010) ok | M 1.1e-13 (max|b0| 0.0079 max|b2| 0.0300) ok | Ga 4.0e-11 (max|b0| 0.0005 max|b2| 0.0009) ok | P 0.0e+00 (max 0.0070) ok
+ifle06tjq seeing 2.0 0.70"/px FWHM 2.86 px | G 5.8e-15 (max|b0| 0.0016 max|b2| 0.0023) ok | M 5.2e-14 (max|b0| 0.0047 max|b2| 0.0320) ok | P 4.4e-16 (max 0.0186) ok
+ifle06tjq seeing 2.0 1.00"/px FWHM 2.00 px | G 6.0e-15 (max|b0| 0.0010 max|b2| 0.0066) ok | M 9.8e-15 (max|b0| 0.0021 max|b2| 0.0302) ok | P 0.0e+00 (max 0.0359) ok
+ifle06tjq seeing 2.0 1.50"/px FWHM 1.33 px | G 3.0e-15 (max|b0| 0.0007 max|b2| 0.0078) ok | M 2.9e-15 (max|b0| 0.0010 max|b2| 0.0232) ok | P 1.1e-16 (max 0.0678) ok
+ifle06tjq seeing 2.0 2.00"/px FWHM 1.00 px | G 3.4e-15 (max|b0| 0.0105 max|b2| 0.0095) ok | M 2.8e-15 (max|b0| 0.0015 max|b2| 0.0202) ok | P 2.2e-16 (max 0.0957) ok
+ifle06tjq seeing 3.0 0.44"/px FWHM 6.82 px | G 2.1e-10 (max|b0| 0.0006 max|b2| 0.0008) ok | M 2.2e-12 (max|b0| 0.0096 max|b2| 0.0289) ok | Ga 4.7e-11 (max|b0| 0.0002 max|b2| 0.0008) ok | P 8.9e-16 (max 0.0031) ok
+ifle06tjq seeing 3.0 0.70"/px FWHM 4.29 px | G 6.5e-12 (max|b0| 0.0010 max|b2| 0.0009) ok | M 1.6e-13 (max|b0| 0.0076 max|b2| 0.0310) ok | P 8.9e-16 (max 0.0085) ok
+ifle06tjq seeing 3.0 1.00"/px FWHM 3.00 px | G 6.2e-15 (max|b0| 0.0015 max|b2| 0.0018) ok | M 1.6e-14 (max|b0| 0.0054 max|b2| 0.0320) ok | P 2.2e-16 (max 0.0168) ok
+ifle06tjq seeing 3.0 1.50"/px FWHM 2.00 px | G 2.9e-15 (max|b0| 0.0009 max|b2| 0.0064) ok | M 7.0e-15 (max|b0| 0.0020 max|b2| 0.0300) ok | P 2.2e-16 (max 0.0357) ok
+ifle06tjq seeing 3.0 2.00"/px FWHM 1.50 px | G 1.7e-15 (max|b0| 0.0005 max|b2| 0.0083) ok | M 1.8e-15 (max|b0| 0.0011 max|b2| 0.0252) ok | P 0.0e+00 (max 0.0573) ok
+ifle06tjq seeing 4.0 0.70"/px FWHM 5.72 px | G 7.1e-11 (max|b0| 0.0008 max|b2| 0.0007) ok | M 2.6e-13 (max|b0| 0.0090 max|b2| 0.0300) ok | P 1.8e-15 (max 0.0048) ok
+ifle06tjq seeing 4.0 1.00"/px FWHM 4.00 px | G 1.0e-11 (max|b0| 0.0011 max|b2| 0.0009) ok | M 3.3e-14 (max|b0| 0.0077 max|b2| 0.0312) ok | P 2.2e-16 (max 0.0096) ok
+ifle06tjq seeing 4.0 1.50"/px FWHM 2.67 px | G 3.1e-15 (max|b0| 0.0014 max|b2| 0.0027) ok | M 8.9e-15 (max|b0| 0.0042 max|b2| 0.0318) ok | P 1.1e-16 (max 0.0211) ok
+ifle06tjq seeing 4.0 2.00"/px FWHM 2.00 px | G 2.7e-15 (max|b0| 0.0008 max|b2| 0.0062) ok | M 2.0e-15 (max|b0| 0.0020 max|b2| 0.0299) ok | P 3.3e-16 (max 0.0356) ok
+ifle22f7q seeing 0.7 0.24"/px FWHM 2.93 px | G 2.6e-14 (max|b0| 0.0018 max|b2| 0.0019) ok | M 8.7e-14 (max|b0| 0.0054 max|b2| 0.0331) ok | Ga 2.3e-14 (max|b0| 0.0009 max|b2| 0.0017) ok | P 0.0e+00 (max 0.0172) ok
+ifle22f7q seeing 0.7 0.44"/px FWHM 1.60 px | G 8.0e-15 (max|b0| 0.0003 max|b2| 0.0092) ok | M 3.4e-14 (max|b0| 0.0011 max|b2| 0.0270) ok | Ga 1.4e-14 (max|b0| 0.0006 max|b2| 0.0064) ok | P 0.0e+00 (max 0.0490) ok
+ifle22f7q seeing 0.7 0.70"/px FWHM 1.01 px | G 5.8e-15 (max|b0| 0.0082 max|b2| 0.0048) ok | M 1.5e-14 (max|b0| 0.0014 max|b2| 0.0211) ok | Ga 7.5e-15 (max|b0| 0.0124 max|b2| 0.0133) ok | P 4.4e-16 (max 0.0951) ok
+ifle22f7q seeing 1.0 0.24"/px FWHM 4.18 px | G 2.8e-11 (max|b0| 0.0013 max|b2| 0.0008) ok | M 1.4e-13 (max|b0| 0.0082 max|b2| 0.0321) ok | Ga 8.4e-12 (max|b0| 0.0006 max|b2| 0.0006) ok | P 8.9e-16 (max 0.0086) ok
+ifle22f7q seeing 1.0 0.44"/px FWHM 2.28 px | G 1.2e-14 (max|b0| 0.0016 max|b2| 0.0047) ok | M 1.6e-14 (max|b0| 0.0029 max|b2| 0.0317) ok | Ga 1.3e-14 (max|b0| 0.0008 max|b2| 0.0038) ok | P 0.0e+00 (max 0.0266) ok
+ifle22f7q seeing 1.0 0.70"/px FWHM 1.43 px | G 7.1e-15 (max|b0| 0.0004 max|b2| 0.0103) ok | M 9.3e-15 (max|b0| 0.0009 max|b2| 0.0257) ok | Ga 4.4e-15 (max|b0| 0.0004 max|b2| 0.0067) ok | P 4.4e-16 (max 0.0619) ok
+ifle22f7q seeing 1.0 1.00"/px FWHM 1.00 px | G 2.7e-15 (max|b0| 0.0089 max|b2| 0.0051) ok | M 4.0e-15 (max|b0| 0.0014 max|b2| 0.0213) ok | P 0.0e+00 (max 0.0977) ok
+ifle22f7q seeing 1.5 0.24"/px FWHM 6.26 px | G 4.2e-10 (max|b0| 0.0009 max|b2| 0.0007) ok | M 1.0e-12 (max|b0| 0.0104 max|b2| 0.0308) ok | Ga 1.6e-11 (max|b0| 0.0003 max|b2| 0.0005) ok | P 8.9e-16 (max 0.0040) ok
+ifle22f7q seeing 1.5 0.44"/px FWHM 3.41 px | G 7.2e-11 (max|b0| 0.0015 max|b2| 0.0012) ok | M 7.5e-14 (max|b0| 0.0064 max|b2| 0.0322) ok | Ga 3.7e-11 (max|b0| 0.0008 max|b2| 0.0011) ok | P 4.4e-16 (max 0.0123) ok
+ifle22f7q seeing 1.5 0.70"/px FWHM 2.15 px | G 7.1e-15 (max|b0| 0.0017 max|b2| 0.0059) ok | M 1.6e-14 (max|b0| 0.0025 max|b2| 0.0323) ok | P 8.9e-16 (max 0.0320) ok
+ifle22f7q seeing 1.5 1.00"/px FWHM 1.50 px | G 5.8e-15 (max|b0| 0.0004 max|b2| 0.0105) ok | M 6.7e-15 (max|b0| 0.0010 max|b2| 0.0267) ok | P 2.2e-16 (max 0.0585) ok
+ifle22f7q seeing 1.5 1.50"/px FWHM 1.00 px | G 3.3e-15 (max|b0| 0.0085 max|b2| 0.0051) ok | M 2.1e-15 (max|b0| 0.0013 max|b2| 0.0215) ok | P 1.1e-16 (max 0.0956) ok
+ifle22f7q seeing 2.0 0.44"/px FWHM 4.55 px | G 9.2e-11 (max|b0| 0.0012 max|b2| 0.0008) ok | M 1.4e-13 (max|b0| 0.0084 max|b2| 0.0313) ok | Ga 3.6e-11 (max|b0| 0.0005 max|b2| 0.0007) ok | P 4.4e-16 (max 0.0070) ok
+ifle22f7q seeing 2.0 0.70"/px FWHM 2.86 px | G 7.1e-15 (max|b0| 0.0019 max|b2| 0.0023) ok | M 1.4e-14 (max|b0| 0.0050 max|b2| 0.0335) ok | P 4.4e-16 (max 0.0187) ok
+ifle22f7q seeing 2.0 1.00"/px FWHM 2.00 px | G 6.7e-15 (max|b0| 0.0015 max|b2| 0.0071) ok | M 4.4e-15 (max|b0| 0.0021 max|b2| 0.0317) ok | P 6.7e-16 (max 0.0362) ok
+ifle22f7q seeing 2.0 1.50"/px FWHM 1.33 px | G 3.6e-15 (max|b0| 0.0007 max|b2| 0.0096) ok | M 5.0e-15 (max|b0| 0.0010 max|b2| 0.0245) ok | P 1.1e-16 (max 0.0677) ok
+ifle22f7q seeing 2.0 2.00"/px FWHM 1.00 px | G 2.0e-15 (max|b0| 0.0088 max|b2| 0.0057) ok | M 2.8e-15 (max|b0| 0.0013 max|b2| 0.0219) ok | P 1.1e-16 (max 0.0946) ok
+ifle22f7q seeing 3.0 0.44"/px FWHM 6.82 px | G 7.7e-10 (max|b0| 0.0007 max|b2| 0.0007) ok | M 6.7e-13 (max|b0| 0.0102 max|b2| 0.0302) ok | Ga 5.3e-11 (max|b0| 0.0003 max|b2| 0.0007) ok | P 8.9e-16 (max 0.0031) ok
+ifle22f7q seeing 3.0 0.70"/px FWHM 4.29 px | G 2.7e-11 (max|b0| 0.0012 max|b2| 0.0008) ok | M 1.1e-13 (max|b0| 0.0081 max|b2| 0.0324) ok | P 4.4e-16 (max 0.0084) ok
+ifle22f7q seeing 3.0 1.00"/px FWHM 3.00 px | G 3.3e-15 (max|b0| 0.0018 max|b2| 0.0020) ok | M 2.2e-14 (max|b0| 0.0059 max|b2| 0.0336) ok | P 4.4e-16 (max 0.0168) ok
+ifle22f7q seeing 3.0 1.50"/px FWHM 2.00 px | G 3.0e-15 (max|b0| 0.0013 max|b2| 0.0068) ok | M 4.4e-15 (max|b0| 0.0022 max|b2| 0.0317) ok | P 2.2e-16 (max 0.0354) ok
+ifle22f7q seeing 3.0 2.00"/px FWHM 1.50 px | G 2.0e-15 (max|b0| 0.0005 max|b2| 0.0096) ok | M 1.2e-15 (max|b0| 0.0012 max|b2| 0.0270) ok | P 2.2e-16 (max 0.0563) ok
+ifle22f7q seeing 4.0 0.70"/px FWHM 5.72 px | G 3.6e-12 (max|b0| 0.0009 max|b2| 0.0008) ok | M 4.4e-13 (max|b0| 0.0097 max|b2| 0.0314) ok | P 1.3e-15 (max 0.0047) ok
+ifle22f7q seeing 4.0 1.00"/px FWHM 4.00 px | G 4.3e-11 (max|b0| 0.0013 max|b2| 0.0010) ok | M 1.3e-14 (max|b0| 0.0083 max|b2| 0.0328) ok | P 2.2e-16 (max 0.0096) ok
+ifle22f7q seeing 4.0 1.50"/px FWHM 2.67 px | G 2.9e-15 (max|b0| 0.0017 max|b2| 0.0028) ok | M 1.2e-14 (max|b0| 0.0047 max|b2| 0.0335) ok | P 3.3e-16 (max 0.0207) ok
+ifle22f7q seeing 4.0 2.00"/px FWHM 2.00 px | G 1.1e-15 (max|b0| 0.0012 max|b2| 0.0065) ok | M 3.4e-15 (max|b0| 0.0023 max|b2| 0.0317) ok | P 3.3e-16 (max 0.0348) ok
+# H1 verdict: PASS
+# done in 298 s

@@ -1,0 +1,8 @@
+# pages bar 2026-09-30 12:15:59 UTC | HEAD d11c887
+P0  FAIL  no pages.yml to plant in
+P1  FAIL  pages.yml: absent | tests.yml: clean
+P2  FAIL  K18: red | on a copy that adds pull_request: no file
+P3  PASS  tar exit 0; 14 members, index.html at the root: True; the page loads 4 addresses, 0 missing; links 0; 0.3 MB
+P4  FAIL  strict: FAIL (229 run, 1 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 1, 169 s | pages_bar/suite_P4.txt
+# pages bar: NOT MET, 1 of 5 (failing: P0 P1 P2 P4)
+exit 0

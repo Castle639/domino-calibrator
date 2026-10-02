@@ -1,0 +1,8 @@
+# pages bar 2026-09-30 12:19:41 UTC | HEAD ebb431d
+P0  PASS  the planted copy: exit 1, 4 lines; the undefined step named: True
+P1  PASS  pages.yml: clean | tests.yml: clean
+P2  PASS  K18: green | on a copy that adds pull_request: red
+P3  PASS  tar exit 0; 14 members, index.html at the root: True; the page loads 4 addresses, 0 missing; links 0; 0.3 MB
+P4  PASS  strict: PASS (229 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 0, 179 s | pages_bar/suite_P4.txt
+# pages bar: MET, 5 of 5
+exit 0

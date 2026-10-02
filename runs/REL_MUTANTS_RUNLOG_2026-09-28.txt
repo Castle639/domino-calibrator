@@ -1,0 +1,8 @@
+# the seventh room's mutants | calibrator/runs/rel_mutants.py | HEAD 1c49200 (the words as in the working tree)
+the unchanged copy (control)                         GREEN as it must | red: -
+a box loses its seeing edge (README)                 RED as it must | red: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box, test_w2_every_tally_is_the_recount_of_its_box, test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars, test_w4_every_other_number_is_registered_and_true
+a count off by one (README)                          RED as it must | red: test_w2_every_tally_is_the_recount_of_its_box, test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+set-ups for cells (README)                           RED as it must | red: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box, test_w1_3_cells_are_counted_as_cells, test_w2_every_tally_is_the_recount_of_its_box, test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars, test_w4_every_other_number_is_registered_and_true
+truth without HST's photocentre (README)             RED as it must | red: test_w1_2_truth_is_named_as_hsts_photocentre
+the page's old sentence, lane 2's first blocker      RED as it must | red: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box
+# PASS: every mutant red, the control green

@@ -1,0 +1,19 @@
+# audit_fix_bar_2 | HEAD 94f5954 | its sha256 93de899e9ca44bda06ccd82f34e9f467ace3448d8528c3cd619be108fac0be70
+Z0  PASS  the harness's loading, the page's parseFITS: w6248 6248x4176 = 26.1 Mpx, too big True, readable False | w4096 4096x4096, readable True, too big False | the limit 25 Mpx
+Z1  PASS  the page refuses w6248 at loading: True, and offers nothing: True | the command line writes no record: True (a comet measured (only 37 of 41 radii converged: the fit had too little to hold))
+    the page: info "Could not read: too big for the page (26 Mpx; the limit is 25 Mpx): cut out the comet first" | Copy disabled True | ADES "" | zero ""
+Z2  PASS  the audit's other 12 inputs: the command line as wanted True | the page's engine as wanted True | the pixel answer stands on the four WCS True
+    ok  ok  cd_zero            cli: a sky position (the WCS matrix is all zero or cannot be inverted)      | engine: a sky position (the WCS matrix is all zero or cannot be inverted)
+    ok  ok  cd_singular        cli: a sky position (the WCS matrix is all zero or cannot be inverted)      | engine: a sky position (the WCS matrix is all zero or cannot be inverted)
+    ok  ok  sip_huge           cli: a sky position (the WCS distortion changes the pixel scale by a factor | engine: a sky position (the WCS distortion changes the pixel scale by a factor
+    ok  ok  crpix_str          cli: a sky position (the WCS card CRPIX1 = 'abc' is not a number)           | engine: a sky position (the WCS card CRPIX1 = 'abc' is not a number)
+    ok  ok  const              cli: a comet measured (only 5 of 41 radii converged: the fit had too little | engine: a comet measured (only 6 of 41 radii converged: the fit had too little
+    ok  ok  w4096 automatic    cli: a comet measured (only 37 of 41 radii converged: the fit had too littl | engine: a comet measured (only 37 of 41 radii converged: the fit had too littl
+    ok  ok  c101 +5 +0         cli: a comet measured (only 7 of 41 radii converged: the fit had too little | engine: a comet measured (only 7 of 41 radii converged: the fit had too little
+    ok  ok  c101 +0 -5         cli: a comet measured (only 3 of 41 radii converged: the fit had too little | engine: a comet measured (only 3 of 41 radii converged: the fit had too little
+    ok  ok  c101 (40, 61)      cli: a comet measured (only 4 of 41 radii converged: the fit had too little | engine: a comet measured (only 18 of 41 radii converged: the fit had too littl
+    ok  ok  c101 on the comet  cli: record                                                                 | engine: record
+    ok  ok  c101 automatic     cli: record                                                                 | engine: record
+    ok  ok  good               cli: record                                                                 | engine: record
+Z3  PASS  the whole suite: strict: PASS (239 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# audit fix bar 2: MET, 4 of 4

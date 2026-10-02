@@ -1,0 +1,14 @@
+# fix_f7_bar | HEAD 6a0a389 | the confirmation 3c911895a809 (the audit room's)
+    sip_ok       rc 0 | off 0.0 | record True | need None | judge submit is OK
+    sip_nan_raw  rc 2 | off None | record False | need a sky position (the WCS card A_2_0 = 'NAN' is not a number) | judge no record
+    sip_nan_str  rc 2 | off None | record False | need a sky position (the WCS card A_2_0 = 'NaN' is not a number) | judge no record
+    sip_drop     rc 0 | off 1.77 | record True | need None | judge submit is OK
+    engine sip_ok       {"need": [], "rd": [151.26468965882043, 10.587262750990512]}
+    engine sip_nan_raw  {"need": ["a sky position (the WCS card A_2_0 = 'NAN' is not a number)"], "rd": null}
+    engine sip_nan_str  {"need": ["a sky position (the WCS card A_2_0 = 'NaN' is not a number)"], "rd": null}
+    engine sip_drop     {"need": [], "rd": [151.2651899398735, 10.587263121673582]}
+R0 PASS  the controls: the confirmation the audit room's and run whole; sip_ok on the truth; sip_drop 1.77" off; the engine refuses both NaN files and places the other two; sip_nan_str refused here
+R1 PASS  sip_nan_raw: rc 2, record False, sky None, need "a sky position (the WCS card A_2_0 = 'NAN' is not a number)" (the engine: "a sky position (the WCS card A_2_0 = 'NAN' is not a number)")
+R2 PASS  tests/test_fix_f7.py | OK
+R3 PASS  strict: PASS (307 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F7's bar: MET, 4 of 4

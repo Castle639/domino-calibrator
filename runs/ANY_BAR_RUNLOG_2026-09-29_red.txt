@@ -1,0 +1,28 @@
+# the bar for launch step 1, 2026-09-29 19:24:06 UTC
+# the record (pyproject.toml): Python 3.11, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# tested   Python 3.11.15, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# pick311  Python 3.11.15, numpy 2.4.6, scipy 1.17.1, astropy 8.0.1
+# pick313  Python 3.13.12, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+# pick314  Python 3.14.7, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+
+A0         PASS  the tested setup: {'Python': '3.11.15', 'numpy': '2.2.6', 'scipy': '1.15.3', 'astropy': '6.1.7'}
+A.tested   FAIL  ran 223, failures 0, errors 0, skipped 0 (249 s) | K13 ran: False | K6 tested leg: None
+A.pick311  FAIL  ran 223, failures 7, errors 0, skipped 0 (242 s) | K13 ran: False | K6 tested leg: None
+A.pick313  FAIL  ran 223, failures 15, errors 0, skipped 2 (210 s) | K13 ran: False | K6 tested leg: None | skipped: test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu: no Debian or Ubuntu system Python here to read the packages of; test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install: no system Python >= 3.13 here that PEP 668 marks as externally managed
+A.pick314  FAIL  ran 223, failures 15, errors 0, skipped 2 (212 s) | K13 ran: False | K6 tested leg: None | skipped: test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu: no Debian or Ubuntu system Python here to read the packages of; test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install: no system Python >= 3.14 here that PEP 668 marks as externally managed
+B0         FAIL  cut curl: exit 7 | curl without the proxy: exit 0 | cut pip download: exit 1 | control, the proxy as set: HTTP 200
+B1         FAIL  no network: ran 223, failures 5, errors 0, skipped 0 (192 s) | skipped: none
+B2         FAIL  no validator: ran 223, failures 4, errors 0, skipped 10 (221 s) | K6 among the skipped: False | reasons: ['the MPC judge needs ADES_PYLIB and ADES_MASTER', 'the MPC judge needs ADES_PYLIB and ADES_MASTER (see test_har', 'the MPC judge needs ADES_PYLIB and ADES_MASTER (see the docs']
+C0         FAIL  imports the copy: True | tested test_k5_ green; tested test_k7_ green; tested test_k13 error; tested test_w4_ green; tested test_t1_ green; tested test_03_ green; pick311 (no flag) test_k13 error; scan red: ['[a session]/scratchpad/any_bar/mutants/control/calibrator/tests/test_release_package.py:36 "\\S" is an invalid escape sequence. Did you mean "\\\\S"? A raw string is also an option.']
+M1         PASS  the README's tested numpy changed (tested, the flag set): test_k5_ red, test_w4_ red
+M2         PASS  the CI's numpy pin changed (tested, the flag set): test_k7_ red
+M3         PASS  the CI's Python changed (tested, the flag set): test_k7_ red
+M4         FAIL  pyproject's numpy minimum changed alone (tested, the flag set): test_k5_ red, test_k7_ green, test_k13 error
+M5         FAIL  the tested-versions flag set on what pip picks on 3.11 (pick311, the flag set): test_k13 error
+M6         PASS  the scatter's generator seeded one off (tested, the flag set): test_t1_ red
+M7         PASS  each noise redraw laid down transposed (tested, the flag set): test_t1_ red
+M8         PASS  G's amplitude check removed (tested, the flag set): test_03_ red
+M9         PASS  an invalid escape in __init__.py's docstring: the scan lists ['[a session]/scratchpad/any_bar/mutants/M9/calibrator/__init__.py:1 "\\d" is an invalid escape sequence. Did you mean "\\\\d"? A raw string is also an option.', '[a session]/scratchpad/any_bar/mutants/M9/calibrator/tests/test_release_package.py:36 "\\S" is an invalid escape sequence. Did you mean "\\\\S"? A raw string is also an option.']
+D          FAIL  62 files compiled on 3.14.7 | failing: ['[the checkout]/calibrator/tests/test_release_package.py:36 "\\S" is an invalid escape sequence. Did you mean "\\\\S"? A raw string is also an option.']
+
+THE BAR: NOT MET (8 of 19 clauses pass; failing: A.tested, A.pick311, A.pick313, A.pick314, B0, B1, B2, C0, M4, M5, D)

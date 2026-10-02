@@ -1,0 +1,12 @@
+# fix_f1_bar | HEAD f941409 | its sha256 e45c8023d209db944e4d8fbf1c989dd106aae4e153e775e4691729939c08e99c | tests/test_fix_f1.py 0844ec0785779fed59982d1d20fe6a48acef21ca47a936179de8accbae87bed4
+R0  PASS  the fixture gets a record: True | the judge accepts it: True | refuses a planted bad time: True | the checkers on planted strings: 11 of 11 | a control character and a character outside ASCII seen: True | the MPC list: 31 codes, 250 and 247 in, 568 out: True
+R1  PASS  tests.test_fix_f1.F1_1_Stations: 3 run
+R2  PASS  tests.test_fix_f1.F1_2_RmsFigures: 3 run
+R3  PASS  tests.test_fix_f1.F1_3_Decimals: 4 run
+R4  PASS  tests.test_fix_f1.F1_4_Names: 2 run
+R5  PASS  tests.test_fix_f1.F1_6_Software: 1 run
+R6  PASS  tests.test_fix_f1.F1_7_ControlCharacters: 4 run
+R7  PASS  tests.test_fix_f1.F1_8_AsciiDesignations: 2 run
+R8  PASS  the page in Chromium: the full record holds the software block: True, ra and dec at 6 decimals: True, the judge: True | station 250: no record, Copy disabled, the reason shown: True
+R9  PASS  the whole suite: strict: PASS (258 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# fix f1 bar: MET, 10 of 10

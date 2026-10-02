@@ -1,0 +1,444 @@
+# step 2 run 2026-09-28 00:06:46 UTC | HEAD 28970bd + the Python fixes (estimators 8447dda5cc1b, shrink 90ddf8a01d95, ades f0e0a05731d2, cli 069babacb5c7); the page unchanged | ADES-Master 39ae5a9
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ok
+test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ok
+test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ok
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ok
+test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ok
+test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... ok
+test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ok
+test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ok
+test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ok
+test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ok
+test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... ok
+test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... ok
+test_08_cli_radii_are_checked (calibrator.tests.test_hardening.TestSilentWrong.test_08_cli_radii_are_checked) ... ok
+test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... ok
+test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ok
+test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... ok
+test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... ok
+test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time) ... ok
+test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ok
+test_15c_a_date_without_a_time_is_refused (calibrator.tests.test_hardening.TestSilentWrong.test_15c_a_date_without_a_time_is_refused) ... ok
+test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ok
+test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ok
+test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... ok
+test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ok
+test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... FAIL
+test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... FAIL
+test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... FAIL
+test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... FAIL
+test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... FAIL
+test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... FAIL
+test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... FAIL
+test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... FAIL
+test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... FAIL
+test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... FAIL
+test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... FAIL
+test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ERROR
+test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... FAIL
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... FAIL
+test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... FAIL
+test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... FAIL
+test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... FAIL
+test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... FAIL
+test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... FAIL
+test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... FAIL
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+======================================================================
+ERROR: test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 182, in test_15_time_parity
+    self.assertTrue(o[0].get('error'))                          # c0ae330 wrote the start as the mid-exposure
+                    ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+======================================================================
+FAIL: test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 93, in test_03_edge_is_a_reason_not_a_throw
+    o, p = parity(self, img, 35.0, 20.0, est, 100.0)       # c0ae330: "aperture leaves the image", no result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 56, in parity
+    o = js(SHRINK_JS, dict(img_payload(img), x0=x0, y0=y0, opts=opts))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /user/[the checkout]/page/zeroap.js:262:18)
+    at Object.shrink ([the checkout][the checkout]/page/zeroap.js:290:75)
+    at Object.<anonymous> (/tmp/tmpfwpor6d1/s.js:3:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 99, in test_03b_small_annulus_is_a_reason_not_a_throw
+    o, p = parity(self, img, 10.0, 10.0, est, 'annulus')  # c0ae330: "annulus has fewer than 8 pixels", no result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 56, in parity
+    o = js(SHRINK_JS, dict(img_payload(img), x0=x0, y0=y0, opts=opts))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: r/[the checkout]/page/zeroap.js:289:40)
+    at Object.<anonymous> (/tmp/tmpsnnucdej/s.js:3:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 106, in test_04a_aitken_jump_is_bounded_as_in_python
+    self.assertEqual(bool(o['ok']), bool(p['ok']), (o, p))     # c0ae330: the page jumped 9.8 px and said ok
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True != False : ({'x': 39.99999999992334, 'y': 39.999999999999986, 'n': 16, 'ok': True}, {'x': nan, 'y': nan, 'n': 500, 'flux': 124269.20183088366, 'ok': False, 'reason': 'no convergence in 500 iterations'})
+
+======================================================================
+FAIL: test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 114, in test_04b_nan_background_is_a_reason
+    o, p = parity(self, img, 20.0, 20.0, 'M', 'annulus')       # c0ae330: the page read the NaN background as 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 59, in parity
+    test.assertEqual([bool(v) for v in o['ok']], [bool(v) for v in p['ok']])
+AssertionError: Lists differ: [True[75 chars]rue, True, True, True, True, True, True, True,[115 chars]True] != [True[75 chars]rue, False, False, False, False, False, False,[142 chars]alse]
+
+First differing element 14:
+True
+False
+
+  [True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True]
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False]
+
+======================================================================
+FAIL: test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 122, in test_04c_G_small_apertures_are_refused
+    self.assertFalse(q['ok']); self.assertIn('fewer than 8', q['reason'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 127, in test_05_no_time_no_record
+    o = js("out = Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: ''}, D));", REC_JS)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: 4:137)
+    at Object.<anonymous> (/tmp/tmp875h40az/s.js:2:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 134, in test_06_cube_with_one_plane
+    self.assertTrue(o[0]['has']); self.assertEqual((o[0]['nx'], o[0]['ny']), (21, 21))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 137, in test_08_radii_are_validated
+    o = js("out = [[2, 6, 0], [2, 6, -0.1], [2, 6, NaN], [6, 2, 0.1], [0, 6, 0.1], [2, 6, 0.1]].map(a => Z.radiiFrom(a[0], a[1], a[2]));")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /tmpqneeufrr/s.js:2:96
+    at Array.map (<anonymous>)
+    at Object.<anonymous> (/tmp/tmpqneeufrr/s.js:2:85)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 143, in test_09_unparseable_date_is_a_reason_not_a_throw
+    o = js("out = [Z.midExposure({'DATE-OBS': '27/12/25', EXPTIME: 60}), Z.midExposure({'DATE-OBS': 'yesterday', EXPTIME: 60})];")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /[the checkout]/page/zeroap.js:320:14)
+    at Object.<anonymous> (/tmp/tmpylmj5f9y/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 151, in test_10_big_images_are_refused_and_the_stretch_is_sampled
+    o = js("const b = require('fs').readFileSync(D.p); const h = Z.parseFITS(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength));"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: r/[the checkout]/page/zeroap.js:43:42)
+    at Object.<anonymous> (/tmp/tmp3mz21mwn/s.js:2:56)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 161, in test_12_14_ades_2022_parity
+    o = js("out = [Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: '2025-12-12T21:21:02.00Z'}, D)),"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: :137)
+    at Object.<anonymous> (/tmp/tmpsfbq5hm6/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 198, in test_18_17_unsupported_wcs_is_refused_not_misread
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED', (c, v))
+AssertionError: False is not true : ({'CTYPE1': 'RA---TPV', 'CTYPE2': 'DEC--TPV'}, None)
+
+======================================================================
+FAIL: test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 208, in test_19_blank_pixels_are_not_data
+    self.assertIsNone(o[0]); self.assertEqual(o[1], 1000.0)     # c0ae330: -32768, a pixel of data
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -32768 is not None
+
+======================================================================
+FAIL: test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 212, in test_mpc_judge_accepts_the_page_record
+    o = js("out = [Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: '2025-12-12T21:21:02.00Z'}, D)),"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: :137)
+    at Object.<anonymous> (/tmp/tmppzp_75kl/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 268, in test_03_edge_gives_a_measurement
+    self.assertNotIn('Error', c['status']); self.assertIn('did not converge', c['status']); self.assertIn('Zero-aperture', c['zero'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Error' unexpectedly found in 'Error: aperture leaves the image'
+
+======================================================================
+FAIL: test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 272, in test_05_no_time_no_record_and_nothing_to_copy
+    self.assertNotIn('YYYY', c['ades']); self.assertNotIn('permID', c['ades']); self.assertTrue(c['copyDisabled'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YYYY' unexpectedly found in '# version=2017\n# observatory\n! mpcCode 568\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |568|YYYY-MM-DDThh:mm:ss.ssZ|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, r 2-6 px)\n'
+
+======================================================================
+FAIL: test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 260, in test_08_zero_step_is_refused_not_frozen
+    self.assertFalse(c.get('timeout') or c.get('crashed'), c); self.assertIn('step', c['status'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : {'name': 'step0', 'errors': [], 'missing': [], 'info': '71×71 px, WCS 0.756"/px', 'crashed': True, 'timeout': True}
+
+======================================================================
+FAIL: test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 264, in test_09_bad_date_keeps_the_file
+    self.assertNotIn('Could not read', c['info']); self.assertIn('71', c['info']); self.assertEqual(c['tobs'], '')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Could not read' unexpectedly found in 'Could not read: Invalid time value'
+
+======================================================================
+FAIL: test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 276, in test_full_record_on_the_page
+    self.assertIn('# version=2022', c['ades']); self.assertFalse(c['copyDisabled']); self.assertEqual(c['errors'], [])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '# version=2022' not found in '# version=2017\n# observatory\n! mpcCode 568\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, r 2-6 px)\n'
+
+----------------------------------------------------------------------
+Ran 78 tests in 34.430s
+
+FAILED (failures=19, errors=1)

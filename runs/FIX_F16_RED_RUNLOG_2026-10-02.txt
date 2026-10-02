@@ -1,0 +1,5 @@
+# fix_f16_bar | HEAD 08b5df3
+X0 PASS  the controls: OK
+X1 FAIL  tests/test_fix_f16.py | FAILED (failures=1, errors=1) | failing: setUpClass, test_runs_readme_says_it_holds_on_the_machine_that_wrote_the_records
+X2 FAIL  strict: FAIL (360 run, 1 failures, 1 errors, 0 skipped: 0 allowed, 0 not) | failing: setUpClass, test_runs_readme_says_it_holds_on_the_machine_that_wrote_the_records
+# F16's bar: NOT MET, 1 of 3

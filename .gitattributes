@@ -1,0 +1,3 @@
+# Git converts no file of this repository, on any system: a Windows checkout would otherwise rewrite line endings, and
+# the files whose bytes are checked (the fonts' licence, the modules, the checksum list, the records) would change.
+* -text

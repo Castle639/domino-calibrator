@@ -1,0 +1,25 @@
+# audit_fix_bar | HEAD 03bbf62 | its sha256 38c1cebfa911f78b7930fd2dbb3c70a9c7088b0236217d7a01942bd32f2ed531
+X0  PASS  the saturated frame peaks at 65535: True | the automatic start takes the brighter star: True (20.0, 81.0) | the good image 41 of 41: True
+X1  PASS  B1 on the command line: OK | the engine (B1 and B2, and the same words): OK | the page: OK
+X2  PASS  B2 on the command line: OK | the engine: OK | the page: OK
+X3  FAIL  the audit's own inputs, the command line: as wanted True | the pixel answer stands on the four WCS: True | the page's engine: False
+    ok   cd_zero            a sky position (the WCS matrix is all zero or cannot be inverted)
+    ok   cd_singular        a sky position (the WCS matrix is all zero or cannot be inverted)
+    ok   sip_huge           a sky position (the WCS distortion changes the pixel scale by a factor of 0 at the measured position, outside 0.67-1.5: a broken distortion)
+    ok   crpix_str          a sky position (the WCS card CRPIX1 = 'abc' is not a number)
+    ok   const              a comet measured (only 5 of 41 radii converged: the fit had too little to hold)
+    ok   w6248 automatic    a comet measured (only 37 of 41 radii converged: the fit had too little to hold)
+    ok   w4096 automatic    a comet measured (only 37 of 41 radii converged: the fit had too little to hold)
+    ok   c101 +5 +0         a comet measured (only 7 of 41 radii converged: the fit had too little to hold)
+    ok   c101 +0 -5         a comet measured (only 3 of 41 radii converged: the fit had too little to hold)
+    ok   c101 (40, 61)      a comet measured (only 4 of 41 radii converged: the fit had too little to hold)
+    ok   c101 on the comet  record
+    ok   c101 automatic     record
+    ok   good               record
+    the engine: the engine failed: node failed: ata')
+    at Object.<anonymous> (/tmp/tmp2yyhp4i2/s.js:8:41)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+X4  PASS  the study's 30 frames, G and M, from its own starts: 60 of 60 records
+X5  PASS  the whole suite: strict: PASS (238 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# audit fix bar: NOT MET, 5 of 6

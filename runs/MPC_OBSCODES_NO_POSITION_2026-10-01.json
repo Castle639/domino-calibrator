@@ -1,0 +1,133 @@
+{
+ "what": "The MPC's observatory codes with no fixed position (no longitude, cos or sin in the list): space-based and roving observatories, for which ADES's Location Group (sys, ctr, pos1-pos3) must be present. Read once by the calibrator's fix room, at his word (W6), for item 1 of the audit's should-fixes (F2.1).",
+ "source": "https://minorplanetcenter.net/iau/lists/ObsCodesF.html",
+ "read": "2026-10-01 11:55:11 UTC",
+ "sha256_of_the_page": "005435f0e5a4a48a28aa4bed6cd3bb48ed0508e6bd5fca8274440a2d71159743",
+ "codes_in_the_list": 2729,
+ "no_fixed_position": [
+  {
+   "code": "245",
+   "name": "Spitzer Space Telescope"
+  },
+  {
+   "code": "247",
+   "name": "Roving Observer"
+  },
+  {
+   "code": "249",
+   "name": "SOHO"
+  },
+  {
+   "code": "250",
+   "name": "Hubble Space Telescope"
+  },
+  {
+   "code": "258",
+   "name": "Gaia"
+  },
+  {
+   "code": "270",
+   "name": "Unistellar Network, Roving Observer"
+  },
+  {
+   "code": "273",
+   "name": "Euclid"
+  },
+  {
+   "code": "274",
+   "name": "James Webb Space Telescope"
+  },
+  {
+   "code": "275",
+   "name": "Non-geocentric Occultation Observation"
+  },
+  {
+   "code": "288",
+   "name": "SPHEREx"
+  },
+  {
+   "code": "289",
+   "name": "Nancy Grace Roman Space Telescope"
+  },
+  {
+   "code": "311",
+   "name": "NOAA GOES-19"
+  },
+  {
+   "code": "313",
+   "name": "NASA Parker Solar Probe"
+  },
+  {
+   "code": "314",
+   "name": "NOAA SOLAR-1"
+  },
+  {
+   "code": "315",
+   "name": "ESA Solar Orbiter"
+  },
+  {
+   "code": "332",
+   "name": "Jupiter Icy Moons Explorer (JUICE)"
+  },
+  {
+   "code": "335",
+   "name": "PUNCH"
+  },
+  {
+   "code": "336",
+   "name": "Lucy"
+  },
+  {
+   "code": "338",
+   "name": "Psyche"
+  },
+  {
+   "code": "339",
+   "name": "Trace Gas Orbiter"
+  },
+  {
+   "code": "C49",
+   "name": "STEREO-A"
+  },
+  {
+   "code": "C50",
+   "name": "STEREO-B"
+  },
+  {
+   "code": "C51",
+   "name": "WISE"
+  },
+  {
+   "code": "C52",
+   "name": "Swift"
+  },
+  {
+   "code": "C53",
+   "name": "NEOSSat"
+  },
+  {
+   "code": "C54",
+   "name": "New Horizons"
+  },
+  {
+   "code": "C55",
+   "name": "Kepler"
+  },
+  {
+   "code": "C56",
+   "name": "LISA-Pathfinder"
+  },
+  {
+   "code": "C57",
+   "name": "TESS"
+  },
+  {
+   "code": "C58",
+   "name": "NEO Surveyor"
+  },
+  {
+   "code": "C59",
+   "name": "Yangwang-1"
+  }
+ ]
+}

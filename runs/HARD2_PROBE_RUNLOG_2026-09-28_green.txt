@@ -1,0 +1,41 @@
+# sub-case probe 2026-09-28 16:21:00 UTC | HEAD 04b9bfb + round 2's fixes, as committed next (cli 199172162fc2, zeroap 56c7d0f3d47f, index f65c2beb0803)
+1.5 --x=inf                                                rc 1 | # cannot measure: the start (inf, 20.0) is not a finite pixel position
+1.5 --x=-inf                                               rc 1 | # cannot measure: the start (-inf, 20.0) is not a finite pixel position
+1.5 --x=nan                                                rc 1 | # cannot measure: the start (nan, 20.0) is not a finite pixel position
+1.5 shrink(inf)                                            ValueError: the start (inf, 20.0) is not a finite pixel position
+1.11 case 1 page | python                                  refused: no exposure time (EXPTIME, EXPOSURE) and no DATE-AVG, MJD-AVG or DATE-END: the mid-exposure is unknown | refused (ValueError)
+1.11 case 2 page | python                                  2025-12-12T21:21:32.00Z | 2025-12-12T21:21:32.00Z
+1.11 case 3 page | python                                  refused: no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...) | refused (ValueError)
+1.11 case 4 page | python                                  2025-12-12T21:21:02.00Z | 2025-12-12T21:21:02.00Z
+1.12 PCOUNT -3100                                          2
+1.12 PCOUNT -100000                                        2
+4.5 page parse rgb: unreadable                             ['a cube of 3 planes (a colour image?): the page reads one 2-D image; save one plane on its own']
+4.5 CLI on the .fz: x0                                     20.203586234401822
+4.6 page WCS RA---TPV                                      projection TPV: the page reads TAN and TAN-SIP only; the command line reads the other FITS projections
+4.6 page WCS RA---ZPN                                      projection ZPN: the page reads TAN and TAN-SIP only; the command line reads the other FITS projections
+4.6 page WCS 1.0                                           PV terms on a TAN header, which the page does not apply: re-solve the image with SIP or TPV distortion
+4.6 page WCS 2                                             SIP coefficients without -SIP in CTYPE (astropy would apply them; the page would not): the command line applies them
+4.6 page WCS DEC--TAN                                      the WCS has Dec first (CTYPE DEC--TAN, RA---TAN): the page reads RA first; the command line reads either order
+4.6 page WCS LOOKUP                                        lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does
+4.6 page WCS FK4                                           frame FK4 at equinox 1950: only ICRS, or FK5 at J2000, can be written as ICRS; re-solve the image against a current catalogue (Gaia) for an ICRS WCS
+4.6 page TIMESYS TT                                        {'error': 'TIMESYS TT: the page reads UTC only; the command line converts TT and TAI'}
+4.6 page mode empty                                        mode: choose one (CCD; CMO for a CMOS camera; VID; TDI)
+4.6 page BITPIX 64                                         64-bit integer pixels (BITPIX 64), which the page does not read: the command line does
+judge case 1 (edge): a record?                             True
+browser newfile step 0                                     copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser newfile step 1                                     copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJ"
+browser badfile step 0                                     copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser badfile step 1                                     copy off | ades "" | status "" | info "Could not read: no 2-D image in this file" | note ""
+browser badfile step 2                                     copy off | ades "" | status "Load a FITS cutout first." | info "Could not read: no 2-D image in this file" | note ""
+browser field step 0                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser field step 1                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser start step 0                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser start step 1                                       copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser method step 0                                      copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser method step 1                                      copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser edgefull step 0                                    copy ON | ades "# version=2022" | status "8 of 41 radii did not converge (left out" | info "41×41 px, WCS 0.756"/px" | note "Time: obsTime from DATE-O
+browser tyc2 step 0                                        copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser fz step 0                                          copy off | ades "" | status "" | info "Could not read: a compressed (fpack) image, w" | note ""
+browser rgb step 0                                         copy off | ades "" | status "" | info "Could not read: a cube of 3 planes (a colour " | note ""
+browser bigtime step 0                                     copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: the header time (MJD-OBS (the start) + EXPTIME/2) is o"
+browser tt step 0                                          copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: TIMESYS TT: the page reads UTC only; the command line "

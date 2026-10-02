@@ -1,0 +1,5 @@
+# Launch step 2's bar (calibrator/runs/ci_bar.py), its red run on the calibrator as step 1 left it (c94c531): the prediction, written before the run
+W1-W7 (W8 not re-run: the code is 10d0696's, where step 1's bar was met, 19 of 19). PASS (2): W1 (the least certain: ShellCheck's first look at the run lines); W3 (today's K7 on today's file).
+FAIL (15): W2 (checkout@v4, setup-python@v5, setup-node@v4, cache@v4, all on Node 20); W3.wm1-wm10 (each mutation's text occurs 0 times in today's file); W4 (no strict runner); W5 (no README script); W6 (no K14); W7 (no strict runner).
+THE BAR (only W1-W7): NOT MET (2 of 17)
+# written 2026-09-29 20:35:07 UTC, sha256 of the lines above: 398640275721ac1b

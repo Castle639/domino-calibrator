@@ -1,0 +1,4 @@
+# fix_f3_whole_frame | HEAD 0990952 | 3.11.15 | the frame 6248 x 4176, 26.1 Mpx, uint16, 52.2 MB on disk | the comet at (4800.35, 3100.55)
+run 1: exit 0, 41.6 s, peak memory 1.41 GB (the children's largest so far; before it 0.00 GB) | # zero aperture: x 4800.5814 y 3100.6688 (0-based; add 1 for ds9) | slope per px
+run 2: exit 0, 33.3 s, peak memory 1.41 GB (the children's largest so far; before it 1.41 GB) | # zero aperture: x 4800.5814 y 3100.6688 (0-based; add 1 for ds9) | slope per px
+README: on a 26 Mpx frame, one run took about 42 s and 1.4 GB of memory

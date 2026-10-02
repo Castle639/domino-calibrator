@@ -1,0 +1,38 @@
+# audit_fix_bar_2 | HEAD 9a6a0a8 | its sha256 93de899e9ca44bda06ccd82f34e9f467ace3448d8528c3cd619be108fac0be70
+Z0  PASS  the harness's loading, the page's parseFITS: w6248 6248x4176 = 26.1 Mpx, too big True, readable False | w4096 4096x4096, readable True, too big False | the limit 25 Mpx
+Z1  FAIL  the page refuses w6248 at loading: True, and offers nothing: True | the command line writes no record: False (no reason line)
+    the page: info "Could not read: too big for the page (26 Mpx; the limit is 25 Mpx): cut out the comet first" | Copy disabled True | ADES "" | zero ""
+Z2  FAIL  the audit's other 12 inputs: the command line as wanted False | the page's engine as wanted False | the pixel answer stands on the four WCS True
+    the engine failed: node failed: tion
+    at Object.<anonymous> (/tmp/tmps6su14he/s.js:11:15)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/
+    BAD BAD cd_zero            cli: record                                                                 | engine: no answer
+    BAD BAD cd_singular        cli: record                                                                 | engine: no answer
+    BAD BAD sip_huge           cli: record                                                                 | engine: no answer
+    BAD BAD crpix_str          cli: record                                                                 | engine: no answer
+    BAD BAD const              cli: record                                                                 | engine: no answer
+    BAD BAD w4096 automatic    cli: record                                                                 | engine: no answer
+    BAD BAD c101 +5 +0         cli: record                                                                 | engine: no answer
+    BAD BAD c101 +0 -5         cli: record                                                                 | engine: no answer
+    BAD BAD c101 (40, 61)      cli: record                                                                 | engine: no answer
+    ok  BAD c101 on the comet  cli: record                                                                 | engine: no answer
+    ok  BAD c101 automatic     cli: record                                                                 | engine: no answer
+    ok  BAD good               cli: record                                                                 | engine: no answer
+Z3  FAIL  the whole suite: strict: FAIL (238 run, 12 failures, 1 errors, 3 skipped: 0 allowed, 3 not)
+        failed: test_b1_b2_the_page_offers_no_record_to_copy (tests.test_audit_blockers.TestThePage.test_b1_b2_the_page_offers_no_record_to_copy)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b1_b2_the_page_decides_as_the_command_line (tests.test_audit_blockers.TestTheEngine.test_b1_b2_the_page_decides_as_the_command_line)
+# audit fix bar 2: NOT MET, 1 of 4

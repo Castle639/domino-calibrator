@@ -1,0 +1,9 @@
+# page browser check 2026-09-27 18:36:27 UTC | headless Chromium (Playwright 1.56.1) on calibrator/page/index.html, the test_page cutout with SIP, start (35, 35)
+python G: x0 35.2693 y0 34.8502 | x2 35.2708 y2 34.8522 | nbad 0
+python M: x0 35.1707 y0 34.8226 | x2 35.2528 y2 34.8617 | nbad 0
+page G:
+{"info":"71×71 px, WCS 0.754\"/px","status":"done","zero":"Zero-aperture position: x = 35.2693, y = 34.8502 px (G); at r = 2: (35.2708, 34.8522); trend per px of radius: (0.00184, -0.00015). RA 168.6987183, Dec 4.5991541 deg. The r = 2 photocentre sits -0.001\" E, 0.002\" N of it.","ades":"# version=2017\n# observatory\n! mpcCode XXX\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |XXX|2025-12-27T16:05:29.00Z|168.6987183|+4.5991541|Gaia3 |zero-aperture extrapolated (G, r 2-6 px)\n","tobs":"2025-12-27T16:05:29.00Z","circles":82,"errors":[]}
+
+page M:
+{"info":"71×71 px, WCS 0.754\"/px","status":"done","zero":"Zero-aperture position: x = 35.1707, y = 34.8226 px (M); at r = 2: (35.2528, 34.8617); trend per px of radius: (0.04248, 0.00796). RA 168.6987386, Dec 4.5991471 deg. The r = 2 photocentre sits -0.060\" E, 0.033\" N of it.","ades":"# version=2017\n# observatory\n! mpcCode XXX\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |XXX|2025-12-27T16:05:29.00Z|168.6987386|+4.5991471|Gaia3 |zero-aperture extrapolated (M, r 2-6 px)\n","tobs":"2025-12-27T16:05:29.00Z","circles":82,"errors":[]}
+

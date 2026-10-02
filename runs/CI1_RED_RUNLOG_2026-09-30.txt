@@ -1,0 +1,18 @@
+# ci1_bar | HEAD e5f548d | its sha256 d14106d231f81dbc0ceecee5554b39ce6e2664b4ae9f6549753f2c6ff5f20f54
+B0  PASS  the CP1252 locale in force: True | a planted text file rewritten by an autocrlf clone: True | a planted open() named by EncodingWarning: True
+B1  FAIL  K19, the curve's failure ends with the path as given: FAILED (failures=1)
+B2  FAIL  the whole suite under CP1252: strict: FAIL (232 run, 5 failures, 1 errors, 0 skipped: 0 allowed, 0 not)
+        failed: test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record)
+        failed: test_judge_accepts_round_3s_cli_records (tests.test_hardening_3.TestMPCJudge3.test_judge_accepts_round_3s_cli_records)
+        failed: test_t1_3_a_later_load_wins (tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins)
+        failed: test_k19_the_curves_failure_names_the_path_as_given (tests.test_launch_steps.TestCurvePath.test_k19_the_curves_failure_names_the_path_as_given)
+        failed: test_k20_every_text_open_and_text_subprocess_names_its_encoding (tests.test_launch_steps.TestTextNamesItsEncoding.test_k20_every_text_open_and_text_subprocess_names_its_encoding)
+        failed: test_k21_git_converts_no_file (tests.test_launch_steps.TestTheCheckoutIsTheCommit.test_k21_git_converts_no_file)
+B3  FAIL  K20: FAILED (failures=1), omissions 53 | the command line with --curve under warn_default_encoding: exit 0, EncodingWarnings from domino_calibrator/ 1
+        [the checkout]/calibrator/domino_calibrator/cli.py:500: EncodingWarning: 'encoding' argument not specified
+B4  FAIL  K21: FAILED (failures=1) | HEAD cloned with core.autocrlf=true: 0 of 0 files differ from the commit | test_d4 there: FAILED (errors=1)
+B5  FAIL  the whole suite, UTF-8, the kit with the flag: strict: FAIL (232 run, 3 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+        failed: test_k19_the_curves_failure_names_the_path_as_given (tests.test_launch_steps.TestCurvePath.test_k19_the_curves_failure_names_the_path_as_given)
+        failed: test_k20_every_text_open_and_text_subprocess_names_its_encoding (tests.test_launch_steps.TestTextNamesItsEncoding.test_k20_every_text_open_and_text_subprocess_names_its_encoding)
+        failed: test_k21_git_converts_no_file (tests.test_launch_steps.TestTheCheckoutIsTheCommit.test_k21_git_converts_no_file)
+# ci1 bar: NOT MET, 1 of 6

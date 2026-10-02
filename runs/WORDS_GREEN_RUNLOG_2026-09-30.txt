@@ -1,0 +1,9 @@
+# words bar 2026-09-30 12:00:09 UTC | HEAD e38c28f
+W0  PASS  clean: D0 green, K16 green | an <img> from another site: D0 red | a link to another site: K16 red
+W1  PASS  test_k15_: green
+W2  PASS  test_k16_: green
+W3  PASS  test_k17_: green
+W4  PASS  W6 on calibrator/: green | on a copy naming nowhere/at_all.py: red
+W5  PASS  strict: PASS (228 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 0, 167 s | words_bar/suite_W5.txt
+# words bar: MET, 6 of 6
+exit 0

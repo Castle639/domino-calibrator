@@ -1,0 +1,32 @@
+# fix_f8_bar | HEAD 083f2c4 | TARGET head (HEAD:calibrator) | the confirmations C_R1_1.py the audit room's, c6_slice.py the audit room's
+    sip_ok {"rc": 0, "zero": ["64.3008", "63.6955"], "sky": ["151.2646897", "+10.5872628"], "record": "3I    |CCD |568|2025-12-12T10:00:30.00Z|151.264690|+10.587263|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)", "notes": [], "need": null, "j
+    sip_nan_raw {"rc": 2, "zero": ["64.3008", "63.6955"], "sky": null, "record": null, "notes": ["# note: header card A_2_0 could not be read, and was left out"], "need": "a sky position (the WCS card A_2_0 = 'NAN' is not a number)", "judge": "no record"}
+    sip_nan_str {"rc": 2, "zero": ["64.3008", "63.6955"], "sky": null, "record": null, "notes": [], "need": "a sky position (the WCS card A_2_0 = 'NaN' is not a number)", "judge": "no record"}
+    sip_drop {"rc": 0, "zero": ["64.3008", "63.6955"], "sky": ["151.2651899", "+10.5872631"], "record": "3I    |CCD |568|2025-12-12T10:00:30.00Z|151.265190|+10.587263|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)", "notes": [], "need": null, 
+    engine sip_ok {"need": [], "rd": [151.26468965882043, 10.587262750990512]}
+    engine sip_nan_raw {"need": ["a sky position (the WCS card A_2_0 = 'NAN' is not a number)"], "rd": null}
+    engine sip_nan_str {"need": ["a sky position (the WCS card A_2_0 = 'NaN' is not a number)"], "rd": null}
+    engine sip_drop {"need": [], "rd": [151.2651899398735, 10.587263121673582]}
+    C6.1 rot.fits (CD1_1 readable): exit 0 | record True | judge submit is OK | sky (149.9425643, 20.5536023)
+    C6.1 rot_nan: exit 2 | notes ['# note: header card CD1_1 could not be read, and was left out'] | record False | judge - | no sky from rot.fits's position | engine: ["a sky position (the WCS card CD1_1 = 'NAN' is not a number)"]
+    C6.1 rot_inf: exit 2 | notes ['# note: header card CD1_1 could not be read, and was left out'] | record False | judge - | no sky from rot.fits's position | engine: ["a sky position (the WCS card CD1_1 = 'Infinity' is not a number)"]
+    C6.1 engine on rot.fits: need []
+    C6.2 eexp.fits (E exponent): exit 0 | record True | judge submit is OK | sky (150.1227722, 20.4561183)
+    C6.2 crval_dexp: cli exit 0 | notes [] | record True | judge submit is OK | sky (150.1227722, 20.4561183) | 0.0" from eexp's | needs: -
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+    C6.2 crpix_dexp: cli exit 0 | notes [] | record True | judge submit is OK | sky (150.1227722, 20.4561183) | 0.0" from eexp's | needs: -
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+    C6.2 cd_dexp: cli exit 0 | notes [] | record True | judge submit is OK | sky (150.1227722, 20.4561183) | 0.0" from eexp's | needs: -
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+Q0 PASS  the controls: the confirmations the audit room's and run whole (exit 0, 0); sip_ok on the truth, sip_drop 1.77" off; rot.fits and eexp.fits accepted; the engine refuses sip_nan_raw, rot_nan and rot_inf and places the three D files 0.000/0.000/0.000"
+Q1 PASS  R1.1, sip_nan_raw: exit 2, record False, need "a sky position (the WCS card A_2_0 = 'NAN' is not a number)"
+    F6.1 rot_nan: exit 2, record False, need "a sky position (the WCS card CD1_1 = 'NAN' is not a number)"
+    F6.1 rot_inf: exit 2, record False, need "a sky position (the WCS card CD1_1 = '1E400' is not a number)"
+Q2 PASS  F6.1: CD1_1 unreadable (NAN, 1E400) refused at the sky in the page's words, the value as written
+    F6.2 crval_dexp: exit 0, record True, the E file's lines True
+    F6.2 crpix_dexp: exit 0, record True, the E file's lines True
+    F6.2 cd_dexp: exit 0, record True, the E file's lines True
+Q3 PASS  F6.2: the D exponents read as the header says, the E file's record
+Q4 PASS  tests/test_fix_f7.py and tests/test_fix_f8.py | OK
+Q5 PASS  strict: PASS (310 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F8's bar on head: MET, 6 of 6

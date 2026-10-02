@@ -1,0 +1,53 @@
+# The footer's bar (his word, 29 Sept 2026, the calibrator's tenth room): calibrator/tests/test_page_footer.py on the page as the tenth room found it (HEAD 90bfffc), before any fix, 13:12:05 UTC:
+test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) ... 
+  test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the credit is in a footer] ... FAIL
+  test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the footer is last: only scripts follow it] ... FAIL
+  test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the top no longer carries it] ... FAIL
+
+======================================================================
+FAIL: test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the credit is in a footer]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_page_footer.py", line 34, in test_the_credit_sits_in_a_footer_at_the_end_of_the_page
+    self.assertIsNotNone(m, 'no <footer> on the page')
+AssertionError: unexpectedly None : no <footer> on the page
+
+======================================================================
+FAIL: test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the footer is last: only scripts follow it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_page_footer.py", line 38, in test_the_credit_sits_in_a_footer_at_the_end_of_the_page
+    self.assertIsNotNone(m, 'no <footer> on the page')
+AssertionError: unexpectedly None : no <footer> on the page
+
+======================================================================
+FAIL: test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) [the top no longer carries it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_page_footer.py", line 42, in test_the_credit_sits_in_a_footer_at_the_end_of_the_page
+    self.assertNotIn(CREDIT, visible(top))
+AssertionError: "A Castle product from Domino Observatory. Built by Annie, the Castle's AI." unexpectedly found in "Zero-aperture comet astrometry domino-calibrator 0.1.0 · A Castle product from Domino Observatory. Built by Annie, the Castle's AI. A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded."
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=3)
+   exit 1
+# The fix: the credit leaves the top line for a <footer> after the study paragraph (index.html only). The bar, 13:12:53 UTC:
+test_the_credit_sits_in_a_footer_at_the_end_of_the_page (calibrator.tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+   exit 0
+# The release's K1 and K2 (the credit on every face, one version everywhere):
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+----------------------------------------------------------------------
+Ran 2 tests in 1.416s
+OK
+# The whole suite on the fix: 204 of 204, nothing skipped, 177.560 s (calibrator/runs/AUDIT_FOOTER_T_RUNLOG_2026-09-29.txt); the frames fetched again for it, 30 of 30 checksums, 1,266.1 MB in 39.1 s; ADES-Master 39ae5a9.
+# Rendered (headless Chromium, 1000 px wide, from the file, 13:17 UTC), light, then dark:
+   light: {"footerTop":1888,"footerBottom":1918,"lowestOtherBottom":1860,"pageHeight":1934,"top":"domino-calibrator 0.1.0","footer":"A Castle product from Domino Observatory. Built by Annie, the Castle's AI.","color":"rgb(102, 102, 102)","align":"center"}
+   dark: {"footerTop":1888,"footerBottom":1918,"lowestOtherBottom":1860,"pageHeight":1934,"top":"domino-calibrator 0.1.0","footer":"A Castle product from Domino Observatory. Built by Annie, the Castle's AI.","color":"rgb(154, 154, 154)","align":"center"}

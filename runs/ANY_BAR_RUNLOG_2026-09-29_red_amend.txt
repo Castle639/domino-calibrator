@@ -1,0 +1,11 @@
+# the bar for launch step 1, 2026-09-29 19:40:10 UTC
+# the record (pyproject.toml): Python 3.11, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# tested   Python 3.11.15, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# pick311  Python 3.11.15, numpy 2.4.6, scipy 1.17.1, astropy 8.0.1
+# pick313  Python 3.13.12, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+# pick314  Python 3.14.7, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+
+B0         PASS  inside the namespace: curl through the proxy exit 6 (curl: (6) Could not resolve host: pypi.org), curl without it exit 6 (curl: (6) Could not resolve host: pypi.org), pip download exit 1 | outside, the control: HTTP 200
+B1         FAIL  no network: ran 223, failures 5, errors 0, skipped 0 (190 s) | skipped: none
+
+THE BAR (only B0,B1): NOT MET (1 of 2 clauses pass; failing: B1)

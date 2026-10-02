@@ -1,0 +1,14 @@
+# a measurement, not a verdict (the audit fix bar's X3, its engine half, on the 12 inputs the page reads)
+cd_zero            a sky position (the WCS matrix is all zero or cannot be inverted)
+cd_singular        a sky position (the WCS matrix is all zero or cannot be inverted)
+sip_huge           a sky position (the WCS distortion changes the pixel scale by a factor of 0 at the measured position, outside 0.67-1.5: a broken distortion)
+crpix_str          a sky position (the WCS card CRPIX1 = 'abc' is not a number)
+const              a comet measured (only 6 of 41 radii converged: the fit had too little to hold)
+w4096 automatic    a comet measured (only 37 of 41 radii converged: the fit had too little to hold)
+c101 +5 +0         a comet measured (only 7 of 41 radii converged: the fit had too little to hold)
+c101 +0 -5         a comet measured (only 3 of 41 radii converged: the fit had too little to hold)
+c101 (40, 61)      a comet measured (only 18 of 41 radii converged: the fit had too little to hold)
+c101 on the comet  record
+c101 automatic     record
+good               record
+w6248 in the page: parseFITS gives [{'nx': 6248, 'ny': 4176, 'tooBig': True, 'readable': False}] (the page says "too big for the page ... cut out the comet first", C1.22)

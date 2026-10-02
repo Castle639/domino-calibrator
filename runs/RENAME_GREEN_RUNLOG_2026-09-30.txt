@@ -1,0 +1,15 @@
+# rename bar 2026-09-30 11:28:47 UTC | HEAD 21e9488 | tree clean
+R0   PASS  planted old forms hit 8 of 8; new-name and prose lines hit 0 of 4; forms seen: ci dotted import path quoted
+R1   PASS  domino_calibrator/: 10 of 10 modules | .py at the top: 0 | missing at the top: none
+R2   PASS  apertures.py same; estimators.py same; shrink.py same; degrade.py same; synth.py same; ades.py same
+R3   PASS  0 lines in 0 files
+R4   PASS  PASS: 225 run, 0 failures, 0 errors, 0 skipped (0 not allowed); exit 0; 160 s | rename_bar/suite_R4_castle_kit.txt
+R5   PASS  the copy rename_bar/stranger_R5/not-calibrator, 30 frames linked inside | PASS: 225 run, 0 failures, 0 errors, 0 skipped (0 not allowed); exit 0; 181 s | rename_bar/suite_R5_stranger_kit.txt
+R5m  PASS  30 frames linked beside the copy | FAIL: 225 run, 0 failures, 0 errors, 2 skipped (2 not allowed); exit 1; 154 s | refused skips 2, naming the fetcher 2 | rename_bar/suite_R5m_frames_beside.txt
+R6   PASS  pick311 PASS: 225 run, 0 failures, 0 errors, 0 skipped (0 not allowed); exit 0; 164 s | pick313 PASS: 225 run, 0 failures, 0 errors, 0 skipped (0 not allowed); exit 0; 169 s | pick314 PASS: 225 run, 0 failures, 0 errors, 0 skipped (0 not allowed); exit 0; 164 s
+R7   PASS  pip install: yes () | domino_calibrator from the venv: yes ([a session]/scratchpad/rename_r7__jhupq7p/venv/lib/python3.11/site-packages/domino_calibrator/__init__.py) | import calibrator fails: yes (<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'calibrator') | hstpsf not installed: yes (e 1, in <module>
+ModuleNotFoundError: No module named 'domino_calibrator.hstpsf') | top-level names: domino_calibrator alone: yes (domino_calibrator) | the nine modules installed: yes (__init__.py ades.py apertures.py cli.py degrade.py estimators.py hst.py shrink.py synth.py) | domino-calibrator --version: yes (domino-calibrator 0.1.0) | -m domino_calibrator.cli --version: yes (domino-calibrator 0.1.0)
+R8   PASS  actionlint: clean | checkout paths: domino-calibrator, domino-calibrator | run lines lacking: none | naming calibrator/: 0
+# rename bar: MET, 10 of 10
+exit 0

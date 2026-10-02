@@ -1,0 +1,8 @@
+# notes bar | CHANGELOG.md in [the checkout]/calibrator
+N0  FAIL  N3 planted: False, then red | N4 planted: False, then red | N1 planted: False, then red | N2 planted: False, then red | N5 planted: False, then red
+N1  FAIL  no CHANGELOG.md
+N2  FAIL  no CHANGELOG.md
+N3  FAIL  no CHANGELOG.md
+N4  FAIL  no CHANGELOG.md
+N5  FAIL  no CHANGELOG.md
+# notes bar: NOT MET, 0 of 6 (failing: N0 N1 N2 N3 N4 N5)

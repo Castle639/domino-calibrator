@@ -1,0 +1,14 @@
+# fix_f11_bar | HEAD b9d315d | TARGET sealed (1fdc2326b7f80c935cf2d051889a673dfff26699:release/domino-calibrator) | the slice the audit room's
+    C8.6 NAXIS3 = 1, a 2-axis WCS: CLI exit 2, the WCS matrix is all zero or cannot be inverted | page need [], sky yes
+    C8.9 --radii 2.0:6.0:0.1       exit 0 in 0.9 s | radii 41 (2.0-6.0) | zero aperture ('32.3067', '31.6955') | record | 
+    C8.9 --radii 1e-9:1e-9:1e-13   exit 2 in 1.4 s | radii 10000 (0.000000001-0.000000002) | zero aperture ('nan', 'nan') | no record | 
+    C8.9 --radii 3:3.0000001:1e-10 exit 0 in 1.7 s | radii 1010 (3.0-3.0000001009) | zero aperture ('32.3760', '31.6684') | record | 
+    C8.9 --radii 1e308:1e308:1     exit 1 in 0.6 s | radii None | zero aperture None | no record | # cannot measure: attempt to get argmin of an empty sequence
+    C8.10 CTYPE1 with junk after its quote: CLI exit 1 | # cannot measure: VerifyError: Unparsable card (CTYPE1), fix it first with .verify('fix'). | page RA/Dec [151.497758, 10.404241], need []
+Z0 PASS  the controls: the slice the audit room's, run whole (exit 0); the published radii: exit 0, radii 41 (2.0-6.0)
+Z1 FAIL  16, the one-plane cube: the command line the WCS matrix is all zero or cannot be inverted
+Z2 FAIL  18, the radii: [('1e-9:1e-9:1e-13', '2', ''), ('3:3.0000001:1e-10', '0', ''), ('1e308:1e308:1', '1', '# cannot measure: attempt to get argmin of an empty sequence')]
+Z3 FAIL  19, the unparsable CTYPE1: exit 1, # cannot measure: VerifyError: Unparsable card (CTYPE1), fix it first with .verify('fix').
+Z4 FAIL  tests/test_fix_f11.py | FAILED (failures=15) | failing: test_a_flat_ring_says_so, test_a_one_plane_cube_gives_the_sky_position_its_2_axis_wcs_gives, test_a_sky_ring_whose_mad_is_0_still_takes_the_10_sigma_test, test_a_start_off_the_comet_says_why_without_numpys_warnings, test_noncharacters_and_line_separators_are_refused_on_both_faces, test_radii_that_break_the_cap_or_collapse_are_refused, test_the_pixel_answer_stands_and_the_sky_is_refused, test_the_primarys_saturate_is_read_for_an_inherit_t_image_on_both_faces
+Z5 FAIL  strict: FAIL (330 run, 15 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_a_flat_ring_says_so, test_a_one_plane_cube_gives_the_sky_position_its_2_axis_wcs_gives, test_a_sky_ring_whose_mad_is_0_still_takes_the_10_sigma_test, test_a_start_off_the_comet_says_why_without_numpys_warnings, test_noncharacters_and_line_separators_are_refused_on_both_faces, test_radii_that_break_the_cap_or_collapse_are_refused, test_the_pixel_answer_stands_and_the_sky_is_refused, test_the_primarys_saturate_is_read_for_an_inherit_t_image_on_both_faces
+# F11's bar on sealed: NOT MET, 1 of 6

@@ -1,0 +1,8 @@
+# fix_f6_bar | HEAD 73c36ea
+U0 PASS  the stand-in raises EINVAL: True; F2's closed pipe here: True; the plain-quoted recipe, a SyntaxError and another path: README.md True, the page True; the scan finds F1's skip on Windows: True (1 found)
+U1 PASS  a closed pipe through the stand-in as here, exit codes 0, 2, 1 | OK
+U2 PASS  the recipe on both faces, a Windows path typed into it, its words | OK
+U3 PASS  F3's recipe run on a frame, F3's skips documented, K7 | OK
+U4 PASS  each system's skips named in its row, the README's why | OK
+U5 PASS  strict: PASS (305 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F6's bar: MET, 6 of 6

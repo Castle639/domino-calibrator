@@ -1,0 +1,12 @@
+# Hubble's frames: fetched by tools/fetch_frames.py into data/hst-3i/, each checked against the committed checksum list;
+# public at MAST, not kept here
+data/hst-3i/*.fits
+data/hst-3i/*.part
+# the runs' plain raws (their .json.gz are kept), caches, builds, environments
+runs/*_RAW_*.json
+# but the first H1 run's plain raw, kept beside its .json.gz as the Castle keeps it (committed before the rule)
+!runs/H1_RAW_2026-09-27.json
+__pycache__/
+*.egg-info/
+build/
+.venv/

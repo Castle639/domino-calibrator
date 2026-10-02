@@ -1,0 +1,40 @@
+# T run 4 2026-09-27 18:15:11 UTC | hst.py + degrade.py and their tests (test_hst_degrade.py) added
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... FAIL
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... FAIL
+
+======================================================================
+FAIL: test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hst_degrade.py", line 56, in test_resample_blob
+    self.assertAlmostEqual((cx - m) * 0.02, +3.0, delta=2e-3)   # west = +column
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: np.float64(3.0097004617872107) != 3.0 within 0.002 delta (np.float64(0.009700461787210735) difference)
+
+======================================================================
+FAIL: test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hst_degrade.py", line 39, in test_skymap_linear
+    np.testing.assert_allclose(sm.J, J, rtol=2e-4)
+  File "[the kit]/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1715, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "[the kit]/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 921, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0.0002, atol=0
+
+Mismatched elements: 2 / 4 (50%)
+Max absolute difference among violations: 0.00012098
+Max relative difference among violations: 0.00323153
+ ACTUAL: array([[ 0.037559,  0.015432],
+       [ 0.012848, -0.036638]])
+ DESIRED: array([[ 0.037438,  0.015382],
+       [ 0.012848, -0.036638]])
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.043s
+
+FAILED (failures=2)

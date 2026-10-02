@@ -1,0 +1,8 @@
+# fix_f6_bar | HEAD cccff3f
+U0 PASS  the stand-in raises EINVAL: True; F2's closed pipe here: True; the plain-quoted recipe, a SyntaxError and another path: README.md True, the page True; the scan finds F1's skip on Windows: True (1 found)
+U1 FAIL  a closed pipe through the stand-in as here, exit codes 0, 2, 1 | FAILED (failures=3) | failing: test_a_closed_pipe_ends_the_same_way_on_windows_exit_code_included
+U2 FAIL  the recipe on both faces, a Windows path typed into it, its words | FAILED (failures=6) | failing: test_a_windows_path_typed_into_the_recipe_is_the_path_python_opens, test_the_words_say_why
+U3 PASS  F3's recipe run on a frame, F3's skips documented, K7 | OK
+U4 FAIL  each system's skips named in its row, the README's why | FAILED (failures=3) | failing: test_every_test_that_skips_on_a_system_is_allowed_in_that_systems_row, test_the_raw_bytes_skip_is_windows_only_and_the_readme_says_why
+U5 FAIL  strict: FAIL (305 run, 12 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_a_closed_pipe_ends_the_same_way_on_windows_exit_code_included, test_a_windows_path_typed_into_the_recipe_is_the_path_python_opens, test_every_test_that_skips_on_a_system_is_allowed_in_that_systems_row, test_the_raw_bytes_skip_is_windows_only_and_the_readme_says_why, test_the_words_say_why
+# F6's bar: NOT MET, 2 of 6

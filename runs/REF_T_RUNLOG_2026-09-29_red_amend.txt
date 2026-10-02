@@ -1,0 +1,7 @@
+# the amended case alone, on today's calibrator (the fixes not in), 2026-09-29 00:39:37 UTC
+test_d1_1_a_cut_short_file_is_still_refused (calibrator.tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_a_cut_short_file_is_still_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.428s
+
+OK

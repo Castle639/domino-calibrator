@@ -1,0 +1,908 @@
+# The seventh room's bar, its red run: the full suite on 1e19288 (the sixth room's pull request as merged; the new tests as written, uncommitted), 2026-09-28 22:33:10 UTC
+# ADES_PYLIB, ADES_MASTER (39ae5a9), PLAYWRIGHT_MODULE set; PATH with /opt/node22/bin; the 30 frames on disk; the kit: numpy 2.2.6, scipy 1.15.3, astropy 6.1.7, Python 3.11.15
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... [the checkout]/calibrator/estimators.py:123: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:124: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:122: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[the checkout]/calibrator/estimators.py:134: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:135: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:137: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:138: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ok
+test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ok
+test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ok
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ok
+test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ok
+test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... ok
+test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ok
+test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ok
+test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ok
+test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ok
+test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... ok
+test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... ok
+test_08_cli_radii_are_checked (calibrator.tests.test_hardening.TestSilentWrong.test_08_cli_radii_are_checked) ... ok
+test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... ok
+test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ok
+test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... ok
+test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... ok
+test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time) ... ok
+test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ok
+test_15c_a_date_without_a_time_is_refused (calibrator.tests.test_hardening.TestSilentWrong.test_15c_a_date_without_a_time_is_refused) ... ok
+test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ok
+test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ok
+test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... ok
+test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ok
+test_1_18_a_lookup_table_wcs_is_read_with_its_file (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file) ... ok
+test_1_2_a_zero_scatter_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record) ... ok
+test_1_3_a_bad_curve_path_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_3_a_bad_curve_path_keeps_the_record) ... ok
+test_1_4_a_negative_rms_noise_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer) ... ok
+test_1_5_a_non_finite_start_is_refused_by_name (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_5_a_non_finite_start_is_refused_by_name) ... ok
+test_1_8_an_unparsable_card_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_8_an_unparsable_card_keeps_the_answer) ... ok
+test_4_19_a_refusal_always_has_a_reason (calibrator.tests.test_hardening_2.TestLostAnswers2.test_4_19_a_refusal_always_has_a_reason) ... ok
+test_judge_accepts_round_2s_cli_records (calibrator.tests.test_hardening_2.TestMPCJudge2.test_judge_accepts_round_2s_cli_records) ... ok
+test_1_9_a_date_without_a_time_is_refused_for_every_date_key (calibrator.tests.test_hardening_2.TestSilentWrong2.test_1_9_a_date_without_a_time_is_refused_for_every_date_key) ... ok
+test_4_2_the_sky_position_is_printed (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_2_the_sky_position_is_printed) ... ok
+test_4_3_the_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_3_the_remarks_name_the_radii_fitted) ... ok
+test_4_7_the_record_refuses_an_impossible_time (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_7_the_record_refuses_an_impossible_time) ... ok
+test_1_13a_the_image_hdu_wins_the_merge (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge) ... ok
+test_1_13b_rms_corr_has_its_sign (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign) ... ok
+test_4_5_a_colour_cube_is_named (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_5_a_colour_cube_is_named) ... ok
+test_4_6_the_record_refusals_name_the_flags (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_record_refusals_name_the_flags) ... ok
+test_4_6_the_value_refusals_name_the_remedy (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_value_refusals_name_the_remedy) ... ok
+test_1_11_a_blank_card_is_absent_not_zero (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_11_a_blank_card_is_absent_not_zero) ... ok
+test_1_12_a_corrupt_size_does_not_loop (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_12_a_corrupt_size_does_not_loop) ... ok
+test_1_14_names_are_not_split_at_commas (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_14_names_are_not_split_at_commas) ... ok
+test_1_15_the_pc_matrix_takes_its_fits_defaults (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_15_the_pc_matrix_takes_its_fits_defaults) ... ok
+test_1_18_lookup_table_distortion_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_18_lookup_table_distortion_is_refused) ... ok
+test_1_1_a_finite_time_never_throws (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_1_a_finite_time_never_throws) ... ok
+test_1_6_an_impossible_header_date_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_6_an_impossible_header_date_is_refused) ... ok
+test_4_4_a_deprecated_catalogue_is_noted (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_4_a_deprecated_catalogue_is_noted) ... ok
+test_4_5_fz_and_colour_cubes_are_named (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_5_fz_and_colour_cubes_are_named) ... ok
+test_4_6_the_page_names_the_remedy (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_6_the_page_names_the_remedy) ... ok
+test_4_7_an_impossible_typed_time_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_7_an_impossible_typed_time_is_refused) ... ok
+test_1_10_4_9_another_file_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer) ... ok
+test_1_10_a_changed_field_never_leaves_a_stale_record (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record) ... ok
+test_1_10_a_failed_load_forgets_the_old_image (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_failed_load_forgets_the_old_image) ... ok
+test_1_10_a_new_start_or_method_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer) ... ok
+test_1_1_a_huge_header_time_keeps_the_file (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_1_a_huge_header_time_keeps_the_file) ... ok
+test_4_3_the_page_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_3_the_page_remarks_name_the_radii_fitted) ... ok
+test_4_4_the_page_notes_a_deprecated_catalogue (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_4_the_page_notes_a_deprecated_catalogue) ... ok
+test_4_5_fz_and_colour_cubes_are_named_on_the_page (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_5_fz_and_colour_cubes_are_named_on_the_page) ... ok
+test_4_6_the_time_refusal_is_said_once_and_names_the_command_line (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_6_the_time_refusal_is_said_once_and_names_the_command_line) ... ok
+test_judge_accepts_round_2s_page_records (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_judge_accepts_round_2s_page_records) ... ok
+test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) ... ok
+test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) ... ok
+test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (calibrator.tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record) ... ok
+test_judge_accepts_round_3s_cli_records (calibrator.tests.test_hardening_3.TestMPCJudge3.test_judge_accepts_round_3s_cli_records) ... ok
+test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) ... ok
+test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) ... ok
+test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) ... ok
+test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) ... ok
+test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) ... ok
+test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) ... ok
+test_1_19_the_page_decodes_only_the_image_chosen (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_1_19_the_page_decodes_only_the_image_chosen) ... ok
+test_lookup_a_table_not_in_hand_or_not_a_table_is_refused (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_a_table_not_in_hand_or_not_a_table_is_refused) ... ok
+test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) ... ok
+test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) ... ok
+test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) ... ok
+test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) ... ok
+test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) ... ok
+test_t1_6_an_empty_timesys_is_utc_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_6_an_empty_timesys_is_utc_on_the_page) ... ok
+test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) ... ok
+test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) ... ok
+test_t4_4_a_comma_in_a_name_is_noted (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_4_a_comma_in_a_name_is_noted) ... ok
+test_judge_accepts_round_3s_page_records (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) ... ok
+test_lookup_the_page_on_a_real_hubble_frame (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_lookup_the_page_on_a_real_hubble_frame) ... ok
+test_t1_3_a_later_load_wins (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins) ... ok
+test_t1_5_a_card_left_out_is_named_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_5_a_card_left_out_is_named_on_the_page) ... ok
+test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) ... ok
+test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) ... ok
+test_t4_4_a_comma_in_names_is_noted_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_4_a_comma_in_names_is_noted_on_the_page) ... ok
+test_judge_accepts_part_bs_cli_record (calibrator.tests.test_hardening_3b.TestMPCJudge3b.test_judge_accepts_part_bs_cli_record) ... ok
+test_t1_24_c1_names_the_modules_it_ran_on (calibrator.tests.test_hardening_3b.TestTheGuard3b.test_t1_24_c1_names_the_modules_it_ran_on) ... ok
+test_t1_8_the_scatter_is_pinned (calibrator.tests.test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned) ... ok
+test_t1_13_a_zero_mad_border_is_not_all_alike (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_13_a_zero_mad_border_is_not_all_alike) ... ok
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) ... ok
+test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) ... ok
+test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) ... ok
+test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) ... ok
+test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) ... ok
+test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) ... ok
+test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) ... ok
+test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) ... ok
+test_t4_9_no_wcs_names_plate_solving (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_9_no_wcs_names_plate_solving) ... ok
+test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) ... ok
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) ... ok
+test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) ... ok
+test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) ... ok
+test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) ... ok
+test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) ... ok
+test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) ... ok
+test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) ... ok
+test_judge_accepts_part_bs_page_record (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_judge_accepts_part_bs_page_record) ... ok
+test_t1_20_a_changed_field_rewrites_the_live_record (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_changed_field_rewrites_the_live_record) ... ok
+test_t1_20_a_new_radii_background_or_hdu_clears_the_answer (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer) ... ok
+test_t4_11_a_typed_time_says_it_was_typed (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_11_a_typed_time_says_it_was_typed) ... ok
+test_t4_18_the_page_remarks_name_the_radii_as_they_are (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_18_the_page_remarks_name_the_radii_as_they_are) ... ok
+test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) ... ok
+test_t4_8_a_gzipped_file_is_named_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_8_a_gzipped_file_is_named_on_the_page) ... ok
+test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) ... ok
+test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... ok
+test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... ok
+test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... ok
+test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... ok
+test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... ok
+test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... ok
+test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... ok
+test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... ok
+test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... ok
+test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... ok
+test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ok
+test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... ok
+test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... ok
+test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... ok
+test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... ok
+test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... ok
+test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... ok
+test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... ok
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... 
+  test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) [present, inside calibrator/ (the Castle has no .github/: nothing runs on the private repository)] ... FAIL
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... 
+  test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [README.md] ... FAIL
+  test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [the page] ... FAIL
+  test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [the command line: --version] ... FAIL
+  test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [LICENSE] ... FAIL
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+  test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) [the tested versions] (what='pip install from the folder') ... FAIL
+  test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) [what pip picks today] (what='pip install from the folder') ... FAIL
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... 
+  test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [present] ... FAIL
+  test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [the notice: the copyright line, then the credit] ... FAIL
+  test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [the body is SPDX's MIT, word for word] ... FAIL
+  test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [pyproject and CITATION.cff say MIT] ... FAIL
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... 
+  test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [present] ... FAIL
+  test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [the schema's required keys] ... FAIL
+  test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [title and type] ... FAIL
+  test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [the authors: entities named in the credit, Annie and Domino Observatory] ... FAIL
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... 
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [present] ... FAIL
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the name] ... FAIL
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [Python: the version this suite runs on] ... FAIL
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the dependencies: the tested versions as the minimums] ... FAIL
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the README names the tested versions] ... FAIL
+  test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the modules: every one but hstpsf.py (it needs TinyTim and the Castle's psfkit)] ... FAIL
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... 
+  test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [pyproject.toml] ... FAIL
+  test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [CITATION.cff] ... FAIL
+  test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [the page shows it] ... FAIL
+  test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [the command line shows it] ... FAIL
+test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) ... 
+  test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) [README.md] (count='3 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 s') ... FAIL
+  test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) [README.md] (count=' sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, t') ... FAIL
+test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) ... 
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim='tailward PX None None (104, 130)') ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="helps PX ('<=', 1.0) ('<=', 0.44) (20, 20)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails PX ('>=', 2.0) ('>=', 1.0) (42, 45)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails PX any ('<=', 0.44) (15, 40)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim='worse PX None None (45, 130)') ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails ARC ('>=', 2.0) ('>=', 1.0) (21, 24)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails SEE ('>=', 2.0) ('>=', 1.0) (38, 45)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="helps ARC ('<=', 1.5) ('in', 0.7, 1.0) (24, 25)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="helps PX ('<=', 1.0) ('<=', 0.44) (20, 20)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="fails PX ('>=', 2.0) ('>=', 1.0) (42, 45)") ... FAIL
+  test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="fails PX any ('<=', 0.44) (15, 40)") ... FAIL
+test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) ... 
+  test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (what='no number nobody registered') ... FAIL
+  test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='0.05–0.15″') ... FAIL
+  test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='0.12–0.64″') ... FAIL
+  test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='27–73 %') ... FAIL
+test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) ... 
+  test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **') ... FAIL
+  test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (4') ... FAIL
+  test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**') ... FAIL
+  test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [the page's What it does] (clause='For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px):') ... FAIL
+test_w1_2_truth_is_named_as_hsts_photocentre (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_2_truth_is_named_as_hsts_photocentre) ... 
+  test_w1_2_truth_is_named_as_hsts_photocentre (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_2_truth_is_named_as_hsts_photocentre) [README.md] (clause='For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.') ... FAIL
+test_w1_3_cells_are_counted_as_cells (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_3_cells_are_counted_as_cells) ... 
+  test_w1_3_cells_are_counted_as_cells (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_3_cells_are_counted_as_cells) [README.md] ... FAIL
+test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) ... 
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (what="no path into the Castle's archive/ or papers/") ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='archive/CALIBRATOR_2026-09-27.md') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/page/index.html') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='zeroap.js') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='Farnocchia et al. (2016), arXiv:1507.01980') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/runs/') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/tests/') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/runs/S1_FIGURE_2026-09-27.png') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='zeroap.js') ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [the page] (what="no path into the Castle's archive/ or papers/") ... FAIL
+  test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [the page] (path='archive/CALIBRATOR_2026-09-27.md') ... FAIL
+test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) ... 
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='one comet') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='five visits') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='one filter') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit="HST's photocentre as the reference") ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='the boxes drawn after the data') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='the invitation to check it') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='★★ in-house') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='one comet') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='five visits') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='one filter') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit="HST's photocentre as the reference") ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='the boxes drawn after the data') ... FAIL
+  test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='the invitation to check it') ... FAIL
+test_w0_the_recount_reproduces_the_records (calibrator.tests.test_release_words.TestTheRecount.test_w0_the_recount_reproduces_the_records) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+======================================================================
+FAIL: test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) [present, inside calibrator/ (the Castle has no .github/: nothing runs on the private repository)]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 285, in test_k7_the_ci_runs_what_the_green_run_runs
+    self.assertTrue(os.path.exists(p), 'no calibrator/.github/workflows/tests.yml')
+AssertionError: False is not true : no calibrator/.github/workflows/tests.yml
+
+======================================================================
+FAIL: test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [README.md]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 86, in test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license
+    self.assertIn(CREDIT, squash(read(os.path.join(PKG, 'README.md'))))
+AssertionError: "A Castle product from Domino Observatory. Built by Annie, the Castle's AI." not found in '# calibrator — open zero-aperture comet astrometry A comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on seeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of radius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0. This package is an open, tested implementation of that method, together with the tools used to calibrate it: synthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels. The study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`. ## Use ``` python -m calibrator.cli cutout.fits # G, the published radii, the 2.5r-5r annulus python -m calibrator.cli cutout.fits --x 35.2 --y 34.8 --estimator M --radii 2:6:0.1 --rms-noise 50 \\ --stn 568 --desig 3I --mode CCD --astcat Gaia3 --submitter "A. N. Observer" --measurer "A. N. Observer" \\ --telescope-design Reflector --telescope-aperture 0.5 --telescope-detector CCD ``` prints the photocentre at every radius (a radius that did not converge has no position, only its reason), the zero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022) record through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the header (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you; without them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before submitting anything. Pixels are 0-based: x = column, y = row. In Python: ```python from calibrator import shrink o = shrink(image, x_start, y_start, estimator=\'G\') # o[\'x0\'], o[\'y0\']: zero aperture; o[\'x\'], o[\'y\']: the curve; # o[\'ok\'], o[\'reason\']: per radius ``` **The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the file, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded. ## The estimators - **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width), fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default), or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which function, weighting or re-centring Tholen\'s software uses. - **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps, re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant background. - **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel. ## What was tested (every bar committed before its run; logs in `calibrator/runs/`) - `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature; the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end; and the page\'s JavaScript against the Python through Node. - **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric nulls over pixel phases; noisy nulls. - **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`): - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %; - a bright nucleus stops G and flips M; - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre. - **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters: - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px); - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups); - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.** **Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation. ## Modules | module | what it is | |---|---| | `apertures.py` | exact circle–pixel overlap: area and first moments in closed form | | `estimators.py` | M, G, P and the annulus background | | `shrink.py` | the published sequence and its extrapolation | | `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise | | `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase | | `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS | | `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 | | `ades.py` | the ADES record | | `cli.py` | the command line | | `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check | Castle, 27 Sept 2026 (the calibrator room).'
+
+======================================================================
+FAIL: test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [the page]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 88, in test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license
+    self.assertIn(CREDIT, page_visible())
+AssertionError: "A Castle product from Domino Observatory. Built by Annie, the Castle's AI." not found in 'Zero-aperture comet astrometry Zero-aperture comet astrometry A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded. 1. The cutout Click the comet to set the start (default: the brightest 5×5 pixel). start x y (0-based pixels: x = column, y = row) 2. The method estimator G: symmetric Gaussian fit M: moment photocentre radii from to step px background annulus 2.5r–5r known value 3. The record (every value is yours; nothing defaults) station designation mode choose CCD CMO (CMOS) VID (video) TDI catalogue submitter measurers observers telescope design aperture (m) detector observatory name mid-exposure (UTC) Measure 4. The answer Copy ADES What it does Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: python -m calibrator.cli image.fits (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study ( archive/CALIBRATOR_2026-09-27.md ). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+======================================================================
+FAIL: test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [the command line: --version]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 91, in test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license
+    self.assertEqual(rc, 0, out[-300:])
+AssertionError: 2 != 0 : --observer OBSERVER] [--telescope-design TELESCOPE_DESIGN]
+              [--telescope-aperture TELESCOPE_APERTURE]
+              [--telescope-detector TELESCOPE_DETECTOR]
+              [--observatory-name OBSERVATORY_NAME]
+              fits
+cli.py: error: the following arguments are required: fits
+
+
+======================================================================
+FAIL: test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) [LICENSE]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 95, in test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license
+    self.assertTrue(os.path.exists(p), 'no LICENSE in calibrator/')
+AssertionError: False is not true : no LICENSE in calibrator/
+
+======================================================================
+FAIL: test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) [the tested versions] (what='pip install from the folder')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 235, in test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image
+    self.assertTrue(ok, log[-800:])
+AssertionError: False is not true : ERROR: Directory '/tmp/fresh_uhfmrp72/calibrator' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+
+
+======================================================================
+FAIL: test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) [what pip picks today] (what='pip install from the folder')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 235, in test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image
+    self.assertTrue(ok, log[-800:])
+AssertionError: False is not true : ERROR: Directory '/tmp/fresh_1qk1js1m/calibrator' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+
+
+======================================================================
+FAIL: test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [present]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 130, in test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice
+    self.assertTrue(os.path.exists(p), 'no LICENSE in calibrator/')
+AssertionError: False is not true : no LICENSE in calibrator/
+
+======================================================================
+FAIL: test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [the notice: the copyright line, then the credit]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 135, in test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice
+    self.assertGreaterEqual(i, 0)
+AssertionError: -1 not greater than or equal to 0
+
+======================================================================
+FAIL: test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [the body is SPDX's MIT, word for word]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 139, in test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice
+    self.assertEqual(squash(body), MIT_BODY)
+AssertionError: '' != 'Permission is hereby granted, free of cha[975 chars]ARE.'
+Diff is 1023 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) [pyproject and CITATION.cff say MIT]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 142, in test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice
+    self.assertIsNotNone(pp); self.assertIsNotNone(c)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [present]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 149, in test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit
+    self.assertIsNotNone(c, 'no CITATION.cff in calibrator/')
+AssertionError: unexpectedly None : no CITATION.cff in calibrator/
+
+======================================================================
+FAIL: test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [the schema's required keys]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 153, in test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit
+    self.assertIn(k, c)
+AssertionError: 'authors' not found in {}
+
+======================================================================
+FAIL: test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [title and type]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 157, in test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit
+    self.assertEqual(c.get('title'), NAME)
+AssertionError: None != 'domino-calibrator'
+
+======================================================================
+FAIL: test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) [the authors: entities named in the credit, Annie and Domino Observatory]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 161, in test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit
+    self.assertTrue(a)
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [present]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 175, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertIsNotNone(pp, 'no pyproject.toml in calibrator/')
+AssertionError: unexpectedly None : no pyproject.toml in calibrator/
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the name]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 179, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertEqual(proj.get('name'), NAME)
+AssertionError: None != 'domino-calibrator'
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [Python: the version this suite runs on]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 181, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertEqual(proj.get('requires-python'), '>=' + PY)
+AssertionError: None != '>=3.11'
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the dependencies: the tested versions as the minimums]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 183, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertEqual(sorted(proj.get('dependencies', [])), sorted('%s>=%s' % kv for kv in KIT.items()))
+AssertionError: Lists differ: [] != ['astropy>=6.1.7', 'numpy>=2.2.6', 'scipy>=1.15.3']
+
+Second list contains 3 additional elements.
+First extra element 0:
+'astropy>=6.1.7'
+
+- []
++ ['astropy>=6.1.7', 'numpy>=2.2.6', 'scipy>=1.15.3']
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the README names the tested versions]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 187, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertIn('%s %s' % (k, v), r)
+AssertionError: 'numpy 2.2.6' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n```\npython -m calibrator.cli cutout.fits                       # G, the published radii, the 2.5r-5r annulus\npython -m calibrator.cli cutout.fits --x 35.2 --y 34.8 --estimator M --radii 2:6:0.1 --rms-noise 50 \\\n    --stn 568 --desig 3I --mode CCD --astcat Gaia3 --submitter "A. N. Observer" --measurer "A. N. Observer" \\\n    --telescope-design Reflector --telescope-aperture 0.5 --telescope-detector CCD\n```\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n```python\nfrom calibrator import shrink\no = shrink(image, x_start, y_start, estimator=\'G\')      # o[\'x0\'], o[\'y0\']: zero aperture; o[\'x\'], o[\'y\']: the curve;\n                                                        # o[\'ok\'], o[\'reason\']: per radius\n```\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n  fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n  fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n  or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n  point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n  function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n  re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n  background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n  against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n  the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n  and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n  seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n  nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n  - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n  - a bright nucleus stops G and flips M;\n  - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n  - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n  - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n  - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) [the modules: every one but hstpsf.py (it needs TinyTim and the Castle's psfkit)]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 193, in test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out
+    self.assertEqual(st.get('package-dir'), {'calibrator': '.'})
+AssertionError: None != {'calibrator': '.'}
+
+======================================================================
+FAIL: test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [pyproject.toml]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 107, in test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line
+    self.assertIsNotNone(pp, 'no pyproject.toml in calibrator/')
+AssertionError: unexpectedly None : no pyproject.toml in calibrator/
+
+======================================================================
+FAIL: test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [CITATION.cff]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 115, in test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line
+    self.assertIsNotNone(c, 'no CITATION.cff in calibrator/')
+AssertionError: unexpectedly None : no CITATION.cff in calibrator/
+
+======================================================================
+FAIL: test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [the page shows it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 118, in test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line
+    self.assertIn('%s %s' % (NAME, v), page_visible())
+AssertionError: 'domino-calibrator 0.1.0' not found in 'Zero-aperture comet astrometry Zero-aperture comet astrometry A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded. 1. The cutout Click the comet to set the start (default: the brightest 5×5 pixel). start x y (0-based pixels: x = column, y = row) 2. The method estimator G: symmetric Gaussian fit M: moment photocentre radii from to step px background annulus 2.5r–5r known value 3. The record (every value is yours; nothing defaults) station designation mode choose CCD CMO (CMOS) VID (video) TDI catalogue submitter measurers observers telescope design aperture (m) detector observatory name mid-exposure (UTC) Measure 4. The answer Copy ADES What it does Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: python -m calibrator.cli image.fits (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study ( archive/CALIBRATOR_2026-09-27.md ). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+======================================================================
+FAIL: test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) [the command line shows it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 121, in test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line
+    self.assertEqual(rc, 0, out[-300:])
+AssertionError: 2 != 0 : --observer OBSERVER] [--telescope-design TELESCOPE_DESIGN]
+              [--telescope-aperture TELESCOPE_APERTURE]
+              [--telescope-detector TELESCOPE_DETECTOR]
+              [--observatory-name OBSERVATORY_NAME]
+              fits
+cli.py: error: the following arguments are required: fits
+
+
+======================================================================
+FAIL: test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) [README.md] (count='3 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 s')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 408, in test_w2_every_tally_is_the_recount_of_its_box
+    self.fail('a count the test cannot read: say "N of M cells" and its box')
+AssertionError: a count the test cannot read: say "N of M cells" and its box
+
+======================================================================
+FAIL: test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) [README.md] (count=' sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, t')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 408, in test_w2_every_tally_is_the_recount_of_its_box
+    self.fail('a count the test cannot read: say "N of M cells" and its box')
+AssertionError: a count the test cannot read: say "N of M cells" and its box
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim='tailward PX None None (104, 130)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="helps PX ('<=', 1.0) ('<=', 0.44) (20, 20)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails PX ('>=', 2.0) ('>=', 1.0) (42, 45)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails PX any ('<=', 0.44) (15, 40)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim='worse PX None None (45, 130)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails ARC ('>=', 2.0) ('>=', 1.0) (21, 24)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="fails SEE ('>=', 2.0) ('>=', 1.0) (38, 45)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [README.md] (claim="helps ARC ('<=', 1.5) ('in', 0.7, 1.0) (24, 25)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="helps PX ('<=', 1.0) ('<=', 0.44) (20, 20)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="fails PX ('>=', 2.0) ('>=', 1.0) (42, 45)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) [the page's What it does] (claim="fails PX any ('<=', 0.44) (15, 40)")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 418, in test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars
+    self.assertTrue(hits, 'not stated')
+AssertionError: [] is not true : not stated
+
+======================================================================
+FAIL: test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (what='no number nobody registered')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 429, in test_w4_every_other_number_is_registered_and_true
+    self.assertEqual(unregistered(t), [])
+AssertionError: Lists differ: [('162', '162–165 of  );'), ('165', '162–1[1660 chars]).')] != []
+
+First list contains 17 additional elements.
+First extra element 0:
+('162', '162–165 of  );')
+
+Diff is 1909 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='0.05–0.15″')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 436, in test_w4_every_other_number_is_registered_and_true
+    self.assertRegex(cl, w)
+AssertionError: Regex didn't match: 'r = 2 px' not found in '- the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);'
+
+======================================================================
+FAIL: test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='0.12–0.64″')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 436, in test_w4_every_other_number_is_registered_and_true
+    self.assertRegex(cl, w)
+AssertionError: Regex didn't match: '≥ 2(?:\\.0)?″ seeing' not found in '- the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);'
+
+======================================================================
+FAIL: test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) [README.md] (range='27–73 %')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 436, in test_w4_every_other_number_is_registered_and_true
+    self.assertRegex(cl, w)
+AssertionError: Regex didn't match: '≤ 1(?:\\.0)?″ seeing' not found in '- the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);'
+
+======================================================================
+FAIL: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 342, in test_w1_1_a_verdict_carries_its_tally_and_its_whole_box
+    self.assertTrue(tl, 'a verdict without a tally "N of M cells"')
+AssertionError: [] is not true : a verdict without a tally "N of M cells"
+
+======================================================================
+FAIL: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 342, in test_w1_1_a_verdict_carries_its_tally_and_its_whole_box
+    self.assertTrue(tl, 'a verdict without a tally "N of M cells"')
+AssertionError: [] is not true : a verdict without a tally "N of M cells"
+
+======================================================================
+FAIL: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [README.md] (clause='- **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 342, in test_w1_1_a_verdict_carries_its_tally_and_its_whole_box
+    self.assertTrue(tl, 'a verdict without a tally "N of M cells"')
+AssertionError: [] is not true : a verdict without a tally "N of M cells"
+
+======================================================================
+FAIL: test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) [the page's What it does] (clause='For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px):')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 342, in test_w1_1_a_verdict_carries_its_tally_and_its_whole_box
+    self.assertTrue(tl, 'a verdict without a tally "N of M cells"')
+AssertionError: [] is not true : a verdict without a tally "N of M cells"
+
+======================================================================
+FAIL: test_w1_2_truth_is_named_as_hsts_photocentre (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_2_truth_is_named_as_hsts_photocentre) [README.md] (clause='For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 354, in test_w1_2_truth_is_named_as_hsts_photocentre
+    self.assertRegex(cl, r"(?:HST|Hubble)'s (?:own )?(?:zero-aperture )?photocentre")
+AssertionError: Regex didn't match: "(?:HST|Hubble)'s (?:own )?(?:zero-aperture )?photocentre" not found in 'For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.'
+
+======================================================================
+FAIL: test_w1_3_cells_are_counted_as_cells (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_3_cells_are_counted_as_cells) [README.md]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 363, in test_w1_3_cells_are_counted_as_cells
+    self.assertEqual(over, [])
+AssertionError: Lists differ: ['42 of 45 set-ups', '45 of 130 set-ups', '45 set-ups', '130 set-ups'] != []
+
+First list contains 4 additional elements.
+First extra element 0:
+'42 of 45 set-ups'
+
+- ['42 of 45 set-ups', '45 of 130 set-ups', '45 set-ups', '130 set-ups']
++ []
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (what="no path into the Castle's archive/ or papers/")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 488, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertEqual(re.findall(r'(?<![\w/])(?:archive|papers)/[\w./-]*', raw()), [])
+AssertionError: Lists differ: ['archive/CALIBRATOR_2026-09-27.md', 'Farnocchia et al. (2016), arXiv:1507.01980'] != []
+
+First list contains 2 additional elements.
+First extra element 0:
+'archive/CALIBRATOR_2026-09-27.md'
+
+- ['archive/CALIBRATOR_2026-09-27.md', 'Farnocchia et al. (2016), arXiv:1507.01980']
++ []
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='archive/CALIBRATOR_2026-09-27.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: archive/CALIBRATOR_2026-09-27.md
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/page/index.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: calibrator/page/index.html
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='zeroap.js')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: zeroap.js
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='Farnocchia et al. (2016), arXiv:1507.01980')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: Farnocchia et al. (2016), arXiv:1507.01980
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/runs/')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: calibrator/runs/
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/tests/')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: calibrator/tests/
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='calibrator/runs/S1_FIGURE_2026-09-27.png')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: calibrator/runs/S1_FIGURE_2026-09-27.png
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [README.md] (path='zeroap.js')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: zeroap.js
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [the page] (what="no path into the Castle's archive/ or papers/")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 488, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertEqual(re.findall(r'(?<![\w/])(?:archive|papers)/[\w./-]*', raw()), [])
+AssertionError: Lists differ: ['archive/CALIBRATOR_2026-09-27.md'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'archive/CALIBRATOR_2026-09-27.md'
+
+- ['archive/CALIBRATOR_2026-09-27.md']
++ []
+
+======================================================================
+FAIL: test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) [the page] (path='archive/CALIBRATOR_2026-09-27.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 491, in test_w6_every_path_is_inside_the_folder_that_goes_public
+    self.assertTrue(os.path.exists(os.path.join(PKG, p)), 'not inside calibrator/: ' + p)
+AssertionError: False is not true : not inside calibrator/: archive/CALIBRATOR_2026-09-27.md
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='one comet')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bone comet\\b' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='five visits')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bfive visits\\b' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='one filter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bone filter\\b' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit="HST's photocentre as the reference")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: "(?:HST|Hubble)'s (?:own )?(?:zero-aperture )?photocentre" not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='the boxes drawn after the data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: 'boxes[^.]{0,80}drawn after the data' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [README.md] (limit='the invitation to check it')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '[Cc]heck (?:it|the study|this)[^.]{0,80}your own (?:frames|images)' not found in '# calibrator — open zero-aperture comet astrometry\n\nA comet\'s photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on\nseeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in\nFarnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of\nradius **2.0–6.0 px in steps of 0.1 px**, fits a straight line to x(r) and y(r), and takes its value at r = 0.\n\nThis package is an open, tested implementation of that method, together with the tools used to calibrate it:\nsynthetic comets with a known nucleus, and Hubble\'s WFC3/UVIS frames of 3I/ATLAS degraded to ground seeing and pixels.\nThe study itself — its bars, runs and results — is `archive/CALIBRATOR_2026-09-27.md`.\n\n## Use\n\n\n\n\nprints the photocentre at every radius (a radius that did not converge has no position, only its reason), the\nzero-aperture position (and its RA/Dec through the cutout\'s WCS, or why there is none), the r = 2 position, the trend per pixel of radius, and a **draft** ADES (PSV, version 2022)\nrecord through the cutout\'s WCS and mid-exposure time. The record is written only from real values: the time from the\nheader (or `--obstime`), and the station, designation, mode, catalogue, submitter, measurers and telescope from you;\nwithout them it is refused with the reason, and the pixel answer stands. Check it with the MPC\'s validator before\nsubmitting anything. Pixels are 0-based: x = column, y = row.\n\nIn Python:\n\n\n\n\n**The page:** `calibrator/page/index.html` (with `zeroap.js` beside it) runs the same engine in a browser: open the\nfile, load a FITS cutout, click the comet, press *Measure*. Nothing is uploaded.\n\n## The estimators\n\n- **G — the symmetric fit.** A circular Gaussian integrated over each pixel (free amplitude, centre and width),\n fitted by least squares weighted by each pixel\'s exact overlap with the aperture; the aperture re-centres on the\n fit until it moves < 1e-4 px. Background: the sigma-clipped median of the 2.5r–5r annulus (the paper\'s default),\n or a known value. This is the reading closest to "a model designed to fit the symmetric light distribution from a\n point source" (Farnocchia et al. 2016, l. 162–165 of Farnocchia et al. (2016), arXiv:1507.01980); the paper does not publish which\n function, weighting or re-centring Tholen\'s software uses.\n- **M — the moment photocentre.** The first moment of (image − background) over exact circle–pixel overlaps,\n re-centred on itself until it moves < 1e-6 px. With exact moments its fixed point does not depend on any constant\n background.\n- **P — the brightness peak.** The vertex of a quadratic fitted to the 3×3 pixels around the brightest pixel.\n\n## What was tested (every bar committed before its run; logs in `calibrator/runs/`)\n\n- `calibrator/tests/` (stdlib `unittest`; `python -m unittest discover -s calibrator/tests -t .`): exact apertures\n against geometry and brute force; estimators on exact sources; the closed-form coma integrals against quadrature;\n the renderer\'s flux and centroid; the sky map, resampler and degrader; the ADES layout; the command line end to end;\n and the page\'s JavaScript against the Python through Node.\n- **S0, the controls**: the pipeline against an analytic fixed point (a 1/ρ coma with a dipole asymmetry and no\n seeing: c/r = 0.049860 / 0.146361 / 0.274047 for a = 0.1 / 0.3 / 0.6, linear with zero intercept); symmetric\n nulls over pixel phases; noisy nulls.\n- **S1, the synthetic grid** (72 configurations; `calibrator/runs/S1_FIGURE_2026-09-27.png`):\n - for a textbook 1/ρ coma with a scale-free asymmetry, M extrapolates almost exactly to the nucleus while the apertures exceed the seeing, and G removes about 40 %;\n - a bright nucleus stops G and flips M;\n - no one-sided coma pushes G\'s zero-aperture position beyond its r = 2 photocentre.\n- **H0–H3, Hubble\'s 3I degraded to the ground** (30 frames × 26 seeing/pixel set-ups; `H3_FIGURE_*`). ★★ in-house, after two read-only refuters:\n - the photocentre is displaced **tailward**, by **0.05–0.15″ at professional sampling** (≤ 1″ seeing, ≤ 0.44″/px) and **0.12–0.64″ at amateur sampling** (≥ 2″, ≥ 1″/px);\n - the published extrapolation **helps at professional sampling** (removing 27–73 %) and **fails at amateur sampling** (42 of 45 set-ups);\n - **in 45 of 130 set-ups, all at ≥ 0.70″/px, the zero-aperture position is further off than no correction.**\n\n**Use it with that in mind.** At ≥ 1″/px, look at the curve before trusting the intercept. For a 3I-like coma there, the r = 2 photocentre or the brightness peak was closer to the truth than the extrapolation.\n\n## Modules\n\n| module | what it is |\n|---|---|\n| `apertures.py` | exact circle–pixel overlap: area and first moments in closed form |\n| `estimators.py` | M, G, P and the annulus background |\n| `shrink.py` | the published sequence and its extrapolation |\n| `synth.py` | synthetic comets: nucleus + k/ρ (1 + a(ρ) cos θ) coma (dipole, grow, fade), seeing, pixels, noise |\n| `degrade.py` | a sharp north-up image to a ground telescope: seeing, ground pixels at any phase |\n| `hst.py` | Hubble\'s frames: load, locate, clean against siblings, resample north-up through the full WCS |\n| `hstpsf.py` | TinyTim WFC3/UVIS F350LP through the Castle\'s psfkit recipe, despace never exactly 0 |\n| `ades.py` | the ADES record |\n| `cli.py` | the command line |\n| `page/` | the plain page and its engine (`zeroap.js`), with a Node harness and a headless-browser check |\n\nCastle, 27 Sept 2026 (the calibrator room).\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='★★ in-house')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '★★ in-house' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='one comet')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bone comet\\b' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='five visits')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bfive visits\\b' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='one filter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '\\bone filter\\b' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit="HST's photocentre as the reference")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: "(?:HST|Hubble)'s (?:own )?(?:zero-aperture )?photocentre" not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='the boxes drawn after the data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: 'boxes[^.]{0,80}drawn after the data' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+======================================================================
+FAIL: test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) [the page's What it does] (limit='the invitation to check it')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_words.py", line 459, in test_w5_each_face_names_its_stars_limits_and_the_invitation
+    self.assertRegex(t, pat)
+AssertionError: Regex didn't match: '[Cc]heck (?:it|the study|this)[^.]{0,80}your own (?:frames|images)' not found in '\n \n Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the calibrator package this page belongs to: `python -m calibrator.cli image.fits` (see the package\'s README.md); it reads what the page cannot, as each refusal here says. Where the method holds and where it stops is measured in the Castle\'s calibration study (`archive/CALIBRATOR_2026-09-27.md`). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.\n \n\n'
+
+----------------------------------------------------------------------
+Ran 189 tests in 122.003s
+
+FAILED (failures=72)

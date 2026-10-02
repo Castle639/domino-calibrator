@@ -1,0 +1,11 @@
+# 1.13 mutant check 2026-09-28 15:45:14 UTC | repo HEAD b5b6be4
+ctrl  PASS test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged                         
+ctrl  PASS test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge                 
+ctrl  PASS test_hardening.TestSilentWrong.test_16_rms_through_the_wcs                                 
+ctrl  PASS test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign                        
+## mutA: cli.py: 'm = phdr.copy()\n    for card in ihdr.cards:' -> 'm = ihdr.copy()\n    for card in phdr.cards:'
+mutA  PASS test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged                         
+mutA  FAIL test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge                 | AssertionError: '2025-12-12T20:00:15.00Z' != '2025-12-12T21:21:02.00Z'
+## mutB: ades.py: 'cor = float(S[0, 1] / (sra * sde))' -> 'cor = float(-S[0, 1] / (sra * sde))'
+mutB  PASS test_hardening.TestSilentWrong.test_16_rms_through_the_wcs                                 
+mutB  FAIL test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign                        | AssertionError: 0.75 != -0.75 within 5 places (1.5 difference)

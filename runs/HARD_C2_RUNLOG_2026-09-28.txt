@@ -1,0 +1,9 @@
+# hardening C2 2026-09-28 00:46:23 UTC | calibrator/runs/hard_c2.py | HEAD 8c4c0ee | apertures.py 6018798de27f estimators.py 8447dda5cc1b shrink.py 90ddf8a01d95 degrade.py 7f2c74ed51d9 synth.py d8463d6dd48e
+# frames (the first of each visit, with H3 index): ifle03geq[0] ifle04pdq[5] ifle05qlq[12] ifle06tjq[18] ifle22f7q[24]
+# 3380 records in 307 s, 0 raised
+# compared with H3_RAW: new 3380, H3 3380 records for these frames | H3 records with no new twin 0, new with no H3 twin 0
+noiseless comparisons  7040 | unequal 0 | max |diff| 0.000e+00 ground px
+snr100    comparisons  2200 | unequal 8 | max |diff| inf ground px | first: (('ifle04pdq', 1.5, 0.24, 'snr100', (2, 2)), 'G', [0.06435717644376382, 0.5539503120608487, nan, nan, np.float64(0.2933374434582703), np.float64(0.11279757846934046), 1], [0.06435717644376382, 0.5539503120608487, 1.1564125357840425, 2.679023439452962, 0.2933374434582703, 0.11279757846934046, 1])
+snr20     comparisons  2200 | unequal 35 | max |diff| inf ground px | first: (('ifle05qlq', 2.0, 0.44, 'snr20', (15, 15)), 'Ga', [1.9476114394065505, -2.0501648350577426, nan, nan, np.float64(0.33696993815751597), np.float64(-0.5302750863874337), 1], [1.9476114394065505, -2.0501648350577426, 1.2884463664629422, -2.0667355293104777, 0.33696993815751597, -0.5302750863874337, 1])
+# BAR (bit for bit, nothing raised, every record twinned): FAIL
+# done in 309 s

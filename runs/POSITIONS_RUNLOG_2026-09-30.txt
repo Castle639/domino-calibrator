@@ -1,0 +1,9 @@
+# positions bar 2026-09-30 12:05:07 UTC | HEAD 69770a9
+Q0  PASS  the ground against itself: 0 of 31 lines differ; against the planted copy: 1
+Q1  PASS  paths above the repository in H0: none | the file: present, 30 frames, sorted and distinct: True, two decimals: True
+Q2  PASS  H0 exit 0 in 86 s | per-frame and checks lines: the ground 31, the new 31, differing 0 | # H0.1 peaks within 1.5 px of K0: PASS | H0.3 map residual < 0.01 px: PASS | H0.4 flux(10") within 0.5 %: PASS | H0.6 Ho
+Q3  PASS  30 images, 0 differing from the ground by content
+Q4  PASS  H0_FRAMES: unchanged | the Horizons table: 6 lines changed, all three known header lines: True
+Q5  PASS  C1 PASS | C2 43 REPORTING, 0 FITTED, the same 43 as the thirteenth room's: True | 411 s
+# positions bar: MET, 6 of 6
+exit 0

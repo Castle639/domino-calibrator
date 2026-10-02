@@ -1,0 +1,46 @@
+# pip install from this folder: `pip install .` (or `pip install path/to/the/checkout`).
+# The minimums are the versions the suite was run on; no older ones were tested.
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "domino-calibrator"
+dynamic = ["version"]
+description = "Open zero-aperture comet astrometry (the shrinking-aperture method), with a test of it on Hubble's images of 3I/ATLAS"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "Domino Observatory" }]
+dependencies = ["numpy>=2.2.6", "scipy>=1.15.3", "astropy>=6.1.7"]
+keywords = ["astrometry", "comets", "photocentre", "ADES", "3I/ATLAS"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.urls]
+Repository = "https://github.com/Castle639/domino-calibrator"
+Issues = "https://github.com/Castle639/domino-calibrator/issues"
+
+[project.scripts]
+domino-calibrator = "domino_calibrator.cli:main"
+
+[tool.setuptools]
+# The package is the folder domino_calibrator/, beside this file (the import name since the launch list's step 3: `calibrator`
+# is an unrelated project's on PyPI). Its modules are listed so that hstpsf.py stays out: it needs TinyTim and the Castle's
+# psfkit recipe, and only the study's H2 script uses it. tests/, runs/ and page/ are not installed.
+py-modules = [
+    "domino_calibrator.ades",
+    "domino_calibrator.apertures",
+    "domino_calibrator.cli",
+    "domino_calibrator.degrade",
+    "domino_calibrator.estimators",
+    "domino_calibrator.hst",
+    "domino_calibrator.shrink",
+    "domino_calibrator.synth",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "domino_calibrator.__version__" }

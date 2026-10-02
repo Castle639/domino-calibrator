@@ -1,0 +1,8 @@
+# fix_f18_bar | HEAD fbac1ef | CHECKS 164 patterns, 34 files left out | DECISIONS decisions_8.json
+Z0 PASS  the controls: the sweep in the Castle's own records: 108 lines in 31 files | patterns missing their control: none, their plant: none | files left out not in the Castle: none
+Z1 FAIL  the copy: curation exit 0 | files left out still in it (by number): [24, 25, 26, 27, 28, 29, 30, 31, 32, 33] | named in its text: [24, 27, 31] | the sweep: 11 lines in 6 files
+Z2 FAIL  the release bar on the copy: S0 PASS S1 FAIL S2 PASS S3 FAIL | NOT MET, 2 of 4 (its detail kept out of this log)
+Z3 FAIL  runs/README.md says it: in the Castle False, in the copy False
+Z4 FAIL  strict: FAIL (374 run, 1 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_runs_readme_says_it_in_his_sentence_once_among_the_checks
+Z5 PASS  this log: patterns matching in it: none | files left out named in it: none
+# F18's bar: NOT MET, 2 of 6

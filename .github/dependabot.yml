@@ -1,0 +1,7 @@
+# Dependabot proposes, as pull requests, updates to the actions the workflows pin by SHA.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

@@ -1,0 +1,45 @@
+# The page on GitHub Pages. GitHub serves a site from a branch's root, from its /docs folder, or through a workflow
+# (docs.github.com, "Configuring a publishing source for your GitHub Pages site", read 30 Sept 2026). The page lives in
+# page/, so this workflow uploads that folder as it is and deploys it: on a push to the default branch, or by hand; a pull
+# request never deploys. While the repository is private the job is skipped, not failed: Pages is switched on, with
+# "GitHub Actions" as its source, when the repository is public. The actions are their newest majors, each on Node 24
+# (their action.yml, read at source): configure-pages v6, upload-pages-artifact v5 (upload-artifact v7 inside it),
+# deploy-pages v5. Each is pinned by its commit's SHA, the release beside it; Dependabot (.github/dependabot.yml) proposes
+# the updates.
+name: pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:                    # one deployment at a time; one already running is let finish (GitHub's starter workflow)
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: the page, from page/
+    if: ${{ !github.event.repository.private }}   # skipped, not failed, while the repository is private
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d  # v6.0.0
+
+      - name: page/, as it is (the harness files beside it are small and public; hidden files are left out)
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
+        with:
+          path: page
+
+      - name: deploy
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1

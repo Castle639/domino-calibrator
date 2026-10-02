@@ -1,0 +1,8 @@
+# fix_f18_bar | HEAD ac657c6 | CHECKS 164 patterns, 34 files left out | DECISIONS decisions_9.json
+Z0 PASS  the controls: the sweep in the Castle's own records: 108 lines in 31 files | patterns missing their control: none, their plant: none | files left out not in the Castle: none
+Z1 PASS  the copy: curation exit 0 | files left out still in it (by number): none | named in its text: none | the sweep: 0 lines in 0 files
+Z2 PASS  the release bar on the copy: S0 PASS S1 PASS S2 PASS S3 PASS | MET, 4 of 4 (its detail kept out of this log)
+Z3 PASS  runs/README.md says it: in the Castle True, in the copy True
+Z4 PASS  strict: PASS (374 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+Z5 PASS  this log: patterns matching in it: none | files left out named in it: none
+# F18's bar: MET, 6 of 6

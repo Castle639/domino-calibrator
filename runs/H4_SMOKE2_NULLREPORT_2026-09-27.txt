@@ -1,0 +1,28 @@
+# H4 null (C3): per frame and pair, phase-mean max |b| over (b0, b_first; x, y): M and P in ground px, G in mas on the sky; converged radii, min over phases
+ifle03geq seeing 0.7 0.24"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 4.0e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 2.9e-14 px 41/41 ok | P 8.9e-16 ok
+ifle03geq seeing 0.7 0.44"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 7.5e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 2.3e-14 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 0.7 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.3e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 2.0e-14 px 41/41 ok | P 0.0e+00 ok
+ifle03geq seeing 1.0 0.24"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.7e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 4.5e-14 px 41/41 ok | P 8.9e-16 ok
+ifle03geq seeing 1.0 0.44"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.3e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 2.8e-14 px 41/41 ok | P 0.0e+00 ok
+ifle03geq seeing 1.0 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.2e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 5.8e-15 px 41/41 ok | P 0.0e+00 ok
+ifle03geq seeing 1.0 1.00"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.6e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 2.4e-14 px 41/41 ok | P 2.2e-16 ok
+ifle03geq seeing 1.5 0.24"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 3.0e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 3.8e-14 px 41/41 ok | P 8.9e-16 ok
+ifle03geq seeing 1.5 0.44"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 2.6e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 7.1e-15 px 41/41 ok | P 0.0e+00 ok
+ifle03geq seeing 1.5 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 5.1e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.6e-14 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 1.5 1.00"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 1.0e-13 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 9.3e-15 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 1.5 1.50"/px | ARCG 4.39 mas (first 3.86) 40/41 NULL-FAILED | ARCM 5.0e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.4e-14 px 41/41 ok | P 1.1e-16 ok
+ifle03geq seeing 2.0 0.44"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 2.8e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.8e-14 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 2.0 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 3.1e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.5e-14 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 2.0 1.00"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 8.7e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.0e-14 px 41/41 ok | P 0.0e+00 ok
+ifle03geq seeing 2.0 1.50"/px | ARCG 3.00 mas (first 2.98) 40/41 ok | ARCM 3.8e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.7e-15 px 41/41 ok | P 2.2e-16 ok
+ifle03geq seeing 2.0 2.00"/px | ARCG 42.24 mas (first 8.24) 33/41 NULL-FAILED | ARCM 1.4e-12 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 7.3e-15 px 41/41 ok | P 2.2e-16 ok
+ifle03geq seeing 3.0 0.44"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 2.8e-13 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 8.9e-16 px 41/41 ok | P 1.8e-15 ok
+ifle03geq seeing 3.0 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 4.3e-13 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 3.0e-14 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 3.0 1.00"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 7.1e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 1.4e-14 px 41/41 ok | P 2.2e-16 ok
+ifle03geq seeing 3.0 1.50"/px | ARCG 6.94 mas (first 4.16) 41/41 NULL-FAILED | ARCM 6.0e-15 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 5.4e-15 px 41/41 ok | P 1.1e-16 ok
+ifle03geq seeing 3.0 2.00"/px | ARCG 11.55 mas (first 7.09) 34/41 NULL-FAILED | ARCM 4.7e-13 px 38/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 3.6e-15 px 41/41 ok | P 1.1e-16 ok
+ifle03geq seeing 4.0 0.70"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 2.3e-12 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 9.8e-15 px 41/41 ok | P 8.9e-16 ok
+ifle03geq seeing 4.0 1.00"/px | ARCG 0.00 mas (first 0.00) 41/41 ok | ARCM 2.0e-13 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 6.2e-15 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 4.0 1.50"/px | ARCG 1.80 mas (first 4.08) 40/41 ok | ARCM 3.8e-14 px 41/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 3.0e-15 px 41/41 ok | P 4.4e-16 ok
+ifle03geq seeing 4.0 2.00"/px | ARCG 3.94 mas (first 13.24) 35/41 NULL-FAILED | ARCM 7.8e-13 px 38/41 ok | SEEG 0.00 mas (first 0.00) 41/41 ok | SEEM 6.4e-15 px 41/41 ok | P 2.2e-16 ok
+# C3: M and P PASS; G cells NULL-FAILED: 5 ['03|1.5|1.50|ARC', '03|2.0|2.00|ARC', '03|3.0|1.50|ARC', '03|3.0|2.00|ARC', '03|4.0|2.00|ARC']

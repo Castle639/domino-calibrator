@@ -1,0 +1,98 @@
+# the refuter pass's checks by run (29 Sept 2026): the command line on the suite's test comet and its variants (the scratchpad's checks_cli.py), then the second batch (checks_misc.py); bytecode off, nothing written in the folder
+truth (the renderer's nucleus): (35.05, 34.95)
+
+D1.1 sizes: c.fits 25920 B, c.fits.gz 17594 B
+
+== D1.1 c.fits | rc 0
+    # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    2.00 35.0837 34.9498
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    # sky (ICRS): RA 168.6999785, Dec +4.5999861 deg, the zero-aperture position
+    # time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+    # no ADES record: needs the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture
+
+== D1.1 c.fits.gz (the same file, gzipped) | rc 1
+    # cannot measure: HDU 0: the file ends before its data does (14714 of 20164 bytes): it is truncated
+
+D1.1 sizes: cam.fits 86400 B, cam.fits.gz 38296 B
+
+== D1.1 cam.fits (uint16, noisy sky) | rc 0
+    # start (100.00, 100.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    2.00 100.0792 99.9434
+    3.00 100.0865 99.9452
+    # zero aperture: x 100.0730 y 99.9451 | slope per px of radius: (+0.00440, -0.00010) | r=2: (100.0792, 99.9434)
+    # sky (ICRS): RA 168.6999797, Dec +4.5999847 deg, the zero-aperture position
+    # time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+    # no ADES record: needs the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture
+
+== D1.1 cam.fits.gz | rc 1
+    # cannot measure: HDU 0: the file ends before its data does (35416 of 80802 bytes): it is truncated
+
+== D1.2 --radii 3:8:0.1 | rc 0
+    # start (35.00, 35.00) | estimator G | radii 3.0-8.0 px (51) | unconverged radii 0
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0915 y 34.9500 | slope per px of radius: (+0.00163, +0.00001) | r=2: (35.0920, 34.9499)
+    # sky (ICRS): RA 168.6999745, Dec +4.5999861 deg, the zero-aperture position
+    # time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+    # no ADES record: needs the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture
+    x2,y2 with radii 3-8: (np.float64(35.09203840698548), np.float64(34.94989076039902)) | the r=3.0 photocentre: (np.float64(35.09203840698548), np.float64(34.94989076039902)) | the true r=2.0 photocentre: (np.float64(35.08370481287929), np.float64(34.9497932708729))
+WARNING: The following header keyword is invalid or follows an unrecognized non-standard convention:
+EXPTIME  = 60.0                                                                  [astropy.io.fits.card]
+
+D1.3 card image: 'EXPTIME  = 60.0         ' | astropy value: ' = 60.0'
+
+== D1.3 EXPTIME with "=" in column 10 | rc 0
+    # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    # note: header card EXPTIME could not be read, and was left out
+    2.00 35.0837 34.9498
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    # sky (ICRS): RA 168.6999785, Dec +4.5999861 deg, the zero-aperture position
+    # no ADES record: needs a mid-exposure time (no exposure time (EXPTIME, EXPOSURE) and no DATE-AVG, MJD-AVG or DATE-END: the mid-exposure is unknown; give it with --obstime, or the exposure with --exptime)
+D1.4 the suite's 71-px cutout   true sigma 10.00 | border sigma, flat sky 10.63 | with a 100-ADU gradient 62.43
+D1.4 a 121-px cutout            true sigma 10.00 | border sigma, flat sky 10.36 | with a 100-ADU gradient 60.41
+D1.4 a 201-px cutout            true sigma 10.00 | border sigma, flat sky 10.25 | with a 100-ADU gradient 61.33
+
+D1.14 repeated PV2_1: KeyError: "Keyword 'PV2_1' not found."
+
+== D1.17 CRVAL1 359.99999999 | rc 0
+    # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    2.00 35.0837 34.9498
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    # sky (ICRS): RA 359.9999784, Dec +4.5999861 deg, the zero-aperture position
+    # time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+    record line: 3I    |CCD |568|2025-12-12T21:21:02.00Z|359.9999784|+4.5999861|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)
+
+== D4.16 DATE-OBS with a space | rc 0
+    # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    2.00 35.0837 34.9498
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    # sky (ICRS): RA 168.6999785, Dec +4.5999861 deg, the zero-aperture position
+    # no ADES record: needs a mid-exposure time (DATE-OBS '2025-12-12 21:20:32' has a date and no time (and there is no TIME-OBS); give it with --obstime)
+
+== D1.19 date-only DATE-OBS, MJD-OBS present | rc 0
+    # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    2.00 35.0837 34.9498
+    3.00 35.0920 34.9499
+    # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    # sky (ICRS): RA 168.6999785, Dec +4.5999861 deg, the zero-aperture position
+    # no ADES record: needs a mid-exposure time (DATE-OBS '2025-12-12' has a date and no time (and there is no TIME-OBS); give it with --obstime)
+
+D1.15 --obstime 2025-12-12T21:21:02.129Z -> 2025-12-12T21:21:02.12Z
+D1.15 DATE-OBS 21:20:32.019 + 30 s -> 2025-12-12T21:21:02.01Z
+
+D4.15 python -m calibrator.cli --help, first line: usage: cli.py [-h] [--version] [--x X] [--y Y] [--estimator {G,M}]
+
+# second batch
+D1.22 deg.fits     radec (168.6999784514535, 4.599986121409845) | sky_error None | notes []
+D1.22 degree.fits  radec (168.6999784514535, 4.599986121409845) | sky_error None | notes ["WCS: 'unitfix' made the change 'Changed units: 'degree' -> 'deg', 'degree' -> 'deg'."]
+D1.12 PV defaults: radec (168.6999784514535, 4.599986121409845) | plain TAN (168.6999784514535, 4.599986121409845) | sky_error None | WCS notes []
+D1.17 # sky (ICRS): RA 360.0000000, Dec +4.5999861 deg, the zero-aperture position | record: ['0.0000000', '+4.5999861']
+D4.14 wheel build rc 0 
+D4.14 METADATA Metadata-Version: 2.4
+D4.14 METADATA Author: Annie, the Castle's AI, Domino Observatory
+D4.14 METADATA License-Expression: MIT
+D4.14 METADATA License-File: LICENSE

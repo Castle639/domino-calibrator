@@ -1,0 +1,45 @@
+# H0 2026-09-29 11:39:01 UTC | calibrator/runs/h0_prepare.py | commit fb3f508
+# frames: 30 (ifle03geq ifle03gfq ifle03ggq ifle03ghq ifle03giq ifle04pdq ifle04peq ifle04pfq ifle04pgq ifle04phq ifle04piq ifle04pjq ifle05qlq ifle05qmq ifle05qnq ifle05qoq ifle05qpq ifle05qqq ifle06tjq ifle06tkq ifle06tlq ifle06tmq ifle06tnq ifle06toq ifle22f7q ifle22f8q ifle22f9q ifle22faq ifle22fbq ifle22fcq)
+# pass 2 (K0's re-centring): re-found ['ifle04pjq']
+# dither groups: 03A:2 03B:3 04A:3 04B:4 05A:3 05B:3 06A:3 06B:3 22A:3 22B:3
+# per frame: peak vs K0 | clean: replaced px, flux e-, core hits | map resid px | scales "/px, skew deg | flux(10") sky/det | reference (cutout px): G0 - M0, G0 - P, G0 - G2 in mas (sky)
+ifle03geq 03A | peak-K0 0.20 px | clean 12266 px   7155355 e- core 0 | resid 0.0007 | 0.03957 0.03977 skew -3.81 | flux 1.00003 | G0-M0 (-1.9,+1.0) G0-P (+0.7,-2.3) G0-G2 (+2.8,-2.5) | nbad G 0 M 0 | G s(r=2) 1.38 px
+ifle03gfq 03A | peak-K0 0.24 px | clean 10289 px   5394332 e- core 1 | resid 0.0007 | 0.03957 0.03977 skew -3.81 | flux 1.00002 | G0-M0 (-1.8,+1.3) G0-P (+1.0,-1.8) G0-G2 (+2.8,-2.7) | nbad G 0 M 0 | G s(r=2) 1.35 px
+ifle03ggq 03B | peak-K0 0.24 px | clean  9055 px   4925639 e- core 0 | resid 0.0009 | 0.03957 0.03977 skew -3.81 | flux 0.99998 | G0-M0 (-2.1,+1.6) G0-P (+4.4,-1.1) G0-G2 (+3.0,-2.5) | nbad G 0 M 0 | G s(r=2) 1.33 px
+ifle03ghq 03B | peak-K0 0.22 px | clean  7100 px   3796970 e- core 0 | resid 0.0009 | 0.03957 0.03977 skew -3.81 | flux 0.99999 | G0-M0 (-2.2,+1.0) G0-P (+0.4,-4.8) G0-G2 (+3.0,-2.3) | nbad G 0 M 0 | G s(r=2) 1.34 px
+ifle03giq 03B | peak-K0 0.26 px | clean 35892 px  95222114 e- core 0 | resid 0.0009 | 0.03957 0.03977 skew -3.81 | flux 1.00000 | G0-M0 (-2.3,+1.2) G0-P (+5.1,-2.0) G0-G2 (+2.8,-2.3) | nbad G 0 M 0 | G s(r=2) 1.31 px
+ifle04pdq 04A | peak-K0 0.14 px | clean  6256 px   2950850 e- core 0 | resid 0.0010 | 0.03959 0.03976 skew -3.80 | flux 1.00002 | G0-M0 (-1.7,+1.2) G0-P (+1.6,-3.1) G0-G2 (+2.5,-2.2) | nbad G 0 M 0 | G s(r=2) 1.34 px
+ifle04peq 04A | peak-K0 0.17 px | clean  5622 px   3206550 e- core 0 | resid 0.0010 | 0.03959 0.03976 skew -3.80 | flux 1.00006 | G0-M0 (-2.0,+1.4) G0-P (+1.1,-3.4) G0-G2 (+2.8,-2.2) | nbad G 0 M 0 | G s(r=2) 1.30 px
+ifle04pfq 04A | peak-K0 0.18 px | clean  7288 px   6383805 e- core 1 | resid 0.0010 | 0.03959 0.03976 skew -3.80 | flux 1.00002 | G0-M0 (-2.2,+1.2) G0-P (+1.5,-3.1) G0-G2 (+2.9,-1.8) | nbad G 0 M 0 | G s(r=2) 1.29 px
+ifle04pgq 04B | peak-K0 0.16 px | clean  6325 px   3553681 e- core 2 | resid 0.0012 | 0.03959 0.03976 skew -3.80 | flux 1.00001 | G0-M0 (-1.9,+0.8) G0-P (+0.6,-2.2) G0-G2 (+3.1,-2.0) | nbad G 0 M 0 | G s(r=2) 1.31 px
+ifle04phq 04B | peak-K0 0.14 px | clean  8270 px   4330176 e- core 0 | resid 0.0011 | 0.03959 0.03976 skew -3.80 | flux 0.99999 | G0-M0 (-2.0,+0.7) G0-P (+0.7,-2.5) G0-G2 (+3.0,-2.3) | nbad G 0 M 0 | G s(r=2) 1.31 px
+ifle04piq 04B | peak-K0 0.11 px | clean  9753 px   4942552 e- core 0 | resid 0.0012 | 0.03959 0.03976 skew -3.80 | flux 1.00000 | G0-M0 (-1.8,+1.1) G0-P (+1.7,-2.2) G0-G2 (+2.9,-2.5) | nbad G 0 M 0 | G s(r=2) 1.32 px
+ifle04pjq 04B | peak-K0 0.06 px | clean 10903 px   6485983 e- core 2 | resid 0.0014 | 0.03958 0.03976 skew -3.80 | flux 0.99994 | G0-M0 (-1.8,+0.9) G0-P (+3.1,-1.8) G0-G2 (+2.5,-2.1) | nbad G 0 M 0 | G s(r=2) 1.34 px
+ifle05qlq 05A | peak-K0 0.24 px | clean  6312 px   2974827 e- core 0 | resid 0.0007 | 0.03958 0.03976 skew -3.80 | flux 1.00001 | G0-M0 (-1.4,+1.1) G0-P (-0.5,-3.5) G0-G2 (+2.4,-2.5) | nbad G 0 M 0 | G s(r=2) 1.29 px
+ifle05qmq 05A | peak-K0 0.24 px | clean  8594 px   4022925 e- core 0 | resid 0.0007 | 0.03958 0.03976 skew -3.80 | flux 1.00003 | G0-M0 (-1.8,+0.9) G0-P (+0.2,-3.4) G0-G2 (+2.8,-2.1) | nbad G 0 M 0 | G s(r=2) 1.29 px
+ifle05qnq 05A | peak-K0 0.23 px | clean  6903 px   3107369 e- core 0 | resid 0.0007 | 0.03958 0.03976 skew -3.80 | flux 1.00000 | G0-M0 (-1.7,+1.6) G0-P (+1.9,-6.7) G0-G2 (+3.0,-2.4) | nbad G 0 M 0 | G s(r=2) 1.30 px
+ifle05qoq 05B | peak-K0 0.20 px | clean  8532 px   3923464 e- core 2 | resid 0.0009 | 0.03958 0.03976 skew -3.80 | flux 1.00006 | G0-M0 (-1.6,+0.9) G0-P (+2.0,-2.3) G0-G2 (+3.3,-2.2) | nbad G 0 M 0 | G s(r=2) 1.32 px
+ifle05qpq 05B | peak-K0 0.22 px | clean  8102 px   3964929 e- core 0 | resid 0.0009 | 0.03958 0.03976 skew -3.80 | flux 1.00007 | G0-M0 (-1.5,+1.4) G0-P (+0.4,-3.3) G0-G2 (+3.4,-2.6) | nbad G 0 M 0 | G s(r=2) 1.36 px
+ifle05qqq 05B | peak-K0 0.20 px | clean 14683 px   8001972 e- core 0 | resid 0.0009 | 0.03958 0.03976 skew -3.80 | flux 1.00005 | G0-M0 (-1.7,+1.4) G0-P (+0.7,-3.0) G0-G2 (+3.8,-2.3) | nbad G 0 M 0 | G s(r=2) 1.37 px
+ifle06tjq 06A | peak-K0 0.26 px | clean  7348 px   3517268 e- core 1 | resid 0.0010 | 0.03958 0.03976 skew -3.80 | flux 0.99999 | G0-M0 (-3.3,+1.3) G0-P (+0.8,-1.6) G0-G2 (+3.9,-3.2) | nbad G 0 M 0 | G s(r=2) 1.27 px
+ifle06tkq 06A | peak-K0 0.25 px | clean  7852 px   4050896 e- core 0 | resid 0.0010 | 0.03958 0.03976 skew -3.80 | flux 1.00002 | G0-M0 (-2.9,+1.7) G0-P (+0.2,-1.1) G0-G2 (+3.6,-3.2) | nbad G 0 M 0 | G s(r=2) 1.29 px
+ifle06tlq 06A | peak-K0 0.23 px | clean  8005 px   3857478 e- core 0 | resid 0.0010 | 0.03958 0.03976 skew -3.80 | flux 1.00000 | G0-M0 (-3.1,+1.8) G0-P (+1.6,-1.7) G0-G2 (+4.1,-3.4) | nbad G 0 M 0 | G s(r=2) 1.28 px
+ifle06tmq 06B | peak-K0 0.14 px | clean  7036 px   3005309 e- core 1 | resid 0.0009 | 0.03958 0.03975 skew -3.80 | flux 1.00005 | G0-M0 (-2.4,+1.3) G0-P (+0.1,-0.1) G0-G2 (+3.4,-3.5) | nbad G 0 M 0 | G s(r=2) 1.32 px
+ifle06tnq 06B | peak-K0 0.13 px | clean  7823 px   3792921 e- core 0 | resid 0.0009 | 0.03958 0.03975 skew -3.80 | flux 1.00003 | G0-M0 (-2.1,+1.7) G0-P (+0.9,-1.9) G0-G2 (+3.2,-3.5) | nbad G 0 M 0 | G s(r=2) 1.36 px
+ifle06toq 06B | peak-K0 0.13 px | clean  8062 px   3731257 e- core 0 | resid 0.0009 | 0.03958 0.03975 skew -3.80 | flux 1.00003 | G0-M0 (-2.5,+1.8) G0-P (+1.9,-1.7) G0-G2 (+3.6,-3.5) | nbad G 0 M 0 | G s(r=2) 1.40 px
+ifle22f7q 22A | peak-K0 0.15 px | clean  4966 px   2862813 e- core 11 | resid 0.0010 | 0.03958 0.03976 skew -3.81 | flux 0.99999 | G0-M0 (-4.1,+1.4) G0-P (+5.8,+0.2) G0-G2 (+5.8,-3.2) | nbad G 0 M 0 | G s(r=2) 1.36 px
+ifle22f8q 22A | peak-K0 0.16 px | clean  6297 px   3529037 e- core 0 | resid 0.0010 | 0.03958 0.03976 skew -3.81 | flux 0.99999 | G0-M0 (-3.5,+1.3) G0-P (+4.9,+0.4) G0-G2 (+5.8,-3.2) | nbad G 0 M 0 | G s(r=2) 1.39 px
+ifle22f9q 22A | peak-K0 0.18 px | clean  8787 px   5815899 e- core 4 | resid 0.0011 | 0.03958 0.03976 skew -3.81 | flux 1.00000 | G0-M0 (-3.8,+1.2) G0-P (+4.5,+0.4) G0-G2 (+6.6,-3.3) | nbad G 0 M 0 | G s(r=2) 1.41 px
+ifle22faq 22B | peak-K0 0.11 px | clean 11006 px   6170318 e- core 11 | resid 0.0009 | 0.03958 0.03976 skew -3.81 | flux 1.00001 | G0-M0 (-3.4,+1.4) G0-P (+4.5,-2.5) G0-G2 (+5.7,-3.1) | nbad G 0 M 0 | G s(r=2) 1.41 px
+ifle22fbq 22B | peak-K0 0.14 px | clean 11976 px   6789691 e- core 0 | resid 0.0009 | 0.03958 0.03976 skew -3.81 | flux 1.00000 | G0-M0 (-3.6,+1.2) G0-P (+3.7,+0.3) G0-G2 (+5.6,-3.2) | nbad G 0 M 0 | G s(r=2) 1.41 px
+ifle22fcq 22B | peak-K0 0.19 px | clean  9914 px   5837618 e- core 18 | resid 0.0009 | 0.03958 0.03976 skew -3.81 | flux 1.00000 | G0-M0 (-4.2,+1.3) G0-P (+5.4,+0.6) G0-G2 (+5.5,-3.3) | nbad G 0 M 0 | G s(r=2) 1.40 px
+# reference, within-position scatter about the group mean (mas, detector-fixed; includes any drift): median 2.3 max 6.9
+# Horizons (observer HST @-48): 5 rows; raw in data/hst-3i/horizons/3I_from_HST_psang_2026-09-27.txt
+  visit 22: 2025-Dec-12 21:37:04.022 |  |  | 168.68564 | 4.63082 | 2.108083811595 | 47.6419508 | 1.81366661444235 | -10.3151088 | 27.7947 | 292.964 | 109.376 | 
+  visit 03: 2025-Dec-27 16:12:11.146 |  |  | 151.45526 | 10.36983 | 2.536046227210 | 52.2034860 | 1.83000368643498 | 10.4638011 | 18.2841 | 291.360 | 107.030 | 
+  visit 04: 2026-Jan-07 15:50:08.621 |  |  | 138.53137 | 14.05989 | 2.874021099270 | 54.2097399 | 1.97830016130828 | 32.6151620 | 9.7649 | 290.624 | 104.124 | 
+  visit 05: 2026-Jan-14 15:38:34.224 |  |  | 131.11238 | 15.86012 | 3.094810440345 | 55.1164266 | 2.13506303067581 | 43.1278719 | 4.8118 | 293.059 | 102.022 | 
+  visit 06: 2026-Jan-22 13:27:01.670 |  |  | 123.87094 | 17.36784 | 3.348399141524 | 55.9035236 | 2.36469930874144 | 54.9397279 | 0.6961 | 12.964 | 99.631 | 
+# H0.3 map: GridMap vs the full WCS at 2000 random points, max over frames 0.0014 px (the old cubic: 0.0781 px)
+# H0.1 peaks within 1.5 px of K0: PASS | H0.3 map residual < 0.01 px: PASS | H0.4 flux(10") within 0.5 %: PASS | H0.6 Horizons 5 rows: PASS
+# done in 105 s

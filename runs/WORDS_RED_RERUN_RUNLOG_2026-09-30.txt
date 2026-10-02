@@ -1,0 +1,7 @@
+# words bar 2026-09-30 11:58:45 UTC | HEAD f191dc5
+W0  FAIL  clean: D0 green, K16 red | an <img> from another site: D0 red | a link to another site: K16 red
+W1  FAIL  test_k15_: red
+W2  FAIL  test_k16_: red
+W3  FAIL  test_k17_: red
+W4  PASS  W6 on calibrator/: green | on a copy naming nowhere/at_all.py: red
+# words bar: NOT MET, 1 of 5 (failing: W0 W1 W2 W3)

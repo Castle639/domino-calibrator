@@ -1,0 +1,20 @@
+# fix_f3_bar | HEAD 323ebc7 | its sha256 d92dd43d7926f1fd180d942cbad6add186ed1843d8a78d989bf3d9d72f3efd5f | tests/test_fix_f3.py dd8332bb80bab2bd679dd4908f3a5b017ddd78cd28065a662a5bfd8b33d3dd5f
+P0  PASS  the summaries' recounts (21, 45, 21, 3, 9, 20, 20, 45, 130): True | the registry flags a planted number: True | the jargon and name patterns catch planted forms: True | the judge accepts the record with the validator: True, fails without it: True | Chromium reads the placeholders' colours: True (10 inputs)
+P1  PASS  tests.test_fix_f3.F3_Rule: 1 run
+P2  PASS  tests.test_fix_f3.F3_ExitCodes: 1 run
+P3  PASS  tests.test_fix_f3.F3_13_WholeFrame: 1 run
+P4  PASS  tests.test_fix_f3.F3_15_Judge: 1 run
+P5  PASS  tests.test_fix_f3.F3_16_CheckARecord: 1 run
+P6  PASS  tests.test_fix_f3.F3_17_MaySkip: 1 run
+P7  PASS  tests.test_fix_f3.F3_20_Jargon: 1 run
+P8  PASS  tests.test_fix_f3.F3_21_Changelog: 2 run
+P9  PASS  tests.test_fix_f3.F3_23_Cutout: 2 run
+P10  PASS  tests.test_fix_f3.F3_24_26_Study: 3 run
+P11  PASS  tests.test_fix_f3.F3_28_PageComparison: 1 run
+P12  PASS  tests.test_fix_f3.F3_29_SameMethod: 1 run
+P13  PASS  tests.test_fix_f3.F3_30_Credit: 1 run
+P14  PASS  tests.test_fix_f3.F3_40_Hints: 1 run
+P15  PASS  tests.test_fix_f3.F3_3_5_RmsWords: 1 run
+P16 PASS  the placeholders against their own boxes, at least 4.5:1: all 10
+P17 PASS  the whole suite: strict: PASS (290 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# fix f3 bar: MET, 18 of 18

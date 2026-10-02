@@ -1,0 +1,8 @@
+# release bar 2026-10-01 17:38:38 UTC | HEAD 858ae4c | the folder release/domino-calibrator
+S0  PASS  107 patterns, each hitting its control: yes | each found where its bare form is planted, in a copy of the folder (a runs/ log and a tools/ script): yes
+S1  PASS  364 files, missing 0, extra 0 | the checksum list: 30 lines, the positions file's 30 frames: True | the tools name their source and commit: True
+S2  PASS  modules byte-identical but: ades.py differs (each differing line held a pattern); estimators.py differs (each differing line held a pattern); shrink.py differs (each differing line held a pattern)
+S3  PASS  patterns matching in the folder: none | kept, for the record: none
+S4  PASS  strict: PASS (305 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 0, 344 s
+S5  PASS  C1 PASS | C2 43 REPORTING, 0 FITTED, the same 43: True | 491 s
+# release bar: MET, 6 of 6

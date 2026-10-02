@@ -1,0 +1,58 @@
+# T run 11 2026-09-27 20:28:08 UTC | shrink and zeroap.js: an unconverged r = 2 / r = 6 reports NaN; its test
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... [the checkout]/calibrator/estimators.py:97: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:98: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:96: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[the checkout]/calibrator/estimators.py:108: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:109: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:111: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:112: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:140: RuntimeWarning: overflow encountered in exp
+  s = float(np.exp(q[3]))
+[the checkout]/calibrator/estimators.py:97: RuntimeWarning: overflow encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:98: RuntimeWarning: overflow encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 13.066s
+
+OK

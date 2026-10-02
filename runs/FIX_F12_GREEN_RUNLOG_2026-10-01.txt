@@ -1,0 +1,6 @@
+# fix_f12_bar | HEAD 403caa8 | TARGET HEAD (403caa8) | BASE ea49149
+V0 PASS  the controls: the standing word tests | OK
+V1 PASS  the package code, docstrings aside, against ea49149: 10 modules, differing none
+V2 PASS  tests/test_fix_f12.py | OK
+V3 PASS  strict: PASS (349 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F12's bar on HEAD: MET, 4 of 4

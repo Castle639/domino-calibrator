@@ -1,0 +1,144 @@
+# The suite on Linux, Windows and macOS, on every push and pull request. The repository's root holds the package domino_calibrator/, tests/, and, copied
+# in beside the package, tools/fetch_frames.py and data/hst-3i/CHECKSUMS.sha256 (the curation list). Every command runs
+# from that root, as a stranger types it after a clone, whatever the folder is called. The checkout goes to a folder of its
+# own, so that the tools (ADES-Master, the validator, Playwright) stay beside it, outside the folder whose every .py K14
+# compiles; the frames land in its data/hst-3i/, where the tests look for them.
+# Two jobs. The tested versions: Linux, Python 3.11, numpy, scipy and astropy pinned, and the flag that lets K13 check
+# them. What pip picks today: Linux on Python 3.11 to 3.14, Windows and macOS on 3.14, each with Python 3.11 beside it for
+# K6's install of the tested versions. Every job fails on any skip it does not name (tests/strict.py); Windows and macOS
+# may skip only K8 and K10's Debian records, Linux's by design, and run the README's own install lines instead
+# (tests/readme_install.py); Windows also F1's raw bytes in argv, since it hands Python its arguments as UTF-16. The actions are their newest majors, on Node 24 (Node 20 left GitHub's runners on 23 Sept 2026), each pinned by its
+# commit's SHA, the release beside it; Dependabot (.github/dependabot.yml) proposes the updates.
+name: tests
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  tested:
+    name: the tested versions (ubuntu-24.04, Python 3.11)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          path: domino-calibrator
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
+        with:
+          node-version: "22"
+
+      - name: the tested versions
+        run: python -m pip install numpy==2.2.6 scipy==1.15.3 astropy==6.1.7
+
+      - name: the MPC's validator (IAU ADES-Master at 39ae5a9)
+        env:
+          GIT_LFS_SKIP_SMUDGE: "1"
+        run: |
+          git clone https://github.com/IAU-ADES/ades-master ades-master
+          git -C ades-master checkout 39ae5a9
+          python -m pip install --target pylib ./ades-master
+
+      - name: headless Chromium for the page's tests
+        run: |
+          npm install playwright@1.56.1
+          npx playwright install --with-deps chromium
+
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: domino-calibrator/data/hst-3i/*.fits
+          key: hst-frames-${{ runner.os }}-${{ hashFiles('domino-calibrator/data/hst-3i/CHECKSUMS.sha256') }}
+
+      - name: Hubble's frames from MAST, each checked against its committed checksum
+        working-directory: domino-calibrator
+        run: python tools/fetch_frames.py 22 03 04 05 06
+
+      - name: the suite, nothing skipped
+        working-directory: domino-calibrator
+        env:
+          ADES_PYLIB: ${{ github.workspace }}/pylib
+          ADES_MASTER: ${{ github.workspace }}/ades-master
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/node_modules/playwright
+          DOMINO_CALIBRATOR_TESTED_VERSIONS: "1"    # this job installs the tested versions: K13 checks they are the ones running
+        run: python -m tests.strict
+
+  picks:
+    name: what pip picks today (${{ matrix.os }}, Python ${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-24.04, python: "3.11" }
+          - { os: ubuntu-24.04, python: "3.12" }
+          - { os: ubuntu-24.04, python: "3.13" }
+          - { os: ubuntu-24.04, python: "3.14" }
+          - { os: windows-2025, python: "3.14", may_skip: "--may-skip test_k8_ --may-skip test_k10_ --may-skip test_the_command_line_with_raw_bytes_in_argv" }
+          - { os: macos-26, python: "3.14", may_skip: "--may-skip test_k8_ --may-skip test_k10_" }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          path: domino-calibrator
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0    # the last is the default; 3.11 stays on the PATH, for K6
+        with:
+          python-version: |
+            3.11
+            ${{ matrix.python }}
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
+        with:
+          node-version: "22"
+
+      - name: what pip picks today
+        working-directory: domino-calibrator
+        run: python -m pip install .
+
+      - name: the MPC's validator (IAU ADES-Master at 39ae5a9)
+        env:
+          GIT_LFS_SKIP_SMUDGE: "1"
+        run: |
+          git clone https://github.com/IAU-ADES/ades-master ades-master
+          git -C ades-master checkout 39ae5a9
+          python -m pip install --target pylib ./ades-master
+
+      - name: headless Chromium for the page's tests
+        run: |
+          npm install playwright@1.56.1
+          if [ "$RUNNER_OS" = Linux ]; then npx playwright install --with-deps chromium; else npx playwright install chromium; fi
+
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: domino-calibrator/data/hst-3i/*.fits
+          key: hst-frames-${{ runner.os }}-${{ hashFiles('domino-calibrator/data/hst-3i/CHECKSUMS.sha256') }}
+
+      - name: Hubble's frames from MAST, each checked against its committed checksum
+        working-directory: domino-calibrator
+        run: python tools/fetch_frames.py 22 03 04 05 06
+
+      - name: the suite, nothing skipped but what this system cannot run
+        working-directory: domino-calibrator
+        env:
+          ADES_PYLIB: ${{ github.workspace }}/pylib
+          ADES_MASTER: ${{ github.workspace }}/ades-master
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/node_modules/playwright
+        run: python -m tests.strict ${{ matrix.may_skip }}
+
+      - name: the README's install lines, as written (Windows and macOS; on Linux, K8 runs them in Ubuntu's own shell)
+        if: runner.os != 'Linux'
+        working-directory: domino-calibrator
+        run: python tests/readme_install.py

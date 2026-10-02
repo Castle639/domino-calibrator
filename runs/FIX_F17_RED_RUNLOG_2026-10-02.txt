@@ -1,0 +1,5 @@
+# fix_f17_bar | HEAD e1dc7c4
+X0 PASS  the controls: OK
+X1 FAIL  tests/test_fix_f17.py | FAILED (failures=10) | failing: test_an_infinity_planted_in_the_summary_is_found, test_infinity_against_anything_else_is_a_difference, test_runs_readme_says_it_in_his_words
+X2 FAIL  strict: FAIL (372 run, 10 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_an_infinity_planted_in_the_summary_is_found, test_infinity_against_anything_else_is_a_difference, test_runs_readme_says_it_in_his_words
+# F17's bar: NOT MET, 1 of 3

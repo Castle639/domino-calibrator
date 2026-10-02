@@ -1,0 +1,13 @@
+# fix_f4_bar | HEAD b6e99c3 | its sha256 73686696dcc421439e5c4b13d1b9bbc09badbc3a715f7d971d1ba1b5dd51c1c1 | tests/test_fix_f4.py 1d261d379d9772956d058c1a98b6f92f96645c1dd3b687e20755a4457fa708a3 | CHECKS c357708eebbd | the recipe curate_4.py, 755883c33145 | its decisions decisions_4.json, 62bb574ccbe3
+#   the folder built by the recipe: yes (344 files)
+Q0  PASS  a placeholder planted is found: True | a machine path planted is found: True | a pointer to a file left out, planted, is found: True | an executable line planted is found, a comment is not: True | the Castle's arcsec record is not marked: True | the Castle's fetch_frames.py examples select no frame of the public list: True | the Castle's psfkit.py self-test fails the case: True | an sdist without MANIFEST.in ships tests/: True | the workflow cases fail on a planted workflow: True
+Q1  PASS  tests.test_fix_f4.F4_32_Sdist: 1 run
+Q2  PASS  tests.test_fix_f4.F4_33_PyPI: 3 run
+Q3  PASS  tests.test_fix_f4.F4_35_Publish: 3 run
+Q4  PASS  tests.test_fix_f4.F4_36_RunsReadme: 1 run
+Q5  PASS  placeholders in the folder: 0 in 0 files | to leave out, still there: 0 of 24 | to keep, missing: 0 of 7 | psfkit.py's self-test: exit 2, a traceback: False, its last line says what it needs: True | pointers to a file left out: 0 in 0 files
+Q6  PASS  the examples: ifle22f7q -> 0, 22 03 -> 0 | the exit line names PRESENT: True | private phrases left: 0 of 3
+Q7  PASS  the advice at line 81, its three lines kept: True, the mark right before it: True
+Q8  PASS  machine paths in the folder: 0 in 0 files | .py files whose code the curation changed: 0
+Q9  PASS  the whole suite: strict: PASS (298 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# fix f4 bar: MET, 10 of 10

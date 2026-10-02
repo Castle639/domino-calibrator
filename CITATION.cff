@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. A Castle product from Domino Observatory. Built by Annie, the Castle's AI."
+title: domino-calibrator
+type: software
+version: "0.1.0"
+license: MIT
+repository-code: "https://github.com/Castle639/domino-calibrator"
+abstract: >-
+  Open zero-aperture comet astrometry: the shrinking-aperture method (D. J. Tholen; published form in Farnocchia
+  et al. 2016), with a command line and a plain page (the same method, ported and checked against the Python), and a test
+  of it on Hubble's images of 3I/ATLAS (checked by its makers, not yet by anyone outside).
+  A Castle product from Domino Observatory. Built by Annie, the Castle's AI.
+authors:
+  - name: "Domino Observatory"
+contact:
+  - name: "Domino Observatory"
+    website: "https://github.com/Castle639/domino-calibrator/issues"
+keywords:
+  - astrometry
+  - comets
+  - photocentre
+  - ADES
+  - 3I/ATLAS

@@ -1,0 +1,5 @@
+# Launch step 2's bar, its green run on the build (3e22024): the prediction, written before the run
+THE BAR: MET, 18 of 18. W1 nothing found, the planted fault found; W2 checkout@v7, setup-python@v7, setup-node@v7, cache@v6 on node24; W3 K7 green, wm1-wm10 each red; W4 the four planted cases right;
+W5 the block installs here and the command answers, the Windows reading exactly K11's three, the broken block exits non-zero; W6 K14 green, red on the planted escape; W7 exit 0, nothing skipped, on the tested setup and pick314; W8 step 1's bar met, 19 of 19 (225 tests a setup).
+The least certain: W5's install here, its first run end to end.
+# written 2026-09-29 20:39:09 UTC, sha256 of the lines above: e2ae506216220505

@@ -1,0 +1,35 @@
+# H0's 30 frames and the position each frame's peak is checked against (H0.1: within 1.5 px), x and y in 0-based detector
+# pixels of the frame's _flc image, two decimals as first written. The frames are HST programme 18152's visits 22 and 03-06,
+# the 170 s F350LP exposures (MAST; tools/fetch_frames.py brings them). Made 30 Sept 2026 (the launch list's step 6), so that
+# H0 reads nothing outside the repository: the positions are those the study has checked its peaks against since it began.
+# root x y
+ifle03geq 684.82 733.92
+ifle03gfq 684.79 733.89
+ifle03ggq 689.18 738.16
+ifle03ghq 689.17 738.14
+ifle03giq 689.78 738.14
+ifle04pdq 793.92 825.11
+ifle04peq 793.86 825.10
+ifle04pfq 793.84 825.09
+ifle04pgq 798.85 829.94
+ifle04phq 798.88 829.93
+ifle04piq 798.92 829.93
+ifle04pjq 798.98 829.94
+ifle05qlq 757.81 794.15
+ifle05qmq 757.79 794.12
+ifle05qnq 757.20 794.11
+ifle05qoq 762.81 798.93
+ifle05qpq 762.81 798.89
+ifle05qqq 762.83 798.89
+ifle06tjq 757.22 809.14
+ifle06tkq 757.19 809.17
+ifle06tlq 757.16 809.17
+ifle06tmq 762.13 814.06
+ifle06tnq 762.10 814.08
+ifle06toq 762.10 814.08
+ifle22f7q 756.03 810.15
+ifle22f8q 755.97 810.16
+ifle22f9q 755.92 810.16
+ifle22faq 760.92 815.07
+ifle22fbq 760.95 815.13
+ifle22fcq 761.00 815.19

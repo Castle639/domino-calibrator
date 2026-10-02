@@ -1,0 +1,14 @@
+# the amended test_4_6 on b5b6be4's code, 2026-09-28 15:57:44 UTC (before any fix)
+F
+======================================================================
+FAIL: test_4_6_the_page_names_the_remedy (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_6_the_page_names_the_remedy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_2_page.py", line 177, in test_4_6_the_page_names_the_remedy
+    self.assertIn('command line', v or '', c)
+AssertionError: 'command line' not found in 'projection TPV: the page reads TAN and TAN-SIP only' : {'CTYPE1': 'RA---TPV', 'CTYPE2': 'DEC--TPV'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.240s
+
+FAILED (failures=1)

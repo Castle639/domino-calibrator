@@ -1,0 +1,44 @@
+# audit_fix_bar | HEAD 6523f24 | its sha256 e2516ea42c30570c9ad1c4334eb8889ff1439bc700fe85727ec28a1674da1e29
+X0  PASS  the saturated frame peaks at 65535: True | the automatic start takes the brighter star: True (20.0, 81.0) | the good image 41 of 41: True
+X1  FAIL  B1 on the command line: FAILED (failures=4) | the engine (B1 and B2, and the same words): FAILED (failures=1) | the page: FAILED (errors=1)
+X2  FAIL  B2 on the command line: FAILED (failures=7, skipped=1) | the engine: FAILED (failures=1) | the page: FAILED (errors=1)
+X3  FAIL  the audit's own inputs, the command line: as wanted False | the pixel answer stands on the four WCS: True | the page's engine: False
+    BAD  cd_zero            record
+    BAD  cd_singular        record
+    BAD  sip_huge           record
+    BAD  crpix_str          record
+    BAD  const              record
+    BAD  w6248 automatic    record
+    BAD  w4096 automatic    record
+    BAD  c101 +5 +0         record
+    BAD  c101 +0 -5         record
+    BAD  c101 (40, 61)      record
+    ok   c101 on the comet  record
+    ok   c101 automatic     record
+    ok   good               record
+    the engine: the engine failed: node failed: tion
+    at Object.<anonymous> (/tmp/tmpw4t5ubsc/s.js:10:15)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+X4  FAIL  the study's 30 frames, G and M, from its own starts: 0 of 60 records
+        ifle03geq G:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03geq_flc.fits'
+        ifle03geq M:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03geq_flc.fits'
+        ifle03gfq G:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03gfq_flc.fits'
+        ifle03gfq M:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03gfq_flc.fits'
+        ifle03ggq G:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03ggq_flc.fits'
+        ifle03ggq M:  measure: [Errno 2] No such file or directory: '[the checkout]/calibrator/data/hst-3i/ifle03ggq_flc.fits'
+X5  FAIL  the whole suite: strict: FAIL (238 run, 12 failures, 1 errors, 1 skipped: 0 allowed, 1 not)
+        failed: test_b1_b2_the_page_offers_no_record_to_copy (tests.test_audit_blockers.TestThePage.test_b1_b2_the_page_offers_no_record_to_copy)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured)
+        failed: test_b1_b2_the_page_decides_as_the_command_line (tests.test_audit_blockers.TestTheEngine.test_b1_b2_the_page_decides_as_the_command_line)
+# audit fix bar: NOT MET, 1 of 6

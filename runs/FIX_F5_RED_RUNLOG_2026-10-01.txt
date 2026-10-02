@@ -1,0 +1,19 @@
+# fix_f5_bar | HEAD 5d4fe93 | its sha256 3a6a770697e6e0553aa5d5936445e13854de856d120aa6f5e023261776f9b7ee | CHECKS b8a481b4bf85 | the recipe curate_4.py, 755883c33145 | its decisions decisions_4.json, 62bb574ccbe3
+#   the folder built by the recipe: yes (352 files)
+V0  PASS  a pointer planted is found: True | a tool planted that is not in the folder is found: True | the Castle's own first study record fails V2: True | the Castle's own ades.py fails V3: True | the Castle's own psfkit.py fails V4: True | an executable line planted is found, a comment is not: True
+V1  FAIL  pointers to a never-public file of the Castle: 42 in 28 files | generically (a record or a tool not in the folder): 29 in 28 files
+    archive/CALIBRATOR_2026-09-27.md 2, 1
+    domino_calibrator/ades.py 1, 1
+    runs/REL_T_RUNLOG_2026-09-28_red.txt 13, 0
+    runs/any_machine.py 1, 1
+    runs/audit_fix_bar.py 1, 1
+    runs/ci_bar.py 1, 1
+    runs/fix_f1_bar.py 1, 1
+    runs/fix_f2_bar.py 1, 1
+V2  FAIL  the paper's path left anywhere in the folder: 14 | archive/CALIBRATOR_2026-09-27.md: the path 1 in the source, 1 left, the reference 0 | runs/REL_T_RUNLOG_2026-09-28_red.txt: the path 13 in the source, 13 left, the reference 0
+V3  FAIL  domino_calibrator/ades.py: never-public names 1 | its code the Castle's: True
+V4  FAIL  tools/psfkit.py's docstring: kept words missing: 0 of 2 | dropped words left: 5 of 5 | TinyTim's source named in words: False
+V5  PASS  .py files whose code the curation changed, but the named stand-ins: 0
+V6  PASS  placeholders 0 | machine paths 0 | pointers to a file left out 0 | left out, still there: 0 of 24 | kept, missing: 0 of 7
+V7  PASS  the whole suite in a copy of the folder, the frames linked (30): strict: PASS (298 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# fix f5 bar: NOT MET, 4 of 8 (failing: V1 V2 V3 V4)

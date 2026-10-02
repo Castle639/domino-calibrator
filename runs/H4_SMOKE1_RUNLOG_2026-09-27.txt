@@ -1,0 +1,5 @@
+# H4 smoke 2026-09-27 21:48:15 UTC | calibrator/runs/h4_arcsec.py | commit 30b083a | NREAL 1
+# frames: ifle03geq
+# 468 records in 104 s (0 errors)
+# raw: ../../..[a session]/scratchpad/H4_RAW_smoke.json.gz
+# done in 105 s

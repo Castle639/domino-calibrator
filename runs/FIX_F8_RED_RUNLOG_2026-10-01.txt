@@ -1,0 +1,32 @@
+# fix_f8_bar | HEAD 20b1aea | TARGET sealed (004726d5589694a1d987a892f5fde0575d8b2cab:release/domino-calibrator) | the confirmations C_R1_1.py the audit room's, c6_slice.py the audit room's
+    sip_ok {"rc": 0, "zero": ["64.3008", "63.6955"], "sky": ["151.2646897", "+10.5872628"], "record": "3I    |CCD |568|2025-12-12T10:00:30.00Z|151.264690|+10.587263|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)", "notes": [], "need": null, "j
+    sip_nan_raw {"rc": 0, "zero": ["64.3008", "63.6955"], "sky": ["151.2651899", "+10.5872631"], "record": "3I    |CCD |568|2025-12-12T10:00:30.00Z|151.265190|+10.587263|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)", "notes": ["# note: heade
+    sip_nan_str {"rc": 2, "zero": ["64.3008", "63.6955"], "sky": null, "record": null, "notes": [], "need": "a sky position (the WCS card A_2_0 = 'NaN' is not a number)", "judge": "no record"}
+    sip_drop {"rc": 0, "zero": ["64.3008", "63.6955"], "sky": ["151.2651899", "+10.5872631"], "record": "3I    |CCD |568|2025-12-12T10:00:30.00Z|151.265190|+10.587263|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)", "notes": [], "need": null, 
+    engine sip_ok {"need": [], "rd": [151.26468965882043, 10.587262750990512]}
+    engine sip_nan_raw {"need": ["a sky position (the WCS card A_2_0 = 'NAN' is not a number)"], "rd": null}
+    engine sip_nan_str {"need": ["a sky position (the WCS card A_2_0 = 'NaN' is not a number)"], "rd": null}
+    engine sip_drop {"need": [], "rd": [151.2651899398735, 10.587263121673582]}
+    C6.1 rot.fits (CD1_1 readable): exit 0 | record True | judge submit is OK | sky (149.9425643, 20.5536023)
+    C6.1 rot_nan: exit 0 | notes ['# note: header card CD1_1 could not be read, and was left out'] | record True | judge submit is OK | 608.6" from rot.fits's position | engine: ["a sky position (the WCS card CD1_1 = 'NAN' is not a number)"]
+    C6.1 rot_inf: exit 0 | notes ['# note: header card CD1_1 could not be read, and was left out'] | record True | judge submit is OK | 608.6" from rot.fits's position | engine: ["a sky position (the WCS card CD1_1 = 'Infinity' is not a number)"]
+    C6.1 engine on rot.fits: need []
+    C6.2 eexp.fits (E exponent): exit 0 | record True | judge submit is OK | sky (150.1227722, 20.4561183)
+    C6.2 crval_dexp: cli exit 0 | notes [] | record True | judge submit is OK | sky (1.5010022, 20.4561183) | 501298.9" from eexp's | needs: -
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+    C6.2 crpix_dexp: cli exit 0 | notes [] | record True | judge submit is OK | sky (150.1093898, 20.4561178) | 45.1" from eexp's | needs: -
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+    C6.2 cd_dexp: cli exit 2 | notes [] | record False | judge - | sky None | no sky from eexp's | needs: a sky position (the WCS matrix is degenerate: its two axes are nearly parallel)
+         engine: need [] | rd [150.12277222083833, 20.456118294691986] | 0.000" from eexp's
+Q0 PASS  the controls: the confirmations the audit room's and run whole (exit 0, 0); sip_ok on the truth, sip_drop 1.77" off; rot.fits and eexp.fits accepted; the engine refuses sip_nan_raw, rot_nan and rot_inf and places the three D files 0.000/0.000/0.000"
+Q1 FAIL  R1.1, sip_nan_raw: exit 0, record True, need None
+    F6.1 rot_nan: exit 0, record True, need None
+    F6.1 rot_inf: exit 0, record True, need None
+Q2 FAIL  F6.1: CD1_1 unreadable (NAN, 1E400) refused at the sky in the page's words, the value as written
+    F6.2 crval_dexp: exit 0, record True, the E file's lines False | need None | ['# sky (ICRS): RA 1.5010022, Dec +20.4561183 deg, the zero-aperture position']
+    F6.2 crpix_dexp: exit 0, record True, the E file's lines False | need None | ['# sky (ICRS): RA 150.1093898, Dec +20.4561178 deg, the zero-aperture position']
+    F6.2 cd_dexp: exit 2, record False, the E file's lines False | need 'a sky position (the WCS matrix is degenerate: its two axes are nearly parallel)' | []
+Q3 FAIL  F6.2: the D exponents read as the header says, the E file's record
+Q4 FAIL  tests/test_fix_f7.py and tests/test_fix_f8.py | FAILED (failures=5) | failing: test_a_d_exponent_gives_the_record_the_e_exponent_gives, test_a_wcs_that_differs_from_its_header_gives_no_sky_position
+Q5 FAIL  strict: FAIL (310 run, 5 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_a_d_exponent_gives_the_record_the_e_exponent_gives, test_a_wcs_that_differs_from_its_header_gives_no_sky_position
+# F8's bar on sealed: NOT MET, 1 of 6

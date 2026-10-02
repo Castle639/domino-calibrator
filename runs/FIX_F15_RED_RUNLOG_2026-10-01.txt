@@ -1,0 +1,5 @@
+# fix_f15_bar | HEAD ae72c94
+X0 PASS  the controls: OK
+X1 FAIL  tests/test_fix_f15.py | FAILED (failures=1) | failing: test_the_readme_says_it_after_the_credit_line_as_its_own_sentence
+X2 FAIL  strict: FAIL (359 run, 1 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_the_readme_says_it_after_the_credit_line_as_its_own_sentence
+# F15's bar: NOT MET, 1 of 3

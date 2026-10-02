@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero-aperture comet astrometry</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  @font-face { font-family: "Inter"; src: url('fonts/Inter-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Inter"; src: url('fonts/Inter-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+  /* one theme, dark, whatever the system asks */
+  :root { color-scheme: dark; --bg: #161616; --fg: #e6e6e6; --muted: #9a9a9a; --line: #707070; --rule: #2c2e33; --surface: #1c1e22; --field: #1e1e1e;
+          --accent: #6ea8ff; --accent2: #ff7b6b; --on-accent: #0b1830; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 15px/1.5 "Inter", system-ui, sans-serif; margin: 0 auto; max-width: 1080px; padding: 24px 20px 32px; overflow-wrap: break-word; }
+  h1 { font-size: 1.45em; font-weight: 600; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: 1.08em; font-weight: 600; margin: 28px 0 10px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  code { font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 0.92em; }
+  .muted { color: var(--muted); }
+  .row { margin: 8px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  input[type=text], input[type=number], select { font: inherit; font-size: 14px; min-height: 32px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--field); color: var(--fg); font-variant-numeric: tabular-nums; }
+  input[type=number] { width: 6.5em; } select { min-width: 8em; }
+  input[type=file] { font: inherit; font-size: 14px; min-height: 32px; max-width: 100%; }
+  input[type=file]::file-selector-button { font: inherit; font-weight: 600; min-height: 30px; padding: 3px 12px; margin-right: 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--field); color: var(--fg); cursor: pointer; }
+  .stack select { max-width: 24em; }
+  button { font: inherit; font-weight: 600; min-height: 32px; padding: 4px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--field); color: var(--fg); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); padding: 4px 22px; }
+  button:disabled { opacity: 0.55; cursor: not-allowed; }
+  /* the head: the tile, the title and the version */
+  .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .tile .frame { fill: none; stroke: var(--fg); stroke-width: 2.5; } .tile .ring { fill: none; stroke: var(--accent); stroke-width: 2.5; } .tile .pip { fill: var(--accent2); }
+  .lede { margin: 14px 0 0; max-width: 72ch; }
+  /* the tool: the image beside the method at desktop width, one column on a phone */
+  .bench { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 8px 36px; align-items: start; }
+  .bench h2 { margin-top: 0; }
+  canvas, svg#plot { display: block; border: 1px solid var(--line); border-radius: 4px; max-width: 100%; height: auto; }
+  canvas { background: var(--surface); }
+  .stack { display: flex; flex-direction: column; gap: 4px; margin: 10px 0; }
+  .stack label { font-weight: 600; font-size: 14px; }
+  .hint { color: var(--muted); font-size: 13px; }
+  input::placeholder { color: var(--muted); opacity: 1; }   /* 3.62:1 was the browser's own grey */
+  .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  fieldset { border: 1px solid var(--rule); border-radius: 8px; padding: 6px 14px 10px; margin: 0; min-width: 0; }
+  legend { font-weight: 600; padding: 0 6px; }
+  fieldset input[type=text], fieldset select { width: 100%; }
+  .actions { margin: 16px 0 4px; }
+  .answer { display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 16px 24px; align-items: start; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; } td, th { padding: 3px 10px; text-align: right; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 600; } td.why { text-align: left; color: var(--muted); }
+  pre { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; overflow-x: auto; white-space: pre-wrap;
+        font: 12.5px/1.5 ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace; }
+  details.more { border: 1px solid var(--rule); border-radius: 8px; margin: 10px 0; background: var(--surface); max-width: 80ch; }
+  details.more > summary { cursor: pointer; padding: 10px 14px; font-weight: 600; }
+  details.more > summary:focus-visible { outline-offset: -2px; }
+  details.more > .prose { padding: 0 14px 14px; }
+  .prose { max-width: 80ch; }
+  footer { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85em; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  @media (max-width: 820px) { .bench, .answer { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 480px) { body { padding: 16px 16px 28px; } h1 { font-size: 1.25em; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg id="logo" class="tile" role="img" aria-label="domino-calibrator" viewBox="0 0 64 32" width="72" height="36">
+      <rect class="frame" x="1.25" y="1.25" width="61.5" height="29.5" rx="4"/><line class="frame" x1="32" y1="3" x2="32" y2="29"/>
+      <circle class="ring" cx="15" cy="16" r="11"/><circle class="ring" cx="18" cy="16" r="5"/><circle class="pip" cx="48" cy="16" r="4"/>
+    </svg>
+    <div>
+      <h1>Zero-aperture comet astrometry</h1>
+      <div class="muted" id="about">domino-calibrator 0.1.0</div>
+    </div>
+  </div>
+</header>
+<p class="lede">A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded.</p>
+
+<h2>1. The cutout</h2>
+<div class="row"><label for="file">FITS cutout</label> <input type="file" id="file" accept=".fits,.fit,.fts,.fz,.gz"> <label for="hdu">image</label> <select id="hdu"></select> <span id="info" class="muted" role="status"></span></div>
+<div class="row muted" id="hdrnote"></div>
+<div class="bench">
+  <div>
+    <div class="hint">Click the comet to set the start (default: the brightest 5&times;5 pixel).</div>
+    <canvas id="img" width="400" height="400" role="img" aria-label="The cutout in greyscale; click the comet to set the start, or type x and y below"></canvas>
+    <div class="row"><label for="sx">start x</label> <input type="number" id="sx" step="0.1"> <label for="sy">y</label> <input type="number" id="sy" step="0.1"> <span class="hint">(x = column, y = row; 0-based; add 1 for ds9)</span></div>
+  </div>
+  <div>
+    <h2>2. The method</h2>
+    <div class="stack"><label for="est">estimator</label><select id="est"><option value="G">G: symmetric Gaussian fit</option><option value="M">M: moment photocentre</option></select></div>
+    <div class="row"><label for="r0">radii from</label> <input type="number" id="r0" value="2.0" step="0.1"> <label for="r1">to</label> <input type="number" id="r1" value="6.0" step="0.1"> <label for="rs">step</label> <input type="number" id="rs" value="0.1" step="0.05"> <span>px</span></div>
+    <div class="row"><label for="bgm">background</label> <select id="bgm"><option value="annulus">annulus 2.5r&ndash;5r</option><option value="value">known value</option></select> <label for="bgv">value</label> <input type="number" id="bgv" value="0" step="any"></div>
+  </div>
+</div>
+
+<h2>3. The record (every value is yours; nothing defaults)</h2>
+<p class="hint" id="rule">The tool writes an ADES record only from a start you give, on the comet, and only when its checks pass: a sound sky solution, every radius converged, and a bright, unclipped peak of more than one pixel well above the sky; a star or a galaxy can pass these checks too, so telling a comet from a star is yours. Otherwise it says why, and the pixel answer stands. A star inside the measuring ring pulls the answer toward it.</p>
+<div class="groups">
+  <fieldset>
+    <legend>The observation</legend>
+    <div class="stack"><label for="stn">station</label><input type="text" id="stn" placeholder="e.g. 568" aria-describedby="stn-hint"><span class="hint" id="stn-hint">The MPC's code for your site, e.g. 568.</span></div>
+    <div class="stack"><label for="desig">designation</label><input type="text" id="desig" placeholder="3I, 1P, C/2025 N1" aria-describedby="desig-hint"><span class="hint" id="desig-hint">As the MPC writes it: 3I, 1P, C/2025 N1.</span></div>
+    <div class="stack"><label for="mode">mode</label><select id="mode"><option value="">choose</option><option value="CCD">CCD</option><option value="CMO">CMO (CMOS)</option><option value="VID">VID (video)</option><option value="TDI">TDI</option></select></div>
+    <div class="stack"><label for="astcat">catalogue</label><input type="text" id="astcat" list="cats" placeholder="e.g. Gaia3" aria-describedby="astcat-hint"><span class="hint" id="astcat-hint">The star catalogue your plate solution used, e.g. Gaia3.</span></div>
+    <div class="stack"><label for="tobs">mid-exposure (UTC)</label><input type="text" id="tobs" placeholder="from the header, or type it" aria-describedby="tobs-hint"><span class="hint" id="tobs-hint">From the header when it has one; otherwise type it.</span></div>
+  </fieldset>
+  <fieldset>
+    <legend>The people</legend>
+    <div class="stack"><label for="submitter">submitter</label><input type="text" id="submitter" placeholder="e.g. A. N. Observer" aria-describedby="submitter-hint"><span class="hint" id="submitter-hint">Initials, then surname, as ADES asks: A. N. Observer.</span></div>
+    <div class="stack"><label for="measurers">measurers</label><input type="text" id="measurers" placeholder="e.g. J. Smith; A. Doe" aria-describedby="measurers-hint"><span class="hint" id="measurers-hint">Initials, then surname, as ADES asks; a semicolon between names: J. Smith; A. Doe.</span></div>
+    <div class="stack"><label for="observers">observers</label><input type="text" id="observers" placeholder="optional; e.g. B. Roe" aria-describedby="observers-hint"><span class="hint" id="observers-hint">Optional; initials, then surname; a semicolon between names: B. Roe.</span></div>
+  </fieldset>
+  <fieldset>
+    <legend>The telescope</legend>
+    <div class="stack"><label for="design">telescope design</label><input type="text" id="design" placeholder="e.g. Reflector" aria-describedby="design-hint"><span class="hint" id="design-hint">As ADES names it, e.g. Reflector.</span></div>
+    <div class="stack"><label for="aperture">aperture (m)</label><input type="text" id="aperture"></div>
+    <div class="stack"><label for="detector">detector</label><input type="text" id="detector" placeholder="e.g. CMOS" aria-describedby="detector-hint"><span class="hint" id="detector-hint">The detector type, e.g. CCD or CMOS.</span></div>
+    <div class="stack"><label for="obsname">observatory name</label><input type="text" id="obsname" placeholder="optional"></div>
+  </fieldset>
+</div>
+<datalist id="cats"></datalist>
+<div class="row actions"><button id="run" class="primary">Measure</button> <span id="status" class="muted" role="status"></span></div>
+
+<h2>4. The answer</h2>
+<div class="answer">
+  <div><svg id="plot" width="460" height="300" viewBox="0 0 460 300" role="img" aria-label="The photocentre minus the zero-aperture position against the aperture radius, x and y, with their fitted lines; the numbers are in the table"></svg></div>
+  <div class="tablewrap"><table id="tab" aria-label="The photocentre at every fifth radius, and every radius that did not converge"></table></div>
+</div>
+<div class="row" id="zero"></div>
+<pre id="ades"></pre>
+<div class="row muted" id="adesnote"></div>
+<div class="row"><button id="copy" disabled>Copy ADES</button> <span id="copynote" class="muted" role="status"></span></div>
+
+<h2>What it does</h2>
+<details class="more">
+<summary>The method</summary>
+<div class="prose">
+  Photocentres in circular apertures of radius 2.0&ndash;6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, &sect;2.1 and &sect;3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r&ndash;5r annulus (the paper's default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST's lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header's time and your own values, and is a draft for the MPC's validator. This page runs the same method, ported and checked against the Python: where it says "the command line", it means that Python, in the package this page belongs to (domino-calibrator, installed in a virtual environment as its <a href="https://github.com/Castle639/domino-calibrator#readme"><code>README.md</code></a> says): <code>domino-calibrator image.fits</code>, the same as <code>python -m domino_calibrator.cli image.fits</code>; it reads what the page cannot, as each refusal here says. Look at the curve before trusting the intercept.
+</div>
+</details>
+<details class="more">
+<summary>A cutout</summary>
+<div class="prose" id="cutout">
+  The page reads images up to 25 Mpx, and the method needs only the comet and its sky, so cut out the comet first, keeping the frame's WCS and its time. With astropy, for a frame whose WCS is TAN or TAN-SIP (as astrometry.net and ASTAP write them):
+<pre><code>from astropy.io import fits
+from astropy.nddata import Cutout2D
+from astropy.wcs import WCS
+
+x, y = 2345.6, 1234.5                       # the comet in the frame, in pixels (0-based)
+# the r before each path keeps a Windows path as typed: r'C:\Users\you\frame.fits'
+with fits.open(r'frame.fits') as f:
+    i = next(k for k, u in enumerate(f) if u.is_image and u.data is not None and u.data.ndim == 2)
+    h = f[i].header                         # the first 2-D image: HDU 0 for most cameras, 1 for Hubble's and many pipelines'
+    c = Cutout2D(f[i].data, (x, y), (101, 101), wcs=WCS(h, fobj=f))
+    out = c.wcs.to_header(relax=True)       # the WCS, SIP included, moved to the cutout
+    for k in ('DATE-OBS', 'TIME-OBS', 'DATE-AVG', 'MJD-OBS', 'EXPTIME', 'EXPOSURE', 'TIMESYS', 'RADESYS', 'EQUINOX'):
+        for g in (h, f[0].header):          # the image's own card first, then the file's first header
+            if k in g:
+                out[k] = g[k]               # the time and the frame, which the record needs
+                break
+    fits.PrimaryHDU(c.data, out).writeto(r'cutout.fits')</code></pre>
+  Then load <code>cutout.fits</code> here.
+</div>
+</details>
+<details class="more">
+<summary>The study behind it</summary>
+<div class="prose" id="study">
+  What the study found, checked by us, not yet by anyone outside: one comet, 3I/ATLAS, in five visits of Hubble's WFC3/UVIS, one filter (F350LP), degraded to 26 ground set-ups, with HST's own zero-aperture photocentre as the reference (the frames: Hubble programme 18152, PI Man-To Hui, from MAST at STScI), not the nucleus. With G and the background known, the study's setting, the published extrapolation helps in 20 of 20 cells at &le; 1.0&Prime; seeing and &le; 0.44&Prime;/px without noise; at low signal, SNR 20, the zero-aperture position is further from HST's photocentre than the r = 2 px one in 9 of the 20 cells at &le; 1.0&Prime; seeing and &le; 0.44&Prime;/px; the extrapolation fails in 42 of 45 cells at &ge; 2&Prime; seeing and &ge; 1.0&Prime;/px; sharp pixels alone are not enough: it fails in 15 of 40 cells at &le; 0.44&Prime;/px with any seeing; and the zero-aperture position is further off than no correction in 45 of the 130 cells, all at &ge; 0.70&Prime;/px. Two first findings, recounted from the same run: with the background from the 2.5r&ndash;5r annulus, the page's default, G was measured in 50 of the 130 cells, all at &le; 0.70&Prime;/px, and in none at &ge; 1.0&Prime;/px; where it was measured, G with the background from the annulus helps in 20 of 20 cells at &le; 1.0&Prime; seeing and &le; 0.44&Prime;/px and fails in 15 of 40 cells at &le; 0.44&Prime;/px with any seeing, as G with the background known does, and is further off than no correction in 0 of the 50 measured cells; with M, the zero-aperture position is further off than no correction in 58 of the 130 cells, all at &ge; 0.70&Prime;/px, more often than with G. The boxes these tallies are counted in were drawn after the data. Check it on your own frames: every cell, the limits and the scripts are in the package's <a href="https://github.com/Castle639/domino-calibrator#readme"><code>README.md</code></a> and <code>runs/</code>.
+</div>
+</details>
+
+<footer>
+  <svg class="tile" aria-hidden="true" viewBox="0 0 64 32" width="40" height="20"><rect class="frame" x="1.25" y="1.25" width="61.5" height="29.5" rx="4"/><line class="frame" x1="32" y1="3" x2="32" y2="29"/><circle class="ring" cx="15" cy="16" r="11"/><circle class="ring" cx="18" cy="16" r="5"/><circle class="pip" cx="48" cy="16" r="4"/></svg>
+  <span>A Castle product from Domino Observatory. Built by Annie, the Castle's AI.</span>
+</footer>
+
+<script src="zeroap.js"></script>
+<script>
+(function () {
+  const Z = window.ZeroAp;
+  let hdus = null, cur = null, last = null;    // last: the measurement shown, kept so that the record follows its boxes
+  let given = false;                         // a start the observer gave: a click, or x and y typed
+  let hdrTime = null, noteRest = [];           // the header's time and the notes beside it: a typed time says so
+  let loads = 0;                               // the latest file load: an earlier one that finishes later is dropped
+  const $ = (id) => document.getElementById(id);
+  function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  Z.AST_CATS.forEach((c) => { const o = document.createElement('option'); o.value = c; $('cats').appendChild(o); });
+
+  // The answer belongs to the inputs it came from: a new file, HDU, start, estimator, radii or background
+  // clears it and disables Copy; a record field rewrites the record from the kept measurement.
+  function clearAnswer() {
+    last = null;
+    $('tab').innerHTML = ''; $('plot').innerHTML = ''; $('zero').textContent = ''; $('ades').textContent = ''; $('adesnote').textContent = '';
+    $('copy').disabled = true; $('status').textContent = ''; $('copynote').textContent = '';
+  }
+
+  $('file').addEventListener('change', async (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    const my = ++loads;
+    hdus = null; cur = null; hdrTime = null; noteRest = []; clearAnswer();   // a failed load kept the old image, and Measure went on with it (1.10)
+    $('hdu').innerHTML = ''; $('hdrnote').textContent = ''; $('tobs').value = '';
+    const c = $('img'); c.getContext('2d').clearRect(0, 0, c.width, c.height);
+    try {
+      const buf = await f.arrayBuffer();
+      if (my !== loads) return;                  // a later file was chosen while this one was read: it wins
+      const hs = Z.parseFITS(buf);
+      const sel = $('hdu');
+      hs.forEach((h, i) => {                     // known without decoding: only the image chosen is decoded (1.19's half)
+        if (h.nx === undefined) return;
+        const o = document.createElement('option'); o.value = i;
+        const name = h.header.EXTNAME === undefined ? '' : ' ' + String(h.header.EXTNAME).trim() + (h.header.EXTVER === undefined ? '' : ',' + h.header.EXTVER);
+        o.textContent = 'HDU ' + i + name + ' (' + h.nx + '×' + h.ny + (h.readable ? ')' : ': ' + unread(h) + ')');
+        if (!h.readable) o.disabled = true;
+        sel.appendChild(o);
+      });
+      const first = Array.from(sel.options).find((o) => !o.disabled);
+      if (!first) throw new Error(sel.options.length ? unread(hs[Number(sel.options[0].value)])
+        : ((hs.find((h) => h.unreadable) || {}).unreadable || 'no 2-D image in this file'));
+      hdus = hs; sel.value = first.value;
+      choose(Number(first.value));
+    } catch (err) { if (my !== loads) return; hdus = null; cur = null; $('info').textContent = 'Could not read: ' + err.message; }
+  });
+  $('hdu').addEventListener('change', (e) => {
+    try { choose(Number(e.target.value)); } catch (err) { cur = null; clearAnswer(); $('info').textContent = 'Could not read: ' + err.message; }
+  });
+  function unread(h) {                     // why an image HDU was not decoded
+    if (h.tooBig) return 'too big for the page (' + (h.nx * h.ny / 1e6).toFixed(0) + ' Mpx; the limit is ' + (Z.MAX_PIXELS / 1e6) + ' Mpx): cut out the comet first';
+    if (h.truncated) return 'the file ends before the image does';
+    return h.unreadable || 'not read';
+  }
+  function merged() { return Z.mergeHeaders(hdus[0].header, cur.header); }   // a blank image card hides nothing
+  // no WCS named no remedy: an unsolved image is an amateur's likeliest first refusal
+  const NO_WCS = 'the image is not plate-solved; plate-solve it (with astrometry.net or ASTAP, say) and load the solved file';
+  function showNotes() {                   // the time's note, then the header's other notes
+    if (!hdrTime) { $('hdrnote').textContent = ''; return; }
+    const typed = $('tobs').value.trim(), own = hdrTime.time || '';
+    const time = typed && typed !== own   // a typed time kept the header's note
+      ? 'Time: typed (the header gave ' + (own ? own + ', ' + hdrTime.note : 'none: ' + hdrTime.error) + ').'
+      : (own ? 'Time: ' + hdrTime.note + '.' : 'Time: ' + hdrTime.error + '; type the mid-exposure (UTC) to get a record.');
+    $('hdrnote').textContent = [time].concat(noteRest).join(' ');
+  }
+
+  function choose(i) {
+    cur = hdus[i]; clearAnswer();
+    const w = Z.makeWCS(cur.header, hdus[0].header, hdus);   // hdus: HST's lookup tables sit in the file's own extensions
+    const wtxt = !w ? ', no WCS (pixels only): ' + NO_WCS : (w.unsupported ? ', WCS not usable here: ' + w.unsupported + ' (pixels only)' : ', WCS ' + w.scale.toFixed(3) + '"/px');
+    const n = shownAt();                     // a frame shown reduced: a click lands n image px from where it was meant
+    $('info').textContent = cur.nx + '×' + cur.ny + ' px' + wtxt + (n >= 2 ? '; shown at 1:' + n + ', so a click lands within about ' + n + ' px: ' + ZOOM : '');
+    let t;                                   // an answer or a reason: the file is never dropped for its time
+    try { t = Z.midExposure(merged()); } catch (err) { t = { error: 'the header time could not be read (' + err.message + ')' }; }
+    $('tobs').value = t.time || '';
+    hdrTime = t; noteRest = [];
+    if (w && w.notes && w.notes.length) noteRest.push('WCS: ' + w.notes.join('; ') + '.');
+    const dropped = (hdus[0].dropped || []).concat(i ? cur.dropped || [] : []).filter((k, j, a) => a.indexOf(k) === j);
+    if (dropped.length) noteRest.push('Header card' + (dropped.length > 1 ? 's ' : ' ') + dropped.join(', ') + ' could not be read, and ' + (dropped.length > 1 ? 'were' : 'was') + ' left out.');
+    showNotes();
+    const s = Z.brightestStart(cur.data, cur.nx, cur.ny); $('sx').value = s[0]; $('sy').value = s[1]; given = false;
+    draw();
+  }
+
+  const ZOOM = 'type x and y on the comet\'s peak, or cut out the comet first (A cutout, below)';
+  function shownAt() { return cur ? Math.round(Math.max(cur.nx, cur.ny) / 400) : 1; }   // the canvas is 400 px at most
+
+  function draw() {
+    const c = $('img'), ctx = c.getContext('2d'), nx = cur.nx, ny = cur.ny;
+    const sc = Math.min(400 / nx, 400 / ny); c.width = Math.round(nx * sc); c.height = Math.round(ny * sc);
+    const st = Z.stretch(cur.data), lo = st.lo, hi = st.hi, soft = Math.max((hi - lo) / 200, 1e-12);   // sampled
+    const im = ctx.createImageData(nx, ny);
+    for (let i = 0; i < ny; i++) for (let j = 0; j < nx; j++) {
+      const val = cur.data[i * nx + j];
+      const t = Number.isFinite(val) ? Math.asinh(Math.max(val - lo, 0) / soft) / Math.asinh(Math.max(hi - lo, 1e-12) / soft) : 0;
+      const g = Math.max(0, Math.min(255, Math.round(255 * t))), k = 4 * ((ny - 1 - i) * nx + j);   // FITS row 0 at the bottom
+      im.data[k] = im.data[k + 1] = im.data[k + 2] = g; im.data[k + 3] = 255;
+    }
+    const off = document.createElement('canvas'); off.width = nx; off.height = ny; off.getContext('2d').putImageData(im, 0, 0);
+    ctx.imageSmoothingEnabled = false; ctx.drawImage(off, 0, 0, c.width, c.height);
+    const x = Number($('sx').value), y = Number($('sy').value);
+    ctx.strokeStyle = '#ff4040'; ctx.beginPath();
+    const px = (x + 0.5) * sc, py = (ny - 0.5 - y) * sc;
+    ctx.moveTo(px - 8, py); ctx.lineTo(px + 8, py); ctx.moveTo(px, py - 8); ctx.lineTo(px, py + 8); ctx.stroke();
+  }
+  $('img').addEventListener('click', (e) => {
+    if (!cur) return;
+    const r = e.target.getBoundingClientRect(), sc = e.target.width / cur.nx;
+    const x = (e.clientX - r.left) * (e.target.width / r.width) / sc - 0.5, y = cur.ny - 0.5 - (e.clientY - r.top) * (e.target.height / r.height) / sc;
+    $('sx').value = x.toFixed(1); $('sy').value = y.toFixed(1); given = true; if (last) clearAnswer(); draw();
+  });
+  ['sx', 'sy'].forEach((id) => ['input', 'change'].forEach((ev) => $(id).addEventListener(ev, () => { given = true; })));
+  ['sx', 'sy'].forEach((id) => $(id).addEventListener('change', () => cur && draw()));
+  ['sx', 'sy', 'est', 'r0', 'r1', 'rs', 'bgm', 'bgv'].forEach((id) => ['input', 'change'].forEach((ev) =>
+    $(id).addEventListener(ev, () => { if (last) clearAnswer(); })));
+  ['stn', 'desig', 'mode', 'astcat', 'submitter', 'measurers', 'observers', 'design', 'aperture', 'detector', 'obsname', 'tobs'].forEach((id) =>
+    ['input', 'change'].forEach((ev) => $(id).addEventListener(ev, renderRecord)));
+  ['input', 'change'].forEach((ev) => $('tobs').addEventListener(ev, showNotes));
+
+  $('run').addEventListener('click', () => {
+    if (!cur) { $('status').textContent = 'Load a FITS cutout first.'; return; }
+    const rr = Z.radiiFrom($('r0').value, $('r1').value, $('rs').value);          // checked before the loop
+    if (rr.error) { $('status').textContent = rr.error; return; }
+    // an empty box is not 0: an emptied start measured from x = 0, an emptied known background with 0
+    const empty = ['sx', 'sy'].filter((id) => $(id).value.trim() === '');
+    if (empty.length) { $('status').textContent = 'start: ' + empty.map((id) => id.slice(1)).join(' and ') + (empty.length > 1 ? ' are' : ' is') + ' empty or not a number (click the comet, or type x and y)'; return; }
+    if ($('bgm').value !== 'annulus' && $('bgv').value.trim() === '') { $('status').textContent = 'background: the known value is empty or not a number (type it, or choose the annulus)'; return; }
+    const bg = $('bgm').value === 'annulus' ? 'annulus' : Number($('bgv').value);
+    if (bg !== 'annulus' && !Number.isFinite(bg)) { $('status').textContent = 'background: the known value is not a number'; return; }
+    const x0 = Number($('sx').value), y0 = Number($('sy').value);
+    if (!Number.isFinite(x0) || !Number.isFinite(y0)) { $('status').textContent = 'start: x and y must be numbers'; return; }
+    $('status').textContent = 'measuring…';
+    setTimeout(() => {
+      try {
+        const est = $('est').value;
+        const o = Z.shrink(cur.data, cur.nx, cur.ny, x0, y0, { estimator: est, radii: rr.radii, background: bg });
+        show(o, est, rr.radii, [x0, y0]);
+        $('status').textContent = o.nbad ? o.nbad + ' of ' + o.radii.length + ' radii did not converge (left out of the line; the table gives each reason)' : 'done';
+      } catch (err) { $('status').textContent = 'Error: ' + err.message; }
+    }, 20);
+  });
+
+  function show(o, est, radii, start) {
+    const tab = $('tab'); tab.innerHTML = '<caption class="hint">x and y: 0-based; add 1 for ds9</caption><tr><th>r (px)</th><th>x</th><th>y</th><th></th></tr>';
+    const f = (v, n) => Number.isFinite(v) ? v.toFixed(n) : '—';
+    o.radii.forEach((r, k) => {
+      if (k % 5 === 0 || k === o.radii.length - 1 || !o.ok[k])
+        tab.innerHTML += '<tr><td>' + r.toFixed(1) + '</td><td>' + f(o.x[k], 3) + '</td><td>' + f(o.y[k], 3) + '</td><td class="why">' + (o.ok[k] ? '' : o.reason[k]) + '</td></tr>';
+    });
+    // plot: x(r) - x0 and y(r) - y0 with the lines; unconverged radii have no point
+    const svg = $('plot'), W = 460, H = 300, L = 50, R = 12, T = 28, B = 34, acc = css('--accent'), acc2 = css('--accent2'), fg = css('--fg'), line = css('--line');
+    let s = '';
+    if (Number.isFinite(o.x0)) {
+      const dx = o.x.map((v) => v - o.x0), dy = o.y.map((v) => v - o.y0);
+      const all = dx.concat(dy, [0]).filter(Number.isFinite); let lo = Math.min.apply(null, all), hi = Math.max.apply(null, all); if (hi - lo < 1e-3) { hi += 0.01; lo -= 0.01; }
+      const rmax = radii[radii.length - 1];
+      const X = (r) => L + (W - L - R) * r / rmax, Y = (v) => T + (H - T - B) * (hi - v) / (hi - lo);
+      s += '<line x1="' + L + '" y1="' + Y(0) + '" x2="' + (W - R) + '" y2="' + Y(0) + '" stroke="' + line + '"/>';
+      s += '<text x="' + L + '" y="' + (H - 8) + '" fill="' + fg + '" font-size="12">0</text><text x="' + (W - R - 62) + '" y="' + (H - 8) + '" fill="' + fg + '" font-size="12">r = ' + rmax + ' px</text>';
+      s += '<text x="4" y="' + (T + 10) + '" fill="' + fg + '" font-size="12">' + hi.toFixed(3) + '</text><text x="4" y="' + (H - B) + '" fill="' + fg + '" font-size="12">' + lo.toFixed(3) + '</text>';
+      [[dx, o.sx, acc, 'x'], [dy, o.sy, acc2, 'y']].forEach((q) => {
+        q[0].forEach((v, k) => { if (Number.isFinite(v)) s += '<circle cx="' + X(o.radii[k]) + '" cy="' + Y(v) + '" r="2" fill="' + q[2] + '"/>'; });
+        s += '<line x1="' + X(0) + '" y1="' + Y(0) + '" x2="' + X(rmax) + '" y2="' + Y(q[1] * rmax) + '" stroke="' + q[2] + '" stroke-dasharray="4 3"/>';
+        s += '<text x="' + (X(rmax) - 14) + '" y="' + (Y(q[1] * rmax) - 4) + '" fill="' + q[2] + '" font-size="12">' + q[3] + '</text>';
+      });
+      s += '<text x="' + L + '" y="16" fill="' + fg + '" font-size="12">photocentre minus zero-aperture position (px), x and y</text>';
+    }
+    svg.innerHTML = s;
+    // the decision is the engine's (zeroap.js, decide): a comet measured and a WCS that holds at it
+    const auto = !given;                       // a typed start equal to the brightest box is a start given
+    const dec = Z.decide({ cur: cur, hdus: hdus, o: o, start: start, auto: auto }), w = dec.w, need = dec.need;
+    let txt;
+    const r2 = o.radii.reduce(function (b, r) { return Math.abs(r - 2) < Math.abs(b - 2) ? r : b; }, o.radii[0]);   // the engine's x2: nearest 2 px
+    const r2t = Math.abs(r2 - 2) < 1e-9 ? '2' : Z.radiusText(r2);   // named when it is not 2
+    if (!Number.isFinite(o.x0)) {
+      txt = 'No zero-aperture position: fewer than 2 radii converged.';
+    } else {
+      txt = 'Zero-aperture position: x = ' + o.x0.toFixed(4) + ', y = ' + o.y0.toFixed(4) + ' px (' + est + '; 0-based; add 1 for ds9); at r = ' + r2t + ': (' + f(o.x2, 4) + ', ' + f(o.y2, 4) + '; 0-based; add 1 for ds9); trend per px of radius: (' + o.sx.toFixed(5) + ', ' + o.sy.toFixed(5) + ').';
+    }
+    const rd = dec.rd;
+    if (rd) {
+      txt += ' RA ' + rd[0].toFixed(7) + ', Dec ' + rd[1].toFixed(7) + ' deg.';
+      if (Number.isFinite(o.x2)) {
+        const rd2 = w.pixToSky(o.x2, o.y2);
+        const dra = (rd2[0] - rd[0]) * Math.cos(rd[1] * Math.PI / 180) * 3600, dde = (rd2[1] - rd[1]) * 3600;
+        txt += ' The r = ' + r2t + ' photocentre sits ' + dra.toFixed(3) + '" E, ' + dde.toFixed(3) + '" N of it.';
+      }
+    }
+    $('zero').textContent = txt;
+    last = { o: o, est: est, rd: rd, need: need };
+    renderRecord();
+  }
+  function renderRecord() {                  // the record from the kept measurement and the boxes as they are now
+    if (!last) return;
+    $('copynote').textContent = '';              // a copy made before this change is not this record
+    const o = last.o, fitted = o.radii.filter((r, k) => o.ok[k]);   // the radii the line went through, not those asked for (4.3)
+    let rec = null;
+    if (!last.need.length) {
+      rec = Z.adesPSV({ ra: last.rd[0], dec: last.rd[1], time: $('tobs').value, stn: $('stn').value, desig: $('desig').value, mode: $('mode').value,
+        astCat: $('astcat').value.trim(), submitter: $('submitter').value, measurers: $('measurers').value, observers: $('observers').value,
+        observatoryName: $('obsname').value.trim() || null, design: $('design').value, aperture: $('aperture').value, detector: $('detector').value,
+        remarks: 'zero-aperture extrapolated (' + last.est + ', ' + fitted.length + ' of ' + o.radii.length + ' radii, r '   // radii as they are
+          + Z.radiusText(Math.min.apply(null, fitted)) + '-' + Z.radiusText(Math.max.apply(null, fitted)) + ' px)' });
+    }
+    if (rec && rec.psv) { $('ades').textContent = rec.psv; $('copy').disabled = false; }
+    else {
+      const far = !rec && shownAt() >= 2 && last.need.some((s) => s.indexOf('a comet measured') === 0)   // the start may be a click far off
+        ? ' The image is shown at 1:' + shownAt() + ', so a click lands within about ' + shownAt() + ' px of where you meant: ' + ZOOM.replace('type x and y on the comet\'s peak', 'type x and y on the comet') + '.' : '';
+      $('ades').textContent = 'No ADES record: ' + (rec ? rec.error : 'needs ' + last.need.join('; ')) + '.' + far; $('copy').disabled = true;
+    }   // #5: nothing to copy
+    $('adesnote').textContent = rec && rec.psv && rec.notes.length ? 'Note: ' + rec.notes.join('; ') + '.' : '';   // as the command line says (4.4)
+  }
+  // The first click copies (on claude.ai the async clipboard refused a first click and took the second):
+  // first the copy command on a selection, inside the click, which needs no clipboard permission; then the async clipboard;
+  // then the record selected for Ctrl+C.
+  function copyBySelection(text) {
+    const was = document.activeElement, a = document.createElement('textarea');
+    a.value = text; a.setAttribute('readonly', ''); a.style.position = 'fixed'; a.style.top = '0'; a.style.left = '-9999px';
+    document.body.appendChild(a); a.focus(); a.select(); a.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    a.remove(); if (was && was.focus) was.focus();
+    return ok;
+  }
+  $('copy').addEventListener('click', async () => {   // Copy says whether it copied: a stale clipboard went unsaid
+    if ($('copy').disabled) return;
+    const text = $('ades').textContent;
+    if (copyBySelection(text)) { $('copynote').textContent = 'Copied: the record above is on the clipboard.'; return; }
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('this browser gives the page no clipboard here');
+      await navigator.clipboard.writeText(text);
+      $('copynote').textContent = 'Copied: the record above is on the clipboard.';
+    } catch (err) {
+      const r = document.createRange(); r.selectNodeContents($('ades')); const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      $('copynote').textContent = 'Could not copy (' + err.message + '): the record is selected; copy it with Ctrl+C (Cmd+C on a Mac).';
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# fix_f17_bar | HEAD 515a1fd
+X0 PASS  the controls: OK
+X1 PASS  tests/test_fix_f17.py | OK
+X2 PASS  strict: PASS (372 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F17's bar: MET, 3 of 3

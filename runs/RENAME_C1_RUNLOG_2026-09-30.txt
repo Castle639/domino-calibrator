@@ -1,0 +1,9 @@
+# hardening C1 2026-09-30 11:46:33 UTC | runs/hard_c1.py | HEAD 8241669 | apertures.py 6018798de27f estimators.py 8447dda5cc1b shrink.py 9af984bcb566 degrade.py 7f2c74ed51d9 synth.py d8463d6dd48e | package as committed
+# frames (the first of each visit): ifle03geq ifle04pdq ifle05qlq ifle06tjq ifle22f7q
+# 2080 records in 289 s, 0 raised
+# compared with H3_RAW: 2080 records (0 not in H3); radii not ok in the new run: 0
+C1     H4's C1: G, M b0 b2 b6 (x, y), nbad; P (x, y)        comparisons  6240 | unequal 0 | max |diff| 0.000e+00 ground px
+curve  the curve line: G, M x(r), y(r), 41 radii            comparisons  4160 | unequal 0 | max |diff| 0.000e+00 ground px
+Ga     the Ga line: G with the annulus, where H3 ran it     comparisons   800 | unequal 0 | max |diff| 0.000e+00 ground px
+# BAR (bit for bit, nothing raised, every record in H3): PASS
+# done in 291 s

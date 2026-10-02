@@ -1,0 +1,62 @@
+# fix_f1_bar | HEAD 8ee323e | its sha256 e45c8023d209db944e4d8fbf1c989dd106aae4e153e775e4691729939c08e99c | tests/test_fix_f1.py 117393502a7edec41c316f9b9e5d7cb0f4a4ca06ea1cc70a47facee8a3a33421
+R0  PASS  the fixture gets a record: True | the judge accepts it: True | refuses a planted bad time: True | the checkers on planted strings: 11 of 11 | a control character and a character outside ASCII seen: True | the MPC list: 31 codes, 250 and 247 in, 568 out: True
+R1  FAIL  tests.test_fix_f1.F1_1_Stations: 3 run, 65 faults
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='245'): AssertionError: ValueError not raised
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='247'): AssertionError: ValueError not raised
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='249'): AssertionError: ValueError not raised
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='250'): AssertionError: ValueError not raised
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='258'): AssertionError: ValueError not raised
+    test_a_station_without_a_fixed_position_gets_no_record (face='python', stn='270'): AssertionError: ValueError not raised
+R2  FAIL  tests.test_fix_f1.F1_2_RmsFigures: 3 run, 7 faults
+    test_an_rms_that_two_figures_cannot_write_in_seven_characters_is_refused: AssertionError: ValueError not raised
+    0995)): AssertionError: 3 != 2 : ('rmsDec', '0.100')
+    34)): AssertionError: 4 != 2 : ('rmsRA', '1.234')
+    5)): AssertionError: 1 != 2 : ('rmsRA', '0.0001')
+    0151)): AssertionError: 3 != 2 : ('rmsRA', '0.145')
+    0026)): AssertionError: 3 != 2 : ('rmsRA', '0.350')
+R3  FAIL  tests.test_fix_f1.F1_3_Decimals: 4 run, 15 faults
+    9999999): + 0.000000
+    9999994): + 359.999999
+    9999999): + 0.000000
+    9999994): + 359.999999
+    test_the_command_line_end_to_end_and_the_judge: + (6, 6) : {'permID': '3I', 'mode': 'CCD', 'stn': '568', 'obsTime': '2025-12-12T21:21:02.00Z', 'ra': '168.6999785', 'dec': '+4.5999861', 'astCat': 'Gaia3', 'remarks': 'zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)'}
+    6): AssertionError: 7 != 6 : {'permID': '3I', 'mode': 'CCD', 'stn': '568', 'obsTime': '2025-12-12T21:21:02.00Z', 'ra': '168.7000000', 'dec': '+4.6000000', 'rmsRA': '0.200', 'rmsDec': '0.200', 'astCat': 'Gaia3', 'remarks': 'zero-apertu
+R4  FAIL  tests.test_fix_f1.F1_4_Names: 2 run, 4 faults
+    test_the_command_line_asks_initials_then_surname (flag='--submitter'): AssertionError: Regex didn't match: '(?i)initials,? then (the )?surname' not found in '--submitter NAME --measurer NAME [--measurer NAME ...] [--observer NAME ...]' : ('--submitter', '--submitter NAME --measurer NAME [--measurer N
+    test_the_command_line_asks_initials_then_surname (flag='--measurer'): AssertionError: Regex didn't match: '(?i)initials,? then (the )?surname' not found in '--measurer MEASURER' : ('--measurer', '--measurer MEASURER')
+    test_the_command_line_asks_initials_then_surname (flag='--observer'): AssertionError: Regex didn't match: '(?i)initials,? then (the )?surname' not found in '--observer OBSERVER' : ('--observer', '--observer OBSERVER')
+    test_the_page_asks_initials_then_surname: AssertionError: Regex matched: 'Surname, initial' matches '(?i)surname,\\s*initial' in '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<titl
+R5  FAIL  tests.test_fix_f1.F1_6_Software: 1 run, 3 faults
+    test_the_record_names_the_software_after_the_telescope (face='command line'): 3I    |CCD |568|2025-12-12T21:21:02.00Z|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)
+    test_the_record_names_the_software_after_the_telescope (face='page'): 3I    |CCD |568|2025-12-12T21:21:02.00Z|168.7000000|+4.6000000|Gaia3 |zero-aperture extrapolated position
+    test_the_record_names_the_software_after_the_telescope: Node.js v22.22.0
+R6  FAIL  tests.test_fix_f1.F1_7_ControlCharacters: 4 run, 74 faults
+    \x07Observer'): AssertionError: ValueError not raised
+     Observer\x1b[31m'): AssertionError: ValueError not raised
+    \x7fObserver'): AssertionError: ValueError not raised
+    \x85Observer'): AssertionError: ValueError not raised
+    \x00Observer'): AssertionError: ValueError not raised
+     Observer'): AssertionError: ValueError not raised
+R7  FAIL  tests.test_fix_f1.F1_8_AsciiDesignations: 2 run, 10 faults
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='python', desig='３I'): AssertionError: ValueError not raised
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='python', desig='٣I'): AssertionError: ValueError not raised
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='python', desig='1Ｐ'): AssertionError: 'outside ASCII' not found in "desig: '1Ｐ' is neither a permanent (permID, e.g. 3I, 1P) nor a provisional designation (provID, e.g. C/2025 N1) by the ADES schema's patterns"
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='python', desig='C/2025 Ｎ1'): AssertionError: 'outside ASCII' not found in "desig: 'C/2025 Ｎ1' is neither a permanent (permID, e.g. 3I, 1P) nor a provisional designation (provID, e.g. C/2025 N1) by the ADES schema's patterns"
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='python', desig='C/2025 N١'): AssertionError: ValueError not raised
+    test_a_designation_outside_ascii_is_refused_on_both_faces (face='page', desig='３I'): AssertionError: 'outside ASCII' not found in "desig: neither a permanent (3I, 1P) nor a provisional designation (C/2025 N1) by the ADES schema's patterns"
+R8  FAIL  the page in Chromium: the full record holds the software block: False, ra and dec at 6 decimals: False, the judge: True | station 250: no record, Copy disabled, the reason shown: False
+    the page: ! aperture 0.5 / ! detector CCD / permID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                      / 3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px) | submit is OK | xsd/submit.xsd: VALID
+R9  FAIL  the whole suite: strict: FAIL (258 run, 177 failures, 1 errors, 0 skipped: 0 allowed, 0 not)
+    test_the_list_is_the_record tests.test_fix_f1.F1_1_Stations.test_the_list_is_the_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+    test_a_station_without_a_fixed_position_gets_no_record tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record
+# fix f1 bar: NOT MET, 1 of 10 (failing: R1 R2 R3 R4 R5 R6 R7 R8 R9)

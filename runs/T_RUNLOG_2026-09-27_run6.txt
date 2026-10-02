@@ -1,0 +1,32 @@
+# T run 6 2026-09-27 18:21:02 UTC | synth: psf ('array', K) and post kernels, their test; degrade: Gaussian kernel at 4 sigma; hstpsf.py
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 6.801s
+
+OK

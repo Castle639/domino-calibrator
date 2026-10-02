@@ -1,0 +1,10 @@
+# release bar 2026-09-30 14:11:54 UTC | HEAD acfdc2c | the folder release/domino-calibrator
+S0  PASS  57 patterns, each hitting its control: yes | each found where its bare form is planted, in a copy of the folder (a runs/ log and a tools/ script): yes
+S1  PASS  301 files, missing 0, extra 0 | the checksum list: 30 lines, the positions file's 30 frames: True | the tools name their source and commit: True
+S2  PASS  modules byte-identical but: hst.py differs (each differing line held a pattern); hstpsf.py differs (each differing line held a pattern)
+S3  PASS  patterns matching in the folder: none | kept, for the record: the cloud checkout path 2600, the invitations 60, the issue list draft 36, the launch road 27, the paper text 21, the refuter camera 29
+S4  PASS  strict: PASS (229 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 0, 185 s
+S5  PASS  C1 PASS | C2 43 REPORTING, 0 FITTED, the same 43: True | 428 s
+# release bar: MET, 6 of 6
+exit 0
+ended 14:22:40 UTC

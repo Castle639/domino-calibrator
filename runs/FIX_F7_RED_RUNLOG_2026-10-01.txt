@@ -1,0 +1,14 @@
+# fix_f7_bar | HEAD 6e3ef7e | the confirmation 3c911895a809 (the audit room's)
+    sip_ok       rc 0 | off 0.0 | record True | need None | judge submit is OK
+    sip_nan_raw  rc 0 | off 1.77 | record True | need None | judge submit is OK
+    sip_nan_str  rc 2 | off None | record False | need a sky position (the WCS card A_2_0 = 'NaN' is not a number) | judge no record
+    sip_drop     rc 0 | off 1.77 | record True | need None | judge submit is OK
+    engine sip_ok       {"need": [], "rd": [151.26468965882043, 10.587262750990512]}
+    engine sip_nan_raw  {"need": ["a sky position (the WCS card A_2_0 = 'NAN' is not a number)"], "rd": null}
+    engine sip_nan_str  {"need": ["a sky position (the WCS card A_2_0 = 'NaN' is not a number)"], "rd": null}
+    engine sip_drop     {"need": [], "rd": [151.2651899398735, 10.587263121673582]}
+R0 PASS  the controls: the confirmation the audit room's and run whole; sip_ok on the truth; sip_drop 1.77" off; the engine refuses both NaN files and places the other two; sip_nan_str refused here
+R1 FAIL  sip_nan_raw: rc 0, record True, sky ['151.2651899', '+10.5872631'], need None (the engine: "a sky position (the WCS card A_2_0 = 'NAN' is not a number)")
+R2 FAIL  tests/test_fix_f7.py | FAILED (failures=4) | failing: test_a_wcs_number_that_cannot_be_read_gives_no_sky_position_in_the_pages_words
+R3 FAIL  strict: FAIL (307 run, 4 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_a_wcs_number_that_cannot_be_read_gives_no_sky_position_in_the_pages_words
+# F7's bar: NOT MET, 1 of 4

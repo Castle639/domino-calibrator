@@ -1,0 +1,41 @@
+# fix_f4_bar | HEAD 1056439 | its sha256 ea830a73e27422fd2573712310a025e017a37db02f2679b5c299dc6f7e260317 | tests/test_fix_f4.py 71df7e6c1a6c15b3549d6047186c53208b8355bdbf9ef601fd5c94891a4678f1 | CHECKS 9f70c0f088a9 | the recipe curate_3.py, 8e631242aed7 | its decisions decisions_3.json, eac409771164
+#   the folder built by the recipe: yes (364 files)
+Q0  PASS  a placeholder planted is found: True | a machine path planted is found: True | an executable line planted is found, a comment is not: True | the Castle's arcsec record is not marked: True | the Castle's fetch_frames.py examples select no frame of the public list: True | the Castle's psfkit.py self-test fails the case: True | an sdist without MANIFEST.in ships tests/: True | the workflow cases fail on a planted workflow: True
+Q1  FAIL  tests.test_fix_f4.F4_32_Sdist: 1 run, 2 faults
+    test_the_sdist_holds_the_package_and_its_documents_only [no fragment of tests/, runs/ or page/]: Diff is 910 characters long. Set self.maxDiff to None to see it.
+    test_the_sdist_holds_the_package_and_its_documents_only [exactly the package, its documents and the metadata setuptools writes]: 'CHANGELOG.md'
+Q2  FAIL  tests.test_fix_f4.F4_33_PyPI: 3 run, 3 faults
+    svg'): AssertionError: False is not true : not an absolute URL into the repository: page/logo-dark.svg
+    svg'): AssertionError: False is not true : not an absolute URL into the repository: page/logo.svg
+    test_the_repository_named_where_the_files_are: AssertionError: Regex didn't match: 'files[^.]*\\bare in (?:its|the) repository, https://github\\.com/Castle639/domino\\-calibrator\\b' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.sv
+Q3  FAIL  tests.test_fix_f4.F4_35_Publish: 3 run, 3 faults
+    test_least_permissions_id_token_only_where_it_publishes: AssertionError: False is not true : no .github/workflows/publish.yml
+    test_the_build_in_its_own_job_and_each_index_on_its_own_trigger: AssertionError: False is not true : no .github/workflows/publish.yml
+    test_triggers_a_release_and_a_manual_run_only: AssertionError: False is not true : no .github/workflows/publish.yml
+Q4  FAIL  tests.test_fix_f4.F4_36_RunsReadme: 1 run, 1 fault
+    test_a_short_readme_naming_every_family: AssertionError: False is not true : no runs/README.md
+Q5  FAIL  placeholders in the folder: 301 in 25 files | to leave out, still there: 20 of 20 | to keep, missing: 0 of 7 | psfkit.py's self-test: exit 1, a traceback: True (FileNotFoundError), its last line says what it needs: False
+    placeholders: archive/CALIBRATOR_2026-09-27.md 3
+    placeholders: archive/CALIBRATOR_ARCSEC_2026-09-27.md 5
+    placeholders: the audit's record of 29 Sept 2026, not in this repository 40
+    placeholders: the design room's record of 29 Sept 2026, not in this repository 2
+    placeholders: the launch steps' record of 29 Sept 2026, not in this repository 3
+    placeholders: the first refuters' record of 27 Sept 2026, not in this repository 67
+    the audit's record of 29 Sept 2026, not in this repository
+    the design room's record of 29 Sept 2026, not in this repository
+    the launch steps' record of 29 Sept 2026, not in this repository
+    the release room's record of 28 Sept 2026, not in this repository
+Q6  FAIL  the examples: ifle07acq -> 2, 07 08 -> 2 | the exit line names PRESENT: False | private phrases left: 3 of 3
+Q7  FAIL  the advice at line 80, its three lines kept: True, the mark right before it: False
+Q8  FAIL  machine paths in the folder: 2784 in 104 files | .py files whose code the curation changed: 4 (tests/test_fix_f3.py, the second hardening round's refuter scans, not in this repository, the audit wave's scans, not in this repository, runs/fix_f3_bar.py (does not parse: unterminated string literal (detected at line 112)))
+Q9  FAIL  the whole suite: strict: FAIL (298 run, 9 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+    test_the_sdist_holds_the_package_and_its_documents_only tests.test_fix_f4.F4_32_Sdist.test_the_sdist_holds_the_package_and_its_documents_only
+    test_the_sdist_holds_the_package_and_its_documents_only tests.test_fix_f4.F4_32_Sdist.test_the_sdist_holds_the_package_and_its_documents_only
+    test_the_logo_at_absolute_urls_each_a_file_of_the_folder tests.test_fix_f4.F4_33_PyPI.test_the_logo_at_absolute_urls_each_a_file_of_the_folder
+    test_the_logo_at_absolute_urls_each_a_file_of_the_folder tests.test_fix_f4.F4_33_PyPI.test_the_logo_at_absolute_urls_each_a_file_of_the_folder
+    test_the_repository_named_where_the_files_are tests.test_fix_f4.F4_33_PyPI.test_the_repository_named_where_the_files_are
+    test_least_permissions_id_token_only_where_it_publishes tests.test_fix_f4.F4_35_Publish.test_least_permissions_id_token_only_where_it_publishes
+    test_the_build_in_its_own_job_and_each_index_on_its_own_trigger tests.test_fix_f4.F4_35_Publish.test_the_build_in_its_own_job_and_each_index_on_its_own_trigger
+    test_triggers_a_release_and_a_manual_run_only tests.test_fix_f4.F4_35_Publish.test_triggers_a_release_and_a_manual_run_only
+    test_a_short_readme_naming_every_family tests.test_fix_f4.F4_36_RunsReadme.test_a_short_readme_naming_every_family
+# fix f4 bar: NOT MET, 1 of 10 (failing: Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9)

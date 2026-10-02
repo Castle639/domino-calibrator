@@ -1,0 +1,7 @@
+# Launch step 1's bar (calibrator/runs/any_machine.py), its red run on the tests as f05c06d left them: the prediction, written before the run
+PASS (9): A0; B0 (the least certain: direct egress without the proxy unmeasured); M1, M2, M3, M6, M7, M8, M9 (today's guards already catch them)
+FAIL (10): A.tested (223 run, 0/0/0; K13 absent; K6's line names no Python); A.pick311 (7 failures); A.pick313 (15, 2 skipped); A.pick314 (15, 2 skipped);
+  B1 (5 failures offline: K6 x2 'pip install from the folder', K8 x3; 0 skipped; nothing else fails offline); B2 (4 failures: K6's judge, 2 installs x 2 commands; the rest skip naming ADES_PYLIB);
+  C0 (K13 an error on both setups; the scan lists test_release_package.py:36); M4 (K7 green on it today; K13 an error); M5 (K13 an error); D (test_release_package.py:36)
+THE BAR: NOT MET (9 of 19)
+# written 2026-09-29 19:24:06 UTC, sha256 of the lines above: 049cfc54d94268eb

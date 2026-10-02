@@ -1,0 +1,11 @@
+# fix_f11b_bar | HEAD 960b302 | TARGET HEAD (960b302:calibrator)
+    --rms-noise 0  exit 0 | record yes | rms fields [] | remarks 'zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)' | judge True | scatter line None
+    --rms-noise 5  exit 0 | record yes | rms fields ['rmsRA', 'rmsDec', 'rmsCorr'] | remarks 'zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px); rmsRA/rmsDec: the sky-noise ' | judge True | scatter line None
+    --rms-noise 30 exit 0 | record yes | rms fields ['rmsRA', 'rmsDec', 'rmsCorr'] | remarks 'zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px); rmsRA/rmsDec: the sky-noise ' | judge True | scatter line None
+Y0 PASS  the controls: without --rms-noise a record, no rms fields, judge True; with 5, the pixel scatter printed: True
+Y1 FAIL  8: with --rms-noise 5 and 30 the record carries no rms, is the record without (False, False), judge (True, True)
+Y2 FAIL  7: the scatter line, 5: None | 30: None
+Y3 FAIL  the words (no rms in the record, no edit of rmsCorr, no edit of the remarks): {'--help': (False, False, False), 'README.md': (False, False, False)}
+Y4 FAIL  tests/test_fix_f11b.py | FAILED (failures=6) | failing: test_few_redraws_say_how_rough_and_give_no_correlation, test_help_and_readme_say_the_record_holds_no_sky_noise_rms, test_the_record_carries_no_rms_from_the_sky_noise, test_the_scatter_is_printed_beside_it_with_what_to_do
+Y5 FAIL  strict: FAIL (334 run, 6 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | failing: test_few_redraws_say_how_rough_and_give_no_correlation, test_help_and_readme_say_the_record_holds_no_sky_noise_rms, test_the_record_carries_no_rms_from_the_sky_noise, test_the_scatter_is_printed_beside_it_with_what_to_do
+# F11b's bar on HEAD: NOT MET, 1 of 6

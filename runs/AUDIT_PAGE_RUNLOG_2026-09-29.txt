@@ -1,0 +1,28 @@
+# His test of the page (the ninth invitation's ask 2), the local check before publishing (29 Sept 2026, the calibrator's tenth room): calibrator/runs/audit_page_check.js serves calibrator/page over http and drives headless Chromium (Playwright 1.56.1, Node v22.22.2) three ways. The sample: the suite's synthetic comet (calibrator/tests/test_hardening.py, comet and write; 71x71 px, 1"/px, true nucleus x 35.05 y 34.95), 25920 bytes, sha256 30133c682019ed19...; the record's values the suite's (REC_ARGS). HEAD 0648c66. The first run (13:02 UTC) printed the same lines; re-run for this log at 13:03:16 UTC:
+== A. a served page, clipboard granted
+   info: 71×71 px, WCS 1.000"/px
+   start: ["35","35"]
+   status: done
+   zero: Zero-aperture position: x = 35.0773, y = 34.9500 px (G); at r = 2: (35.0837, 34.9498); trend per px of radius: (0.00473, -0.00001). RA 168.6999785, Dec 4.5999861 deg. The r = 2 photocentre sits -0.006" E, -0.000" N of it.
+   ades: # version=2022 / # observatory / ! mpcCode 568 / # submitter / ! name A. N. Observer / # measurers / ! name A. N. Observer / # telescope / ! design Reflector / ! aperture 0.5 / ! detector CCD / permID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                      / 3I    |CCD |568|2025-12-12T21:21:02.00Z|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px) / 
+   copynote: Copied: the record above is on the clipboard.
+   clipboard_equals_record: true
+   page errors: none
+== B. a served page, clipboard not granted
+   info: 71×71 px, WCS 1.000"/px
+   start: ["35","35"]
+   status: done
+   zero: Zero-aperture position: x = 35.0773, y = 34.9500 px (G); at r = 2: (35.0837, 34.9498); trend per px of radius: (0.00473, -0.00001). RA 168.6999785, Dec 4.5999861 deg. The r = 2 photocentre sits -0.006" E, -0.000" N of it.
+   ades: # version=2022 / # observatory / ! mpcCode 568 / # submitter / ! name A. N. Observer / # measurers / ! name A. N. Observer / # telescope / ! design Reflector / ! aperture 0.5 / ! detector CCD / permID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                      / 3I    |CCD |568|2025-12-12T21:21:02.00Z|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px) / 
+   copynote: Could not copy (Failed to execute 'writeText' on 'Clipboard': Write permission denied.): the record is selected; copy it with Ctrl+C (Cmd+C on a Mac).
+   page errors: none
+== C. inside a sandboxed cross-origin iframe, no clipboard permission policy
+   info: 71×71 px, WCS 1.000"/px
+   start: ["35","35"]
+   status: done
+   zero: Zero-aperture position: x = 35.0773, y = 34.9500 px (G); at r = 2: (35.0837, 34.9498); trend per px of radius: (0.00473, -0.00001). RA 168.6999785, Dec 4.5999861 deg. The r = 2 photocentre sits -0.006" E, -0.000" N of it.
+   ades: # version=2022 / # observatory / ! mpcCode 568 / # submitter / ! name A. N. Observer / # measurers / ! name A. N. Observer / # telescope / ! design Reflector / ! aperture 0.5 / ! detector CCD / permID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                      / 3I    |CCD |568|2025-12-12T21:21:02.00Z|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px) / 
+   copynote: Could not copy (Failed to execute 'writeText' on 'Clipboard': The Clipboard API has been blocked because of a permissions policy applied to the current document. See https://crbug.com/414348233 for more details.): the record is selected; copy it with Ctrl+C (Cmd+C on a Mac).
+   page errors: none
+# The command line on the same file, for comparison: zero aperture x 35.0773 y 34.9500, r=2 (35.0837, 34.9498), RA 168.6999785 Dec +4.5999861, time 2025-12-12T21:21:02.00Z (run 13:01 UTC, the suite's run_main with REC_ARGS).
+# Published privately at 13:02 UTC, his yes: https://claude.ai/artifact/9Z88VvG41w5Jff53SUR4gR (Version 1): index.html with zeroap.js, as committed.

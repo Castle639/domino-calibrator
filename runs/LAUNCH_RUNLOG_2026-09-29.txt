@@ -1,0 +1,334 @@
+# The launch plan's step 1 (the README's install block in a virtual environment; the issue list's entry 1), bar first: test_release_package.py's red run (K8 and K9 new; K1-K7 its controls) on the README and the page as committed, git HEAD 10ac2b0, 2026-09-29 17:22:10 UTC; the kit's Python 3.11.15
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_fet2cxmm/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_fet2cxmm/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+
+    [what pip picks today] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_32ymcr4b/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_32ymcr4b/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] no answer
+
+  test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [the block runs to its end] ... FAIL
+  test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [then the command answers with the version and the credit] ... FAIL
+  test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [the package is an environment's, not the system's] ... FAIL
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... 
+  test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) [no bare pip install on the page] ... FAIL
+  test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) [it names the virtual environment, with the README] ... FAIL
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+
+======================================================================
+FAIL: test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [the block runs to its end]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 379, in test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install
+    self.assertEqual(c.returncode, 0, (c.stdout + c.stderr)[-800:])
+AssertionError: 1 != 0 :    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+
+
+======================================================================
+FAIL: test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [then the command answers with the version and the credit]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 381, in test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install
+    self.assertIn('%s %s' % (NAME, calibrator.__version__), out)
+AssertionError: 'domino-calibrator 0.1.0' not found in ''
+
+======================================================================
+FAIL: test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) [the package is an environment's, not the system's]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 385, in test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install
+    self.assertIsNotNone(m, out[-400:])
+AssertionError: unexpectedly None : 
+
+======================================================================
+FAIL: test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) [no bare pip install on the page]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 398, in test_k9_the_pages_install_hint_names_the_virtual_environment
+    self.assertNotIn('pip install .', t)
+AssertionError: 'pip install .' unexpectedly found in 'Zero-aperture comet astrometry Zero-aperture comet astrometry domino-calibrator 0.1.0 A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded. 1. The cutout FITS cutout image Click the comet to set the start (default: the brightest 5×5 pixel). start x y (0-based pixels: x = column, y = row) 2. The method estimator G: symmetric Gaussian fit M: moment photocentre radii from to step px background annulus 2.5r–5r known value value 3. The record (every value is yours; nothing defaults) The observation station The MPC\'s code for your site. designation As the MPC writes it. mode choose CCD CMO (CMOS) VID (video) TDI catalogue The star catalogue your plate solution used. mid-exposure (UTC) From the header when it has one; otherwise type it. The people submitter measurers Surname, initial; a semicolon between names. observers Optional; a semicolon between names. The telescope telescope design aperture (m) detector observatory name Measure 4. The answer Copy ADES What it does The method Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the package this page belongs to (domino-calibrator; pip install . in its folder): domino-calibrator image.fits , the same as python -m calibrator.cli image.fits (see the package\'s README.md ); it reads what the page cannot, as each refusal here says. Look at the curve before trusting the intercept. The study behind it What the study found, checked by us, not yet by anyone outside: one comet, 3I/ATLAS, in five visits of Hubble\'s WFC3/UVIS, one filter (F350LP), degraded to 26 ground set-ups, with HST\'s own zero-aperture photocentre as the reference, not the nucleus. With G and the background known, the study\'s setting, the published extrapolation helps in 20 of 20 cells at ≤ 1.0″ seeing and ≤ 0.44″/px and fails in 42 of 45 cells at ≥ 2″ seeing and ≥ 1.0″/px; sharp pixels alone are not enough: it fails in 15 of 40 cells at ≤ 0.44″/px with any seeing. Two first findings, recounted from the same run: with the background from the 2.5r–5r annulus, the page\'s default, G was measured in 50 of the 130 cells, all at ≤ 0.70″/px, and in none at ≥ 1.0″/px; where it was measured, G with the background from the annulus helps in 20 of 20 cells at ≤ 1.0″ seeing and ≤ 0.44″/px and fails in 15 of 40 cells at ≤ 0.44″/px with any seeing, as G with the background known does, and is further off than no correction in 0 of the 50 measured cells; with M, the zero-aperture position is further off than no correction in 58 of the 130 cells, all at ≥ 0.70″/px, more often than with G. The boxes these tallies are counted in were drawn after the data. Check it on your own frames: every cell, the limits and the scripts are in the package\'s README.md and runs/ . A Castle product from Domino Observatory. Built by Annie, the Castle\'s AI.'
+
+======================================================================
+FAIL: test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) [it names the virtual environment, with the README]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 400, in test_k9_the_pages_install_hint_names_the_virtual_environment
+    self.assertRegex(t, r'virtual environment[^.]{0,80}README\.md|README\.md[^.]{0,80}virtual environment')
+AssertionError: Regex didn't match: 'virtual environment[^.]{0,80}README\\.md|README\\.md[^.]{0,80}virtual environment' not found in 'Zero-aperture comet astrometry Zero-aperture comet astrometry domino-calibrator 0.1.0 A FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded. 1. The cutout FITS cutout image Click the comet to set the start (default: the brightest 5×5 pixel). start x y (0-based pixels: x = column, y = row) 2. The method estimator G: symmetric Gaussian fit M: moment photocentre radii from to step px background annulus 2.5r–5r known value value 3. The record (every value is yours; nothing defaults) The observation station The MPC\'s code for your site. designation As the MPC writes it. mode choose CCD CMO (CMOS) VID (video) TDI catalogue The star catalogue your plate solution used. mid-exposure (UTC) From the header when it has one; otherwise type it. The people submitter measurers Surname, initial; a semicolon between names. observers Optional; a semicolon between names. The telescope telescope design aperture (m) detector observatory name Measure 4. The answer Copy ADES What it does The method Photocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where this page says "the command line", it means the same method in Python, in the package this page belongs to (domino-calibrator; pip install . in its folder): domino-calibrator image.fits , the same as python -m calibrator.cli image.fits (see the package\'s README.md ); it reads what the page cannot, as each refusal here says. Look at the curve before trusting the intercept. The study behind it What the study found, checked by us, not yet by anyone outside: one comet, 3I/ATLAS, in five visits of Hubble\'s WFC3/UVIS, one filter (F350LP), degraded to 26 ground set-ups, with HST\'s own zero-aperture photocentre as the reference, not the nucleus. With G and the background known, the study\'s setting, the published extrapolation helps in 20 of 20 cells at ≤ 1.0″ seeing and ≤ 0.44″/px and fails in 42 of 45 cells at ≥ 2″ seeing and ≥ 1.0″/px; sharp pixels alone are not enough: it fails in 15 of 40 cells at ≤ 0.44″/px with any seeing. Two first findings, recounted from the same run: with the background from the 2.5r–5r annulus, the page\'s default, G was measured in 50 of the 130 cells, all at ≤ 0.70″/px, and in none at ≥ 1.0″/px; where it was measured, G with the background from the annulus helps in 20 of 20 cells at ≤ 1.0″ seeing and ≤ 0.44″/px and fails in 15 of 40 cells at ≤ 0.44″/px with any seeing, as G with the background known does, and is further off than no correction in 0 of the 50 measured cells; with M, the zero-aperture position is further off than no correction in 58 of the 130 cells, all at ≥ 0.70″/px, more often than with G. The boxes these tallies are counted in were drawn after the data. Check it on your own frames: every cell, the limits and the scripts are in the package\'s README.md and runs/ . A Castle product from Domino Observatory. Built by Annie, the Castle\'s AI.'
+
+----------------------------------------------------------------------
+Ran 9 tests in 59.624s
+
+FAILED (failures=5)
+# exit 1 at 2026-09-29 17:23:22 UTC
+
+# Its second run: the same module on the new words (the README's install block and the page's hint; uncommitted, on git HEAD b5aa44b), 2026-09-29 17:25:02 UTC; the kit's Python 3.11.15
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_pmzxybgw/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_pmzxybgw/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+
+    [what pip picks today] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_hj_0bwgy/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_hj_0bwgy/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+ok
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... ok
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 80.241s
+
+OK
+# exit 0 at 2026-09-29 17:26:23 UTC
+# Note, 2026-09-29 17:29:15 UTC: after this second run, two points of the README's prose changed ("since" for the colon before the error's name; a semicolon), not its fenced block; the whole suite ran on the final words: calibrator/runs/LAUNCH_T_RUNLOG_2026-09-29.txt.
+
+
+# Its amendment (his word: [his words, not quoted in public]), the harness's fault shown, then its fix: K8 under GitHub's pip.conf ([global] break-system-packages = true, as actions/runner-images' install-python.sh writes /etc/pip.conf), given to pip as a global config through XDG_CONFIG_DIRS; git HEAD 97190cc, 2026-09-29 17:43:31 UTC
+# (a1) K8 as committed (the amended test set aside with git stash):
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install ... 
+  test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install [control: that Python refuses a plain pip install (PEP 668)] (python='/usr/bin/python3.12') ... FAIL
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+FAIL: test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install [control: that Python refuses a plain pip install (PEP 668)] (python='/usr/bin/python3.12')
+AssertionError: 0 == 0 : nux_2_28_x86_64.whl (35.3 MB)
+Ran 1 test in 22.501s
+FAILED (failures=1)
+# (a2) K8 amended (its shell reads no pip configuration), under the same file, 2026-09-29 17:43:55 UTC:
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+Ran 1 test in 19.469s
+OK
+
+# (b) the amended module's red run (K10 and K11 new; K8 amended; K1-K7 and K9 its controls) on the README and the page as committed, git HEAD 97190cc, 2026-09-29 17:44:24 UTC; the kit's Python 3.11.15
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (calibrator.tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) ... 
+  test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (calibrator.tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) [the README names it, before the block] ... FAIL
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_xcr9t4g_/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_xcr9t4g_/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+
+    [what pip picks today] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_lsbdxbw3/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_lsbdxbw3/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+ok
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... ok
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) ... 
+  test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.venv\\Scripts\\python -m pip install .') ... FAIL
+  test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.venv\\Scripts\\domino-calibrator') ... FAIL
+  test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [no activation script] ... FAIL
+
+======================================================================
+FAIL: test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (calibrator.tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) [the README names it, before the block]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 428, in test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu
+    self.assertIn('apt install python3-venv', t)
+AssertionError: 'apt install python3-venv' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`):\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows: `py -m venv .venv`, then `.venv\\Scripts\\activate`, then `pip install .`. The command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+======================================================================
+FAIL: test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.venv\\Scripts\\python -m pip install .')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 455, in test_k11_the_readmes_windows_line_needs_no_activation_script
+    self.assertIn(s, t)
+AssertionError: '.venv\\Scripts\\python -m pip install .' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`):\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows: `py -m venv .venv`, then `.venv\\Scripts\\activate`, then `pip install .`. The command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+======================================================================
+FAIL: test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.venv\\Scripts\\domino-calibrator')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 455, in test_k11_the_readmes_windows_line_needs_no_activation_script
+    self.assertIn(s, t)
+AssertionError: '.venv\\Scripts\\domino-calibrator' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`):\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows: `py -m venv .venv`, then `.venv\\Scripts\\activate`, then `pip install .`. The command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+======================================================================
+FAIL: test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [no activation script]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 457, in test_k11_the_readmes_windows_line_needs_no_activation_script
+    self.assertNotRegex(t, r'Scripts\\[Aa]ctivate')
+AssertionError: Regex matched: 'Scripts\\activate' matches 'Scripts\\\\[Aa]ctivate' in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`):\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows: `py -m venv .venv`, then `.venv\\Scripts\\activate`, then `pip install .`. The command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+----------------------------------------------------------------------
+Ran 11 tests in 76.203s
+
+FAILED (failures=4)
+# exit 1 at 2026-09-29 17:45:41 UTC
+
+# The second amendment's red run (K11 amended, K12 new; K1-K10 its controls) on the README as committed, git HEAD 7d32021, 2026-09-29 17:53:10 UTC; the kit's Python 3.11.15. Its reason, measured at 17:50 UTC in a scratch copy: the README's block with python3 3.10.20 stops at pip, "ERROR: Package 'domino-calibrator' requires a different Python: 3.10.20 not in '>=3.11'".
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (calibrator.tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) ... ok
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_7o_m8j6g/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_7o_m8j6g/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+
+    [what pip picks today] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_9thbwiut/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_9thbwiut/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+ok
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... ok
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k12_the_readme_names_the_python_it_needs_before_the_block (calibrator.tests.test_release_package.TestPythonFirst.test_k12_the_readme_names_the_python_it_needs_before_the_block) ... 
+  test_k12_the_readme_names_the_python_it_needs_before_the_block (calibrator.tests.test_release_package.TestPythonFirst.test_k12_the_readme_names_the_python_it_needs_before_the_block) [the README says it, before the block] (words='Python 3.11 or newer') ... FAIL
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) ... 
+  test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.\\.venv\\Scripts\\python.exe -m pip install .') ... FAIL
+  test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.\\.venv\\Scripts\\domino-calibrator.exe') ... FAIL
+
+======================================================================
+FAIL: test_k12_the_readme_names_the_python_it_needs_before_the_block (calibrator.tests.test_release_package.TestPythonFirst.test_k12_the_readme_names_the_python_it_needs_before_the_block) [the README says it, before the block] (words='Python 3.11 or newer')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 478, in test_k12_the_readme_names_the_python_it_needs_before_the_block
+    self.assertIn(want, t)
+AssertionError: 'Python 3.11 or newer' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`). On Debian or Ubuntu, `python3 -m venv` needs a package of its own first: `apt install python3-venv` (as root, or with `sudo`). Then:\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows, no activation is needed: `py -m venv .venv`, then `.venv\\Scripts\\python -m pip install .`, and the command is `.venv\\Scripts\\domino-calibrator`. Elsewhere the command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+======================================================================
+FAIL: test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.\\.venv\\Scripts\\python.exe -m pip install .')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 464, in test_k11_the_readmes_windows_line_needs_no_activation_script
+    self.assertIn(s, t)
+AssertionError: '.\\.venv\\Scripts\\python.exe -m pip install .' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`). On Debian or Ubuntu, `python3 -m venv` needs a package of its own first: `apt install python3-venv` (as root, or with `sudo`). Then:\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows, no activation is needed: `py -m venv .venv`, then `.venv\\Scripts\\python -m pip install .`, and the command is `.venv\\Scripts\\domino-calibrator`. Elsewhere the command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+======================================================================
+FAIL: test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) [it names] (what='.\\.venv\\Scripts\\domino-calibrator.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_release_package.py", line 464, in test_k11_the_readmes_windows_line_needs_no_activation_script
+    self.assertIn(s, t)
+AssertionError: '.\\.venv\\Scripts\\domino-calibrator.exe' not found in "\nFrom this folder, into a virtual environment of its own, since a system's own Python may refuse a plain `pip install` (`externally-managed-environment`). On Debian or Ubuntu, `python3 -m venv` needs a package of its own first: `apt install python3-venv` (as root, or with `sudo`). Then:\n\n```\npython3 -m venv .venv\nsource .venv/bin/activate\npip install .\n```\n\nOn Windows, no activation is needed: `py -m venv .venv`, then `.venv\\Scripts\\python -m pip install .`, and the command is `.venv\\Scripts\\domino-calibrator`. Elsewhere the command is then `domino-calibrator`, the same as `python -m calibrator.cli`, in any shell where the environment is active; a new shell needs it activated again. It was tested with Python 3.11, numpy 2.2.6, scipy 1.15.3 and astropy 6.1.7, and it asks for at least those versions, because no older ones were tested.\n\n"
+
+----------------------------------------------------------------------
+Ran 12 tests in 67.748s
+
+FAILED (failures=3)
+# exit 1 at 2026-09-29 17:54:18 UTC
+
+# The second amendment's green: every module that reads the README (as committed at 9170289, the stars' bar set aside with git stash) on its new words, uncommitted, 2026-09-29 17:55:03 UTC; the kit's Python 3.11.15
+test_k7_the_ci_runs_what_the_green_run_runs (calibrator.tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (calibrator.tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (calibrator.tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) ... ok
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (calibrator.tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_ctc27c__/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_ctc27c__/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+
+    [what pip picks today] installed: domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+[the checkout]/calibrator/tests/test_hardening.py:341: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_u7qhlnqh/run/rec.psv' mode='w' encoding='utf-8'>
+  open(f, 'w', encoding='utf-8').write(psv)
+[the checkout]/calibrator/tests/test_hardening.py:346: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/fresh_u7qhlnqh/run/valsubmit.file' mode='r' encoding='utf-8'>
+  first = open(os.path.join(workdir, 'valsubmit.file')).readline().strip() if os.path.exists(os.path.join(workdir, 'valsubmit.file')) else 'no valsubmit.file'
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (calibrator.tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+ok
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (calibrator.tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (calibrator.tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... ok
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (calibrator.tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k12_the_readme_names_the_python_it_needs_before_the_block (calibrator.tests.test_release_package.TestPythonFirst.test_k12_the_readme_names_the_python_it_needs_before_the_block) ... ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (calibrator.tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+test_k11_the_readmes_windows_line_needs_no_activation_script (calibrator.tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) ... ok
+test_w2_every_tally_is_the_recount_of_its_box (calibrator.tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) ... ok
+test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (calibrator.tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) ... ok
+test_w4_every_other_number_is_registered_and_true (calibrator.tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) ... ok
+test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) ... ok
+test_w1_2_truth_is_named_as_hsts_photocentre (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_2_truth_is_named_as_hsts_photocentre) ... ok
+test_w1_3_cells_are_counted_as_cells (calibrator.tests.test_release_words.TestLaneTwosBlockers.test_w1_3_cells_are_counted_as_cells) ... ok
+test_w6_every_path_is_inside_the_folder_that_goes_public (calibrator.tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) ... ok
+test_w5_each_face_names_its_stars_limits_and_the_invitation (calibrator.tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) ... ok
+test_w0_the_recount_reproduces_the_records (calibrator.tests.test_release_words.TestTheRecount.test_w0_the_recount_reproduces_the_records) ... ok
+test_w7_each_face_names_the_variant_its_tallies_were_measured_with (calibrator.tests.test_release_words.TestTheVariant.test_w7_each_face_names_the_variant_its_tallies_were_measured_with) ... ok
+test_w8_the_readme_says_who_recounted_the_defaults_and_ms_tallies (calibrator.tests.test_release_words.TestWhoRecounted.test_w8_the_readme_says_who_recounted_the_defaults_and_ms_tallies) ... ok
+test_d5_contrast_targets_names_focus_and_fonts (calibrator.tests.test_page_design.TestTheDesignInABrowser.test_d5_contrast_targets_names_focus_and_fonts) ... ok
+test_d6_dark_whatever_the_system_asks (calibrator.tests.test_page_design.TestTheDesignInABrowser.test_d6_dark_whatever_the_system_asks) ... ok
+test_d9_the_layout_at_desktop_and_phone (calibrator.tests.test_page_design.TestTheDesignInABrowser.test_d9_the_layout_at_desktop_and_phone) ... ok
+test_d0_controls (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d0_controls) ... ok
+test_d10_the_method_and_the_findings_folded_in_plain_words (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d10_the_method_and_the_findings_folded_in_plain_words) ... ok
+test_d1_the_tool_first_with_no_box (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d1_the_tool_first_with_no_box) ... ok
+test_d2_the_record_in_three_labelled_groups (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d2_the_record_in_three_labelled_groups) ... ok
+test_d3_hints_status_lines_and_text_alternatives (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d3_hints_status_lines_and_text_alternatives) ... ok
+test_d4_inter_beside_the_page_unchanged_with_its_licence (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d4_inter_beside_the_page_unchanged_with_its_licence) ... ok
+test_d7_the_tile_the_favicon_and_the_readmes_logos (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d7_the_tile_the_favicon_and_the_readmes_logos) ... ok
+test_d8_the_readme_logo_on_top_credit_in_a_closing_section (calibrator.tests.test_page_design.TestTheDesignOnDisk.test_d8_the_readme_logo_on_top_credit_in_a_closing_section) ... ok
+test_d1_1_a_compressed_file_is_measured_as_the_file_itself (calibrator.tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_a_compressed_file_is_measured_as_the_file_itself) ... ok
+test_d1_1_a_cut_short_file_is_still_refused (calibrator.tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_a_cut_short_file_is_still_refused) ... ok
+test_d1_1_the_pages_sentence_holds (calibrator.tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_the_pages_sentence_holds) ... ok
+test_d1_2_r_is_2_only_at_2 (calibrator.tests.test_refuters_4.TestD12TheRadiusIsNamed.test_d1_2_r_is_2_only_at_2) ... ok
+test_d1_6_help_and_readme_name_the_rms (calibrator.tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_d1_6_help_and_readme_name_the_rms) ... ok
+test_d1_6_the_records_remarks_name_the_rms (calibrator.tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_d1_6_the_records_remarks_name_the_rms) ... ok
+test_judge_accepts_the_record_with_its_rms_and_its_remark (calibrator.tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_judge_accepts_the_record_with_its_rms_and_its_remark) ... ok
+test_e2_control_the_judge_accepts_the_record_edited_as_the_words_say (calibrator.tests.test_refuters_5.TestE2TheRecordAndTheEdit.test_e2_control_the_judge_accepts_the_record_edited_as_the_words_say) ... ok
+test_e2_control_the_record_is_unchanged (calibrator.tests.test_refuters_5.TestE2TheRecordAndTheEdit.test_e2_control_the_record_is_unchanged) ... ok
+test_e2_control_the_d1_6_words_stay (calibrator.tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_control_the_d1_6_words_stay) ... ok
+test_e2_the_instruction_names_every_field_it_changes (calibrator.tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_the_instruction_names_every_field_it_changes) ... ok
+test_e2_the_words_say_what_the_remarks_say (calibrator.tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_the_words_say_what_the_remarks_say) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 82.986s
+
+OK
+# exit 0 at 2026-09-29 17:56:27 UTC

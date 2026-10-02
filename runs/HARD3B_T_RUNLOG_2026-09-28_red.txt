@@ -1,0 +1,923 @@
+# Round 3, Part B: the bar's red run on 847d438 (the fifth room's merge; its calibrator is 7416259's) with the 29 new tests, 2026-09-28 21:14:23 UTC
+# ADES_PYLIB, ADES_MASTER (39ae5a9), PLAYWRIGHT_MODULE set; PATH with /opt/node22/bin; the 30 frames on disk
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... [the checkout]/calibrator/estimators.py:123: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:124: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:122: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[the checkout]/calibrator/estimators.py:134: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:135: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:137: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:138: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:174: RuntimeWarning: overflow encountered in exp
+  s = float(np.exp(q[3]))
+ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ok
+test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ok
+test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ok
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ok
+test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ok
+test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... ok
+test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ok
+test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ok
+test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ok
+test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ok
+test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... ok
+test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... ok
+test_08_cli_radii_are_checked (calibrator.tests.test_hardening.TestSilentWrong.test_08_cli_radii_are_checked) ... ok
+test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... ok
+test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ok
+test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... ok
+test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... ok
+test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time) ... ok
+test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ok
+test_15c_a_date_without_a_time_is_refused (calibrator.tests.test_hardening.TestSilentWrong.test_15c_a_date_without_a_time_is_refused) ... ok
+test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ok
+test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ok
+test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... ok
+test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ok
+test_1_18_a_lookup_table_wcs_is_read_with_its_file (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file) ... ok
+test_1_2_a_zero_scatter_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record) ... ok
+test_1_3_a_bad_curve_path_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_3_a_bad_curve_path_keeps_the_record) ... ok
+test_1_4_a_negative_rms_noise_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer) ... ok
+test_1_5_a_non_finite_start_is_refused_by_name (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_5_a_non_finite_start_is_refused_by_name) ... ok
+test_1_8_an_unparsable_card_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_8_an_unparsable_card_keeps_the_answer) ... ok
+test_4_19_a_refusal_always_has_a_reason (calibrator.tests.test_hardening_2.TestLostAnswers2.test_4_19_a_refusal_always_has_a_reason) ... ok
+test_judge_accepts_round_2s_cli_records (calibrator.tests.test_hardening_2.TestMPCJudge2.test_judge_accepts_round_2s_cli_records) ... ok
+test_1_9_a_date_without_a_time_is_refused_for_every_date_key (calibrator.tests.test_hardening_2.TestSilentWrong2.test_1_9_a_date_without_a_time_is_refused_for_every_date_key) ... ok
+test_4_2_the_sky_position_is_printed (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_2_the_sky_position_is_printed) ... ok
+test_4_3_the_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_3_the_remarks_name_the_radii_fitted) ... ok
+test_4_7_the_record_refuses_an_impossible_time (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_7_the_record_refuses_an_impossible_time) ... ok
+test_1_13a_the_image_hdu_wins_the_merge (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge) ... ok
+test_1_13b_rms_corr_has_its_sign (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign) ... ok
+test_4_5_a_colour_cube_is_named (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_5_a_colour_cube_is_named) ... ok
+test_4_6_the_record_refusals_name_the_flags (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_record_refusals_name_the_flags) ... ok
+test_4_6_the_value_refusals_name_the_remedy (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_value_refusals_name_the_remedy) ... ok
+test_1_11_a_blank_card_is_absent_not_zero (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_11_a_blank_card_is_absent_not_zero) ... ok
+test_1_12_a_corrupt_size_does_not_loop (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_12_a_corrupt_size_does_not_loop) ... ok
+test_1_14_names_are_not_split_at_commas (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_14_names_are_not_split_at_commas) ... ok
+test_1_15_the_pc_matrix_takes_its_fits_defaults (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_15_the_pc_matrix_takes_its_fits_defaults) ... ok
+test_1_18_lookup_table_distortion_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_18_lookup_table_distortion_is_refused) ... ok
+test_1_1_a_finite_time_never_throws (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_1_a_finite_time_never_throws) ... ok
+test_1_6_an_impossible_header_date_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_6_an_impossible_header_date_is_refused) ... ok
+test_4_4_a_deprecated_catalogue_is_noted (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_4_a_deprecated_catalogue_is_noted) ... ok
+test_4_5_fz_and_colour_cubes_are_named (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_5_fz_and_colour_cubes_are_named) ... ok
+test_4_6_the_page_names_the_remedy (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_6_the_page_names_the_remedy) ... ok
+test_4_7_an_impossible_typed_time_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_7_an_impossible_typed_time_is_refused) ... ok
+test_1_10_4_9_another_file_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer) ... ok
+test_1_10_a_changed_field_never_leaves_a_stale_record (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record) ... ok
+test_1_10_a_failed_load_forgets_the_old_image (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_failed_load_forgets_the_old_image) ... ok
+test_1_10_a_new_start_or_method_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer) ... ok
+test_1_1_a_huge_header_time_keeps_the_file (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_1_a_huge_header_time_keeps_the_file) ... ok
+test_4_3_the_page_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_3_the_page_remarks_name_the_radii_fitted) ... ok
+test_4_4_the_page_notes_a_deprecated_catalogue (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_4_the_page_notes_a_deprecated_catalogue) ... ok
+test_4_5_fz_and_colour_cubes_are_named_on_the_page (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_5_fz_and_colour_cubes_are_named_on_the_page) ... ok
+test_4_6_the_time_refusal_is_said_once_and_names_the_command_line (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_6_the_time_refusal_is_said_once_and_names_the_command_line) ... ok
+test_judge_accepts_round_2s_page_records (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_judge_accepts_round_2s_page_records) ... ok
+test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) ... ok
+test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) ... ok
+test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (calibrator.tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record) ... ok
+test_judge_accepts_round_3s_cli_records (calibrator.tests.test_hardening_3.TestMPCJudge3.test_judge_accepts_round_3s_cli_records) ... ok
+test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) ... ok
+test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) ... ok
+test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) ... ok
+test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) ... ok
+test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) ... ok
+test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) ... ok
+test_1_19_the_page_decodes_only_the_image_chosen (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_1_19_the_page_decodes_only_the_image_chosen) ... ok
+test_lookup_a_table_not_in_hand_or_not_a_table_is_refused (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_a_table_not_in_hand_or_not_a_table_is_refused) ... ok
+test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) ... ok
+test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) ... ok
+test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) ... ok
+test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) ... ok
+test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) ... ok
+test_t1_6_an_empty_timesys_is_utc_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_6_an_empty_timesys_is_utc_on_the_page) ... ok
+test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) ... ok
+test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) ... ok
+test_t4_4_a_comma_in_a_name_is_noted (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_4_a_comma_in_a_name_is_noted) ... ok
+test_judge_accepts_round_3s_page_records (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) ... ok
+test_lookup_the_page_on_a_real_hubble_frame (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_lookup_the_page_on_a_real_hubble_frame) ... ok
+test_t1_3_a_later_load_wins (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins) ... ok
+test_t1_5_a_card_left_out_is_named_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_5_a_card_left_out_is_named_on_the_page) ... ok
+test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) ... ok
+test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) ... ok
+test_t4_4_a_comma_in_names_is_noted_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_4_a_comma_in_names_is_noted_on_the_page) ... ok
+test_judge_accepts_part_bs_cli_record (calibrator.tests.test_hardening_3b.TestMPCJudge3b.test_judge_accepts_part_bs_cli_record) ... ok
+test_t1_24_c1_names_the_modules_it_ran_on (calibrator.tests.test_hardening_3b.TestTheGuard3b.test_t1_24_c1_names_the_modules_it_ran_on) ... FAIL
+test_t1_8_the_scatter_is_pinned (calibrator.tests.test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned) ... ok
+test_t1_13_a_zero_mad_border_is_not_all_alike (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_13_a_zero_mad_border_is_not_all_alike) ... FAIL
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) ... 
+  test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [MJD-OBS 3e+06] ... FAIL
+  test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [MJD-OBS -700000] ... FAIL
+  test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [the command line] ... FAIL
+test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) ... 
+  test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [no time at all] ... FAIL
+  test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [a TIMESYS the command line does not convert] ... FAIL
+  test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [a DATE-AVG that is not a date] ... FAIL
+  test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [the user's own --exptime, not a number of seconds] ... FAIL
+  test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [an --exptime that DATE-AVG overrides is said] ... FAIL
+test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) ... 
+  test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2026-02-30T12:00:00Z] ... FAIL
+  test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2026-13-01T00:00:00Z] ... FAIL
+  test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2025-12-12T25:00:00Z] ... FAIL
+test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) ... 
+  test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1] ... FAIL
+  test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 2] ... FAIL
+  test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1001] ... FAIL
+  test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1000000000] ... FAIL
+test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) ... 
+  test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) [TNX] ... FAIL
+  test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) [ZPX] ... FAIL
+test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) ... 
+  test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [NAXIS3 = -100] ... FAIL
+  test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [PCOUNT = -3100] ... FAIL
+  test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [PCOUNT = -100000] ... FAIL
+  test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [cut off halfway through its image] ... FAIL
+test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) ... 
+  test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) [the record's remarks] ... FAIL
+  test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) [the first line] ... FAIL
+test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) ... 
+  test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [--x 30] ... FAIL
+  test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [--y 30] ... FAIL
+  test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [measure_file(x=30.0)] ... FAIL
+  test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [measure_file(y=30.0)] ... FAIL
+test_t4_9_no_wcs_names_plate_solving (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_9_no_wcs_names_plate_solving) ... FAIL
+test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) ... 
+  test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) [A_ORDER alone] ... FAIL
+  test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) [B_ORDER alone] ... FAIL
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) ... 
+  test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) [MJD-OBS 3e6] ... FAIL
+  test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) [MJD-OBS -700000] ... FAIL
+test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) ... 
+  test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) [the brightest light on the edge] ... FAIL
+  test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) [an infinite pixel away from the comet] ... FAIL
+test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) ... 
+  test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [CTYPE1, its quote at column 21] ... FAIL
+  test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [DATE-OBS, its quote at column 21] ... FAIL
+  test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [a quote written twice is one quote] ... FAIL
+test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) ... 
+  test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [TDB] ... FAIL
+  test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [LOCAL] ... FAIL
+  test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [GPS] ... FAIL
+test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) ... 
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [Dec first] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [TPV] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SIP without -SIP] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [AXISCORR] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SCAMP's terms on TAN] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [lookup tables without the file] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SCAMP's terms beside SIP] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [TIMESYS TT] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [BITPIX 64] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [fpack] ... FAIL
+  test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [the page says it once, under "What it does"] ... FAIL
+test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) ... 
+  test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) [TNX] ... FAIL
+  test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) [ZPX] ... FAIL
+test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) ... 
+  test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a gzipped FITS file] ... FAIL
+  test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a PNG] ... FAIL
+  test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a text file] ... FAIL
+  test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a file shorter than one FITS block] ... FAIL
+  test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [the file picker offers .gz] ... FAIL
+test_judge_accepts_part_bs_page_record (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_judge_accepts_part_bs_page_record) ... ok
+test_t1_20_a_changed_field_rewrites_the_live_record (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_changed_field_rewrites_the_live_record) ... ok
+test_t1_20_a_new_radii_background_or_hdu_clears_the_answer (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer) ... ok
+test_t4_11_a_typed_time_says_it_was_typed (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_11_a_typed_time_says_it_was_typed) ... FAIL
+test_t4_18_the_page_remarks_name_the_radii_as_they_are (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_18_the_page_remarks_name_the_radii_as_they_are) ... FAIL
+test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) ... 
+  test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) [empty_start] ... FAIL
+  test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) [empty_bg] ... FAIL
+test_t4_8_a_gzipped_file_is_named_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_8_a_gzipped_file_is_named_on_the_page) ... FAIL
+test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) ... 
+  test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) [the info line] ... FAIL
+  test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) [the record's refusal] ... FAIL
+test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... ok
+test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... ok
+test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... ok
+test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... ok
+test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... ok
+test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... ok
+test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... ok
+test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... ok
+test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... ok
+test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... ok
+test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ok
+test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... ok
+test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... ok
+test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... ok
+test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... ok
+test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... ok
+test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... ok
+test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... ok
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+======================================================================
+FAIL: test_t1_24_c1_names_the_modules_it_ran_on (calibrator.tests.test_hardening_3b.TestTheGuard3b.test_t1_24_c1_names_the_modules_it_ran_on)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 261, in test_t1_24_c1_names_the_modules_it_ran_on
+    self.assertTrue(hasattr(m, 'stamp'), "hard_c1.py has no stamp(): its log names no module's hash")
+AssertionError: False is not true : hard_c1.py has no stamp(): its log names no module's hash
+
+======================================================================
+FAIL: test_t1_13_a_zero_mad_border_is_not_all_alike (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_13_a_zero_mad_border_is_not_all_alike)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 212, in test_t1_13_a_zero_mad_border_is_not_all_alike
+    self.assertTrue(e); self.assertNotIn('all alike', e); self.assertIn('half', e)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'all alike' unexpectedly found in 'the 5-px border has no scatter (its pixels are all alike): no noise level to draw from'
+
+======================================================================
+FAIL: test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [MJD-OBS 3e+06]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 223, in test_t1_15_a_time_outside_the_years_0000_9999_is_refused
+    with self.assertRaisesRegex(ValueError, 'year'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [MJD-OBS -700000]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 223, in test_t1_15_a_time_outside_the_years_0000_9999_is_refused
+    with self.assertRaisesRegex(ValueError, 'year'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_15_a_time_outside_the_years_0000_9999_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) [the command line]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 228, in test_t1_15_a_time_outside_the_years_0000_9999_is_refused
+    self.assertEqual(lines_starting(out, '# time:'), [])
+AssertionError: Lists differ: ['# time: 10072-08-06T00:00:30.0Z (obsTime[35 chars]/2)'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'# time: 10072-08-06T00:00:30.0Z (obsTime from MJD-OBS (the start) + EXPTIME/2)'
+
++ []
+- ['# time: 10072-08-06T00:00:30.0Z (obsTime from MJD-OBS (the start) + '
+-  'EXPTIME/2)']
+
+======================================================================
+FAIL: test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [no time at all]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 83, in test_t1_19_t4_7_the_time_remedy_names_what_helps
+    self.assertEqual('with --exptime' in e, exp_helps, e)
+AssertionError: True != False : needs a mid-exposure time (no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...); give it with --obstime, or the exposure with --exptime)
+
+======================================================================
+FAIL: test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [a TIMESYS the command line does not convert]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 83, in test_t1_19_t4_7_the_time_remedy_names_what_helps
+    self.assertEqual('with --exptime' in e, exp_helps, e)
+AssertionError: True != False : needs a mid-exposure time (TIMESYS LOCAL is not UTC, TT or TAI: give the mid-exposure (UTC) yourself; give it with --obstime, or the exposure with --exptime)
+
+======================================================================
+FAIL: test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [a DATE-AVG that is not a date]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 83, in test_t1_19_t4_7_the_time_remedy_names_what_helps
+    self.assertEqual('with --exptime' in e, exp_helps, e)
+AssertionError: True != False : needs a mid-exposure time (DATE-AVG '2025-12-32T21:21:02.000' is not a FITS date-time; give it with --obstime, or the exposure with --exptime)
+
+======================================================================
+FAIL: test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [the user's own --exptime, not a number of seconds]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 83, in test_t1_19_t4_7_the_time_remedy_names_what_helps
+    self.assertEqual('with --exptime' in e, exp_helps, e)
+AssertionError: True != False : needs a mid-exposure time (the exposure time -5.0 is not a number of seconds; give it with --obstime, or the exposure with --exptime)
+
+======================================================================
+FAIL: test_t1_19_t4_7_the_time_remedy_names_what_helps (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) [an --exptime that DATE-AVG overrides is said]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 88, in test_t1_19_t4_7_the_time_remedy_names_what_helps
+    self.assertRegex(r.get('time_note', ''), re.compile('exptime|exposure', re.I))   # 847d438: "obsTime from DATE-AVG"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Regex didn't match: 'exptime|exposure' not found in 'obsTime from DATE-AVG'
+
+======================================================================
+FAIL: test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2026-02-30T12:00:00Z]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 54, in test_t1_21_an_impossible_obstime_is_one_line_and_no_circle
+    self.assertEqual([ln for ln in out.splitlines() if not (ln.startswith('#') or CURVE_ROW.match(ln))], [])
+AssertionError: Lists differ: ['ErfaError: ERFA function "dtf2d" yielded[69 chars]me)'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'ErfaError: ERFA function "dtf2d" yielded 1 of "bad day"; give it with --obstime, or the exposure with --exptime)'
+
++ []
+- ['ErfaError: ERFA function "dtf2d" yielded 1 of "bad day"; give it with '
+-  '--obstime, or the exposure with --exptime)']
+
+======================================================================
+FAIL: test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2026-13-01T00:00:00Z]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 54, in test_t1_21_an_impossible_obstime_is_one_line_and_no_circle
+    self.assertEqual([ln for ln in out.splitlines() if not (ln.startswith('#') or CURVE_ROW.match(ln))], [])
+AssertionError: Lists differ: ['ErfaError: ERFA function "dtf2d" yielded[71 chars]me)'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'ErfaError: ERFA function "dtf2d" yielded 1 of "bad month"; give it with --obstime, or the exposure with --exptime)'
+
++ []
+- ['ErfaError: ERFA function "dtf2d" yielded 1 of "bad month"; give it with '
+-  '--obstime, or the exposure with --exptime)']
+
+======================================================================
+FAIL: test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) [2025-12-12T25:00:00Z]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 54, in test_t1_21_an_impossible_obstime_is_one_line_and_no_circle
+    self.assertEqual([ln for ln in out.splitlines() if not (ln.startswith('#') or CURVE_ROW.match(ln))], [])
+AssertionError: Lists differ: ['ErfaError: ERFA function "dtf2d" yielded[70 chars]me)'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'ErfaError: ERFA function "dtf2d" yielded 1 of "bad hour"; give it with --obstime, or the exposure with --exptime)'
+
++ []
+- ['ErfaError: ERFA function "dtf2d" yielded 1 of "bad hour"; give it with '
+-  '--obstime, or the exposure with --exptime)']
+
+======================================================================
+FAIL: test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 125, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    self.assertIn('--rms-noise', r.get('rms_error', ''))
+AssertionError: '--rms-noise' not found in 'fewer than 3 of 1 noise redraws gave a position'
+
+======================================================================
+FAIL: test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 2]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 125, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    self.assertIn('--rms-noise', r.get('rms_error', ''))
+AssertionError: '--rms-noise' not found in 'fewer than 3 of 2 noise redraws gave a position'
+
+======================================================================
+FAIL: test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1001]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 130, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    c = subprocess.run([sys.executable, '-m', 'calibrator.cli', p, '--estimator', 'M', '--rms-noise', str(n)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['[the kit]/bin/python', '-m', 'calibrator.cli', '/tmp/tmp312onfkx/c.fits', '--estimator', 'M', '--rms-noise', '1001']' timed out after 20 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 134, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    self.fail('--rms-noise %d ran past 20 s' % n)
+AssertionError: --rms-noise 1001 ran past 20 s
+
+======================================================================
+FAIL: test_t4_10_t1_23_rms_noise_is_3_to_1000 (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) [--rms-noise 1000000000]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 130, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    c = subprocess.run([sys.executable, '-m', 'calibrator.cli', p, '--estimator', 'M', '--rms-noise', str(n)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['[the kit]/bin/python', '-m', 'calibrator.cli', '/tmp/tmp312onfkx/c.fits', '--estimator', 'M', '--rms-noise', '1000000000']' timed out after 20 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 134, in test_t4_10_t1_23_rms_noise_is_3_to_1000
+    self.fail('--rms-noise %d ran past 20 s' % n)
+AssertionError: --rms-noise 1000000000 ran past 20 s
+
+======================================================================
+FAIL: test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) [TNX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 153, in test_t4_16_tnx_and_zpx_are_named
+    self.assertIn(code, e); self.assertRegex(e, 'SIP|TPV')
+    ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'TNX' not found in 'the WCS could not be read: Internal error in wcslib header parser:'
+
+======================================================================
+FAIL: test_t4_16_tnx_and_zpx_are_named (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) [ZPX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 153, in test_t4_16_tnx_and_zpx_are_named
+    self.assertIn(code, e); self.assertRegex(e, 'SIP|TPV')
+    ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ZPX' not found in 'the WCS could not be read: Internal error in wcslib header parser:'
+
+======================================================================
+FAIL: test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [NAXIS3 = -100]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 184, in test_t4_17_a_corrupt_or_truncated_file_names_its_fault
+    self.assertIn(card, why[0]); self.assertIn('corrupt', why[0])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NAXIS3' not found in '# cannot measure: [Errno 22] Invalid argument'
+
+======================================================================
+FAIL: test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [PCOUNT = -3100]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 182, in test_t4_17_a_corrupt_or_truncated_file_names_its_fault
+    self.assertEqual(rc, 1, out[:300]); self.assertEqual(len(why), 1, out[:300])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : # start (0.00, 0.00) | estimator M | radii 2.0-6.0 px (41) | unconverged radii 41
+# r_px  x  y   (a radius that did not converge has no position; its reason follows)
+2.00 nan nan  # unconverged: aperture leaves the image
+2.10 nan nan  # unconverged: aperture leaves the image
+2.20 nan nan  # unconver
+
+======================================================================
+FAIL: test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [PCOUNT = -100000]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 184, in test_t4_17_a_corrupt_or_truncated_file_names_its_fault
+    self.assertIn(card, why[0]); self.assertIn('corrupt', why[0])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PCOUNT' not found in '# cannot measure: [Errno 22] Invalid argument'
+
+======================================================================
+FAIL: test_t4_17_a_corrupt_or_truncated_file_names_its_fault (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) [cut off halfway through its image]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 186, in test_t4_17_a_corrupt_or_truncated_file_names_its_fault
+    self.assertRegex(why[0], 'truncated|ends before')
+AssertionError: Regex didn't match: 'truncated|ends before' not found in '# cannot measure: TypeError: buffer is too small for requested array'
+
+======================================================================
+FAIL: test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) [the record's remarks]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 197, in test_t4_18_the_radii_are_written_as_they_are
+    self.assertIn('r 2.05-5.95 px', record_row(out[out.index('# version='):])['remarks'])
+AssertionError: 'r 2.05-5.95 px' not found in 'zero-aperture extrapolated (M, 79 of 79 radii, r 2.0-6.0 px)'
+
+======================================================================
+FAIL: test_t4_18_the_radii_are_written_as_they_are (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) [the first line]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 199, in test_t4_18_the_radii_are_written_as_they_are
+    self.assertIn('radii 2.05-5.95 px (79)', lines_starting(out, '# start')[0])
+AssertionError: 'radii 2.05-5.95 px (79)' not found in '# start (35.00, 35.00) | estimator M | radii 2.0-6.0 px (79) | unconverged radii 0'
+
+======================================================================
+FAIL: test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [--x 30]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 97, in test_t4_3_x_without_y_is_refused
+    self.assertEqual(rc, 1, out[:300])
+AssertionError: 0 != 1 : # start (35.00, 35.00) | estimator M | radii 2.0-6.0 px (41) | unconverged radii 0
+# r_px  x  y   (a radius that did not converge has no position; its reason follows)
+2.00 35.0767 34.9553
+2.10 35.0819 34.9528
+2.20 35.0895 34.9493
+2.30 35.0985 34.9450
+2.40 35.1077 34.9405
+2.50 35.1040 34.9417
+2.60 35
+
+======================================================================
+FAIL: test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [--y 30]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 97, in test_t4_3_x_without_y_is_refused
+    self.assertEqual(rc, 1, out[:300])
+AssertionError: 0 != 1 : # start (35.00, 35.00) | estimator M | radii 2.0-6.0 px (41) | unconverged radii 0
+# r_px  x  y   (a radius that did not converge has no position; its reason follows)
+2.00 35.0767 34.9553
+2.10 35.0819 34.9528
+2.20 35.0895 34.9493
+2.30 35.0985 34.9450
+2.40 35.1077 34.9405
+2.50 35.1040 34.9417
+2.60 35
+
+======================================================================
+FAIL: test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [measure_file(x=30.0)]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 102, in test_t4_3_x_without_y_is_refused
+    with self.assertRaisesRegex(ValueError, r'\bx\b.*\by\b'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t4_3_x_without_y_is_refused (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) [measure_file(y=30.0)]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 102, in test_t4_3_x_without_y_is_refused
+    with self.assertRaisesRegex(ValueError, r'\bx\b.*\by\b'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t4_9_no_wcs_names_plate_solving (calibrator.tests.test_hardening_3b.TestTheUsersValues.test_t4_9_no_wcs_names_plate_solving)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b.py", line 113, in test_t4_9_no_wcs_names_plate_solving
+    self.assertIn('solve', r.get('sky_error', '').lower())
+AssertionError: 'solve' not found in 'no wcs in the header'
+
+======================================================================
+FAIL: test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) [A_ORDER alone]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 146, in test_t1_12_sip_needs_both_orders
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and ('A_ORDER' in v or 'B_ORDER' in v), v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t1_12_sip_needs_both_orders (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) [B_ORDER alone]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 146, in test_t1_12_sip_needs_both_orders
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and ('A_ORDER' in v or 'B_ORDER' in v), v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) [MJD-OBS 3e6]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 162, in test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('year', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '+010072-08-06T00:00:30Z' is not false : {'time': '+010072-08-06T00:00:30Z', 'note': 'obsTime from MJD-OBS (the start) + EXPTIME/2'}
+
+======================================================================
+FAIL: test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) [MJD-OBS -700000]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 162, in test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('year', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '-000058-05-06T00:00:30Z' is not false : {'time': '-000058-05-06T00:00:30Z', 'note': 'obsTime from MJD-OBS (the start) + EXPTIME/2'}
+
+======================================================================
+FAIL: test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) [the brightest light on the edge]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 178, in test_t1_18_the_automatic_start_is_one_rule_on_both_faces
+    self.assertEqual(tuple(float(v) for v in page), cli._start(img))
+AssertionError: Tuples differ: (2.0, 20.0) != (0.0, 20.0)
+
+First differing element 0:
+2.0
+0.0
+
+- (2.0, 20.0)
+?  ^
+
++ (0.0, 20.0)
+?  ^
+
+
+======================================================================
+FAIL: test_t1_18_the_automatic_start_is_one_rule_on_both_faces (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) [an infinite pixel away from the comet]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 178, in test_t1_18_the_automatic_start_is_one_rule_on_both_faces
+    self.assertEqual(tuple(float(v) for v in page), cli._start(img))
+AssertionError: Tuples differ: (24.0, 21.0) != (38.0, 8.0)
+
+First differing element 0:
+24.0
+38.0
+
+- (24.0, 21.0)
++ (38.0, 8.0)
+
+======================================================================
+FAIL: test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [CTYPE1, its quote at column 21]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 133, in test_t1_7_a_string_opens_where_its_quote_is
+    self.assertEqual(o['ct'], 'RA---TAN'); self.assertEqual(o['w'], 'MEASURED')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "'RA---TAN'" != 'RA---TAN'
+- 'RA---TAN'
+? -        -
++ RA---TAN
+
+
+======================================================================
+FAIL: test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [DATE-OBS, its quote at column 21]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 135, in test_t1_7_a_string_opens_where_its_quote_is
+    self.assertEqual(o['t'].get('time'), '2025-12-12T21:21:02.00Z', o['t'])
+AssertionError: None != '2025-12-12T21:21:02.00Z' : {'error': "DATE-OBS '2025-12-12T21:20:32.000' is not a FITS date-time"}
+
+======================================================================
+FAIL: test_t1_7_a_string_opens_where_its_quote_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) [a quote written twice is one quote]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 137, in test_t1_7_a_string_opens_where_its_quote_is
+    self.assertEqual(o['obj'], "O'Brien")
+AssertionError: 'O' != "O'Brien"
+- O
++ O'Brien
+
+
+======================================================================
+FAIL: test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [TDB]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 85, in test_t4_11_timesys_names_the_command_line_only_where_it_converts
+    self.assertEqual('command line' in q.get('error', ''), t in ('TT', 'TDT', 'TAI', 'IAT'), q)
+AssertionError: True != False : {'error': 'TIMESYS TDB: the page reads UTC only; the command line converts TT and TAI'}
+
+======================================================================
+FAIL: test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [LOCAL]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 85, in test_t4_11_timesys_names_the_command_line_only_where_it_converts
+    self.assertEqual('command line' in q.get('error', ''), t in ('TT', 'TDT', 'TAI', 'IAT'), q)
+AssertionError: True != False : {'error': 'TIMESYS LOCAL: the page reads UTC only; the command line converts TT and TAI'}
+
+======================================================================
+FAIL: test_t4_11_timesys_names_the_command_line_only_where_it_converts (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) [GPS]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 85, in test_t4_11_timesys_names_the_command_line_only_where_it_converts
+    self.assertEqual('command line' in q.get('error', ''), t in ('TT', 'TDT', 'TAI', 'IAT'), q)
+AssertionError: True != False : {'error': 'TIMESYS GPS: the page reads UTC only; the command line converts TT and TAI'}
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [Dec first]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'the WCS has Dec first (CTYPE DEC--TAN, RA---TAN): the page reads RA first; the command line reads either order'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [TPV]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'projection TPV: the page reads TAN and TAN-SIP only; the command line reads the other FITS projections'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SIP without -SIP]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'SIP coefficients without -SIP in CTYPE (astropy would apply them; the page would not): the command line applies them'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [AXISCORR]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'the old D2IM keyword AXISCORR, which the page does not read: the command line does'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SCAMP's terms on TAN]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in "SCAMP's PV distortion terms, which the page does not apply: the command line does (as TPV)"
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [lookup tables without the file]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in "lookup-table distortion (CPDIS: as in HST frames), whose tables sit in the file's own extensions: the page reads them with the whole file; the command line does too"
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [SCAMP's terms beside SIP]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in "SCAMP's PV terms beside SIP, which the page does not choose between: the command line applies the SIP and drops the PV terms, as astropy does"
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [TIMESYS TT]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'TIMESYS TT: the page reads UTC only; the command line converts TT and TAI'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [BITPIX 64]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in '64-bit integer pixels (BITPIX 64), which the page does not read: the command line does'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [fpack]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 104, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', m)
+AssertionError: 'python -m calibrator.cli' not found in 'a compressed (fpack) image, which the page does not read: run funpack on it first, or use the command line'
+
+======================================================================
+FAIL: test_t4_12_the_page_says_what_the_command_line_is (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) [the page says it once, under "What it does"]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 107, in test_t4_12_the_page_says_what_the_command_line_is
+    self.assertIn('python -m calibrator.cli', html[html.index('<h2>What it does</h2>'):])
+AssertionError: 'python -m calibrator.cli' not found in '<h2>What it does</h2>\n<div class="muted">\n  Photocentres in circular apertures of radius 2.0&ndash;6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, &sect;2.1 and &sect;3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r&ndash;5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000), with HST\'s lookup tables read from the file itself; any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where the method holds and where it stops is measured in the Castle\'s calibration study (<code>archive/CALIBRATOR_2026-09-27.md</code>). For 3I/ATLAS it helped on sharp images (&le; 0.44&Prime;/px) and made the position worse in many coarse ones (&ge; 0.7&Prime;/px): look at the curve before trusting the intercept.\n</div>\n\n<script src="zeroap.js"></script>\n<script>\n(function () {\n  const Z = window.ZeroAp;\n  let hdus = null, cur = null, last = null;    // last: the measurement shown, kept so that the record follows its boxes\n  let loads = 0;                               // the latest file load: an earlier one that finishes later is dropped (round 3, T1.3)\n  const $ = (id) => document.getElementById(id);\n  function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }\n  Z.AST_CATS.forEach((c) => { const o = document.createElement(\'option\'); o.value = c; $(\'cats\').appendChild(o); });\n\n  // The answer belongs to the inputs it came from (round 2, 1.10): a new file, HDU, start, estimator, radii or background\n  // clears it and disables Copy; a record field rewrites the record from the kept measurement.\n  function clearAnswer() {\n    last = null;\n    $(\'tab\').innerHTML = \'\'; $(\'plot\').innerHTML = \'\'; $(\'zero\').textContent = \'\'; $(\'ades\').textContent = \'\'; $(\'adesnote\').textContent = \'\';\n    $(\'copy\').disabled = true; $(\'status\').textContent = \'\'; $(\'copynote\').textContent = \'\';\n  }\n\n  $(\'file\').addEventListener(\'change\', async (e) => {\n    const f = e.target.files[0]; if (!f) return;\n    const my = ++loads;\n    hdus = null; cur = null; clearAnswer();      // a failed load kept the old image, and Measure went on with it (1.10)\n    $(\'hdu\').innerHTML = \'\'; $(\'hdrnote\').textContent = \'\'; $(\'tobs\').value = \'\';\n    const c = $(\'img\'); c.getContext(\'2d\').clearRect(0, 0, c.width, c.height);\n    try {\n      const buf = await f.arrayBuffer();\n      if (my !== loads) return;                  // a later file was chosen while this one was read: it wins (T1.3)\n      const hs = Z.parseFITS(buf);\n      const sel = $(\'hdu\');\n      hs.forEach((h, i) => {                     // known without decoding: only the image chosen is decoded (1.19\'s half)\n        if (h.nx === undefined) return;\n        const o = document.createElement(\'option\'); o.value = i;\n        const name = h.header.EXTNAME === undefined ? \'\' : \' \' + String(h.header.EXTNAME).trim() + (h.header.EXTVER === undefined ? \'\' : \',\' + h.header.EXTVER);\n        o.textContent = \'HDU \' + i + name + \' (\' + h.nx + \'×\' + h.ny + (h.readable ? \')\' : \': \' + unread(h) + \')\');\n        if (!h.readable) o.disabled = true;\n        sel.appendChild(o);\n      });\n      const first = Array.from(sel.options).find((o) => !o.disabled);\n      if (!first) throw new Error(sel.options.length ? unread(hs[Number(sel.options[0].value)])\n        : ((hs.find((h) => h.unreadable) || {}).unreadable || \'no 2-D image in this file\'));\n      hdus = hs; sel.value = first.value;\n      choose(Number(first.value));\n    } catch (err) { if (my !== loads) return; hdus = null; cur = null; $(\'info\').textContent = \'Could not read: \' + err.message; }\n  });\n  $(\'hdu\').addEventListener(\'change\', (e) => {\n    try { choose(Number(e.target.value)); } catch (err) { cur = null; clearAnswer(); $(\'info\').textContent = \'Could not read: \' + err.message; }\n  });\n  function unread(h) {                     // why an image HDU was not decoded\n    if (h.tooBig) return \'too big for the page (\' + (h.nx * h.ny / 1e6).toFixed(0) + \' Mpx; the limit is \' + (Z.MAX_PIXELS / 1e6) + \' Mpx): cut out the comet first\';\n    if (h.truncated) return \'the file ends before the image does\';\n    return h.unreadable || \'not read\';\n  }\n  function merged() { return Z.mergeHeaders(hdus[0].header, cur.header); }   // a blank image card hides nothing (round 3, T1.6)\n\n  function choose(i) {\n    cur = hdus[i]; clearAnswer();\n    const w = Z.makeWCS(cur.header, hdus[0].header, hdus);   // hdus: HST\'s lookup tables sit in the file\'s own extensions\n    const wtxt = !w ? \', no WCS (pixels only)\' : (w.unsupported ? \', WCS not usable here: \' + w.unsupported + \' (pixels only)\' : \', WCS \' + w.scale.toFixed(3) + \'"/px\');\n    $(\'info\').textContent = cur.nx + \'×\' + cur.ny + \' px\' + wtxt;\n    let t;                                   // an answer or a reason: the file is never dropped for its time (#9; round 2, 1.1)\n    try { t = Z.midExposure(merged()); } catch (err) { t = { error: \'the header time could not be read (\' + err.message + \')\' }; }\n    $(\'tobs\').value = t.time || \'\';\n    const notes = [t.time ? \'Time: \' + t.note + \'.\' : \'Time: \' + t.error + \'; type the mid-exposure (UTC) to get a record.\'];\n    if (w && w.notes && w.notes.length) notes.push(\'WCS: \' + w.notes.join(\'; \') + \'.\');\n    const dropped = (hdus[0].dropped || []).concat(i ? cur.dropped || [] : []).filter((k, j, a) => a.indexOf(k) === j);\n    if (dropped.length) notes.push(\'Header card\' + (dropped.length > 1 ? \'s \' : \' \') + dropped.join(\', \') + \' could not be read (no "= " in columns 1-10), and \' + (dropped.length > 1 ? \'were\' : \'was\') + \' left out.\');\n    $(\'hdrnote\').textContent = notes.join(\' \');\n    const s = Z.brightestStart(cur.data, cur.nx, cur.ny); $(\'sx\').value = s[0]; $(\'sy\').value = s[1];\n    draw();\n  }\n\n  function draw() {\n    const c = $(\'img\'), ctx = c.getContext(\'2d\'), nx = cur.nx, ny = cur.ny;\n    const sc = Math.min(400 / nx, 400 / ny); c.width = Math.round(nx * sc); c.height = Math.round(ny * sc);\n    const st = Z.stretch(cur.data), lo = st.lo, hi = st.hi, soft = Math.max((hi - lo) / 200, 1e-12);   // sampled (#10)\n    const im = ctx.createImageData(nx, ny);\n    for (let i = 0; i < ny; i++) for (let j = 0; j < nx; j++) {\n      const val = cur.data[i * nx + j];\n      const t = Number.isFinite(val) ? Math.asinh(Math.max(val - lo, 0) / soft) / Math.asinh(Math.max(hi - lo, 1e-12) / soft) : 0;\n      const g = Math.max(0, Math.min(255, Math.round(255 * t))), k = 4 * ((ny - 1 - i) * nx + j);   // FITS row 0 at the bottom\n      im.data[k] = im.data[k + 1] = im.data[k + 2] = g; im.data[k + 3] = 255;\n    }\n    const off = document.createElement(\'canvas\'); off.width = nx; off.height = ny; off.getContext(\'2d\').putImageData(im, 0, 0);\n    ctx.imageSmoothingEnabled = false; ctx.drawImage(off, 0, 0, c.width, c.height);\n    const x = Number($(\'sx\').value), y = Number($(\'sy\').value);\n    ctx.strokeStyle = \'#ff4040\'; ctx.beginPath();\n    const px = (x + 0.5) * sc, py = (ny - 0.5 - y) * sc;\n    ctx.moveTo(px - 8, py); ctx.lineTo(px + 8, py); ctx.moveTo(px, py - 8); ctx.lineTo(px, py + 8); ctx.stroke();\n  }\n  $(\'img\').addEventListener(\'click\', (e) => {\n    if (!cur) return;\n    const r = e.target.getBoundingClientRect(), sc = e.target.width / cur.nx;\n    const x = (e.clientX - r.left) * (e.target.width / r.width) / sc - 0.5, y = cur.ny - 0.5 - (e.clientY - r.top) * (e.target.height / r.height) / sc;\n    $(\'sx\').value = x.toFixed(1); $(\'sy\').value = y.toFixed(1); if (last) clearAnswer(); draw();\n  });\n  [\'sx\', \'sy\'].forEach((id) => $(id).addEventListener(\'change\', () => cur && draw()));\n  [\'sx\', \'sy\', \'est\', \'r0\', \'r1\', \'rs\', \'bgm\', \'bgv\'].forEach((id) => [\'input\', \'change\'].forEach((ev) =>\n    $(id).addEventListener(ev, () => { if (last) clearAnswer(); })));\n  [\'stn\', \'desig\', \'mode\', \'astcat\', \'submitter\', \'measurers\', \'observers\', \'design\', \'aperture\', \'detector\', \'obsname\', \'tobs\'].forEach((id) =>\n    [\'input\', \'change\'].forEach((ev) => $(id).addEventListener(ev, renderRecord)));\n\n  $(\'run\').addEventListener(\'click\', () => {\n    if (!cur) { $(\'status\').textContent = \'Load a FITS cutout first.\'; return; }\n    const rr = Z.radiiFrom($(\'r0\').value, $(\'r1\').value, $(\'rs\').value);          // checked before the loop (#8)\n    if (rr.error) { $(\'status\').textContent = rr.error; return; }\n    const bg = $(\'bgm\').value === \'annulus\' ? \'annulus\' : Number($(\'bgv\').value);\n    if (bg !== \'annulus\' && !Number.isFinite(bg)) { $(\'status\').textContent = \'background: the known value is not a number\'; return; }\n    const x0 = Number($(\'sx\').value), y0 = Number($(\'sy\').value);\n    if (!Number.isFinite(x0) || !Number.isFinite(y0)) { $(\'status\').textContent = \'start: x and y must be numbers\'; return; }\n    $(\'status\').textContent = \'measuring…\';\n    setTimeout(() => {\n      try {\n        const est = $(\'est\').value;\n        const o = Z.shrink(cur.data, cur.nx, cur.ny, x0, y0, { estimator: est, radii: rr.radii, background: bg });\n        show(o, est, rr.radii);\n        $(\'status\').textContent = o.nbad ? o.nbad + \' of \' + o.radii.length + \' radii did not converge (left out of the line; the table gives each reason)\' : \'done\';\n      } catch (err) { $(\'status\').textContent = \'Error: \' + err.message; }\n    }, 20);\n  });\n\n  function show(o, est, radii) {\n    const tab = $(\'tab\'); tab.innerHTML = \'<tr><th>r (px)</th><th>x</th><th>y</th><th></th></tr>\';\n    const f = (v, n) => Number.isFinite(v) ? v.toFixed(n) : \'—\';\n    o.radii.forEach((r, k) => {\n      if (k % 5 === 0 || k === o.radii.length - 1 || !o.ok[k])\n        tab.innerHTML += \'<tr><td>\' + r.toFixed(1) + \'</td><td>\' + f(o.x[k], 3) + \'</td><td>\' + f(o.y[k], 3) + \'</td><td class="why">\' + (o.ok[k] ? \'\' : o.reason[k]) + \'</td></tr>\';\n    });\n    // plot: x(r) - x0 and y(r) - y0 with the lines; unconverged radii have no point\n    const svg = $(\'plot\'), W = 460, H = 300, L = 50, R = 12, T = 28, B = 34, acc = css(\'--accent\'), acc2 = css(\'--accent2\'), fg = css(\'--fg\'), line = css(\'--line\');\n    let s = \'\';\n    if (Number.isFinite(o.x0)) {\n      const dx = o.x.map((v) => v - o.x0), dy = o.y.map((v) => v - o.y0);\n      const all = dx.concat(dy, [0]).filter(Number.isFinite); let lo = Math.min.apply(null, all), hi = Math.max.apply(null, all); if (hi - lo < 1e-3) { hi += 0.01; lo -= 0.01; }\n      const rmax = radii[radii.length - 1];\n      const X = (r) => L + (W - L - R) * r / rmax, Y = (v) => T + (H - T - B) * (hi - v) / (hi - lo);\n      s += \'<line x1="\' + L + \'" y1="\' + Y(0) + \'" x2="\' + (W - R) + \'" y2="\' + Y(0) + \'" stroke="\' + line + \'"/>\';\n      s += \'<text x="\' + L + \'" y="\' + (H - 8) + \'" fill="\' + fg + \'" font-size="12">0</text><text x="\' + (W - R - 62) + \'" y="\' + (H - 8) + \'" fill="\' + fg + \'" font-size="12">r = \' + rmax + \' px</text>\';\n      s += \'<text x="4" y="\' + (T + 10) + \'" fill="\' + fg + \'" font-size="12">\' + hi.toFixed(3) + \'</text><text x="4" y="\' + (H - B) + \'" fill="\' + fg + \'" font-size="12">\' + lo.toFixed(3) + \'</text>\';\n      [[dx, o.sx, acc, \'x\'], [dy, o.sy, acc2, \'y\']].forEach((q) => {\n        q[0].forEach((v, k) => { if (Number.isFinite(v)) s += \'<circle cx="\' + X(o.radii[k]) + \'" cy="\' + Y(v) + \'" r="2" fill="\' + q[2] + \'"/>\'; });\n        s += \'<line x1="\' + X(0) + \'" y1="\' + Y(0) + \'" x2="\' + X(rmax) + \'" y2="\' + Y(q[1] * rmax) + \'" stroke="\' + q[2] + \'" stroke-dasharray="4 3"/>\';\n        s += \'<text x="\' + (X(rmax) - 14) + \'" y="\' + (Y(q[1] * rmax) - 4) + \'" fill="\' + q[2] + \'" font-size="12">\' + q[3] + \'</text>\';\n      });\n      s += \'<text x="\' + L + \'" y="16" fill="\' + fg + \'" font-size="12">photocentre minus zero-aperture position (px), x and y</text>\';\n    }\n    svg.innerHTML = s;\n    const w = Z.makeWCS(cur.header, hdus[0].header, hdus);\n    const need = [];\n    let txt;\n    if (!Number.isFinite(o.x0)) {\n      txt = \'No zero-aperture position: fewer than 2 radii converged.\';\n      need.push(\'a zero-aperture position\');\n    } else {\n      txt = \'Zero-aperture position: x = \' + o.x0.toFixed(4) + \', y = \' + o.y0.toFixed(4) + \' px (\' + est + \'); at r = 2: (\' + f(o.x2, 4) + \', \' + f(o.y2, 4) + \'); trend per px of radius: (\' + o.sx.toFixed(5) + \', \' + o.sy.toFixed(5) + \').\';\n    }\n    let rd = null;\n    if (!w) need.push(\'a sky position (no WCS in the header)\');\n    else if (w.unsupported) need.push(\'a sky position (\' + w.unsupported + \')\');\n    else if (Number.isFinite(o.x0)) {\n      rd = w.pixToSky(o.x0, o.y0);\n      txt += \' RA \' + rd[0].toFixed(7) + \', Dec \' + rd[1].toFixed(7) + \' deg.\';\n      if (Number.isFinite(o.x2)) {\n        const rd2 = w.pixToSky(o.x2, o.y2);\n        const dra = (rd2[0] - rd[0]) * Math.cos(rd[1] * Math.PI / 180) * 3600, dde = (rd2[1] - rd[1]) * 3600;\n        txt += \' The r = 2 photocentre sits \' + dra.toFixed(3) + \'" E, \' + dde.toFixed(3) + \'" N of it.\';\n      }\n    }\n    $(\'zero\').textContent = txt;\n    last = { o: o, est: est, rd: rd, need: need };\n    renderRecord();\n  }\n  function renderRecord() {                  // the record from the kept measurement and the boxes as they are now (round 2, 1.10)\n    if (!last) return;\n    $(\'copynote\').textContent = \'\';              // a copy made before this change is not this record\n    const o = last.o, fitted = o.radii.filter((r, k) => o.ok[k]);   // the radii the line went through, not those asked for (4.3)\n    let rec = null;\n    if (!last.need.length) {\n      rec = Z.adesPSV({ ra: last.rd[0], dec: last.rd[1], time: $(\'tobs\').value, stn: $(\'stn\').value, desig: $(\'desig\').value, mode: $(\'mode\').value,\n        astCat: $(\'astcat\').value.trim(), submitter: $(\'submitter\').value, measurers: $(\'measurers\').value, observers: $(\'observers\').value,\n        observatoryName: $(\'obsname\').value.trim() || null, design: $(\'design\').value, aperture: $(\'aperture\').value, detector: $(\'detector\').value,\n        remarks: \'zero-aperture extrapolated (\' + last.est + \', \' + fitted.length + \' of \' + o.radii.length + \' radii, r \'\n          + Math.min.apply(null, fitted).toFixed(1) + \'-\' + Math.max.apply(null, fitted).toFixed(1) + \' px)\' });\n    }\n    if (rec && rec.psv) { $(\'ades\').textContent = rec.psv; $(\'copy\').disabled = false; }\n    else { $(\'ades\').textContent = \'No ADES record: \' + (rec ? rec.error : \'needs \' + last.need.join(\'; \')) + \'.\'; $(\'copy\').disabled = true; }   // #5: nothing to copy\n    $(\'adesnote\').textContent = rec && rec.psv && rec.notes.length ? \'Note: \' + rec.notes.join(\'; \') + \'.\' : \'\';   // as the command line says (4.4)\n  }\n  $(\'copy\').addEventListener(\'click\', async () => {   // Copy says whether it copied: a stale clipboard went unsaid (round 3, T4.2)\n    if ($(\'copy\').disabled) return;\n    try {\n      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error(\'this browser gives the page no clipboard here\');\n      await navigator.clipboard.writeText($(\'ades\').textContent);\n      $(\'copynote\').textContent = \'Copied: the record above is on the clipboard.\';\n    } catch (err) {\n      const r = document.createRange(); r.selectNodeContents($(\'ades\')); const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);\n      $(\'copynote\').textContent = \'Could not copy (\' + err.message + \'): the record is selected; copy it with Ctrl+C (Cmd+C on a Mac).\';\n    }\n  });\n})();\n</script>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) [TNX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 116, in test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line
+    self.assertIn(code, v); self.assertIn('re-solve', v)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 're-solve' not found in 'projection TNX: the page reads TAN and TAN-SIP only; the command line reads the other FITS projections'
+
+======================================================================
+FAIL: test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) [ZPX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 116, in test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line
+    self.assertIn(code, v); self.assertIn('re-solve', v)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 're-solve' not found in 'projection ZPX: the page reads TAN and TAN-SIP only; the command line reads the other FITS projections'
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a gzipped FITS file]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 70, in test_t4_8_a_gzipped_or_non_fits_file_is_named
+    self.assertTrue(any(u and word in u for u in o), o)
+AssertionError: False is not true : [None]
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a PNG]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 70, in test_t4_8_a_gzipped_or_non_fits_file_is_named
+    self.assertTrue(any(u and word in u for u in o), o)
+AssertionError: False is not true : [None]
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a text file]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 70, in test_t4_8_a_gzipped_or_non_fits_file_is_named
+    self.assertTrue(any(u and word in u for u in o), o)
+AssertionError: False is not true : [None]
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [a file shorter than one FITS block]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 70, in test_t4_8_a_gzipped_or_non_fits_file_is_named
+    self.assertTrue(any(u and word in u for u in o), o)
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_or_non_fits_file_is_named (calibrator.tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) [the file picker offers .gz]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 73, in test_t4_8_a_gzipped_or_non_fits_file_is_named
+    self.assertIn('.gz', [a.strip() for a in accept.split(',')])
+AssertionError: '.gz' not found in ['.fits', '.fit', '.fts', '.fz']
+
+======================================================================
+FAIL: test_t4_11_a_typed_time_says_it_was_typed (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_11_a_typed_time_says_it_was_typed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 253, in test_t4_11_a_typed_time_says_it_was_typed
+    self.assertIn('typed', s1['hdrnote']); self.assertIn('2025-12-27T16:05:29', s1['hdrnote'])   # and what the header gave
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'typed' not found in 'Time: obsTime from DATE-OBS (the start) + EXPTIME/2.'
+
+======================================================================
+FAIL: test_t4_18_the_page_remarks_name_the_radii_as_they_are (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_18_the_page_remarks_name_the_radii_as_they_are)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 258, in test_t4_18_the_page_remarks_name_the_radii_as_they_are
+    self.assertIn('r 2.05-5.95 px', record_row(s0['ades'])['remarks'])
+AssertionError: 'r 2.05-5.95 px' not found in 'zero-aperture extrapolated (M, 79 of 79 radii, r 2.0-6.0 px)'
+
+======================================================================
+FAIL: test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) [empty_start]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 235, in test_t4_3_an_empty_box_is_refused_by_name
+    self.assertIn(word, s1['status']); self.assertIn('empty', s1['status'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'start' not found in '41 of 41 radii did not converge (left out of the line; the table gives each reason)'
+
+======================================================================
+FAIL: test_t4_3_an_empty_box_is_refused_by_name (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) [empty_bg]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 235, in test_t4_3_an_empty_box_is_refused_by_name
+    self.assertIn(word, s1['status']); self.assertIn('empty', s1['status'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'background' not found in 'done'
+
+======================================================================
+FAIL: test_t4_8_a_gzipped_file_is_named_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_8_a_gzipped_file_is_named_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 240, in test_t4_8_a_gzipped_file_is_named_on_the_page
+    self.assertIn('Could not read', s0['info']); self.assertIn('gunzip', s0['info'])
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'gunzip' not found in 'Could not read: no 2-D image in this file'
+
+======================================================================
+FAIL: test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) [the info line]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 245, in test_t4_9_no_wcs_names_plate_solving_on_the_page
+    self.assertIn('solve', s0['info'].lower())
+AssertionError: 'solve' not found in '71×71 px, no wcs (pixels only)'
+
+======================================================================
+FAIL: test_t4_9_no_wcs_names_plate_solving_on_the_page (calibrator.tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) [the record's refusal]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3b_page.py", line 247, in test_t4_9_no_wcs_names_plate_solving_on_the_page
+    self.assertNotIn('# version', s0['ades']); self.assertIn('solve', s0['ades'].lower())
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'solve' not found in 'no ades record: needs a sky position (no wcs in the header).'
+
+----------------------------------------------------------------------
+Ran 173 tests in 137.062s
+
+FAILED (failures=67)

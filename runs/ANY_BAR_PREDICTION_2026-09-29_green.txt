@@ -1,0 +1,4 @@
+# Launch step 1's bar as amended (7f399b0), its green run on the fix (b69416c): the prediction, written before the run
+THE BAR: MET, 19 of 19. A: 224 run on each setup, 0/0/0, K13 run; K6's tested install 2.2.6 1.15.3 6.1.7 on a Python 3.11 everywhere (/usr/bin/python3.11 from 3.13 and 3.14); K8 and K10 run on 3.13 and 3.14 (Ubuntu's 3.12).
+B1: skipped exactly 2 (K6, K8), each naming PyPI; B2: the 10 skipped before plus K6's 4 judge subtests, all naming ADES_PYLIB. C0, M1-M9, D pass. The least certain: K6's tested install through a second Python.
+# written 2026-09-29 19:49:21 UTC, sha256 of the lines above: 9d9427ba94b8638b

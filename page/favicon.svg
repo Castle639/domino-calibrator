@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    .frame { fill: none; stroke: #1a1a1a; stroke-width: 3.5; }
+    .pip { fill: #c0392b; }
+    @media (prefers-color-scheme: dark) { .frame { stroke: #e6e6e6; } .pip { fill: #ff7b6b; } }
+  </style>
+  <rect class="frame" x="2" y="2" width="28" height="28" rx="6"/>
+  <circle class="pip" cx="16" cy="16" r="6"/>
+</svg>

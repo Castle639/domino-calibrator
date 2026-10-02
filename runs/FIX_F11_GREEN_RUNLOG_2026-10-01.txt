@@ -1,0 +1,14 @@
+# fix_f11_bar | HEAD 5997d42 | TARGET head (HEAD:calibrator) | the slice the audit room's
+    C8.6 NAXIS3 = 1, a 2-axis WCS: CLI exit 0, ('151.4999180', '+10.4000195') | page need ['a start you give: click on the comet to get a record (the automatic start takes the brightest source, which may be a star)'], sky yes
+    C8.9 --radii 2.0:6.0:0.1       exit 0 in 1.2 s | radii 41 (2.0-6.0) | zero aperture ('32.3067', '31.6955') | no record | 
+    C8.9 --radii 1e-9:1e-9:1e-13   exit 1 in 0.7 s | radii None | zero aperture None | no record | # cannot measure: --radii 1e-9:1e-9:1e-13: needs 0.5 <= FROM <= TO <= 1000 px, STEP >= 0.01 px and at most 1000 radii
+    C8.9 --radii 3:3.0000001:1e-10 exit 1 in 0.7 s | radii None | zero aperture None | no record | # cannot measure: --radii 3:3.0000001:1e-10: needs 0.5 <= FROM <= TO <= 1000 px, STEP >= 0.01 px and at most 1000 radii
+    C8.9 --radii 1e308:1e308:1     exit 1 in 0.7 s | radii None | zero aperture None | no record | # cannot measure: --radii 1e308:1e308:1: needs 0.5 <= FROM <= TO <= 1000 px, STEP >= 0.01 px and at most 1000 radii
+    C8.10 CTYPE1 with junk after its quote: CLI exit 2 | None | page RA/Dec [151.497758, 10.404241], need []
+Z0 PASS  the controls: the slice the audit room's, run whole (exit 0); the published radii: exit 0, radii 41 (2.0-6.0)
+Z1 PASS  16, the one-plane cube: the command line ('151.4999180', '+10.4000195')
+Z2 PASS  18, the radii: [('1e-9:1e-9:1e-13', '1', '# cannot measure: --radii 1e-9:1e-9:1e-13: needs 0.5 <= FROM <= TO <= '), ('3:3.0000001:1e-10', '1', '# cannot measure: --radii 3:3.0000001:1e-10: needs 0.5 <= FROM <= TO <'), ('1e308:1e308:1', '1', '# cannot measure: --radii 1e308:1e308:1: needs 0.5 <= FROM <= TO <= 10')]
+Z3 PASS  19, the unparsable CTYPE1: exit 2, None
+Z4 PASS  tests/test_fix_f11.py | OK
+Z5 PASS  strict: PASS (330 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F11's bar on head: MET, 6 of 6

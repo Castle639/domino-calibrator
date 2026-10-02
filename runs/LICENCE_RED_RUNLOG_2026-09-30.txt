@@ -1,0 +1,10 @@
+# licence_bar | HEAD d025f91 | its sha256 35da837b163c4a5b0487ce172fcab66dd3e9c9d62cc3ef183619d466638b2e5c
+L0  PASS  the plain MIT text passes: True | with the credit planted in its notice, it fails: True
+L1  FAIL  LICENSE is SPDX's MIT exactly: False | the credit in it: True
+L2  FAIL  K1: FAILED (failures=1) | K3 and K4: FAILED (failures=1)
+L3  FAIL  K25: FAILED (failures=1)
+L4  FAIL  the whole suite: strict: FAIL (239 run, 3 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+        failed: test_k25_the_notes_tell_windows_users_of_the_validator_about_utf8_mode (tests.test_launch_steps.TestReleaseNotes.test_k25_the_notes_tell_windows_users_of_the_validator_about_utf8_mode)
+        failed: test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license)
+        failed: test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice)
+# licence bar: NOT MET, 1 of 5

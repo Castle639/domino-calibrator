@@ -1,0 +1,4 @@
+# PV on TAN through the command line's WCS, 2026-09-28 15:57:44 UTC | pixel (5, 60), 39 px from the reference pixel
+PV1_1, PV2_1 = 1 alone                       | from plain TAN       0.6816" | from the same terms as TPV       0.6816" | the command line's WCS notes: none
+SCAMP first order: PV_0-PV_2 (identity)      | from plain TAN  707990.8210" | from the same terms as TPV  707990.8210" | the command line's WCS notes: none
+SCAMP to index 5: + PV1_5 = PV2_5 = 0.01     | from plain TAN       0.0029" | from the same terms as TPV       0.0000" | the command line's WCS notes: ["Removed redundant SIP distortion parameters because SCAMP' PV distortions are also present"]

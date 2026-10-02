@@ -1,0 +1,741 @@
+# red run 2026-09-27 23:45:02 UTC | HEAD b1da95b | package: 0 modified .py | ADES-Master 39ae5a9 | node v22.22.2
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ERROR
+test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ERROR
+test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ERROR
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ERROR
+test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ERROR
+test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... FAIL
+test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ERROR
+test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ERROR
+test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ERROR
+test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ERROR
+test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... FAIL
+test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... usage: python -m unittest [-h] [--x X] [--y Y] [--estimator {G,M}]
+                          [--radii RADII] [--background BACKGROUND]
+                          [--stn STN] [--desig DESIG] [--ext EXT]
+                          [--rms-noise RMS_NOISE] [--curve CURVE]
+                          fits
+python -m unittest: error: unrecognized arguments: --mode CCD --astcat Gaia3 --submitter A. N. Observer --measurer A. N. Observer --telescope-design Reflector --telescope-aperture 0.5 --telescope-detector CCD
+ERROR
+test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... FAIL
+test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... FAIL
+test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ERROR
+test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... usage: python -m unittest [-h] [--x X] [--y Y] [--estimator {G,M}]
+                          [--radii RADII] [--background BACKGROUND]
+                          [--stn STN] [--desig DESIG] [--ext EXT]
+                          [--rms-noise RMS_NOISE] [--curve CURVE]
+                          fits
+python -m unittest: error: unrecognized arguments: --mode CMO --astcat Gaia3E --submitter A. N. Observer --measurer A. N. Observer --telescope-design Reflector --telescope-aperture 0.5 --telescope-detector CMOS
+ERROR
+test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... FAIL
+test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time) ... ERROR
+test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ERROR
+test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ERROR
+test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ERROR
+test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... FAIL
+test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... INFO: 
+                Inconsistent SIP distortion information is present in the FITS header and the WCS object:
+                SIP coefficients were detected, but CTYPE is missing a "-SIP" suffix.
+                astropy.wcs is using the SIP distortion coefficients,
+                therefore the coordinates calculated here might be incorrect.
+
+                If you do not want to apply the SIP distortion coefficients,
+                please remove the SIP coefficients from the FITS header or the
+                WCS object.  As an example, if the image is already distortion-corrected
+                (e.g., drizzled) then distortion components should not apply and the SIP
+                coefficients should be removed.
+
+                While the SIP distortion coefficients are being applied here, if that was indeed the intent,
+                for consistency please append "-SIP" to the CTYPE in the FITS header or the WCS object.
+
+                 [astropy.wcs.wcs]
+ERROR
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ERROR
+test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... FAIL
+test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... FAIL
+test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... FAIL
+test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... FAIL
+test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... FAIL
+test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... FAIL
+test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... FAIL
+test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... FAIL
+test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... FAIL
+test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... FAIL
+test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... FAIL
+test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ERROR
+test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... FAIL
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... FAIL
+test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... FAIL
+test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... FAIL
+test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... FAIL
+test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... FAIL
+test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... FAIL
+test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... FAIL
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+======================================================================
+ERROR: test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 302, in test_12_version_2022_and_the_required_blocks
+    t = A.ades_psv(168.7, 4.6, '2025-12-12T21:21:02.00Z', **dict(REC, observers=['B. Observer'], observatory_name='My Observatory'))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ades_psv() got an unexpected keyword argument 'submitter'
+
+======================================================================
+ERROR: test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 320, in test_12b_bad_context_values_are_refused
+    A.ades_psv(168.7, 4.6, '2025-12-12T21:21:02.00Z', **dict(REC, **bad))
+TypeError: ades_psv() got an unexpected keyword argument 'submitter'
+
+======================================================================
+ERROR: test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 312, in test_14_ra_rounds_into_range
+    t = A.ades_psv(359.99999996, 1.0, '2025-12-12T21:21:02.00Z', **REC)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ades_psv() got an unexpected keyword argument 'submitter'
+
+======================================================================
+ERROR: test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 93, in test_01_G_nan_in_aperture_is_a_reason_not_a_raise
+    o = gauss_fit(img, 20.2, 19.9, 4.0, bkg=100.0)          # raised ValueError on c0ae330
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/estimators.py", line 136, in gauss_fit
+    res = least_squares(fun, q, jac=jac, method='lm', xtol=1e-10, ftol=1e-10, max_nfev=400)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/scipy/optimize/_lsq/least_squares.py", line 821, in least_squares
+    raise ValueError("Initial guess is outside of provided bounds")
+ValueError: Initial guess is outside of provided bounds
+
+======================================================================
+ERROR: test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 110, in test_02_small_apertures_are_refused_not_raised
+    o = gauss_fit(img, 20.2, 19.9, r, bkg=100.0) if est == 'G' else moment_centroid(img, 20.2, 19.9, r, bkg=100.0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/estimators.py", line 136, in gauss_fit
+    res = least_squares(fun, q, jac=jac, method='lm', xtol=1e-10, ftol=1e-10, max_nfev=400)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/scipy/optimize/_lsq/least_squares.py", line 851, in least_squares
+    raise ValueError("Method 'lm' doesn't work when the number of "
+ValueError: Method 'lm' doesn't work when the number of residuals is less than the number of variables.
+
+======================================================================
+ERROR: test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 124, in test_04_P_never_raises
+    o = peak_quadratic(img, x, 20)                       # c0ae330: ValueError (the search window wrapped, empty)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/estimators.py", line 156, in peak_quadratic
+    py, px = np.unravel_index(np.nanargmax(win), win.shape)
+                              ^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py", line 626, in nanargmax
+    res = np.argmax(a, axis=axis, out=out, keepdims=keepdims)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/numpy/_core/fromnumeric.py", line 1342, in argmax
+    return _wrapfunc(a, 'argmax', axis=axis, out=out, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/numpy/_core/fromnumeric.py", line 57, in _wrapfunc
+    return bound(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^
+ValueError: attempt to get argmax of an empty sequence
+
+======================================================================
+ERROR: test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 136, in test_05_every_radius_carries_ok_and_a_reason
+    self.assertEqual(len(s['reason']), len(s['radii']))
+                         ~^^^^^^^^^^
+KeyError: 'reason'
+
+======================================================================
+ERROR: test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 145, in test_06_cube_with_one_plane_is_measured
+    r = cli.measure_file(p, estimator='M')                                   # c0ae330: IndexError
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 37, in measure_file
+    h = f[ext] if ext is not None else hdus[0]
+                                       ~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 151, in test_07_no_image_is_an_honest_refusal
+    rc, out = run_main([p])                                                   # c0ae330: IndexError traceback
+              ^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 72, in run_main
+    rc = cli.main(args)
+         ^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 94, in main
+    r = measure_file(A.fits, A.x, A.y, A.estimator, _radii(A.radii), A.background, A.ext, A.stn, A.desig, A.rms_noise)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 37, in measure_file
+    h = f[ext] if ext is not None else hdus[0]
+                                       ~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 160, in test_05_no_time_no_record
+    rc, out = run_main([p] + REC_ARGS)                          # c0ae330 has no such flags; its record carried a placeholder
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 72, in run_main
+    rc = cli.main(args)
+         ^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 93, in main
+    A = ap.parse_args(argv)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/argparse.py", line 1889, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/usr/lib/python3.11/argparse.py", line 2652, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.11/argparse.py", line 2639, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 187, in test_13_designation_field_by_the_schema_pattern
+    self.assertEqual(A.designation_field('3I'), 'permID')
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'calibrator.ades' has no attribute 'designation_field'
+
+======================================================================
+ERROR: test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 200, in test_13b_mode_and_astcat_are_the_users
+    rc, out = run_main([p] + args)                               # c0ae330: no --mode or --astcat
+              ^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 72, in run_main
+    rc = cli.main(args)
+         ^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 93, in main
+    A = ap.parse_args(argv)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/argparse.py", line 1889, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/usr/lib/python3.11/argparse.py", line 2652, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.11/argparse.py", line 2639, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 219, in test_15_time
+    A.mid_exposure(H(DATE_OBS='2025-12-12T21:20:32.000'))
+    ^^^^^^^^^^^^^^
+AttributeError: module 'calibrator.ades' has no attribute 'mid_exposure'
+
+======================================================================
+ERROR: test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 239, in test_15b_the_two_headers_are_merged
+    r = cli.measure_file(p, estimator='M', ades=dict(REC))                  # c0ae330 wrote 21:20:32, the start
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: measure_file() got an unexpected keyword argument 'ades'
+
+======================================================================
+ERROR: test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 244, in test_16_rms_through_the_wcs
+    rra, rde, cor = A.sky_rms(h, 35.0, 35.0, [[4e-4, 0.0], [0.0, 1e-4]])   # x (the larger scatter) runs north
+                    ^^^^^^^^^
+AttributeError: module 'calibrator.ades' has no attribute 'sky_rms'
+
+======================================================================
+ERROR: test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 260, in test_16b_nan_border_keeps_the_noise
+    r = cli.measure_file(p, estimator='M', rms_noise=5, ades=dict(REC))   # c0ae330: the noise was NaN, rms silently dropped
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: measure_file() got an unexpected keyword argument 'ades'
+
+======================================================================
+ERROR: test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 284, in test_17b_wcs_warnings_reach_the_user
+    self.assertTrue(any('SIP' in n for n in r['notes']))            # c0ae330 silenced every WCS warning
+                                            ~^^^^^^^^^
+KeyError: 'notes'
+
+======================================================================
+ERROR: test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 294, in test_19_blank_pixels_are_not_data
+    im, hdr, notes = cli.load_image(p)                                 # c0ae330 read the blank as 0
+                     ^^^^^^^^^^^^^^
+AttributeError: module 'calibrator.cli' has no attribute 'load_image'
+
+======================================================================
+ERROR: test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 182, in test_15_time_parity
+    self.assertTrue(o[0].get('error'))                          # c0ae330 wrote the start as the mid-exposure
+                    ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+======================================================================
+FAIL: test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 119, in test_03_G_amplitude_must_be_positive
+    self.assertFalse(o['ok']); self.assertIn('amplitude', o['reason'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 348, in test_mpc_judge_accepts_the_cli_record
+    self.assertTrue(ok, 'the default record: ' + why)             # c0ae330: version 2017, blocks missing
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : the default record: submit has failed: | xsd/submit.xsd: INVALID /tmp/tmp6vwn15aq/rec.xml:4:0:ERROR:SCHEMASV:SCHEMAV_ELEMENT_CONTENT: Element 'obsContext': Missing child element(s). Expected is one of ( submitter, observers, measurers, telescope, software, coinvestigators, collaborators, fundingSource, comment ).
+
+======================================================================
+FAIL: test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 169, in test_05b_default_run_writes_no_placeholder
+    self.assertNotIn('YYYY', out)                               # c0ae330 printed obsTime YYYY-MM-DDThh:mm:ss.ssZ
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YYYY' unexpectedly found in '# start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0\n# r_px  x  y\n2.00 35.0837 34.9498\n2.10 35.0845 34.9499\n2.20 35.0852 34.9500\n2.30 35.0858 34.9501\n2.40 35.0864 34.9503\n2.50 35.0872 34.9503\n2.60 35.0882 34.9501\n2.70 35.0892 34.9501\n2.80 35.0902 34.9500\n2.90 35.0912 34.9499\n3.00 35.0920 34.9499\n3.10 35.0929 34.9499\n3.20 35.0936 34.9499\n3.30 35.0944 34.9499\n3.40 35.0952 34.9499\n3.50 35.0959 34.9500\n3.60 35.0964 34.9500\n3.70 35.0970 34.9501\n3.80 35.0975 34.9501\n3.90 35.0980 34.9501\n4.00 35.0984 34.9500\n4.10 35.0989 34.9500\n4.20 35.0993 34.9500\n4.30 35.0998 34.9500\n4.40 35.1002 34.9499\n4.50 35.1005 34.9499\n4.60 35.1007 34.9500\n4.70 35.1009 34.9500\n4.80 35.1010 34.9500\n4.90 35.1012 34.9500\n5.00 35.1013 34.9500\n5.10 35.1015 34.9500\n5.20 35.1016 34.9500\n5.30 35.1017 34.9500\n5.40 35.1019 34.9500\n5.50 35.1019 34.9500\n5.60 35.1020 34.9500\n5.70 35.1020 34.9500\n5.80 35.1021 34.9500\n5.90 35.1021 34.9500\n6.00 35.1022 34.9500\n# zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)\n# ADES (draft; validate before submitting):\n# version=2017\n# observatory\n! mpcCode XXX\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                     \n3I    |CCD |XXX|YYYY-MM-DDThh:mm:ss.ssZ|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, r 2.0-6.0 px)\n'
+
+======================================================================
+FAIL: test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 175, in test_11_unconverged_radii_have_no_position
+    self.assertTrue(np.all(np.isnan(s['x'][~s['ok']])) and np.all(np.isnan(s['y'][~s['ok']])))
+AssertionError: np.False_ is not true
+
+======================================================================
+FAIL: test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 210, in test_13c_nothing_defaults
+    self.assertNotIn('Gaia3', out); self.assertNotIn('|CCD', out.replace(' ', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Gaia3' unexpectedly found in '# start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0\n# r_px  x  y\n2.00 35.0837 34.9498\n2.10 35.0845 34.9499\n2.20 35.0852 34.9500\n2.30 35.0858 34.9501\n2.40 35.0864 34.9503\n2.50 35.0872 34.9503\n2.60 35.0882 34.9501\n2.70 35.0892 34.9501\n2.80 35.0902 34.9500\n2.90 35.0912 34.9499\n3.00 35.0920 34.9499\n3.10 35.0929 34.9499\n3.20 35.0936 34.9499\n3.30 35.0944 34.9499\n3.40 35.0952 34.9499\n3.50 35.0959 34.9500\n3.60 35.0964 34.9500\n3.70 35.0970 34.9501\n3.80 35.0975 34.9501\n3.90 35.0980 34.9501\n4.00 35.0984 34.9500\n4.10 35.0989 34.9500\n4.20 35.0993 34.9500\n4.30 35.0998 34.9500\n4.40 35.1002 34.9499\n4.50 35.1005 34.9499\n4.60 35.1007 34.9500\n4.70 35.1009 34.9500\n4.80 35.1010 34.9500\n4.90 35.1012 34.9500\n5.00 35.1013 34.9500\n5.10 35.1015 34.9500\n5.20 35.1016 34.9500\n5.30 35.1017 34.9500\n5.40 35.1019 34.9500\n5.50 35.1019 34.9500\n5.60 35.1020 34.9500\n5.70 35.1020 34.9500\n5.80 35.1021 34.9500\n5.90 35.1021 34.9500\n6.00 35.1022 34.9500\n# zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)\n# ADES (draft; validate before submitting):\n# version=2017\n# observatory\n! mpcCode XXX\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                     \n3I    |CCD |XXX|2025-12-12T21:21:02.00Z|168.6999785|+4.5999861|Gaia3 |zero-aperture extrapolated (G, r 2.0-6.0 px)\n'
+
+======================================================================
+FAIL: test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening.py", line 269, in test_17_frames_and_axes
+    self.assertAlmostEqual(ra, 168.7, places=9); self.assertAlmostEqual(dec, 4.6, places=9)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4.599999999999994 != 168.7 within 9 places (164.1 difference)
+
+======================================================================
+FAIL: test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 93, in test_03_edge_is_a_reason_not_a_throw
+    o, p = parity(self, img, 35.0, 20.0, est, 100.0)       # c0ae330: "aperture leaves the image", no result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 56, in parity
+    o = js(SHRINK_JS, dict(img_payload(img), x0=x0, y0=y0, opts=opts))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /user/[the checkout]/page/zeroap.js:262:18)
+    at Object.shrink ([the checkout][the checkout]/page/zeroap.js:290:75)
+    at Object.<anonymous> (/tmp/tmpkm4xer4y/s.js:3:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 99, in test_03b_small_annulus_is_a_reason_not_a_throw
+    o, p = parity(self, img, 10.0, 10.0, est, 'annulus')  # c0ae330: "annulus has fewer than 8 pixels", no result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 56, in parity
+    o = js(SHRINK_JS, dict(img_payload(img), x0=x0, y0=y0, opts=opts))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: r/[the checkout]/page/zeroap.js:289:40)
+    at Object.<anonymous> (/tmp/tmpowp626m6/s.js:3:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 106, in test_04a_aitken_jump_is_bounded_as_in_python
+    self.assertEqual(bool(o['ok']), bool(p['ok']), (o, p))     # c0ae330: the page jumped 9.8 px and said ok
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True != False : ({'x': 39.99999999992334, 'y': 39.999999999999986, 'n': 16, 'ok': True}, {'x': 39.941553631884766, 'y': 40.0, 'n': 500, 'flux': 124269.20183088366, 'ok': False})
+
+======================================================================
+FAIL: test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 114, in test_04b_nan_background_is_a_reason
+    o, p = parity(self, img, 20.0, 20.0, 'M', 'annulus')       # c0ae330: the page read the NaN background as 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 59, in parity
+    test.assertEqual([bool(v) for v in o['ok']], [bool(v) for v in p['ok']])
+AssertionError: Lists differ: [True[81 chars]rue, True, True, True, True, True, True, True,[109 chars]True] != [True[81 chars]rue, False, False, False, False, False, False,[135 chars]alse]
+
+First differing element 15:
+True
+False
+
+  [True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+   True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True,
+-  True]
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False,
++  False]
+
+======================================================================
+FAIL: test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 122, in test_04c_G_small_apertures_are_refused
+    self.assertFalse(q['ok']); self.assertIn('fewer than 8', q['reason'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 127, in test_05_no_time_no_record
+    o = js("out = Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: ''}, D));", REC_JS)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: 4:137)
+    at Object.<anonymous> (/tmp/tmpyae1cncl/s.js:2:9)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 134, in test_06_cube_with_one_plane
+    self.assertTrue(o[0]['has']); self.assertEqual((o[0]['nx'], o[0]['ny']), (21, 21))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 137, in test_08_radii_are_validated
+    o = js("out = [[2, 6, 0], [2, 6, -0.1], [2, 6, NaN], [6, 2, 0.1], [0, 6, 0.1], [2, 6, 0.1]].map(a => Z.radiiFrom(a[0], a[1], a[2]));")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /tmp706p8rkp/s.js:2:96
+    at Array.map (<anonymous>)
+    at Object.<anonymous> (/tmp/tmp706p8rkp/s.js:2:85)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 143, in test_09_unparseable_date_is_a_reason_not_a_throw
+    o = js("out = [Z.midExposure({'DATE-OBS': '27/12/25', EXPTIME: 60}), Z.midExposure({'DATE-OBS': 'yesterday', EXPTIME: 60})];")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: /[the checkout]/page/zeroap.js:320:14)
+    at Object.<anonymous> (/tmp/tmpdhqi4q8j/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 151, in test_10_big_images_are_refused_and_the_stretch_is_sampled
+    o = js("const b = require('fs').readFileSync(D.p); const h = Z.parseFITS(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength));"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: r/[the checkout]/page/zeroap.js:43:42)
+    at Object.<anonymous> (/tmp/tmpdkr2drap/s.js:2:56)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 161, in test_12_14_ades_2022_parity
+    o = js("out = [Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: '2025-12-12T21:21:02.00Z'}, D)),"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: :137)
+    at Object.<anonymous> (/tmp/tmpi6aqotll/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 198, in test_18_17_unsupported_wcs_is_refused_not_misread
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED', (c, v))
+AssertionError: False is not true : ({'CTYPE1': 'RA---TPV', 'CTYPE2': 'DEC--TPV'}, None)
+
+======================================================================
+FAIL: test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 208, in test_19_blank_pixels_are_not_data
+    self.assertIsNone(o[0]); self.assertEqual(o[1], 1000.0)     # c0ae330: -32768, a pixel of data
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -32768 is not None
+
+======================================================================
+FAIL: test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 212, in test_mpc_judge_accepts_the_page_record
+    o = js("out = [Z.adesPSV(Object.assign({ra: 168.7, dec: 4.6, time: '2025-12-12T21:21:02.00Z'}, D)),"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 33, in js
+    raise AssertionError('node failed: ' + r.stderr.strip()[-600:])
+AssertionError: node failed: :137)
+    at Object.<anonymous> (/tmp/tmp5vzrybc3/s.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.2
+
+======================================================================
+FAIL: test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 268, in test_03_edge_gives_a_measurement
+    self.assertNotIn('Error', c['status']); self.assertIn('did not converge', c['status']); self.assertIn('Zero-aperture', c['zero'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Error' unexpectedly found in 'Error: aperture leaves the image'
+
+======================================================================
+FAIL: test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 272, in test_05_no_time_no_record_and_nothing_to_copy
+    self.assertNotIn('YYYY', c['ades']); self.assertNotIn('permID', c['ades']); self.assertTrue(c['copyDisabled'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YYYY' unexpectedly found in '# version=2017\n# observatory\n! mpcCode 568\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |568|YYYY-MM-DDThh:mm:ss.ssZ|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, r 2-6 px)\n'
+
+======================================================================
+FAIL: test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 260, in test_08_zero_step_is_refused_not_frozen
+    self.assertFalse(c.get('timeout') or c.get('crashed'), c); self.assertIn('step', c['status'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : {'name': 'step0', 'errors': [], 'missing': [], 'info': '71×71 px, WCS 0.756"/px', 'crashed': True, 'timeout': True}
+
+======================================================================
+FAIL: test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 264, in test_09_bad_date_keeps_the_file
+    self.assertNotIn('Could not read', c['info']); self.assertIn('71', c['info']); self.assertEqual(c['tobs'], '')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Could not read' unexpectedly found in 'Could not read: Invalid time value'
+
+======================================================================
+FAIL: test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_page.py", line 276, in test_full_record_on_the_page
+    self.assertIn('# version=2022', c['ades']); self.assertFalse(c['copyDisabled']); self.assertEqual(c['errors'], [])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '# version=2022' not found in '# version=2017\n# observatory\n! mpcCode 568\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                 \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, r 2-6 px)\n'
+
+----------------------------------------------------------------------
+Ran 76 tests in 20.942s
+
+FAILED (failures=25, errors=19)

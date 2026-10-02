@@ -1,0 +1,14 @@
+# H2(a) 2026-09-27 18:28:45 UTC | calibrator/runs/h2_injection.py | commit 36b177c
+TinyTim (758, 814) despace 0.001 um SUB 5: (447, 447), Z4 line 1.1e-05, point-symmetrised: True
+(a) offsets from the nucleus at HST resolution, phase-mean over 16 phases (mas; x along the asymmetry) | max over phases
+  sym          eta 0.2 | G b0 (+0.00, +0.00) b2 (-0.00, -0.00) b6 (+0.00, +0.00) max|b0x| 0.27 nbad 0 | M b0 (+0.00, -0.00) b2 (-0.00, -0.00) b6 (+0.00, +0.00) max|b0x| 0.04 nbad 0 | P (-0.00, +0.00) max 2.54
+  dip0.1       eta 0.2 | G b0 (+1.06, -0.00) b2 (+2.82, -0.01) b6 (+6.60, -0.01) max|b0x| 1.33 nbad 0 | M b0 (-0.69, -0.02) b2 (+3.21, -0.00) b6 (+10.51, +0.00) max|b0x| 0.78 nbad 0 | P (+2.37, -0.01) max 4.91
+  dip0.3 eta0  eta 0.0 | G b0 (+5.98, -0.02) b2 (+12.21, -0.02) b6 (+25.38, -0.03) max|b0x| 6.11 nbad 0 | M b0 (+1.70, -0.05) b2 (+13.26, -0.02) b6 (+34.70, +0.00) max|b0x| 1.84 nbad 0 | P (+10.31, -0.01) max 12.14
+  dip0.3       eta 0.2 | G b0 (+3.18, -0.01) b2 (+8.40, -0.02) b6 (+19.58, -0.03) max|b0x| 3.44 nbad 0 | M b0 (-1.87, -0.04) b2 (+9.57, -0.01) b6 (+30.90, +0.01) max|b0x| 2.02 nbad 0 | P (+6.46, +0.00) max 9.49
+  dip0.3 eta1  eta 1.0 | G b0 (+2.29, -0.01) b2 (+3.56, -0.01) b6 (+7.03, -0.02) max|b0x| 2.87 nbad 0 | M b0 (-4.97, -0.04) b2 (+4.53, -0.01) b6 (+21.48, +0.01) max|b0x| 5.13 nbad 0 | P (+2.92, -0.01) max 6.17
+  fade rs5     eta 0.2 | G b0 (+3.86, -0.01) b2 (+6.42, -0.01) b6 (+12.47, -0.01) max|b0x| 4.10 nbad 0 | M b0 (+2.01, -0.03) b2 (+7.26, -0.01) b6 (+17.69, +0.01) max|b0x| 2.17 nbad 0 | P (+5.35, -0.01) max 8.10
+  fade rs25    eta 0.2 | G b0 (+3.54, -0.01) b2 (+7.88, -0.01) b6 (+17.44, -0.02) max|b0x| 3.79 nbad 0 | M b0 (-0.36, -0.04) b2 (+8.96, -0.01) b6 (+26.65, +0.01) max|b0x| 0.49 nbad 0 | P (+6.44, -0.05) max 9.14
+  grow rs5     eta 0.2 | G b0 (-0.68, -0.00) b2 (+2.01, -0.01) b6 (+7.23, -0.02) max|b0x| 0.96 nbad 0 | M b0 (-4.09, -0.02) b2 (+2.38, -0.01) b6 (+13.71, -0.00) max|b0x| 4.18 nbad 0 | P (+1.48, -0.01) max 3.95
+  grow rs25    eta 0.2 | G b0 (-0.36, -0.00) b2 (+0.53, -0.00) b6 (+2.19, -0.01) max|b0x| 0.63 nbad 0 | M b0 (-1.62, -0.01) b2 (+0.63, -0.00) b6 (+4.47, -0.00) max|b0x| 1.68 nbad 0 | P (+0.38, -0.00) max 2.85
+(a) null (sym) phase-mean <= 1e-4 px: PASS
+# done in 97 s

@@ -1,0 +1,39 @@
+# Part B mutant check 2026-09-28 21:11:58 UTC | repo HEAD 847d438
+ctrl  PASS test_hardening.TestSilentWrong.test_16_rms_through_the_wcs                                           
+ctrl  PASS test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise                                   
+ctrl  PASS test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file                 
+ctrl  PASS test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record                           
+ctrl  PASS test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer                     
+ctrl  PASS test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign                                  
+ctrl  PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer                
+ctrl  PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record       
+ctrl  PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer           
+ctrl  PASS test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned                                     
+ctrl  PASS test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_changed_field_rewrites_the_live_record       
+ctrl  PASS test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer 
+## mutC: cli.py: 'rng = np.random.default_rng(seed)' -> 'rng = np.random.default_rng(seed + 1)'
+mutC  PASS test_hardening.TestSilentWrong.test_16_rms_through_the_wcs                                           
+mutC  PASS test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise                                   
+mutC  PASS test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record                           
+mutC  PASS test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer                     
+mutC  PASS test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file                 
+mutC  PASS test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign                                  
+mutC  FAIL test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned                                     | AssertionError: 0.1603336133425493 not less than or equal to 1.1051656444153766e-13 : (-0.049817048901011636, 
+## mutD: cli.py: 'oo = shrink(img + rng.normal(0.0, sig, img.shape),' -> 'oo = shrink(img + rng.normal(0.0, sig, img.shape[::-1]).T,'
+mutD  PASS test_hardening.TestSilentWrong.test_16_rms_through_the_wcs                                           
+mutD  PASS test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise                                   
+mutD  PASS test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record                           
+mutD  PASS test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer                     
+mutD  PASS test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file                 
+mutD  PASS test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign                                  
+mutD  FAIL test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned                                     | AssertionError: 0.12353091627240202 not less than or equal to 1.1051656444153766e-13 : (-0.013014351830864353,
+## mutF1: page/index.html: "['input', 'change'].forEach((ev) => $(id).addEventListener(ev, renderRecord)));" -> "['input', 'change'].forEach((ev) => $(id).addEventListener(ev, () => { $('copy').disabled = true; })));"
+mutF1 PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record       
+mutF1 FAIL test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_changed_field_rewrites_the_live_record       | AssertionError: True is not false : # version=2022
+## mutF2: page/index.html: "['sx', 'sy', 'est', 'r0', 'r1', 'rs', 'bgm', 'bgv'].forEach((id) =>" -> "['sx', 'sy', 'est'].forEach((id) =>"
+mutF2 PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer           
+mutF2 FAIL test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer | AssertionError: False is not true : # version=2022
+## mutF3: page/index.html: 'cur = hdus[i]; clearAnswer();' -> 'cur = hdus[i];'
+mutF3 PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer                
+mutF3 PASS test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer           
+mutF3 FAIL test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer | AssertionError: False is not true : # version=2022

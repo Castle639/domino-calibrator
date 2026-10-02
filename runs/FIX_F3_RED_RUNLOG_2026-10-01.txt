@@ -1,0 +1,72 @@
+# fix_f3_bar | HEAD a4dfbc4 | its sha256 d92dd43d7926f1fd180d942cbad6add186ed1843d8a78d989bf3d9d72f3efd5f | tests/test_fix_f3.py dd8332bb80bab2bd679dd4908f3a5b017ddd78cd28065a662a5bfd8b33d3dd5f
+P0  PASS  the summaries' recounts (21, 45, 21, 3, 9, 20, 20, 45, 130): True | the registry flags a planted number: True | the jargon and name patterns catch planted forms: True | the judge accepts the record with the validator: True, fails without it: True | Chromium reads the placeholders' colours: True (10 inputs)
+P1  FAIL  tests.test_fix_f3.F3_Rule: 1 run, 1 fault
+    test_his_words_in_the_readme_and_on_the_page: AssertionError: 'The tool writes an ADES record only when it has measured a comet: a sound sky solution, every radius converged, a clean peak well above the sky. Otherwise it says why, and the pixel answer stands.' not found in '<
+P2  FAIL  tests.test_fix_f3.F3_ExitCodes: 1 run, 3 faults
+    test_the_readme_says_the_three_codes [\b0 when the measurement passed its gates]: AssertionError: Regex didn't match: '\\b0 when the measurement passed its gates' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> <
+    test_the_readme_says_the_three_codes [\b2 when a gate refused]: AssertionError: Regex didn't match: '\\b2 when a gate refused' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture> # domino
+    test_the_readme_says_the_three_codes [\b1 when it cannot measure at all]: AssertionError: Regex didn't match: '\\b1 when it cannot measure at all' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture
+P3  FAIL  tests.test_fix_f3.F3_13_WholeFrame: 1 run, 1 fault
+    test_a_whole_frames_time_and_memory_from_the_record: AssertionError: False is not true : no measurement on record: runs/FIX_F3_WHOLE_FRAME_2026-10-01.txt
+P4  FAIL  tests.test_fix_f3.F3_15_Judge: 1 run, 1 fault
+    test_a_validator_that_will_not_import_is_not_the_mpcs_refusal: AssertionError: 'not importable' not found in "psvtoxml refused: [the kit]/bin/python: Error while finding module specification for 'ades.psvtoxml' (ModuleNotFoundError: No module named 'ades')"
+P5  FAIL  tests.test_fix_f3.F3_16_CheckARecord: 1 run, 7 faults
+    test_the_readme_says_where_the_validator_and_playwright_come_from [the validator]: AssertionError: Regex didn't match: 'IAU-ADES/ades-master' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# do
+    test_the_readme_says_where_the_validator_and_playwright_come_from [psvtoxml]: AssertionError: Regex didn't match: 'python -m ades\\.psvtoxml' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\
+    test_the_readme_says_where_the_validator_and_playwright_come_from [valsubmit]: AssertionError: Regex didn't match: 'python -m ades\\.valsubmit' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n
+    test_the_readme_says_where_the_validator_and_playwright_come_from [its verdict]: AssertionError: Regex didn't match: 'submit is OK' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# domino-cal
+    test_the_readme_says_where_the_validator_and_playwright_come_from [Windows]: AssertionError: Regex didn't match: 'PYTHONUTF8=1' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# domino-cal
+P6  FAIL  tests.test_fix_f3.F3_17_MaySkip: 1 run, 3 faults
+    test_may_skip_documented_with_the_cis_own_values (value='test_k10_'): AssertionError: '--may-skip test_k10_' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# domino-calibrator: ope
+    test_may_skip_documented_with_the_cis_own_values (value='test_k8_'): AssertionError: '--may-skip test_k8_' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# domino-calibrator: open
+    test_may_skip_documented_with_the_cis_own_values: AssertionError: Regex didn't match: '--may-skip test_k6_' not found in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg">\n</picture>\n\n# dom
+P7  FAIL  tests.test_fix_f3.F3_20_Jargon: 1 run, 3 faults
+    md]: AssertionError: Regex matched: 'its stars' matches '(?i)\\b(its|two|one|three) stars?\\b' in '<picture>\n <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg">\n <img alt="domino-calibrator" src="page/logo.svg"
+    cff]: AssertionError: Regex matched: 'two stars' matches '(?i)\\b(its|two|one|three) stars?\\b' in 'cff-version: 1.2.0\nmessage: "If you use this software, please cite it as below."\ntitle: domino-calibrator\ntype: software\nversion: "0
+    test_no_stars_and_refuter_defined_once: AssertionError: 0 != 1 : refuter defined once, as "A refuter is ..."
+P8  FAIL  tests.test_fix_f3.F3_21_Changelog: 2 run, 12 faults
+    test_every_number_registered_and_true: -  ('8', 'The record itself is always UTF-8.')]
+    test_it_names_this_rounds_changes [the new rule]: AssertionError: Regex didn't match: 'The\\ tool\\ writes\\ an\\ ADES\\ record\\ only\\ when\\ it\\ has\\ measured\\ a\\ comet:\\ a\\ sound\\ sky\\ solution,\\ every\\ radius\\ converged,\\ a\\ clean\\ peak\\ well\\ above\\ the\\ s
+    test_it_names_this_rounds_changes [the exit codes]: AssertionError: Regex didn't match: '\\b2 when a gate refused' not found in "# Changes ## 0.1.0 — a draft, not released *To be finished after the CI's first run on GitHub (Linux, Windows and macOS). Until then this version is not 
+    test_it_names_this_rounds_changes [the stations]: AssertionError: Regex didn't match: 'no fixed position' not found in "# Changes ## 0.1.0 — a draft, not released *To be finished after the CI's first run on GitHub (Linux, Windows and macOS). Until then this version is not on PyPI
+    test_it_names_this_rounds_changes [two figures]: AssertionError: Regex didn't match: 'two significant figures' not found in "# Changes ## 0.1.0 — a draft, not released *To be finished after the CI's first run on GitHub (Linux, Windows and macOS). Until then this version is not o
+P9  FAIL  tests.test_fix_f3.F3_23_Cutout: 2 run, 2 faults
+    test_the_readme_and_the_page_give_the_recipe_and_the_limit: AssertionError: unexpectedly None : no recipe in the README
+    test_the_recipe_works: AssertionError: unexpectedly None : no recipe in the README
+P10  FAIL  tests.test_fix_f3.F3_24_26_Study: 3 run, 3 faults
+    test_h4s_tallies_say_one_frame_per_visit (line='- **Radii in arcsec or in units of the seeing do not rescue it** at ≥ 2″ seeing '): AssertionError: 'one frame per visit' not found in '- **Radii in arcsec or in units of the seeing do not rescue it** at ≥ 2″ seeing and ≥ 1.0″/px: radii fixed at 0.88–2.64″ on the sky fail in 21 of the 24 measurable cells at ≥ 2″ 
+    test_helps_carries_its_low_signal_limit: AssertionError: False is not true : []
+    test_partial_by_the_letter_and_the_cells_not_measured: AssertionError: Regex didn't match: 'PARTIAL, by the letter' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture> # domino-c
+P11  FAIL  tests.test_fix_f3.F3_28_PageComparison: 1 run, 1 fault
+    test_the_page_states_gs_own_45_of_130: AssertionError: [] is not true : not stated
+P12  FAIL  tests.test_fix_f3.F3_29_SameMethod: 1 run, 5 faults
+    md]: AssertionError: 'same engine' unexpectedly found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture> # domino-calibrator: open zero-a
+    md]: AssertionError: 'same engine' unexpectedly found in "# Changes ## 0.1.0 — a draft, not released *To be finished after the CI's first run on GitHub (Linux, Windows and macOS). Until then this version is not on PyPI, has no DOI, and
+    cff]: AssertionError: 'same engine' unexpectedly found in 'cff-version: 1.2.0 message: "If you use this software, please cite it as below." title: domino-calibrator type: software version: "0.1.0" license: MIT repository-code: "https://
+    md] (what='the words'): AssertionError: 'the same method, ported and checked against the Python' not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture
+    test_the_same_method_ported_and_checked [the page] (what='the words'): AssertionError: 'the same method, ported and checked against the Python' not found in ' Zero-aperture comet astrometry Zero-aperture comet astrometry domino-calibrator 0.1.0 A FITS cutout in; the photocentre-vs-aperture curve, the
+P13  FAIL  tests.test_fix_f3.F3_30_Credit: 1 run, 1 fault
+    test_domino_observatory_wherever_authors_are_named: + [{'name': 'Domino Observatory'}]
+P14  FAIL  tests.test_fix_f3.F3_40_Hints: 1 run, 8 faults
+    test_every_placeholder_example_is_also_in_a_visible_hint (field='stn', example='568'): AssertionError: False is not true : ('stn', "The MPC's code for your site.")
+    test_every_placeholder_example_is_also_in_a_visible_hint (field='desig', example='3I, 1P, C/2025 N1'): AssertionError: False is not true : ('desig', 'As the MPC writes it.')
+    test_every_placeholder_example_is_also_in_a_visible_hint (field='astcat', example='Gaia3'): AssertionError: False is not true : ('astcat', 'The star catalogue your plate solution used.')
+     Observer'): AssertionError: False is not true : ('submitter', 'Initials, then surname, as ADES asks.')
+     Doe'): AssertionError: False is not true : ('measurers', 'Initials, then surname, as ADES asks; a semicolon between names.')
+P15  FAIL  tests.test_fix_f3.F3_3_5_RmsWords: 1 run, 1 fault
+    test_the_readme_follows_the_record: AssertionError: Regex didn't match: "the comet's own sky ring, 12–24 px" not found in '<picture> <source media="(prefers-color-scheme: dark)" srcset="page/logo-dark.svg"> <img alt="domino-calibrator" src="page/logo.svg"> </picture
+P16 FAIL  the placeholders against their own boxes, at least 4.5:1: below: {'stn': 3.62, 'desig': 3.62, 'astcat': 3.62, 'tobs': 3.62, 'submitter': 3.62, 'measurers': 3.62, 'observers': 3.62, 'design': 3.62, 'detector': 3.62, 'obsname': 3.62}
+P17 FAIL  the whole suite: strict: FAIL (290 run, 52 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+    test_a_whole_frames_time_and_memory_from_the_record tests.test_fix_f3.F3_13_WholeFrame.test_a_whole_frames_time_and_memory_from_the_record
+    test_a_validator_that_will_not_import_is_not_the_mpcs_refusal tests.test_fix_f3.F3_15_Judge.test_a_validator_that_will_not_import_is_not_the_mpcs_refusal
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_the_readme_says_where_the_validator_and_playwright_come_from tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from
+    test_may_skip_documented_with_the_cis_own_values tests.test_fix_f3.F3_17_MaySkip.test_may_skip_documented_with_the_cis_own_values
+    test_may_skip_documented_with_the_cis_own_values tests.test_fix_f3.F3_17_MaySkip.test_may_skip_documented_with_the_cis_own_values
+    test_may_skip_documented_with_the_cis_own_values tests.test_fix_f3.F3_17_MaySkip.test_may_skip_documented_with_the_cis_own_values
+# fix f3 bar: NOT MET, 1 of 18 (failing: P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 P17)

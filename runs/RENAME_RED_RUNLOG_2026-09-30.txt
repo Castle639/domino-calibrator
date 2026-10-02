@@ -1,0 +1,16 @@
+# rename bar 2026-09-30 11:10:53 UTC | HEAD 7ef869f | tree clean
+R0   PASS  planted old forms hit 8 of 8; new-name and prose lines hit 0 of 4; forms seen: ci dotted import path quoted
+R1   FAIL  domino_calibrator/: 0 of 10 modules | .py at the top: 10 (__init__.py ades.py apertures.py cli.py degrade.py estimators.py) | missing at the top: none
+R2   FAIL  apertures.py absent; estimators.py absent; shrink.py absent; degrade.py absent; synth.py absent; ades.py absent
+R3   FAIL  178 lines in 41 files | by form: ci 4 dotted 39 import 100 path 28 quoted 7 | first: .github/workflows/tests.yml:33,62,67; README.md:24,42,83; cli.py:4,5; page/index.html:138
+R4   FAIL  no strict summary (exit 1, 0 s) | rename_bar/suite_R4_castle_kit.txt
+R5   FAIL  the copy rename_bar/stranger_R5/not-calibrator, 30 frames linked inside | no strict summary (exit 1, 0 s) | rename_bar/suite_R5_stranger_kit.txt
+R5m  FAIL  30 frames linked beside the copy | no strict summary (exit 1, 0 s) | refused skips 0, naming the fetcher 0 | rename_bar/suite_R5m_frames_beside.txt
+R6   FAIL  pick311 no strict summary (exit 1, 0 s) | pick313 no strict summary (exit 1, 0 s) | pick314 no strict summary (exit 1, 0 s)
+R7   FAIL  pip install: yes () | domino_calibrator from the venv: NO ((most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'domino_calibrator') | import calibrator fails: NO () | hstpsf not installed: NO (>", line 1, in <module>
+ModuleNotFoundError: No module named 'domino_calibrator') | top-level names: domino_calibrator alone: NO (calibrator) | the nine modules installed: NO () | domino-calibrator --version: yes (domino-calibrator 0.1.0) | -m domino_calibrator.cli --version: NO ([a session])
+R8   FAIL  actionlint: clean | checkout paths: calibrator, calibrator | run lines lacking: python -m tests.strict, python tests/readme_install.py, python tools/fetch_frames.py 22 03 04 05 06 | naming calibrator/: 5
+# rename bar: NOT MET, 1 of 10 (failing: R1 R2 R3 R4 R5 R5m R6 R7 R8)
+exit 0

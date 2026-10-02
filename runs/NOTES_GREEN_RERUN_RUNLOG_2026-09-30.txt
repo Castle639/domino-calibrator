@@ -1,0 +1,8 @@
+# notes bar | CHANGELOG.md in [the checkout]/calibrator
+N0  PASS  N3 planted: True, then red | N4 planted: True, then red | N1 planted: True, then red | N2 planted: True, then red | N5 planted: True, then red
+N1  PASS  draft marked: True | what is left, lacking: none
+N2  PASS  the notes: 0.1.0 | the package: 0.1.0
+N3  PASS  14 numbers, unsourced: none
+N4  PASS  old-name lines: none | the credit line: True
+N5  PASS  5 paths, missing: none
+# notes bar: MET, 6 of 6

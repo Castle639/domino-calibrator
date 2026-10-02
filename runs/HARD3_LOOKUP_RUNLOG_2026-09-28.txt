@@ -1,0 +1,15 @@
+# round 3, item 4: the page against astropy with HST's lookup tables, 2026-09-28 20:13:03 UTC | bar 1e-05" | zeroap.js sha256 bafe49246062
+## the page as committed: max and median distance to astropy over 225 points per file (microarcseconds)
+ifle03geq                              | max    0.0002 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+ifle04pdq                              | max    0.0002 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+ifle05qlq                              | max    0.0002 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+ifle06tjq                              | max    0.0002 | median    0.0000 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+ifle22f7q                              | max    0.0003 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+synthetic: round 2's lookup_file       | max    0.0003 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (CPDIS1, CPDIS2)
+synthetic: SIP, D2IM, CPDIS            | max    0.0003 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+synthetic: the same, DP1 transposed    | max    0.0003 | median    0.0001 | PASS | notes: lookup tables applied as astropy does (D2IMDIS1, D2IMDIS2, CPDIS1, CPDIS2)
+## the mutants, each must fail the bar where it differs enough to matter (max over the grid, microarcseconds)
+(a) no D2IM tables             | ifle03geq 1649 | ifle04pdq 1649 | ifle05qlq 1649 | ifle06tjq 1649 | ifle22f7q 1649 | round 2's lookup_file 0.0003084 | SIP, D2IM, CPDIS 5.342e+04 | the same, DP1 transposed 5.244e+04
+(b) the index off by one       | ifle03geq 2590 | ifle04pdq 2590 | ifle05qlq 2590 | ifle06tjq 2590 | ifle22f7q 2590 | round 2's lookup_file 0.0003084 | SIP, D2IM, CPDIS 5.872e+05 | the same, DP1 transposed 5.279e+05
+(c) CPDIS at the raw pixel     | ifle03geq 1.161 | ifle04pdq 1.161 | ifle05qlq 1.161 | ifle06tjq 1.161 | ifle22f7q 1.161 | round 2's lookup_file 0.0003084 | SIP, D2IM, CPDIS 2783 | the same, DP1 transposed 2630
+# done

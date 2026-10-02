@@ -1,0 +1,5 @@
+# fix_f15_bar | HEAD 614bfeb
+X0 PASS  the controls: OK
+X1 PASS  tests/test_fix_f15.py | OK
+X2 PASS  strict: PASS (359 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# F15's bar: MET, 3 of 3

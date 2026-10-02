@@ -1,0 +1,9 @@
+# ci1_bar | HEAD 2bc2bf1 | its sha256 c1774bc236e042eb9d5bbdd2a6ddb347f1f21b2398a3cf7257eed21a529d2305
+B0  PASS  the CP1252 locale in force: True | a planted text file rewritten by an autocrlf clone: True | a planted open() named by EncodingWarning: True
+B1  PASS  K19, the curve's failure ends with the path as given: OK
+B2  PASS  the whole suite under CP1252: strict: FAIL (232 run, 0 failures, 1 errors, 0 skipped: 0 allowed, 0 not) (t4_6, the stand-in's limit, allowed by amendment 2)
+        failed: test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record)
+B3  PASS  K20: OK, omissions 0 | the command line with --curve under warn_default_encoding: exit 0, EncodingWarnings from domino_calibrator/ 0
+B4  PASS  K21: OK | HEAD cloned with core.autocrlf=true: 0 of 293 files differ from the commit | test_d4 there: OK
+B5  PASS  the whole suite, UTF-8, the kit with the flag: strict: PASS (232 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# ci1 bar: MET, 6 of 6

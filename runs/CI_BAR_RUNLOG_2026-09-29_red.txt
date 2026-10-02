@@ -1,0 +1,20 @@
+# the bar for launch step 2, 2026-09-29 20:35:09 UTC (only W1,W2,W3,W4,W5,W6,W7)
+W1    PASS  actionlint on the workflow: exit 0, nothing found | ShellCheck version: 0.11.0 | control, "runs-on" misspelt: exit 1, 2 finding line(s)
+W2    FAIL  the actions and what they run on: actions/cache@v4 node20, actions/checkout@v4 node20, actions/setup-node@v4 node20, actions/setup-python@v5 node20 | not Node 24: actions/cache@v4 runs on node20; actions/checkout@v4 runs on node20; actions/setup-node@v4 runs on node20; actions/setup-python@v5 runs on node20
+W3    PASS  K7 on the workflow as written: green
+W3.wm1 PASS  K7 on the mutant: red
+W3.wm2 FAIL  the mutation text occurs 0 times, not 1: '- { os: ubuntu-24.04, python: "3.14" }'
+W3.wm3 FAIL  the mutation text occurs 0 times, not 1: '          - { os: windows-2025, python: "3.14", may_skip: "--may-skip '
+W3.wm4 FAIL  the mutation text occurs 0 times, not 1: '          - { os: macos-26, python: "3.14", may_skip: "--may-skip test'
+W3.wm5 FAIL  the mutation text occurs 0 times, not 1: '          - { os: ubuntu-24.04, python: "3.12" }\n'
+W3.wm6 FAIL  the mutation text occurs 0 times, not 2: 'actions/checkout@v7'
+W3.wm7 FAIL  the mutation text occurs 0 times, not 1: 'run: python calibrator/tests/readme_install.py'
+W3.wm8 FAIL  the mutation text occurs 0 times, not 1: 'run: python -m calibrator.tests.strict ${{ matrix.may_skip }}'
+W3.wm9 FAIL  the mutation text occurs 0 times, not 1: '          python-version: |\n            3.11\n            ${{ matrix.py'
+W3.wm10 FAIL  the mutation text occurs 0 times, not 2: '    timeout-minutes: 60\n'
+W4    FAIL  a pass alone: exit 1 WRONG ([the kit]/bin/python: No module named calibrator.tests.strict) | an unallowed skip: exit 1 WRONG ([the kit]/bin/python: No module named calibrator.tests.strict) | an allowed skip: exit 1 WRONG ([the kit]/bin/python: No module named calibrator.tests.strict) | a failure: exit 1
+W5    FAIL  here (Linux): exit 2, the answer WRONG: [the kit]/bin/python: can't open file '[the checkout]/calibrator/tests/readme_install.py': [Errno 2] No such file or directory | the Windows reading: WRONG: [] | control, the block broken (1 place): exit no script
+W6    FAIL  K14 on the calibrator: error | on a copy with an invalid escape: error | buteError: module 'calibrator.tests.test_release_package' has no attribute 'TestEscapes' //  // ---------------------------------------------------------------------- // Ran 1 test in 0.000s //  // FAILED (errors=1)
+W7    FAIL  the tested setup, the flag set: exit 1, ran ?, ? (1 s) | pick314: exit 1, ran ?, ? (1 s)
+
+THE BAR (only W1,W2,W3,W4,W5,W6,W7): NOT MET (3 of 17 clauses pass; failing: W2, W3.wm2, W3.wm3, W3.wm4, W3.wm5, W3.wm6, W3.wm7, W3.wm8, W3.wm9, W3.wm10, W4, W5, W6, W7)

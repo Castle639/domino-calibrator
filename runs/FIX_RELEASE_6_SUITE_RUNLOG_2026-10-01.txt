@@ -1,0 +1,402 @@
+test_mid_exposure (tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_b1_a_broken_wcs_gives_no_sky_position_and_no_record (tests.test_audit_blockers.TestB1TheCommandLine.test_b1_a_broken_wcs_gives_no_sky_position_and_no_record) ... ok
+test_b2_a_comet_still_gets_its_record (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_a_comet_still_gets_its_record) ... ok
+test_b2_no_record_unless_a_comet_was_measured (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_no_record_unless_a_comet_was_measured) ... ok
+test_b2_the_studys_comet_still_gets_its_record (tests.test_audit_blockers.TestB2TheCommandLine.test_b2_the_studys_comet_still_gets_its_record) ... ok
+test_b1_b2_the_page_decides_as_the_command_line (tests.test_audit_blockers.TestTheEngine.test_b1_b2_the_page_decides_as_the_command_line) ... ok
+test_b1_b2_the_page_offers_no_record_to_copy (tests.test_audit_blockers.TestThePage.test_b1_b2_the_page_offers_no_record_to_copy) ... ok
+test_end_to_end (tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... [a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:123: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:124: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:122: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:134: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:135: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:137: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:138: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+ok
+test_nan_outside_the_circle_is_not_data (tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... [a session]/scratchpad/release_bar/public_copy/domino_calibrator/estimators.py:174: RuntimeWarning: overflow encountered in exp
+  s = float(np.exp(q[3]))
+ok
+test_a_station_without_a_fixed_position_gets_no_record (tests.test_fix_f1.F1_1_Stations.test_a_station_without_a_fixed_position_gets_no_record) ... ok
+test_control_a_fixed_station_still_gets_its_record (tests.test_fix_f1.F1_1_Stations.test_control_a_fixed_station_still_gets_its_record) ... ok
+test_the_list_is_the_record (tests.test_fix_f1.F1_1_Stations.test_the_list_is_the_record) ... ok
+test_an_rms_that_two_figures_cannot_write_in_seven_characters_is_refused (tests.test_fix_f1.F1_2_RmsFigures.test_an_rms_that_two_figures_cannot_write_in_seven_characters_is_refused) ... ok
+test_rms_at_two_significant_figures (tests.test_fix_f1.F1_2_RmsFigures.test_rms_at_two_significant_figures) ... ok
+test_the_command_lines_scatter_at_two_figures_and_the_judge (tests.test_fix_f1.F1_2_RmsFigures.test_the_command_lines_scatter_at_two_figures_and_the_judge) ... # --rms-noise 5: about 0.5 s (5 redraws, each about 0.1 s), starting now
+ok
+test_ra_wraps_at_its_written_decimals (tests.test_fix_f1.F1_3_Decimals.test_ra_wraps_at_its_written_decimals) ... ok
+test_the_command_line_end_to_end_and_the_judge (tests.test_fix_f1.F1_3_Decimals.test_the_command_line_end_to_end_and_the_judge) ... # --rms-noise 5: about 0.6 s (5 redraws, each about 0.1 s), starting now
+ok
+test_with_an_rms_the_decimals_follow_the_uncertainty (tests.test_fix_f1.F1_3_Decimals.test_with_an_rms_the_decimals_follow_the_uncertainty) ... ok
+test_without_an_rms_six_decimals_on_both_faces (tests.test_fix_f1.F1_3_Decimals.test_without_an_rms_six_decimals_on_both_faces) ... ok
+test_the_command_line_asks_initials_then_surname (tests.test_fix_f1.F1_4_Names.test_the_command_line_asks_initials_then_surname) ... ok
+test_the_page_asks_initials_then_surname (tests.test_fix_f1.F1_4_Names.test_the_page_asks_initials_then_surname) ... ok
+test_the_record_names_the_software_after_the_telescope (tests.test_fix_f1.F1_6_Software.test_the_record_names_the_software_after_the_telescope) ... ok
+test_a_control_character_in_a_name_is_refused_on_both_faces (tests.test_fix_f1.F1_7_ControlCharacters.test_a_control_character_in_a_name_is_refused_on_both_faces) ... ok
+test_bytes_that_are_not_utf8_are_refused (tests.test_fix_f1.F1_7_ControlCharacters.test_bytes_that_are_not_utf8_are_refused) ... ok
+test_control_printable_names_outside_ascii_still_pass (tests.test_fix_f1.F1_7_ControlCharacters.test_control_printable_names_outside_ascii_still_pass) ... ok
+test_the_command_line_with_raw_bytes_in_argv (tests.test_fix_f1.F1_7_ControlCharacters.test_the_command_line_with_raw_bytes_in_argv) ... ok
+test_a_designation_outside_ascii_is_refused_on_both_faces (tests.test_fix_f1.F1_8_AsciiDesignations.test_a_designation_outside_ascii_is_refused_on_both_faces) ... ok
+test_control_ascii_designations_still_pass (tests.test_fix_f1.F1_8_AsciiDesignations.test_control_ascii_designations_still_pass) ... ok
+test_the_automatic_start_gives_the_pixel_answer_and_says_what_to_do (tests.test_fix_f10.F10_1_ARecordOnlyFromAGivenStart.test_the_automatic_start_gives_the_pixel_answer_and_says_what_to_do) ... ok
+test_the_page_engine_the_same (tests.test_fix_f10.F10_1_ARecordOnlyFromAGivenStart.test_the_page_engine_the_same) ... ok
+test_a_hot_pixel_is_refused_on_both_faces_from_a_start_on_it (tests.test_fix_f10.F10_2_ASinglePixelIsNoSource.test_a_hot_pixel_is_refused_on_both_faces_from_a_start_on_it) ... ok
+test_a_sharp_real_source_still_passes (tests.test_fix_f10.F10_2_ASinglePixelIsNoSource.test_a_sharp_real_source_still_passes) ... ok
+test_a_start_typed_equal_to_the_brightest_box_is_a_start_given (tests.test_fix_f10.F10_3_ThePageInABrowser.test_a_start_typed_equal_to_the_brightest_box_is_a_start_given) ... ok
+test_no_click_no_record_and_the_page_says_click (tests.test_fix_f10.F10_3_ThePageInABrowser.test_no_click_no_record_and_the_page_says_click) ... ok
+test_each_face_says_what_the_checks_measure_and_whose_the_comet_is (tests.test_fix_f10.F10_4_TheWords.test_each_face_says_what_the_checks_measure_and_whose_the_comet_is) ... ok
+test_a_flat_ring_says_so (tests.test_fix_f11.F11_14_AFlatSkyRing.test_a_flat_ring_says_so) ... ok
+test_a_sky_ring_whose_mad_is_0_still_takes_the_10_sigma_test (tests.test_fix_f11.F11_14_AFlatSkyRing.test_a_sky_ring_whose_mad_is_0_still_takes_the_10_sigma_test) ... ok
+test_noncharacters_and_line_separators_are_refused_on_both_faces (tests.test_fix_f11.F11_15_NamesThatBreakTheMPCsTools.test_noncharacters_and_line_separators_are_refused_on_both_faces) ... ok
+test_a_one_plane_cube_gives_the_sky_position_its_2_axis_wcs_gives (tests.test_fix_f11.F11_16_AOnePlaneCube.test_a_one_plane_cube_gives_the_sky_position_its_2_axis_wcs_gives) ... ok
+test_radii_that_break_the_cap_or_collapse_are_refused (tests.test_fix_f11.F11_18_TheRadii.test_radii_that_break_the_cap_or_collapse_are_refused) ... ok
+test_the_pixel_answer_stands_and_the_sky_is_refused (tests.test_fix_f11.F11_19_AnUnparsableCtype1.test_the_pixel_answer_stands_and_the_sky_is_refused) ... ok
+test_a_start_off_the_comet_says_why_without_numpys_warnings (tests.test_fix_f11.F11_2_NoWarningsFlood.test_a_start_off_the_comet_says_why_without_numpys_warnings) ... ok
+test_the_primarys_saturate_is_read_for_an_inherit_t_image_on_both_faces (tests.test_fix_f11.F11_9_SaturateInTheInheritedPrimary.test_the_primarys_saturate_is_read_for_an_inherit_t_image_on_both_faces) ... ok
+test_few_redraws_say_how_rough_and_give_no_correlation (tests.test_fix_f11b.F11b_7_FewRedraws.test_few_redraws_say_how_rough_and_give_no_correlation) ... # --rms-noise 5: about 0.5 s (5 redraws, each about 0.1 s), starting now
+# --rms-noise 30: about 2.9 s (30 redraws, each about 0.1 s), starting now
+ok
+test_the_record_carries_no_rms_from_the_sky_noise (tests.test_fix_f11b.F11b_8_NoSkyNoiseInTheRecord.test_the_record_carries_no_rms_from_the_sky_noise) ... # --rms-noise 5: about 0.6 s (5 redraws, each about 0.1 s), starting now
+ok
+test_the_scatter_is_printed_beside_it_with_what_to_do (tests.test_fix_f11b.F11b_8_NoSkyNoiseInTheRecord.test_the_scatter_is_printed_beside_it_with_what_to_do) ... # --rms-noise 5: about 0.7 s (5 redraws, each about 0.1 s), starting now
+ok
+test_help_and_readme_say_the_record_holds_no_sky_noise_rms (tests.test_fix_f11b.F11b_TheWords.test_help_and_readme_say_the_record_holds_no_sky_noise_rms) ... ok
+test_no_draft_and_no_wait_for_the_first_run (tests.test_fix_f12.F12_11_25_TheChangelog.test_no_draft_and_no_wait_for_the_first_run) ... ok
+test_the_estimators_as_the_package_has_them (tests.test_fix_f12.F12_11_25_TheChangelog.test_the_estimators_as_the_package_has_them) ... ok
+test_ades_lib_beside_the_checkout_not_inside_it (tests.test_fix_f12.F12_1_CheckingARecord.test_ades_lib_beside_the_checkout_not_inside_it) ... ok
+test_the_use_section_names_the_pixel_scale_and_the_seeing (tests.test_fix_f12.F12_20_WhereItFails.test_the_use_section_names_the_pixel_scale_and_the_seeing) ... ok
+test_runs_readme_explains_the_records_idiom (tests.test_fix_f12.F12_21_PlainWords.test_runs_readme_explains_the_records_idiom) ... ok
+test_the_packages_comments_and_docstrings_name_no_house_reference (tests.test_fix_f12.F12_21_PlainWords.test_the_packages_comments_and_docstrings_name_no_house_reference) ... ok
+test_the_castle_the_project_the_contact_and_the_ai (tests.test_fix_f12.F12_22_WhoMadeIt.test_the_castle_the_project_the_contact_and_the_ai) ... ok
+test_calibration_claims_no_more_than_the_limits (tests.test_fix_f12.F12_24_Credits.test_calibration_claims_no_more_than_the_limits) ... ok
+test_the_data_and_the_method_are_credited (tests.test_fix_f12.F12_24_Credits.test_the_data_and_the_method_are_credited) ... ok
+test_no_signed_header_in_the_package_or_the_page (tests.test_fix_f12.F12_27_OneCredit.test_no_signed_header_in_the_package_or_the_page) ... ok
+test_an_image_in_an_extension_with_its_time_in_the_primary (tests.test_fix_f12.F12_3_TheRecipeFindsTheImage.test_an_image_in_an_extension_with_its_time_in_the_primary) ... ok
+test_hubbles_own_frame (tests.test_fix_f12.F12_3_TheRecipeFindsTheImage.test_hubbles_own_frame) ... ok
+test_the_page_says_how_far_a_click_lands_and_what_to_do (tests.test_fix_f12.F12_4_AWholeFrameOnThePage.test_the_page_says_how_far_a_click_lands_and_what_to_do) ... ok
+test_h3_report_runs_from_a_public_checkout (tests.test_fix_f12.F12_5_TheStudysReportFromTheRoot.test_h3_report_runs_from_a_public_checkout) ... ok
+test_the_annulus_count_says_it_is_the_studys_footprint (tests.test_fix_f12.F12_6_TheFootprint.test_the_annulus_count_says_it_is_the_studys_footprint) ... ok
+test_dependabot_keeps_the_actions_current (tests.test_fix_f13.F13_10_PinnedActions.test_dependabot_keeps_the_actions_current) ... ok
+test_every_action_is_pinned_by_sha_beside_its_release (tests.test_fix_f13.F13_10_PinnedActions.test_every_action_is_pinned_by_sha_beside_its_release) ... ok
+test_the_comments_say_what_the_workflows_do_now (tests.test_fix_f13.F13_26_PagesWhilePrivate.test_the_comments_say_what_the_workflows_do_now) ... ok
+test_the_deploy_job_skips_while_the_repository_is_private (tests.test_fix_f13.F13_26_PagesWhilePrivate.test_the_deploy_job_skips_while_the_repository_is_private) ... ok
+test_every_face_that_gives_the_rule_says_it (tests.test_fix_f14.F14_1_TheStarSentence.test_every_face_that_gives_the_rule_says_it) ... ok
+test_both_faces_refuse_the_sky_in_the_same_words_and_keep_the_pixel_answer (tests.test_fix_f14.F14_3_AnUnparsableCtype1OnThePage.test_both_faces_refuse_the_sky_in_the_same_words_and_keep_the_pixel_answer) ... ok
+test_control_a_string_with_a_comment_after_it_is_read (tests.test_fix_f14.F14_3_AnUnparsableCtype1OnThePage.test_control_a_string_with_a_comment_after_it_is_read) ... ok
+test_the_package_and_the_page_headers_give_the_readmes_credit (tests.test_fix_f14.F14_4_OneCredit.test_the_package_and_the_page_headers_give_the_readmes_credit) ... ok
+test_each_is_named_at_the_header_stage_on_both_faces (tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces) ... ok
+test_the_three_codes (tests.test_fix_f2.F2_10_ExitCodes.test_the_three_codes) ... ok
+test_a_closed_pipe_ends_quietly (tests.test_fix_f2.F2_11_ClosedPipe.test_a_closed_pipe_ends_quietly) ... ok
+test_the_command_line_prints_it_and_the_limit_stands (tests.test_fix_f2.F2_12_Estimate.test_the_command_line_prints_it_and_the_limit_stands) ... ok
+test_the_estimate_comes_before_the_redraws (tests.test_fix_f2.F2_12_Estimate.test_the_estimate_comes_before_the_redraws) ... ok
+test_the_automatic_starts_other_source_on_both_faces (tests.test_fix_f2.F2_14_ZeroBased.test_the_automatic_starts_other_source_on_both_faces) ... ok
+test_the_command_line_says_it_beside_every_position (tests.test_fix_f2.F2_14_ZeroBased.test_the_command_line_says_it_beside_every_position) ... ok
+test_the_page_says_it_beside_every_position (tests.test_fix_f2.F2_14_ZeroBased.test_the_page_says_it_beside_every_position) ... ok
+test_a_cutout_and_its_whole_frame_draw_from_the_same_noise (tests.test_fix_f2.F2_5_SkyRing.test_a_cutout_and_its_whole_frame_draw_from_the_same_noise) ... ok
+test_control_the_record_still_carries_the_scatter (tests.test_fix_f2.F2_5_SkyRing.test_control_the_record_still_carries_the_scatter) ... # --rms-noise 5: about 0.5 s (5 redraws, each about 0.1 s), starting now
+ok
+test_too_few_sky_pixels_no_scatter_with_the_reason (tests.test_fix_f2.F2_5_SkyRing.test_too_few_sky_pixels_no_scatter_with_the_reason) ... ok
+test_control_an_extension_with_its_own_wcs_keeps_it (tests.test_fix_f2.F2_9_Inherit.test_control_an_extension_with_its_own_wcs_keeps_it) ... ok
+test_the_primarys_wcs_only_with_inherit (tests.test_fix_f2.F2_9_Inherit.test_the_primarys_wcs_only_with_inherit) ... ok
+test_a_whole_frames_time_and_memory_from_the_record (tests.test_fix_f3.F3_13_WholeFrame.test_a_whole_frames_time_and_memory_from_the_record) ... ok
+test_a_validator_that_will_not_import_is_not_the_mpcs_refusal (tests.test_fix_f3.F3_15_Judge.test_a_validator_that_will_not_import_is_not_the_mpcs_refusal) ... ok
+test_the_readme_says_where_the_validator_and_playwright_come_from (tests.test_fix_f3.F3_16_CheckARecord.test_the_readme_says_where_the_validator_and_playwright_come_from) ... ok
+test_may_skip_documented_with_the_cis_own_values (tests.test_fix_f3.F3_17_MaySkip.test_may_skip_documented_with_the_cis_own_values) ... ok
+test_no_stars_and_refuter_defined_once (tests.test_fix_f3.F3_20_Jargon.test_no_stars_and_refuter_defined_once) ... ok
+test_every_number_registered_and_true (tests.test_fix_f3.F3_21_Changelog.test_every_number_registered_and_true) ... ok
+test_it_names_this_rounds_changes (tests.test_fix_f3.F3_21_Changelog.test_it_names_this_rounds_changes) ... ok
+test_the_readme_and_the_page_give_the_recipe_and_the_limit (tests.test_fix_f3.F3_23_Cutout.test_the_readme_and_the_page_give_the_recipe_and_the_limit) ... ok
+test_the_recipe_works (tests.test_fix_f3.F3_23_Cutout.test_the_recipe_works) ... ok
+test_h4s_tallies_say_one_frame_per_visit (tests.test_fix_f3.F3_24_26_Study.test_h4s_tallies_say_one_frame_per_visit) ... ok
+test_helps_carries_its_low_signal_limit (tests.test_fix_f3.F3_24_26_Study.test_helps_carries_its_low_signal_limit) ... ok
+test_partial_by_the_letter_and_the_cells_not_measured (tests.test_fix_f3.F3_24_26_Study.test_partial_by_the_letter_and_the_cells_not_measured) ... ok
+test_the_page_states_gs_own_45_of_130 (tests.test_fix_f3.F3_28_PageComparison.test_the_page_states_gs_own_45_of_130) ... ok
+test_the_same_method_ported_and_checked (tests.test_fix_f3.F3_29_SameMethod.test_the_same_method_ported_and_checked) ... ok
+test_domino_observatory_wherever_authors_are_named (tests.test_fix_f3.F3_30_Credit.test_domino_observatory_wherever_authors_are_named) ... ok
+test_the_readme_follows_the_record (tests.test_fix_f3.F3_3_5_RmsWords.test_the_readme_follows_the_record) ... ok
+test_every_placeholder_example_is_also_in_a_visible_hint (tests.test_fix_f3.F3_40_Hints.test_every_placeholder_example_is_also_in_a_visible_hint) ... ok
+test_the_readme_says_the_three_codes (tests.test_fix_f3.F3_ExitCodes.test_the_readme_says_the_three_codes) ... ok
+test_his_words_in_the_readme_and_on_the_page (tests.test_fix_f3.F3_Rule.test_his_words_in_the_readme_and_on_the_page) ... ok
+test_the_sdist_holds_the_package_and_its_documents_only (tests.test_fix_f4.F4_32_Sdist.test_the_sdist_holds_the_package_and_its_documents_only) ... ok
+test_no_relative_link (tests.test_fix_f4.F4_33_PyPI.test_no_relative_link) ... ok
+test_the_logo_at_absolute_urls_each_a_file_of_the_folder (tests.test_fix_f4.F4_33_PyPI.test_the_logo_at_absolute_urls_each_a_file_of_the_folder) ... ok
+test_the_repository_named_where_the_files_are (tests.test_fix_f4.F4_33_PyPI.test_the_repository_named_where_the_files_are) ... ok
+test_least_permissions_id_token_only_where_it_publishes (tests.test_fix_f4.F4_35_Publish.test_least_permissions_id_token_only_where_it_publishes) ... ok
+test_the_build_in_its_own_job_and_each_index_on_its_own_trigger (tests.test_fix_f4.F4_35_Publish.test_the_build_in_its_own_job_and_each_index_on_its_own_trigger) ... ok
+test_triggers_a_release_and_a_manual_run_only (tests.test_fix_f4.F4_35_Publish.test_triggers_a_release_and_a_manual_run_only) ... ok
+test_a_short_readme_naming_every_family (tests.test_fix_f4.F4_36_RunsReadme.test_a_short_readme_naming_every_family) ... ok
+test_a_closed_pipe_ends_the_same_way_on_windows_exit_code_included (tests.test_fix_f6.F6_1_ClosedPipeOnWindows.test_a_closed_pipe_ends_the_same_way_on_windows_exit_code_included) ... ok
+test_the_stand_in_raises_what_windows_raises (tests.test_fix_f6.F6_1_ClosedPipeOnWindows.test_the_stand_in_raises_what_windows_raises) ... ok
+test_a_windows_path_typed_into_the_recipe_is_the_path_python_opens (tests.test_fix_f6.F6_2_TheRecipeOnWindows.test_a_windows_path_typed_into_the_recipe_is_the_path_python_opens) ... ok
+test_both_faces_give_the_same_recipe (tests.test_fix_f6.F6_2_TheRecipeOnWindows.test_both_faces_give_the_same_recipe) ... ok
+test_the_words_say_why (tests.test_fix_f6.F6_2_TheRecipeOnWindows.test_the_words_say_why) ... ok
+test_every_test_that_skips_on_a_system_is_allowed_in_that_systems_row (tests.test_fix_f6.F6_3_EachSystemsSkipsAreNamed.test_every_test_that_skips_on_a_system_is_allowed_in_that_systems_row) ... ok
+test_the_raw_bytes_skip_is_windows_only_and_the_readme_says_why (tests.test_fix_f6.F6_3_EachSystemsSkipsAreNamed.test_the_raw_bytes_skip_is_windows_only_and_the_readme_says_why) ... ok
+test_a_wcs_number_that_cannot_be_read_gives_no_sky_position_in_the_pages_words (tests.test_fix_f7.F7_R1_1_AWcsCardThatCannotBeRead.test_a_wcs_number_that_cannot_be_read_gives_no_sky_position_in_the_pages_words) ... ok
+test_the_controls_a_readable_sip_and_a_card_outside_the_wcs (tests.test_fix_f7.F7_R1_1_AWcsCardThatCannotBeRead.test_the_controls_a_readable_sip_and_a_card_outside_the_wcs) ... ok
+test_1e400_and_comma_decimals_refused_in_the_pages_words (tests.test_fix_f8.F8_1_OtherFormsANumberCannotTake.test_1e400_and_comma_decimals_refused_in_the_pages_words) ... ok
+test_a_d_exponent_gives_the_record_the_e_exponent_gives (tests.test_fix_f8.F8_2_TheDExponent.test_a_d_exponent_gives_the_record_the_e_exponent_gives) ... ok
+test_a_wcs_that_differs_from_its_header_gives_no_sky_position (tests.test_fix_f8.F8_3_TheBackstop.test_a_wcs_that_differs_from_its_header_gives_no_sky_position) ... ok
+test_a_logical_is_no_number (tests.test_fix_f9.F9_1_Face3TheCommandLine.test_a_logical_is_no_number) ... ok
+test_a_number_in_quotes_is_read_as_its_number (tests.test_fix_f9.F9_1_Face3TheCommandLine.test_a_number_in_quotes_is_read_as_its_number) ... ok
+test_a_wcs_that_read_a_quoted_number_or_a_logical_otherwise_is_refused (tests.test_fix_f9.F9_2_TheBackstopReadsTextAndLogicals.test_a_wcs_that_read_a_quoted_number_or_a_logical_otherwise_is_refused) ... ok
+test_a_logical_is_no_number_on_the_page (tests.test_fix_f9.F9_3_BothFaces.test_a_logical_is_no_number_on_the_page) ... ok
+test_lonpole_the_page_refuses_what_it_does_not_apply (tests.test_fix_f9.F9_3_BothFaces.test_lonpole_the_page_refuses_what_it_does_not_apply) ... ok
+test_12_version_2022_and_the_required_blocks (tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ok
+test_12b_bad_context_values_are_refused (tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ok
+test_14_ra_rounds_into_range (tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ok
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ok
+test_02_small_apertures_are_refused_not_raised (tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ok
+test_03_G_amplitude_must_be_positive (tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... ok
+test_04_P_never_raises (tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ok
+test_05_every_radius_carries_ok_and_a_reason (tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ok
+test_06_cube_with_one_plane_is_measured (tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ok
+test_07_no_image_is_an_honest_refusal (tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ok
+test_mpc_judge_accepts_the_cli_record (tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... # --rms-noise 5: about 0.6 s (5 redraws, each about 0.1 s), starting now
+ok
+test_05_no_time_no_record (tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... ok
+test_05b_default_run_writes_no_placeholder (tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... ok
+test_08_cli_radii_are_checked (tests.test_hardening.TestSilentWrong.test_08_cli_radii_are_checked) ... ok
+test_11_unconverged_radii_have_no_position (tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... ok
+test_13_designation_field_by_the_schema_pattern (tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ok
+test_13b_mode_and_astcat_are_the_users (tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... ok
+test_13c_nothing_defaults (tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... ok
+test_15_time (tests.test_hardening.TestSilentWrong.test_15_time) ... ok
+test_15b_the_two_headers_are_merged (tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ok
+test_15c_a_date_without_a_time_is_refused (tests.test_hardening.TestSilentWrong.test_15c_a_date_without_a_time_is_refused) ... ok
+test_16_rms_through_the_wcs (tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ok
+test_16b_nan_border_keeps_the_noise (tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ok
+test_17_frames_and_axes (tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... ok
+test_17b_wcs_warnings_reach_the_user (tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... ok
+test_19_blank_pixels_are_not_data (tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ok
+test_1_18_a_lookup_table_wcs_is_read_with_its_file (tests.test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file) ... ok
+test_1_2_a_zero_scatter_keeps_the_record (tests.test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record) ... ok
+test_1_3_a_bad_curve_path_keeps_the_record (tests.test_hardening_2.TestLostAnswers2.test_1_3_a_bad_curve_path_keeps_the_record) ... ok
+test_1_4_a_negative_rms_noise_keeps_the_answer (tests.test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer) ... ok
+test_1_5_a_non_finite_start_is_refused_by_name (tests.test_hardening_2.TestLostAnswers2.test_1_5_a_non_finite_start_is_refused_by_name) ... ok
+test_1_8_an_unparsable_card_keeps_the_answer (tests.test_hardening_2.TestLostAnswers2.test_1_8_an_unparsable_card_keeps_the_answer) ... ok
+test_4_19_a_refusal_always_has_a_reason (tests.test_hardening_2.TestLostAnswers2.test_4_19_a_refusal_always_has_a_reason) ... ok
+test_judge_accepts_round_2s_cli_records (tests.test_hardening_2.TestMPCJudge2.test_judge_accepts_round_2s_cli_records) ... # --rms-noise 5: about 0.5 s (5 redraws, each about 0.1 s), starting now
+# --rms-noise 5: about 0.5 s (5 redraws, each about 0.1 s), starting now
+ok
+test_1_9_a_date_without_a_time_is_refused_for_every_date_key (tests.test_hardening_2.TestSilentWrong2.test_1_9_a_date_without_a_time_is_refused_for_every_date_key) ... ok
+test_4_2_the_sky_position_is_printed (tests.test_hardening_2.TestSilentWrong2.test_4_2_the_sky_position_is_printed) ... ok
+test_4_3_the_remarks_name_the_radii_fitted (tests.test_hardening_2.TestSilentWrong2.test_4_3_the_remarks_name_the_radii_fitted) ... ok
+test_4_7_the_record_refuses_an_impossible_time (tests.test_hardening_2.TestSilentWrong2.test_4_7_the_record_refuses_an_impossible_time) ... ok
+test_1_13a_the_image_hdu_wins_the_merge (tests.test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge) ... ok
+test_1_13b_rms_corr_has_its_sign (tests.test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign) ... ok
+test_4_5_a_colour_cube_is_named (tests.test_hardening_2.TestWhatTheUserSees2.test_4_5_a_colour_cube_is_named) ... ok
+test_4_6_the_record_refusals_name_the_flags (tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_record_refusals_name_the_flags) ... ok
+test_4_6_the_value_refusals_name_the_remedy (tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_value_refusals_name_the_remedy) ... ok
+test_1_11_a_blank_card_is_absent_not_zero (tests.test_hardening_2_page.TestPageEngine2.test_1_11_a_blank_card_is_absent_not_zero) ... ok
+test_1_12_a_corrupt_size_does_not_loop (tests.test_hardening_2_page.TestPageEngine2.test_1_12_a_corrupt_size_does_not_loop) ... ok
+test_1_14_names_are_not_split_at_commas (tests.test_hardening_2_page.TestPageEngine2.test_1_14_names_are_not_split_at_commas) ... ok
+test_1_15_the_pc_matrix_takes_its_fits_defaults (tests.test_hardening_2_page.TestPageEngine2.test_1_15_the_pc_matrix_takes_its_fits_defaults) ... ok
+test_1_18_lookup_table_distortion_is_refused (tests.test_hardening_2_page.TestPageEngine2.test_1_18_lookup_table_distortion_is_refused) ... ok
+test_1_1_a_finite_time_never_throws (tests.test_hardening_2_page.TestPageEngine2.test_1_1_a_finite_time_never_throws) ... ok
+test_1_6_an_impossible_header_date_is_refused (tests.test_hardening_2_page.TestPageEngine2.test_1_6_an_impossible_header_date_is_refused) ... ok
+test_4_4_a_deprecated_catalogue_is_noted (tests.test_hardening_2_page.TestPageEngine2.test_4_4_a_deprecated_catalogue_is_noted) ... ok
+test_4_5_fz_and_colour_cubes_are_named (tests.test_hardening_2_page.TestPageEngine2.test_4_5_fz_and_colour_cubes_are_named) ... ok
+test_4_6_the_page_names_the_remedy (tests.test_hardening_2_page.TestPageEngine2.test_4_6_the_page_names_the_remedy) ... ok
+test_4_7_an_impossible_typed_time_is_refused (tests.test_hardening_2_page.TestPageEngine2.test_4_7_an_impossible_typed_time_is_refused) ... ok
+test_1_10_4_9_another_file_clears_the_answer (tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer) ... ok
+test_1_10_a_changed_field_never_leaves_a_stale_record (tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record) ... ok
+test_1_10_a_failed_load_forgets_the_old_image (tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_failed_load_forgets_the_old_image) ... ok
+test_1_10_a_new_start_or_method_clears_the_answer (tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer) ... ok
+test_1_1_a_huge_header_time_keeps_the_file (tests.test_hardening_2_page.TestPageInBrowser2.test_1_1_a_huge_header_time_keeps_the_file) ... ok
+test_4_3_the_page_remarks_name_the_radii_fitted (tests.test_hardening_2_page.TestPageInBrowser2.test_4_3_the_page_remarks_name_the_radii_fitted) ... ok
+test_4_4_the_page_notes_a_deprecated_catalogue (tests.test_hardening_2_page.TestPageInBrowser2.test_4_4_the_page_notes_a_deprecated_catalogue) ... ok
+test_4_5_fz_and_colour_cubes_are_named_on_the_page (tests.test_hardening_2_page.TestPageInBrowser2.test_4_5_fz_and_colour_cubes_are_named_on_the_page) ... ok
+test_4_6_the_time_refusal_is_said_once_and_names_the_command_line (tests.test_hardening_2_page.TestPageInBrowser2.test_4_6_the_time_refusal_is_said_once_and_names_the_command_line) ... ok
+test_judge_accepts_round_2s_page_records (tests.test_hardening_2_page.TestPageInBrowser2.test_judge_accepts_round_2s_page_records) ... ok
+test_t1_10_the_curve_never_overwrites_the_input (tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) ... ok
+test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) ... ok
+test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record) ... ok
+test_judge_accepts_round_3s_cli_records (tests.test_hardening_3.TestMPCJudge3.test_judge_accepts_round_3s_cli_records) ... ok
+test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) ... ok
+test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) ... ok
+test_t1_4_an_end_before_the_start_is_refused (tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) ... ok
+test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) ... ok
+test_t4_1_a_partial_wcs_is_refused (tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) ... ok
+test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) ... ok
+test_1_19_the_page_decodes_only_the_image_chosen (tests.test_hardening_3_page.TestPageEngine3.test_1_19_the_page_decodes_only_the_image_chosen) ... ok
+test_lookup_a_table_not_in_hand_or_not_a_table_is_refused (tests.test_hardening_3_page.TestPageEngine3.test_lookup_a_table_not_in_hand_or_not_a_table_is_refused) ... ok
+test_lookup_the_page_matches_astropy_on_hubbles_frames (tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) ... ok
+test_lookup_the_page_matches_astropy_on_synthetic_files (tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) ... ok
+test_t1_17_pv_the_page_says_what_the_command_line_does (tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) ... ok
+test_t1_4_an_end_before_the_start_is_refused_on_the_page (tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) ... ok
+test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) ... ok
+test_t1_6_an_empty_timesys_is_utc_on_the_page (tests.test_hardening_3_page.TestPageEngine3.test_t1_6_an_empty_timesys_is_utc_on_the_page) ... ok
+test_t4_15_the_page_reads_cunit (tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) ... ok
+test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) ... ok
+test_t4_4_a_comma_in_a_name_is_noted (tests.test_hardening_3_page.TestPageEngine3.test_t4_4_a_comma_in_a_name_is_noted) ... ok
+test_judge_accepts_round_3s_page_records (tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) ... ok
+test_lookup_the_page_on_a_real_hubble_frame (tests.test_hardening_3_page.TestPageInBrowser3.test_lookup_the_page_on_a_real_hubble_frame) ... ok
+test_t1_3_a_later_load_wins (tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins) ... ok
+test_t1_5_a_card_left_out_is_named_on_the_page (tests.test_hardening_3_page.TestPageInBrowser3.test_t1_5_a_card_left_out_is_named_on_the_page) ... ok
+test_t1_6_a_blank_image_card_hides_nothing_on_the_page (tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) ... ok
+test_t4_2_copy_says_whether_it_copied (tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) ... ok
+test_t4_4_a_comma_in_names_is_noted_on_the_page (tests.test_hardening_3_page.TestPageInBrowser3.test_t4_4_a_comma_in_names_is_noted_on_the_page) ... ok
+test_judge_accepts_part_bs_cli_record (tests.test_hardening_3b.TestMPCJudge3b.test_judge_accepts_part_bs_cli_record) ... ok
+test_t1_24_c1_names_the_modules_it_ran_on (tests.test_hardening_3b.TestTheGuard3b.test_t1_24_c1_names_the_modules_it_ran_on) ... ok
+test_t1_8_the_scatter_is_pinned (tests.test_hardening_3b.TestTheGuard3b.test_t1_8_the_scatter_is_pinned) ... ok
+test_t1_13_a_zero_mad_border_is_not_all_alike (tests.test_hardening_3b.TestTheUsersValues.test_t1_13_a_zero_mad_border_is_not_all_alike) ... ok
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused (tests.test_hardening_3b.TestTheUsersValues.test_t1_15_a_time_outside_the_years_0000_9999_is_refused) ... ok
+test_t1_19_t4_7_the_time_remedy_names_what_helps (tests.test_hardening_3b.TestTheUsersValues.test_t1_19_t4_7_the_time_remedy_names_what_helps) ... ok
+test_t1_21_an_impossible_obstime_is_one_line_and_no_circle (tests.test_hardening_3b.TestTheUsersValues.test_t1_21_an_impossible_obstime_is_one_line_and_no_circle) ... ok
+test_t4_10_t1_23_rms_noise_is_3_to_1000 (tests.test_hardening_3b.TestTheUsersValues.test_t4_10_t1_23_rms_noise_is_3_to_1000) ... ok
+test_t4_16_tnx_and_zpx_are_named (tests.test_hardening_3b.TestTheUsersValues.test_t4_16_tnx_and_zpx_are_named) ... ok
+test_t4_17_a_corrupt_or_truncated_file_names_its_fault (tests.test_hardening_3b.TestTheUsersValues.test_t4_17_a_corrupt_or_truncated_file_names_its_fault) ... ok
+test_t4_18_the_radii_are_written_as_they_are (tests.test_hardening_3b.TestTheUsersValues.test_t4_18_the_radii_are_written_as_they_are) ... ok
+test_t4_3_x_without_y_is_refused (tests.test_hardening_3b.TestTheUsersValues.test_t4_3_x_without_y_is_refused) ... ok
+test_t4_9_no_wcs_names_plate_solving (tests.test_hardening_3b.TestTheUsersValues.test_t4_9_no_wcs_names_plate_solving) ... ok
+test_t1_12_sip_needs_both_orders (tests.test_hardening_3b_page.TestPageEngine3b.test_t1_12_sip_needs_both_orders) ... ok
+test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page (tests.test_hardening_3b_page.TestPageEngine3b.test_t1_15_a_time_outside_the_years_0000_9999_is_refused_on_the_page) ... ok
+test_t1_18_the_automatic_start_is_one_rule_on_both_faces (tests.test_hardening_3b_page.TestPageEngine3b.test_t1_18_the_automatic_start_is_one_rule_on_both_faces) ... ok
+test_t1_7_a_string_opens_where_its_quote_is (tests.test_hardening_3b_page.TestPageEngine3b.test_t1_7_a_string_opens_where_its_quote_is) ... ok
+test_t4_11_timesys_names_the_command_line_only_where_it_converts (tests.test_hardening_3b_page.TestPageEngine3b.test_t4_11_timesys_names_the_command_line_only_where_it_converts) ... ok
+test_t4_12_the_page_says_what_the_command_line_is (tests.test_hardening_3b_page.TestPageEngine3b.test_t4_12_the_page_says_what_the_command_line_is) ... ok
+test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line (tests.test_hardening_3b_page.TestPageEngine3b.test_t4_16_tnx_and_zpx_are_not_sent_to_the_command_line) ... ok
+test_t4_8_a_gzipped_or_non_fits_file_is_named (tests.test_hardening_3b_page.TestPageEngine3b.test_t4_8_a_gzipped_or_non_fits_file_is_named) ... ok
+test_judge_accepts_part_bs_page_record (tests.test_hardening_3b_page.TestPageInBrowser3b.test_judge_accepts_part_bs_page_record) ... ok
+test_t1_20_a_changed_field_rewrites_the_live_record (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_changed_field_rewrites_the_live_record) ... ok
+test_t1_20_a_new_radii_background_or_hdu_clears_the_answer (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t1_20_a_new_radii_background_or_hdu_clears_the_answer) ... ok
+test_t4_11_a_typed_time_says_it_was_typed (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_11_a_typed_time_says_it_was_typed) ... ok
+test_t4_18_the_page_remarks_name_the_radii_as_they_are (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_18_the_page_remarks_name_the_radii_as_they_are) ... ok
+test_t4_3_an_empty_box_is_refused_by_name (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_3_an_empty_box_is_refused_by_name) ... ok
+test_t4_8_a_gzipped_file_is_named_on_the_page (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_8_a_gzipped_file_is_named_on_the_page) ... ok
+test_t4_9_no_wcs_names_plate_solving_on_the_page (tests.test_hardening_3b_page.TestPageInBrowser3b.test_t4_9_no_wcs_names_plate_solving_on_the_page) ... ok
+test_03_edge_is_a_reason_not_a_throw (tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... ok
+test_03b_small_annulus_is_a_reason_not_a_throw (tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... ok
+test_04a_aitken_jump_is_bounded_as_in_python (tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... ok
+test_04b_nan_background_is_a_reason (tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... ok
+test_04c_G_small_apertures_are_refused (tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... ok
+test_05_no_time_no_record (tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... ok
+test_06_cube_with_one_plane (tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... ok
+test_08_radii_are_validated (tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... ok
+test_09_unparseable_date_is_a_reason_not_a_throw (tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... ok
+test_10_big_images_are_refused_and_the_stretch_is_sampled (tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... ok
+test_12_14_ades_2022_parity (tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... ok
+test_15_time_parity (tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ok
+test_18_17_unsupported_wcs_is_refused_not_misread (tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... ok
+test_19_blank_pixels_are_not_data (tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... ok
+test_mpc_judge_accepts_the_page_record (tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... ok
+test_03_edge_gives_a_measurement (tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... ok
+test_05_no_time_no_record_and_nothing_to_copy (tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... ok
+test_08_zero_step_is_refused_not_frozen (tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... ok
+test_09_bad_date_keeps_the_file (tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... ok
+test_full_record_on_the_page (tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... ok
+test_degrade_bookkeeping (tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_k19_the_curves_failure_names_the_path_as_given (tests.test_launch_steps.TestCurvePath.test_k19_the_curves_failure_names_the_path_as_given) ... ok
+test_k18_github_pages_publishes_page_on_a_push_to_main (tests.test_launch_steps.TestPagesWorkflow.test_k18_github_pages_publishes_page_on_a_push_to_main) ... ok
+test_k25_the_notes_tell_windows_users_of_the_validator_about_utf8_mode (tests.test_launch_steps.TestReleaseNotes.test_k25_the_notes_tell_windows_users_of_the_validator_about_utf8_mode) ... ok
+test_k15_the_readme_says_where_the_repository_is_and_how_its_tests_run (tests.test_launch_steps.TestRepositoryWords.test_k15_the_readme_says_where_the_repository_is_and_how_its_tests_run) ... ok
+test_k16_the_pages_readme_mentions_are_links_to_the_repositorys_readme (tests.test_launch_steps.TestRepositoryWords.test_k16_the_pages_readme_mentions_are_links_to_the_repositorys_readme) ... ok
+test_k17_the_repositorys_address_in_pyproject_and_citation (tests.test_launch_steps.TestRepositoryWords.test_k17_the_repositorys_address_in_pyproject_and_citation) ... ok
+test_k20_every_text_open_and_text_subprocess_names_its_encoding (tests.test_launch_steps.TestTextNamesItsEncoding.test_k20_every_text_open_and_text_subprocess_names_its_encoding) ... ok
+test_k21_git_converts_no_file (tests.test_launch_steps.TestTheCheckoutIsTheCommit.test_k21_git_converts_no_file) ... ok
+test_js_matches_python (tests.test_page.TestPage.test_js_matches_python) ... ok
+test_the_first_click_copies_the_record (tests.test_page_copy.TestTheFirstClickCopies.test_the_first_click_copies_the_record) ... ok
+test_d5_contrast_targets_names_focus_and_fonts (tests.test_page_design.TestTheDesignInABrowser.test_d5_contrast_targets_names_focus_and_fonts) ... ok
+test_d6_dark_whatever_the_system_asks (tests.test_page_design.TestTheDesignInABrowser.test_d6_dark_whatever_the_system_asks) ... ok
+test_d9_the_layout_at_desktop_and_phone (tests.test_page_design.TestTheDesignInABrowser.test_d9_the_layout_at_desktop_and_phone) ... ok
+test_d0_controls (tests.test_page_design.TestTheDesignOnDisk.test_d0_controls) ... ok
+test_d10_the_method_and_the_findings_folded_in_plain_words (tests.test_page_design.TestTheDesignOnDisk.test_d10_the_method_and_the_findings_folded_in_plain_words) ... ok
+test_d1_the_tool_first_with_no_box (tests.test_page_design.TestTheDesignOnDisk.test_d1_the_tool_first_with_no_box) ... ok
+test_d2_the_record_in_three_labelled_groups (tests.test_page_design.TestTheDesignOnDisk.test_d2_the_record_in_three_labelled_groups) ... ok
+test_d3_hints_status_lines_and_text_alternatives (tests.test_page_design.TestTheDesignOnDisk.test_d3_hints_status_lines_and_text_alternatives) ... ok
+test_d4_inter_beside_the_page_unchanged_with_its_licence (tests.test_page_design.TestTheDesignOnDisk.test_d4_inter_beside_the_page_unchanged_with_its_licence) ... ok
+test_d7_the_tile_the_favicon_and_the_readmes_logos (tests.test_page_design.TestTheDesignOnDisk.test_d7_the_tile_the_favicon_and_the_readmes_logos) ... ok
+test_d8_the_readme_logo_on_top_credit_in_a_closing_section (tests.test_page_design.TestTheDesignOnDisk.test_d8_the_readme_logo_on_top_credit_in_a_closing_section) ... ok
+test_the_credit_sits_in_a_footer_at_the_end_of_the_page (tests.test_page_footer.TestCreditFooter.test_the_credit_sits_in_a_footer_at_the_end_of_the_page) ... ok
+test_d1_1_a_compressed_file_is_measured_as_the_file_itself (tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_a_compressed_file_is_measured_as_the_file_itself) ... ok
+test_d1_1_a_cut_short_file_is_still_refused (tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_a_cut_short_file_is_still_refused) ... ok
+test_d1_1_the_pages_sentence_holds (tests.test_refuters_4.TestD11TheCommandLineReadsAGzip.test_d1_1_the_pages_sentence_holds) ... ok
+test_d1_2_r_is_2_only_at_2 (tests.test_refuters_4.TestD12TheRadiusIsNamed.test_d1_2_r_is_2_only_at_2) ... ok
+test_d1_6_help_and_readme_name_the_rms (tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_d1_6_help_and_readme_name_the_rms) ... ok
+test_d1_6_the_records_remarks_name_the_rms (tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_d1_6_the_records_remarks_name_the_rms) ... # --rms-noise 5: about 0.7 s (5 redraws, each about 0.1 s), starting now
+ok
+test_judge_accepts_the_record_with_its_rms_and_its_remark (tests.test_refuters_4.TestD16TheRmsSaysWhatItIs.test_judge_accepts_the_record_with_its_rms_and_its_remark) ... # --rms-noise 5: about 0.7 s (5 redraws, each about 0.1 s), starting now
+ok
+test_d1_2_the_page_says_r_is_2_only_at_2 (tests.test_refuters_4_page.TestD12ThePageNamesTheRadius.test_d1_2_the_page_says_r_is_2_only_at_2) ... ok
+test_e2_control_the_judge_accepts_the_record_edited_as_the_words_say (tests.test_refuters_5.TestE2TheRecordAndTheEdit.test_e2_control_the_judge_accepts_the_record_edited_as_the_words_say) ... # --rms-noise 5: about 0.7 s (5 redraws, each about 0.1 s), starting now
+ok
+test_e2_the_record_holds_no_rms (tests.test_refuters_5.TestE2TheRecordAndTheEdit.test_e2_the_record_holds_no_rms) ... # --rms-noise 5: about 0.7 s (5 redraws, each about 0.1 s), starting now
+ok
+test_e2_control_the_d1_6_words_stay (tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_control_the_d1_6_words_stay) ... ok
+test_e2_the_instruction_names_every_field_it_changes (tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_the_instruction_names_every_field_it_changes) ... ok
+test_e2_the_words_say_what_the_remarks_say (tests.test_refuters_5.TestE2TheWordsNameTheWholeEdit.test_e2_the_words_say_what_the_remarks_say) ... ok
+test_k7_the_ci_runs_what_the_green_run_runs (tests.test_release_package.TestCI.test_k7_the_ci_runs_what_the_green_run_runs) ... ok
+test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license (tests.test_release_package.TestCredit.test_k1_the_credit_line_on_both_faces_in_the_readme_and_the_license) ... ok
+test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu (tests.test_release_package.TestDebianVenvPackage.test_k10_the_readme_names_the_package_that_holds_venvs_pip_on_debian_and_ubuntu) ... ok
+test_k14_every_python_file_compiles_with_warnings_as_errors (tests.test_release_package.TestEscapes.test_k14_every_python_file_compiles_with_warnings_as_errors) ... ok
+test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image (tests.test_release_package.TestFreshInstall.test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image) ... 
+    [the tested versions] installed: Python 3.11.15 | domino-calibrator 0.1.0 | numpy scipy astropy: 2.2.6 1.15.3 6.1.7
+
+    [what pip picks today] installed: Python 3.11.15 | domino-calibrator 0.1.0 | numpy scipy astropy: 2.4.6 1.17.1 8.0.1
+ok
+test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install (tests.test_release_package.TestInstallBlock.test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install) ... 
+    [the README's block, python3.12] 3.12.3 0.1.0 2.5.3 1.18.1 8.0.1
+ok
+test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice (tests.test_release_package.TestLicenseAndCitation.test_k3_the_license_is_mit_by_spdxs_text_with_the_credit_in_its_notice) ... ok
+test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit (tests.test_release_package.TestLicenseAndCitation.test_k4_citation_cff_by_the_1_2_0_schema_its_authors_from_the_credit) ... ok
+test_k9_the_pages_install_hint_names_the_virtual_environment (tests.test_release_package.TestPageInstallHint.test_k9_the_pages_install_hint_names_the_virtual_environment) ... ok
+test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out (tests.test_release_package.TestPyproject.test_k5_pyproject_the_name_the_tested_minimums_and_hstpsf_left_out) ... ok
+test_k12_the_readme_names_the_python_it_needs_before_the_block (tests.test_release_package.TestPythonFirst.test_k12_the_readme_names_the_python_it_needs_before_the_block) ... ok
+test_k13_the_running_versions_against_the_record (tests.test_release_package.TestRunningVersions.test_k13_the_running_versions_against_the_record) ... 
+    [the tested-versions job] running: Python 3.11, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7 | the record: Python 3.11, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+ok
+test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line (tests.test_release_package.TestVersion.test_k2_one_version_in_the_package_pyproject_citation_the_page_and_the_command_line) ... ok
+test_k11_the_readmes_windows_line_needs_no_activation_script (tests.test_release_package.TestWindowsLine.test_k11_the_readmes_windows_line_needs_no_activation_script) ... ok
+test_w2_every_tally_is_the_recount_of_its_box (tests.test_release_words.TestEveryNumber.test_w2_every_tally_is_the_recount_of_its_box) ... ok
+test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars (tests.test_release_words.TestEveryNumber.test_w3_each_face_states_the_studys_tallies_with_their_boxes_and_stars) ... ok
+test_w4_every_other_number_is_registered_and_true (tests.test_release_words.TestEveryNumber.test_w4_every_other_number_is_registered_and_true) ... ok
+test_w1_1_a_verdict_carries_its_tally_and_its_whole_box (tests.test_release_words.TestLaneTwosBlockers.test_w1_1_a_verdict_carries_its_tally_and_its_whole_box) ... ok
+test_w1_2_truth_is_named_as_hsts_photocentre (tests.test_release_words.TestLaneTwosBlockers.test_w1_2_truth_is_named_as_hsts_photocentre) ... ok
+test_w1_3_cells_are_counted_as_cells (tests.test_release_words.TestLaneTwosBlockers.test_w1_3_cells_are_counted_as_cells) ... ok
+test_w6_every_path_is_inside_the_folder_that_goes_public (tests.test_release_words.TestPaths.test_w6_every_path_is_inside_the_folder_that_goes_public) ... ok
+test_w9_no_star_on_the_readme_the_plain_words_in_its_place (tests.test_release_words.TestPlainWords.test_w9_no_star_on_the_readme_the_plain_words_in_its_place) ... ok
+test_w5_each_face_names_its_stars_limits_and_the_invitation (tests.test_release_words.TestStarsLimitsInvitation.test_w5_each_face_names_its_stars_limits_and_the_invitation) ... ok
+test_w0_the_recount_reproduces_the_records (tests.test_release_words.TestTheRecount.test_w0_the_recount_reproduces_the_records) ... ok
+test_w7_each_face_names_the_variant_its_tallies_were_measured_with (tests.test_release_words.TestTheVariant.test_w7_each_face_names_the_variant_its_tallies_were_measured_with) ... ok
+test_w8_the_readme_says_who_recounted_the_defaults_and_ms_tallies (tests.test_release_words.TestWhoRecounted.test_w8_the_readme_says_who_recounted_the_defaults_and_ms_tallies) ... ok
+test_array_psf_and_post (tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 357 tests in 482.138s
+
+OK
+
+strict: PASS (357 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)

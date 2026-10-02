@@ -1,0 +1,74 @@
+# Publishing to PyPI by Trusted Publishing. It runs only when a release is published on GitHub, or by hand from the Actions
+# tab; nothing here runs on a push. A run by hand publishes to TestPyPI, a release to PyPI. Before either can work, each
+# index needs this repository's publisher (owner Castle639, repository domino-calibrator, workflow publish.yml, environment
+# testpypi or pypi), and GitHub the two environments: the maintainer sets them. The jobs follow
+# pypa/gh-action-pypi-publish's README (release/v1): the dists are built in a job of their own, and only the jobs that
+# publish them may ask GitHub for the token PyPI trusts. Each action is pinned by its commit's SHA, the release beside it
+# (release/v1 pointed to v1.14.2 when it was pinned); Dependabot (.github/dependabot.yml) proposes the updates.
+name: publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.11"
+      - name: On a release, its tag is the package's version
+        if: github.event_name == 'release'
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          VERSION=$(python -c "import re; print(re.search(r\"__version__ = '([^']+)'\", open('domino_calibrator/__init__.py').read()).group(1))")
+          test "$TAG" = "v$VERSION" || { echo "the release's tag $TAG is not v$VERSION"; exit 1; }
+      - run: python -m pip install --disable-pip-version-check build==1.6.1
+      - run: python -m build
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: dist
+          path: dist/
+
+  testpypi:
+    if: github.event_name == 'workflow_dispatch'
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/domino-calibrator
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33  # v1.14.2
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  pypi:
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi
+      url: https://pypi.org/p/domino-calibrator
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33  # v1.14.2

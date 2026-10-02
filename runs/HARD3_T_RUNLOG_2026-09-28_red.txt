@@ -1,0 +1,1147 @@
+# Round 3, Part A's bar: its red run on e7051b4 (the fourth room's pull request as merged; its calibrator is 9e62fae's), 2026-09-28 19:54:16 UTC
+# the calibrator's code: git diff e7051b4 -- calibrator/*.py calibrator/page/zeroap.js calibrator/page/index.html is empty; the new tests and browser_cases.js's round-3 steps are the bar
+# ADES_PYLIB, ADES_MASTER (39ae5a9), PLAYWRIGHT_MODULE set; PATH with /opt/node22/bin; the 30 frames on disk (checksums OK at 19:09)
+test_mid_exposure (calibrator.tests.test_ades.TestADES.test_mid_exposure) ... ok
+test_psv (calibrator.tests.test_ades.TestADES.test_psv) ... ok
+test_wcs_origin (calibrator.tests.test_ades.TestADES.test_wcs_origin) ... ok
+test_against_brute_force (calibrator.tests.test_apertures.TestApertures.test_against_brute_force) ... ok
+test_full_circle_area_and_moments (calibrator.tests.test_apertures.TestApertures.test_full_circle_area_and_moments) ... ok
+test_outside_and_leaving (calibrator.tests.test_apertures.TestApertures.test_outside_and_leaving) ... ok
+test_quarter_circles (calibrator.tests.test_apertures.TestApertures.test_quarter_circles) ... ok
+test_end_to_end (calibrator.tests.test_cli.TestCLI.test_end_to_end) ... ok
+test_gauss_fit_exact (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_exact) ... ok
+test_gauss_fit_with_background (calibrator.tests.test_estimators.TestEstimators.test_gauss_fit_with_background) ... ok
+test_linear_extrapolate (calibrator.tests.test_estimators.TestEstimators.test_linear_extrapolate) ... ok
+test_moment_background_invariance (calibrator.tests.test_estimators.TestEstimators.test_moment_background_invariance) ... ok
+test_moment_symmetric_source (calibrator.tests.test_estimators.TestEstimators.test_moment_symmetric_source) ... ok
+test_peak_quadratic (calibrator.tests.test_estimators.TestEstimators.test_peak_quadratic) ... ok
+test_shrink_point_source (calibrator.tests.test_estimators.TestEstimators.test_shrink_point_source) ... ok
+test_leaving_the_image_is_unconverged_not_a_crash (calibrator.tests.test_estimators.TestRobust.test_leaving_the_image_is_unconverged_not_a_crash) ... [the checkout]/calibrator/estimators.py:123: RuntimeWarning: divide by zero encountered in divide
+  ax_p, ax_m = (xx + 0.5 - x0) / (R2 * s), (xx - 0.5 - x0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:124: RuntimeWarning: divide by zero encountered in divide
+  ay_p, ay_m = (yy + 0.5 - y0) / (R2 * s), (yy - 0.5 - y0) / (R2 * s)
+[the checkout]/calibrator/estimators.py:122: RuntimeWarning: overflow encountered in exp
+  s = np.exp(t)
+[the checkout]/calibrator/estimators.py:134: RuntimeWarning: invalid value encountered in divide
+  dgx_dx0 = -(ex_p - ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:135: RuntimeWarning: invalid value encountered in divide
+  dgy_dy0 = -(ey_p - ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:137: RuntimeWarning: invalid value encountered in multiply
+  dgx_dt = -((R2 * s * ax_p) * ex_p - (R2 * s * ax_m) * ex_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:138: RuntimeWarning: invalid value encountered in multiply
+  dgy_dt = -((R2 * s * ay_p) * ey_p - (R2 * s * ay_m) * ey_m) / (SQ2PI * s)
+[the checkout]/calibrator/estimators.py:174: RuntimeWarning: overflow encountered in exp
+  s = float(np.exp(q[3]))
+ok
+test_nan_outside_the_circle_is_not_data (calibrator.tests.test_estimators.TestRobust.test_nan_outside_the_circle_is_not_data) ... ok
+test_unconverged_radius_reports_nan (calibrator.tests.test_estimators.TestRobust.test_unconverged_radius_reports_nan) ... ok
+test_12_version_2022_and_the_required_blocks (calibrator.tests.test_hardening.TestADESRecord.test_12_version_2022_and_the_required_blocks) ... ok
+test_12b_bad_context_values_are_refused (calibrator.tests.test_hardening.TestADESRecord.test_12b_bad_context_values_are_refused) ... ok
+test_14_ra_rounds_into_range (calibrator.tests.test_hardening.TestADESRecord.test_14_ra_rounds_into_range) ... ok
+test_01_G_nan_in_aperture_is_a_reason_not_a_raise (calibrator.tests.test_hardening.TestFailureContract.test_01_G_nan_in_aperture_is_a_reason_not_a_raise) ... ok
+test_02_small_apertures_are_refused_not_raised (calibrator.tests.test_hardening.TestFailureContract.test_02_small_apertures_are_refused_not_raised) ... ok
+test_03_G_amplitude_must_be_positive (calibrator.tests.test_hardening.TestFailureContract.test_03_G_amplitude_must_be_positive) ... ok
+test_04_P_never_raises (calibrator.tests.test_hardening.TestFailureContract.test_04_P_never_raises) ... ok
+test_05_every_radius_carries_ok_and_a_reason (calibrator.tests.test_hardening.TestFailureContract.test_05_every_radius_carries_ok_and_a_reason) ... ok
+test_06_cube_with_one_plane_is_measured (calibrator.tests.test_hardening.TestFailureContract.test_06_cube_with_one_plane_is_measured) ... ok
+test_07_no_image_is_an_honest_refusal (calibrator.tests.test_hardening.TestFailureContract.test_07_no_image_is_an_honest_refusal) ... ok
+test_mpc_judge_accepts_the_cli_record (calibrator.tests.test_hardening.TestMPCJudge.test_mpc_judge_accepts_the_cli_record) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening.TestSilentWrong.test_05_no_time_no_record) ... ok
+test_05b_default_run_writes_no_placeholder (calibrator.tests.test_hardening.TestSilentWrong.test_05b_default_run_writes_no_placeholder) ... ok
+test_08_cli_radii_are_checked (calibrator.tests.test_hardening.TestSilentWrong.test_08_cli_radii_are_checked) ... ok
+test_11_unconverged_radii_have_no_position (calibrator.tests.test_hardening.TestSilentWrong.test_11_unconverged_radii_have_no_position) ... ok
+test_13_designation_field_by_the_schema_pattern (calibrator.tests.test_hardening.TestSilentWrong.test_13_designation_field_by_the_schema_pattern) ... ok
+test_13b_mode_and_astcat_are_the_users (calibrator.tests.test_hardening.TestSilentWrong.test_13b_mode_and_astcat_are_the_users) ... ok
+test_13c_nothing_defaults (calibrator.tests.test_hardening.TestSilentWrong.test_13c_nothing_defaults) ... ok
+test_15_time (calibrator.tests.test_hardening.TestSilentWrong.test_15_time) ... ok
+test_15b_the_two_headers_are_merged (calibrator.tests.test_hardening.TestSilentWrong.test_15b_the_two_headers_are_merged) ... ok
+test_15c_a_date_without_a_time_is_refused (calibrator.tests.test_hardening.TestSilentWrong.test_15c_a_date_without_a_time_is_refused) ... ok
+test_16_rms_through_the_wcs (calibrator.tests.test_hardening.TestSilentWrong.test_16_rms_through_the_wcs) ... ok
+test_16b_nan_border_keeps_the_noise (calibrator.tests.test_hardening.TestSilentWrong.test_16b_nan_border_keeps_the_noise) ... ok
+test_17_frames_and_axes (calibrator.tests.test_hardening.TestSilentWrong.test_17_frames_and_axes) ... ok
+test_17b_wcs_warnings_reach_the_user (calibrator.tests.test_hardening.TestSilentWrong.test_17b_wcs_warnings_reach_the_user) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening.TestSilentWrong.test_19_blank_pixels_are_not_data) ... ok
+test_1_18_a_lookup_table_wcs_is_read_with_its_file (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_18_a_lookup_table_wcs_is_read_with_its_file) ... ok
+test_1_2_a_zero_scatter_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_2_a_zero_scatter_keeps_the_record) ... ok
+test_1_3_a_bad_curve_path_keeps_the_record (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_3_a_bad_curve_path_keeps_the_record) ... ok
+test_1_4_a_negative_rms_noise_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_4_a_negative_rms_noise_keeps_the_answer) ... ok
+test_1_5_a_non_finite_start_is_refused_by_name (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_5_a_non_finite_start_is_refused_by_name) ... ok
+test_1_8_an_unparsable_card_keeps_the_answer (calibrator.tests.test_hardening_2.TestLostAnswers2.test_1_8_an_unparsable_card_keeps_the_answer) ... ok
+test_4_19_a_refusal_always_has_a_reason (calibrator.tests.test_hardening_2.TestLostAnswers2.test_4_19_a_refusal_always_has_a_reason) ... ok
+test_judge_accepts_round_2s_cli_records (calibrator.tests.test_hardening_2.TestMPCJudge2.test_judge_accepts_round_2s_cli_records) ... ok
+test_1_9_a_date_without_a_time_is_refused_for_every_date_key (calibrator.tests.test_hardening_2.TestSilentWrong2.test_1_9_a_date_without_a_time_is_refused_for_every_date_key) ... ok
+test_4_2_the_sky_position_is_printed (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_2_the_sky_position_is_printed) ... ok
+test_4_3_the_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_3_the_remarks_name_the_radii_fitted) ... ok
+test_4_7_the_record_refuses_an_impossible_time (calibrator.tests.test_hardening_2.TestSilentWrong2.test_4_7_the_record_refuses_an_impossible_time) ... ok
+test_1_13a_the_image_hdu_wins_the_merge (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13a_the_image_hdu_wins_the_merge) ... ok
+test_1_13b_rms_corr_has_its_sign (calibrator.tests.test_hardening_2.TestStrongerTests.test_1_13b_rms_corr_has_its_sign) ... ok
+test_4_5_a_colour_cube_is_named (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_5_a_colour_cube_is_named) ... ok
+test_4_6_the_record_refusals_name_the_flags (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_record_refusals_name_the_flags) ... ok
+test_4_6_the_value_refusals_name_the_remedy (calibrator.tests.test_hardening_2.TestWhatTheUserSees2.test_4_6_the_value_refusals_name_the_remedy) ... ok
+test_1_11_a_blank_card_is_absent_not_zero (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_11_a_blank_card_is_absent_not_zero) ... ok
+test_1_12_a_corrupt_size_does_not_loop (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_12_a_corrupt_size_does_not_loop) ... ok
+test_1_14_names_are_not_split_at_commas (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_14_names_are_not_split_at_commas) ... ok
+test_1_15_the_pc_matrix_takes_its_fits_defaults (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_15_the_pc_matrix_takes_its_fits_defaults) ... ok
+test_1_18_lookup_table_distortion_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_18_lookup_table_distortion_is_refused) ... ok
+test_1_1_a_finite_time_never_throws (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_1_a_finite_time_never_throws) ... ok
+test_1_6_an_impossible_header_date_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_1_6_an_impossible_header_date_is_refused) ... ok
+test_4_4_a_deprecated_catalogue_is_noted (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_4_a_deprecated_catalogue_is_noted) ... ok
+test_4_5_fz_and_colour_cubes_are_named (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_5_fz_and_colour_cubes_are_named) ... ok
+test_4_6_the_page_names_the_remedy (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_6_the_page_names_the_remedy) ... ok
+test_4_7_an_impossible_typed_time_is_refused (calibrator.tests.test_hardening_2_page.TestPageEngine2.test_4_7_an_impossible_typed_time_is_refused) ... ok
+test_1_10_4_9_another_file_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_4_9_another_file_clears_the_answer) ... ok
+test_1_10_a_changed_field_never_leaves_a_stale_record (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_changed_field_never_leaves_a_stale_record) ... ok
+test_1_10_a_failed_load_forgets_the_old_image (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_failed_load_forgets_the_old_image) ... ok
+test_1_10_a_new_start_or_method_clears_the_answer (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_10_a_new_start_or_method_clears_the_answer) ... ok
+test_1_1_a_huge_header_time_keeps_the_file (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_1_1_a_huge_header_time_keeps_the_file) ... ok
+test_4_3_the_page_remarks_name_the_radii_fitted (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_3_the_page_remarks_name_the_radii_fitted) ... ok
+test_4_4_the_page_notes_a_deprecated_catalogue (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_4_the_page_notes_a_deprecated_catalogue) ... ok
+test_4_5_fz_and_colour_cubes_are_named_on_the_page (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_5_fz_and_colour_cubes_are_named_on_the_page) ... ok
+test_4_6_the_time_refusal_is_said_once_and_names_the_command_line (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_4_6_the_time_refusal_is_said_once_and_names_the_command_line) ... ok
+test_judge_accepts_round_2s_page_records (calibrator.tests.test_hardening_2_page.TestPageInBrowser2.test_judge_accepts_round_2s_page_records) ... ok
+test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) ... 
+  test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) [the same path] ... FAIL
+  test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) [a second name for the same file] ... FAIL
+test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) ... 
+  test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) [BLANK with no value] ... FAIL
+  test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) [BLANK = 'x'] ... FAIL
+test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (calibrator.tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record) ... FAIL
+test_judge_accepts_round_3s_cli_records (calibrator.tests.test_hardening_3.TestMPCJudge3.test_judge_accepts_round_3s_cli_records) ... ok
+test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) ... 
+  test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN, SCAMP first order] ... FAIL
+  test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN-SIP, SCAMP first order] ... FAIL
+  test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN, PV1_1 and PV2_1 alone] ... FAIL
+  test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [the command line: no sky position, and why] ... FAIL
+  test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [the command line says it] ... FAIL
+test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) ... 
+  test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [CPDIS Polynomial] ... FAIL
+  test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [D2IMDIS Polynomial] ... FAIL
+  test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [D2IMDIS Lookup, the file not given] ... FAIL
+  test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [the command line: no sky position] ... FAIL
+test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) ... 
+  test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END across midnight] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END a day early] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [MJD-END before MJD-OBS] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END before DATE-BEG] ... FAIL
+test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) ... 
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank EQUINOX over EPOCH 1950] ... FAIL
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank RADESYS over RADECSYS FK4] ... FAIL
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [an empty RADESYS over RADECSYS FK4] ... FAIL
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank CTYPE1 in the image HDU: the primary WCS is read] ... FAIL
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank TIMESYS in the image HDU keeps the primary TT] ... FAIL
+  test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank EXPTIME in the image HDU keeps the primary's] ... FAIL
+test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) ... 
+  test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRVAL] ... FAIL
+  test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRVAL2] ... FAIL
+  test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRPIX] ... FAIL
+  test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no scale: no CD, CDELT or PC] ... FAIL
+test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) ... 
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a NUL in the keyword] (mef=False) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [no "= " in columns 9-10] (mef=False) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a TAB in the comment] (mef=False) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a value from column 10] (mef=False) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a NUL in the keyword] (mef=True) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [no "= " in columns 9-10] (mef=True) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a TAB in the comment] (mef=True) ... FAIL
+  test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a value from column 10] (mef=True) ... FAIL
+test_1_19_the_page_decodes_only_the_image_chosen (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_1_19_the_page_decodes_only_the_image_chosen) ... FAIL
+test_lookup_a_table_not_in_hand_or_not_a_table_is_refused (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_a_table_not_in_hand_or_not_a_table_is_refused) ... ok
+test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) ... 
+  test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle03geq] ... FAIL
+  test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle04pdq] ... FAIL
+  test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle05qlq] ... FAIL
+  test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle06tjq] ... FAIL
+  test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle22f7q] ... FAIL
+test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) ... 
+  test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [round 2's file: a CPDIS table, 0.5 px everywhere] ... FAIL
+  test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [SIP, D2IM and CPDIS tables, random, not square] ... FAIL
+  test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [the same, DP1's table transposed by its AXIS cards] ... FAIL
+test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) ... 
+  test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) [TAN-SIP with SCAMP's terms: the command line keeps the SIP and drops the PV terms] ... FAIL
+  test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) [a first-order SCAMP solution on TAN: the CTYPE remedy] ... FAIL
+test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) ... 
+  test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-OBS": "2025-12-12T23:59:30", "DATE-END": "2025-12-12T00:00:30"}] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-OBS": "2025-12-12T21:20:32", "DATE-END": "2025-12-11T21:22:32"}] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"MJD-OBS": 61021.89, "MJD-END": 61021.8}] ... FAIL
+  test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-BEG": "2025-12-12T21:20:32", "DATE-END": "2025-12-12T21:10:32"}] ... FAIL
+test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) ... 
+  test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) [a value from column 10] ... FAIL
+  test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) [no "= " at all] ... FAIL
+test_t1_6_an_empty_timesys_is_utc_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_6_an_empty_timesys_is_utc_on_the_page) ... FAIL
+test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) ... 
+  test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [arcmin] ... FAIL
+  test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [arcsec] ... FAIL
+  test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [mas] ... FAIL
+  test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [rad] ... FAIL
+  test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [a unit the page does not know is refused] ... FAIL
+test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) ... 
+  test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRVAL] ... FAIL
+  test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRVAL2] ... FAIL
+  test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRPIX] ... FAIL
+  test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no scale] ... FAIL
+  test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [T1.22: a PC matrix without CDELT] ... FAIL
+test_t4_4_a_comma_in_a_name_is_noted (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_4_a_comma_in_a_name_is_noted) ... FAIL
+test_judge_accepts_round_3s_page_records (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) ... 
+  test_judge_accepts_round_3s_page_records (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) [flc] ... FAIL
+test_lookup_the_page_on_a_real_hubble_frame (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_lookup_the_page_on_a_real_hubble_frame) ... FAIL
+test_t1_3_a_later_load_wins (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins) ... FAIL
+test_t1_5_a_card_left_out_is_named_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_5_a_card_left_out_is_named_on_the_page) ... FAIL
+test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) ... 
+  test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) [a blank TIMESYS over the primary TT] ... FAIL
+  test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) [a blank EXPTIME over the primary's] ... FAIL
+test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) ... 
+  test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [the clipboard took it] ... FAIL
+  test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [copy_none] ... FAIL
+  test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [copy_refused] ... FAIL
+test_t4_4_a_comma_in_names_is_noted_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_4_a_comma_in_names_is_noted_on_the_page) ... FAIL
+test_03_edge_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03_edge_is_a_reason_not_a_throw) ... ok
+test_03b_small_annulus_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_03b_small_annulus_is_a_reason_not_a_throw) ... ok
+test_04a_aitken_jump_is_bounded_as_in_python (calibrator.tests.test_hardening_page.TestPageEngine.test_04a_aitken_jump_is_bounded_as_in_python) ... ok
+test_04b_nan_background_is_a_reason (calibrator.tests.test_hardening_page.TestPageEngine.test_04b_nan_background_is_a_reason) ... ok
+test_04c_G_small_apertures_are_refused (calibrator.tests.test_hardening_page.TestPageEngine.test_04c_G_small_apertures_are_refused) ... ok
+test_05_no_time_no_record (calibrator.tests.test_hardening_page.TestPageEngine.test_05_no_time_no_record) ... ok
+test_06_cube_with_one_plane (calibrator.tests.test_hardening_page.TestPageEngine.test_06_cube_with_one_plane) ... ok
+test_08_radii_are_validated (calibrator.tests.test_hardening_page.TestPageEngine.test_08_radii_are_validated) ... ok
+test_09_unparseable_date_is_a_reason_not_a_throw (calibrator.tests.test_hardening_page.TestPageEngine.test_09_unparseable_date_is_a_reason_not_a_throw) ... ok
+test_10_big_images_are_refused_and_the_stretch_is_sampled (calibrator.tests.test_hardening_page.TestPageEngine.test_10_big_images_are_refused_and_the_stretch_is_sampled) ... ok
+test_12_14_ades_2022_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_12_14_ades_2022_parity) ... ok
+test_15_time_parity (calibrator.tests.test_hardening_page.TestPageEngine.test_15_time_parity) ... ok
+test_18_17_unsupported_wcs_is_refused_not_misread (calibrator.tests.test_hardening_page.TestPageEngine.test_18_17_unsupported_wcs_is_refused_not_misread) ... ok
+test_19_blank_pixels_are_not_data (calibrator.tests.test_hardening_page.TestPageEngine.test_19_blank_pixels_are_not_data) ... ok
+test_mpc_judge_accepts_the_page_record (calibrator.tests.test_hardening_page.TestPageEngine.test_mpc_judge_accepts_the_page_record) ... ok
+test_03_edge_gives_a_measurement (calibrator.tests.test_hardening_page.TestPageInBrowser.test_03_edge_gives_a_measurement) ... ok
+test_05_no_time_no_record_and_nothing_to_copy (calibrator.tests.test_hardening_page.TestPageInBrowser.test_05_no_time_no_record_and_nothing_to_copy) ... ok
+test_08_zero_step_is_refused_not_frozen (calibrator.tests.test_hardening_page.TestPageInBrowser.test_08_zero_step_is_refused_not_frozen) ... ok
+test_09_bad_date_keeps_the_file (calibrator.tests.test_hardening_page.TestPageInBrowser.test_09_bad_date_keeps_the_file) ... ok
+test_full_record_on_the_page (calibrator.tests.test_hardening_page.TestPageInBrowser.test_full_record_on_the_page) ... ok
+test_degrade_bookkeeping (calibrator.tests.test_hst_degrade.TestHstDegrade.test_degrade_bookkeeping) ... ok
+test_gridmap (calibrator.tests.test_hst_degrade.TestHstDegrade.test_gridmap) ... ok
+test_kernels (calibrator.tests.test_hst_degrade.TestHstDegrade.test_kernels) ... ok
+test_resample_blob (calibrator.tests.test_hst_degrade.TestHstDegrade.test_resample_blob) ... ok
+test_skymap_linear (calibrator.tests.test_hst_degrade.TestHstDegrade.test_skymap_linear) ... ok
+test_js_matches_python (calibrator.tests.test_page.TestPage.test_js_matches_python) ... ok
+test_array_psf_and_post (calibrator.tests.test_synth.TestSynth.test_array_psf_and_post) ... ok
+test_box_integrals_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_box_integrals_vs_quadrature) ... ok
+test_coma_flux_no_psf (calibrator.tests.test_synth.TestSynth.test_coma_flux_no_psf) ... ok
+test_dipole_odd_symmetric_zero (calibrator.tests.test_synth.TestSynth.test_dipole_odd_symmetric_zero) ... ok
+test_grow_and_fade_vs_quadrature (calibrator.tests.test_synth.TestSynth.test_grow_and_fade_vs_quadrature) ... ok
+test_moffat_kernel (calibrator.tests.test_synth.TestSynth.test_moffat_kernel) ... ok
+test_nucleus_only_render (calibrator.tests.test_synth.TestSynth.test_nucleus_only_render) ... ok
+test_snr_scale (calibrator.tests.test_synth.TestSynth.test_snr_scale) ... ok
+
+======================================================================
+FAIL: test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) [the same path]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 255, in test_t1_10_the_curve_never_overwrites_the_input
+    self.assertEqual(open(p, 'rb').read(), before)
+AssertionError: b'r_px,x,y,ok,reason\n2.00,35.083705,34.949[1164 chars]1,\n' != b'SIMPLE  =                    T / conforms[67759 chars]\x00'
+
+======================================================================
+FAIL: test_t1_10_the_curve_never_overwrites_the_input (calibrator.tests.test_hardening_3.TestLost3.test_t1_10_the_curve_never_overwrites_the_input) [a second name for the same file]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 256, in test_t1_10_the_curve_never_overwrites_the_input
+    self.assertEqual(rc, 0); self.assertIn('# version=2022', out)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) [BLANK with no value]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 238, in test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 145, in measure_file
+    img, ihdr, phdr, notes = _open(path, ext)
+                             ^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 96, in _open
+    blank = int(hh['BLANK']) * float(hh.get('BSCALE', 1.0)) + float(hh.get('BZERO', 0.0))
+            ^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 240, in test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+======================================================================
+FAIL: test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer (calibrator.tests.test_hardening_3.TestLost3.test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer) [BLANK = 'x']
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 238, in test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 145, in measure_file
+    img, ihdr, phdr, notes = _open(path, ext)
+                             ^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 96, in _open
+    blank = int(hh['BLANK']) * float(hh.get('BSCALE', 1.0)) + float(hh.get('BZERO', 0.0))
+            ^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 240, in test_t1_2_a_blank_that_is_not_an_integer_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: invalid literal for int() with base 10: 'x'
+
+======================================================================
+FAIL: test_t4_6_a_name_the_console_cannot_encode_keeps_the_record (calibrator.tests.test_hardening_3.TestLost3.test_t4_6_a_name_the_console_cannot_encode_keeps_the_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 267, in test_t4_6_a_name_the_console_cannot_encode_keeps_the_record
+    self.assertEqual(r.returncode, 0, r.stderr.decode('utf-8', 'replace')[-300:])
+AssertionError: 1 != 0 : hon3.11/encodings/cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0141' in position 62: character maps to <undefined>
+
+
+======================================================================
+FAIL: test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN, SCAMP first order]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 79, in test_pv_1_low_order_pv_terms_that_move_the_position_are_refused
+    with self.assertRaisesRegex(ValueError, 'PV') as cm:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN-SIP, SCAMP first order]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 79, in test_pv_1_low_order_pv_terms_that_move_the_position_are_refused
+    with self.assertRaisesRegex(ValueError, 'PV') as cm:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [TAN, PV1_1 and PV2_1 alone]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 79, in test_pv_1_low_order_pv_terms_that_move_the_position_are_refused
+    with self.assertRaisesRegex(ValueError, 'PV') as cm:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [the command line: no sky position, and why]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 85, in test_pv_1_low_order_pv_terms_that_move_the_position_are_refused
+    self.assertNotIn('radec', r); self.assertIn('PV', r.get('sky_error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'radec' unexpectedly found in {'curve': {'radii': array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3. , 3.1, 3.2,
+       3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4. , 4.1, 4.2, 4.3, 4.4, 4.5,
+       4.6, 4.7, 4.8, 4.9, 5. , 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8,
+       5.9, 6. ]), 'x': array([35.07665658, 35.08191718, 35.08947784, 35.09849951, 35.10769771,
+       35.10403963, 35.09442103, 35.0920074 , 35.09229786, 35.09388694,
+       35.09763363, 35.10251363, 35.10759217, 35.11283377, 35.11795128,
+       35.1193808 , 35.11936419, 35.12044088, 35.12316469, 35.12685662,
+       35.13112284, 35.13554209, 35.14008757, 35.14497608, 35.14998431,
+       35.15405903, 35.15761646, 35.16109094, 35.16532825, 35.16996255,
+       35.17488854, 35.1800787 , 35.18554864, 35.19126936, 35.19659792,
+       35.20149232, 35.20620288, 35.21086396, 35.21587361, 35.22127362,
+       35.22691782]), 'y': array([34.95530843, 34.95282738, 34.94934008, 34.94499807, 34.94045314,
+       34.94167614, 34.94998737, 34.95187344, 34.95276588, 34.95297092,
+       34.95235785, 34.95119072, 34.94999762, 34.94880027, 34.94760398,
+       34.94761549, 34.94990139, 34.95056169, 34.95080698, 34.95074993,
+       34.9505281 , 34.95030479, 34.95008599, 34.94974538, 34.94936647,
+       34.94927775, 34.94997605, 34.95020754, 34.95029372, 34.95027482,
+       34.9502194 , 34.95012641, 34.9499857 , 34.94982006, 34.94962828,
+       34.94963035, 34.95004529, 34.95017139, 34.95021147, 34.95019541,
+       34.95014078]), 'ok': array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True]), 'reason': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'bkg': array([165.65075684, 161.63464355, 158.03369904, 156.19094849,
+       154.25561523, 151.09506226, 149.44812012, 147.3838501 ,
+       146.07352448, 144.12129211, 142.60601044, 141.26551819,
+       140.14778137, 138.75309753, 137.74847412, 136.41425323,
+       135.56420898, 134.35365295, 133.64048767, 132.78593445,
+       132.00188446, 131.0856781 , 130.38975525, 129.77496338,
+       129.04405212, 128.29060364, 127.80479431, 127.08351898,
+       126.67212677, 126.03308105, 125.48763275, 125.02923203,
+       124.55690765, 124.05537415, 123.64972305, 123.14590454,
+       122.8158493 , 122.2853241 , 121.99799347, 121.6266861 ,
+       121.24128723]), 's': array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan]), 'estimator': 'M', 'nbad': 0, 'x0': 34.998637420554424, 'sx': 0.03570290615836045, 'y0': 34.94893192141931, 'sy': 0.0002183728248238382, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'x6': np.float64(35.22691782350749), 'y6': np.float64(34.95014078477794)}, 'x0': 34.998637420554424, 'y0': 34.94893192141931, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'start': (35.0, 35.0), 'notes': [], 'radec': (348.69999836825014, 85.4000141900225), 'time': '2025-12-12T21:21:02.00Z', 'time_note': 'obsTime from DATE-OBS (the start) + EXPTIME/2', 'ades': '# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec        |astCat|remarks                                                     \n3I    |CCD |568|2025-12-12T21:21:02.00Z|348.6999984|+85.4000142|Gaia3 |zero-aperture extrapolated (M, 41 of 41 radii, r 2.0-6.0 px)\n'}
+
+======================================================================
+FAIL: test_pv_1_low_order_pv_terms_that_move_the_position_are_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_1_low_order_pv_terms_that_move_the_position_are_refused) [the command line says it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 89, in test_pv_1_low_order_pv_terms_that_move_the_position_are_refused
+    self.assertTrue(any('PV' in ln for ln in lines_starting(out, '# no sky position')), out[-500:])
+AssertionError: False is not true : 773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+# sky (ICRS): RA 348.7002708, Dec +85.4000135 deg, the zero-aperture position
+# time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+# no ADES record: needs the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture), detector (--telescope-detector)
+
+
+======================================================================
+FAIL: test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [CPDIS Polynomial]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 112, in test_pv_2_a_declared_distortion_that_is_not_applied_is_refused
+    with self.assertRaisesRegex(ValueError, 'D2IMDIS|CPDIS'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [D2IMDIS Polynomial]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/ades.py", line 81, in celestial
+    w = WCS(header, fobj=fobj).celestial
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/wcs/wcs.py", line 520, in __init__
+    det2im = self._read_det2im_kw(header, fobj, err=minerr)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/wcs/wcs.py", line 945, in _read_det2im_kw
+    if key.startswith(dp + "."):
+                      ^^
+UnboundLocalError: cannot access local variable 'dp' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+ValueError: the WCS could not be read: cannot access local variable 'dp' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 112, in test_pv_2_a_declared_distortion_that_is_not_applied_is_refused
+    with self.assertRaisesRegex(ValueError, 'D2IMDIS|CPDIS'):
+AssertionError: "D2IMDIS|CPDIS" does not match "the WCS could not be read: cannot access local variable 'dp' where it is not associated with a value"
+
+======================================================================
+FAIL: test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [D2IMDIS Lookup, the file not given]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 112, in test_pv_2_a_declared_distortion_that_is_not_applied_is_refused
+    with self.assertRaisesRegex(ValueError, 'D2IMDIS|CPDIS'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pv_2_a_declared_distortion_that_is_not_applied_is_refused (calibrator.tests.test_hardening_3.TestPV.test_pv_2_a_declared_distortion_that_is_not_applied_is_refused) [the command line: no sky position]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 116, in test_pv_2_a_declared_distortion_that_is_not_applied_is_refused
+    self.assertNotIn('radec', r); self.assertIn('CPDIS', r.get('sky_error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'radec' unexpectedly found in {'curve': {'radii': array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3. , 3.1, 3.2,
+       3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4. , 4.1, 4.2, 4.3, 4.4, 4.5,
+       4.6, 4.7, 4.8, 4.9, 5. , 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8,
+       5.9, 6. ]), 'x': array([35.07665658, 35.08191718, 35.08947784, 35.09849951, 35.10769771,
+       35.10403963, 35.09442103, 35.0920074 , 35.09229786, 35.09388694,
+       35.09763363, 35.10251363, 35.10759217, 35.11283377, 35.11795128,
+       35.1193808 , 35.11936419, 35.12044088, 35.12316469, 35.12685662,
+       35.13112284, 35.13554209, 35.14008757, 35.14497608, 35.14998431,
+       35.15405903, 35.15761646, 35.16109094, 35.16532825, 35.16996255,
+       35.17488854, 35.1800787 , 35.18554864, 35.19126936, 35.19659792,
+       35.20149232, 35.20620288, 35.21086396, 35.21587361, 35.22127362,
+       35.22691782]), 'y': array([34.95530843, 34.95282738, 34.94934008, 34.94499807, 34.94045314,
+       34.94167614, 34.94998737, 34.95187344, 34.95276588, 34.95297092,
+       34.95235785, 34.95119072, 34.94999762, 34.94880027, 34.94760398,
+       34.94761549, 34.94990139, 34.95056169, 34.95080698, 34.95074993,
+       34.9505281 , 34.95030479, 34.95008599, 34.94974538, 34.94936647,
+       34.94927775, 34.94997605, 34.95020754, 34.95029372, 34.95027482,
+       34.9502194 , 34.95012641, 34.9499857 , 34.94982006, 34.94962828,
+       34.94963035, 34.95004529, 34.95017139, 34.95021147, 34.95019541,
+       34.95014078]), 'ok': array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True]), 'reason': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'bkg': array([165.65075684, 161.63464355, 158.03369904, 156.19094849,
+       154.25561523, 151.09506226, 149.44812012, 147.3838501 ,
+       146.07352448, 144.12129211, 142.60601044, 141.26551819,
+       140.14778137, 138.75309753, 137.74847412, 136.41425323,
+       135.56420898, 134.35365295, 133.64048767, 132.78593445,
+       132.00188446, 131.0856781 , 130.38975525, 129.77496338,
+       129.04405212, 128.29060364, 127.80479431, 127.08351898,
+       126.67212677, 126.03308105, 125.48763275, 125.02923203,
+       124.55690765, 124.05537415, 123.64972305, 123.14590454,
+       122.8158493 , 122.2853241 , 121.99799347, 121.6266861 ,
+       121.24128723]), 's': array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan]), 'estimator': 'M', 'nbad': 0, 'x0': 34.998637420554424, 'sx': 0.03570290615836045, 'y0': 34.94893192141931, 'sy': 0.0002183728248238382, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'x6': np.float64(35.22691782350749), 'y6': np.float64(34.95014078477794)}, 'x0': 34.998637420554424, 'y0': 34.94893192141931, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'start': (35.0, 35.0), 'notes': ['WCS: Polynomial distortion is not implemented.', 'WCS: Polynomial distortion is not implemented.'], 'radec': (168.70000037971738, 4.599985814422618), 'time_error': 'no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...)', 'ades_error': "needs a mid-exposure time (no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...); give it with --obstime, or the exposure with --exptime); the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture), detector (--telescope-detector)"}
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END across midnight]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 162, in test_t1_4_an_end_before_the_start_is_refused
+    with self.assertRaisesRegex(ValueError, 'END'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END a day early]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 162, in test_t1_4_an_end_before_the_start_is_refused
+    with self.assertRaisesRegex(ValueError, 'END'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [MJD-END before MJD-OBS]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 162, in test_t1_4_an_end_before_the_start_is_refused
+    with self.assertRaisesRegex(ValueError, 'END'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_4_an_end_before_the_start_is_refused) [DATE-END before DATE-BEG]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 162, in test_t1_4_an_end_before_the_start_is_refused
+    with self.assertRaisesRegex(ValueError, 'END'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank EQUINOX over EPOCH 1950]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 193, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    with self.assertRaisesRegex(ValueError, 'FK4'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank RADESYS over RADECSYS FK4]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 193, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    with self.assertRaisesRegex(ValueError, 'FK4'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [an empty RADESYS over RADECSYS FK4]
+----------------------------------------------------------------------
+ValueError: the WCS frame is  (RADESYS ): only ICRS, or FK5 at J2000, can be written as ICRS; re-solve the image against a current catalogue (Gaia) for an ICRS WCS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 193, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    with self.assertRaisesRegex(ValueError, 'FK4'):
+AssertionError: "FK4" does not match "the WCS frame is  (RADESYS ): only ICRS, or FK5 at J2000, can be written as ICRS; re-solve the image against a current catalogue (Gaia) for an ICRS WCS"
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank CTYPE1 in the image HDU: the primary WCS is read]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 210, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    self.assertIn('radec', r, r.get('sky_error'))
+AssertionError: 'radec' not found in {'curve': {'radii': array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3. , 3.1, 3.2,
+       3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4. , 4.1, 4.2, 4.3, 4.4, 4.5,
+       4.6, 4.7, 4.8, 4.9, 5. , 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8,
+       5.9, 6. ]), 'x': array([35.07665658, 35.08191718, 35.08947784, 35.09849951, 35.10769771,
+       35.10403963, 35.09442103, 35.0920074 , 35.09229786, 35.09388694,
+       35.09763363, 35.10251363, 35.10759217, 35.11283377, 35.11795128,
+       35.1193808 , 35.11936419, 35.12044088, 35.12316469, 35.12685662,
+       35.13112284, 35.13554209, 35.14008757, 35.14497608, 35.14998431,
+       35.15405903, 35.15761646, 35.16109094, 35.16532825, 35.16996255,
+       35.17488854, 35.1800787 , 35.18554864, 35.19126936, 35.19659792,
+       35.20149232, 35.20620288, 35.21086396, 35.21587361, 35.22127362,
+       35.22691782]), 'y': array([34.95530843, 34.95282738, 34.94934008, 34.94499807, 34.94045314,
+       34.94167614, 34.94998737, 34.95187344, 34.95276588, 34.95297092,
+       34.95235785, 34.95119072, 34.94999762, 34.94880027, 34.94760398,
+       34.94761549, 34.94990139, 34.95056169, 34.95080698, 34.95074993,
+       34.9505281 , 34.95030479, 34.95008599, 34.94974538, 34.94936647,
+       34.94927775, 34.94997605, 34.95020754, 34.95029372, 34.95027482,
+       34.9502194 , 34.95012641, 34.9499857 , 34.94982006, 34.94962828,
+       34.94963035, 34.95004529, 34.95017139, 34.95021147, 34.95019541,
+       34.95014078]), 'ok': array([ True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True,  True,  True,  True,  True,
+        True,  True,  True,  True,  True]), 'reason': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'bkg': array([165.65075684, 161.63464355, 158.03369904, 156.19094849,
+       154.25561523, 151.09506226, 149.44812012, 147.3838501 ,
+       146.07352448, 144.12129211, 142.60601044, 141.26551819,
+       140.14778137, 138.75309753, 137.74847412, 136.41425323,
+       135.56420898, 134.35365295, 133.64048767, 132.78593445,
+       132.00188446, 131.0856781 , 130.38975525, 129.77496338,
+       129.04405212, 128.29060364, 127.80479431, 127.08351898,
+       126.67212677, 126.03308105, 125.48763275, 125.02923203,
+       124.55690765, 124.05537415, 123.64972305, 123.14590454,
+       122.8158493 , 122.2853241 , 121.99799347, 121.6266861 ,
+       121.24128723]), 's': array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan]), 'estimator': 'M', 'nbad': 0, 'x0': 34.998637420554424, 'sx': 0.03570290615836045, 'y0': 34.94893192141931, 'sy': 0.0002183728248238382, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'x6': np.float64(35.22691782350749), 'y6': np.float64(34.95014078477794)}, 'x0': 34.998637420554424, 'y0': 34.94893192141931, 'x2': np.float64(35.076656581455005), 'y2': np.float64(34.955308427051804), 'start': (35.0, 35.0), 'notes': [], 'sky_error': "the WCS could not be read: 'NoneType' object has no attribute 'strip'", 'time_error': 'no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...)', 'ades_error': "needs a sky position (the WCS could not be read: 'NoneType' object has no attribute 'strip'); a mid-exposure time (no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJD-OBS, ...); give it with --obstime, or the exposure with --exptime); the record's values for stn (--stn), desig (--desig), mode (--mode), astCat (--astcat), submitter (--submitter), measurers (--measurer), design (--telescope-design), aperture (--telescope-aperture), detector (--telescope-detector)"} : the WCS could not be read: 'NoneType' object has no attribute 'strip'
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank TIMESYS in the image HDU keeps the primary TT]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 215, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    self.assertEqual(cli.measure_file(p, estimator='M').get('time'), '2025-12-12T21:19:52.81Z')
+AssertionError: '2025-12-12T21:21:02.00Z' != '2025-12-12T21:19:52.81Z'
+- 2025-12-12T21:21:02.00Z
+?               -  ^  ^^
++ 2025-12-12T21:19:52.81Z
+?                + ^  ^^
+
+
+======================================================================
+FAIL: test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge) [a blank EXPTIME in the image HDU keeps the primary's]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 218, in test_t1_6_the_blank_card_rule_reaches_the_frame_the_wcs_and_the_merge
+    self.assertEqual(cli.measure_file(p, estimator='M').get('time'), '2025-12-12T21:21:02.00Z')
+AssertionError: None != '2025-12-12T21:21:02.00Z'
+
+======================================================================
+FAIL: test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRVAL]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 175, in test_t4_1_a_partial_wcs_is_refused
+    with self.assertRaisesRegex(ValueError, word):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRVAL2]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 175, in test_t4_1_a_partial_wcs_is_refused
+    with self.assertRaisesRegex(ValueError, word):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no CRPIX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 175, in test_t4_1_a_partial_wcs_is_refused
+    with self.assertRaisesRegex(ValueError, word):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t4_1_a_partial_wcs_is_refused (calibrator.tests.test_hardening_3.TestSilentWrong3.test_t4_1_a_partial_wcs_is_refused) [no scale: no CD, CDELT or PC]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 175, in test_t4_1_a_partial_wcs_is_refused
+    with self.assertRaisesRegex(ValueError, word):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a NUL in the keyword] (mef=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 142, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.assertEqual(named, fate == 'left out', r['notes'])
+AssertionError: False != True : ['WCS: Verification reported errors:', "WCS: Unfixable error: Illegal keyword name 'OBJ\\x00ECT'", 'WCS: Note: astropy.io.fits uses zero-based indexing.', 'WCS: Verification reported errors:', "WCS: Unfixable error: Illegal keyword name 'OBJ\\x00ECT'", 'WCS: Note: astropy.io.fits uses zero-based indexing.', 'WCS: Verification reported errors:', "WCS: Unfixable error: Illegal keyword name 'OBJ\\x00ECT'", 'WCS: Note: astropy.io.fits uses zero-based indexing.']
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [no "= " in columns 9-10] (mef=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 136, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 146, in measure_file
+    hdr = _merged(ihdr, phdr, notes)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 121, in _merged
+    m[card.keyword] = (v, card.comment)
+    ~^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 222, in __setitem__
+    self._update((key, value, comment))
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1658, in _update
+    existing_card.value = value
+    ^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 306, in value
+    raise ValueError(
+ValueError: The value of invalid/unparsable cards cannot set.  Either delete this card from the header or replace it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 138, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: The value of invalid/unparsable cards cannot set.  Either delete this card from the header or replace it.
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a TAB in the comment] (mef=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 136, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 146, in measure_file
+    hdr = _merged(ihdr, phdr, notes)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 121, in _merged
+    m[card.keyword] = (v, card.comment)
+    ~^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 222, in __setitem__
+    self._update((key, value, comment))
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1661, in _update
+    existing_card.comment = comment
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 452, in comment
+    raise ValueError(
+ValueError: FITS header comments must contain standard printable ASCII characters; 'a\tcomment' contains characters not representable in ASCII or non-printable characters.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 138, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: FITS header comments must contain standard printable ASCII characters; 'a\tcomment' contains characters not representabl
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a value from column 10] (mef=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 136, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 146, in measure_file
+    hdr = _merged(ihdr, phdr, notes)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 121, in _merged
+    m[card.keyword] = (v, card.comment)
+    ~^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 222, in __setitem__
+    self._update((key, value, comment))
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1658, in _update
+    existing_card.value = value
+    ^^^^^^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 306, in value
+    raise ValueError(
+ValueError: The value of invalid/unparsable cards cannot set.  Either delete this card from the header or replace it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 138, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: The value of invalid/unparsable cards cannot set.  Either delete this card from the header or replace it.
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a NUL in the keyword] (mef=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 136, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 146, in measure_file
+    hdr = _merged(ihdr, phdr, notes)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 121, in _merged
+    m[card.keyword] = (v, card.comment)
+    ~^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 222, in __setitem__
+    self._update((key, value, comment))
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1677, in _update
+    self.append(card)
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1143, in append
+    card = Card(*card)
+           ^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 197, in __init__
+    self.keyword = keyword
+    ^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 276, in keyword
+    raise ValueError(f"Illegal keyword name: {keyword!r}.")
+ValueError: Illegal keyword name: 'OBJ\x00ECT'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 138, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: Illegal keyword name: 'OBJ\x00ECT'.
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [no "= " in columns 9-10] (mef=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 142, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.assertEqual(named, fate == 'left out', r['notes'])
+AssertionError: False != True : ['WCS: The following header keyword is invalid or follows an unrecognized non-standard convention: OBJECT 3I', 'WCS: The following header keyword is invalid or follows an unrecognized non-standard convention: OBJECT 3I']
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a TAB in the comment] (mef=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 136, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    r = cli.measure_file(p, estimator='M')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 146, in measure_file
+    hdr = _merged(ihdr, phdr, notes)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/cli.py", line 121, in _merged
+    m[card.keyword] = (v, card.comment)
+    ~^^^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 222, in __setitem__
+    self._update((key, value, comment))
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1677, in _update
+    self.append(card)
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/header.py", line 1143, in append
+    card = Card(*card)
+           ^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 202, in __init__
+    self.comment = comment
+    ^^^^^^^^^^^^
+  File "[the kit]/lib/python3.11/site-packages/astropy/io/fits/card.py", line 452, in comment
+    raise ValueError(
+ValueError: FITS header comments must contain standard printable ASCII characters; 'a\tcomment' contains characters not representable in ASCII or non-printable characters.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 138, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.fail('raised %s: %s' % (type(e).__name__, str(e)[:120]))
+AssertionError: raised ValueError: FITS header comments must contain standard printable ASCII characters; 'a\tcomment' contains characters not representabl
+
+======================================================================
+FAIL: test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer (calibrator.tests.test_hardening_3.TestTheMerge.test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer) [a value from column 10] (mef=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3.py", line 142, in test_t1_1_a_card_that_cannot_be_written_back_keeps_the_answer
+    self.assertEqual(named, fate == 'left out', r['notes'])
+AssertionError: False != True : ['WCS: The following header keyword is invalid or follows an unrecognized non-standard convention: EXPTIME =60.0', 'WCS: The following header keyword is invalid or follows an unrecognized non-standard convention: EXPTIME =60.0']
+
+======================================================================
+FAIL: test_1_19_the_page_decodes_only_the_image_chosen (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_1_19_the_page_decodes_only_the_image_chosen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 229, in test_1_19_the_page_decodes_only_the_image_chosen
+    self.assertEqual(o['before'], 0, o['before'])               # e7051b4: the parse decoded every image, and kept no count
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 0
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle03geq]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 200, in test_lookup_the_page_matches_astropy_on_hubbles_frames
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle04pdq]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 200, in test_lookup_the_page_matches_astropy_on_hubbles_frames
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle05qlq]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 200, in test_lookup_the_page_matches_astropy_on_hubbles_frames
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle06tjq]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 200, in test_lookup_the_page_matches_astropy_on_hubbles_frames
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_hubbles_frames (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_hubbles_frames) [ifle22f7q]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 200, in test_lookup_the_page_matches_astropy_on_hubbles_frames
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [round 2's file: a CPDIS table, 0.5 px everywhere]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 188, in test_lookup_the_page_matches_astropy_on_synthetic_files
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [SIP, D2IM and CPDIS tables, random, not square]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 188, in test_lookup_the_page_matches_astropy_on_synthetic_files
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_lookup_the_page_matches_astropy_on_synthetic_files (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_lookup_the_page_matches_astropy_on_synthetic_files) [the same, DP1's table transposed by its AXIS cards]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 188, in test_lookup_the_page_matches_astropy_on_synthetic_files
+    self.assertIn('pts', o or {}, o)
+AssertionError: 'pts' not found in {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'} : {'u': 'lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does'}
+
+======================================================================
+FAIL: test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) [TAN-SIP with SCAMP's terms: the command line keeps the SIP and drops the PV terms]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 103, in test_t1_17_pv_the_page_says_what_the_command_line_does
+    self.assertNotIn('as TPV', v); self.assertIn('drops', v)     # e7051b4: "the command line does (as TPV)"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'as TPV' unexpectedly found in "SCAMP's PV distortion terms, which the page does not apply: the command line does (as TPV)"
+
+======================================================================
+FAIL: test_t1_17_pv_the_page_says_what_the_command_line_does (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_17_pv_the_page_says_what_the_command_line_does) [a first-order SCAMP solution on TAN: the CTYPE remedy]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 106, in test_t1_17_pv_the_page_says_what_the_command_line_does
+    self.assertIn('RA---TPV', v); self.assertNotIn('command line', v)   # e7051b4: "re-solve the image with SIP or TPV"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'RA---TPV' not found in 'PV terms on a TAN header, which the page does not apply: re-solve the image with SIP or TPV distortion'
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-OBS": "2025-12-12T23:59:30", "DATE-END": "2025-12-12T00:00:30"}]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 133, in test_t1_4_an_end_before_the_start_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('END', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T12:00:00.00Z' is not false : {'time': '2025-12-12T12:00:00.00Z', 'note': 'obsTime from DATE-OBS (the start) and DATE-END, halfway'}
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-OBS": "2025-12-12T21:20:32", "DATE-END": "2025-12-11T21:22:32"}]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 133, in test_t1_4_an_end_before_the_start_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('END', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T09:21:32.00Z' is not false : {'time': '2025-12-12T09:21:32.00Z', 'note': 'obsTime from DATE-OBS (the start) and DATE-END, halfway'}
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"MJD-OBS": 61021.89, "MJD-END": 61021.8}]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 133, in test_t1_4_an_end_before_the_start_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('END', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T20:16:48.00Z' is not false : {'time': '2025-12-12T20:16:48.00Z', 'note': 'obsTime from MJD-OBS (the start) and MJD-END, halfway'}
+
+======================================================================
+FAIL: test_t1_4_an_end_before_the_start_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_4_an_end_before_the_start_is_refused_on_the_page) [{"DATE-BEG": "2025-12-12T21:20:32", "DATE-END": "2025-12-12T21:10:32"}]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 133, in test_t1_4_an_end_before_the_start_is_refused_on_the_page
+    self.assertFalse(q.get('time'), q); self.assertIn('END', q.get('error', ''))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T21:15:32.00Z' is not false : {'time': '2025-12-12T21:15:32.00Z', 'note': 'obsTime from DATE-BEG (the start) and DATE-END, halfway'}
+
+======================================================================
+FAIL: test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) [a value from column 10]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 119, in test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named
+    self.assertIn(key, o['dropped'] or [], o)
+AssertionError: 'EXPTIME' not found in [] : {'t': {'time': '2025-12-12T21:20:32.00Z', 'note': 'obsTime from DATE-OBS (the start) + EXPTIME/2'}, 'dropped': None}
+
+======================================================================
+FAIL: test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named) [no "= " at all]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 119, in test_t1_5_a_card_without_its_value_indicator_is_left_out_and_named
+    self.assertIn(key, o['dropped'] or [], o)
+AssertionError: 'OBJECT' not found in [] : {'t': {'time': '2025-12-12T21:21:02.00Z', 'note': 'obsTime from DATE-OBS (the start) + EXPTIME/2'}, 'dropped': None}
+
+======================================================================
+FAIL: test_t1_6_an_empty_timesys_is_utc_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t1_6_an_empty_timesys_is_utc_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 157, in test_t1_6_an_empty_timesys_is_utc_on_the_page
+    self.assertEqual(o.get('time'), '2025-12-12T21:21:02.00Z', o)  # e7051b4: "TIMESYS : the page reads UTC only"; the Python: UTC
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != '2025-12-12T21:21:02.00Z' : {'error': 'TIMESYS : the page reads UTC only; the command line converts TT and TAI'}
+
+======================================================================
+FAIL: test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [arcmin]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 168, in test_t4_15_the_page_reads_cunit
+    self.assertLess(np.max(sky_arcsec(o, WCS(fits.Header(c)).all_pix2world(pts, 0))), 1e-6)
+AssertionError: np.float64(569074.3197499037) not less than 1e-06
+
+======================================================================
+FAIL: test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [arcsec]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 168, in test_t4_15_the_page_reads_cunit
+    self.assertLess(np.max(sky_arcsec(o, WCS(fits.Header(c)).all_pix2world(pts, 0))), 1e-6)
+AssertionError: np.float64(605590.2092623718) not less than 1e-06
+
+======================================================================
+FAIL: test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [mas]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 168, in test_t4_15_the_page_reads_cunit
+    self.assertLess(np.max(sky_arcsec(o, WCS(fits.Header(c)).all_pix2world(pts, 0))), 1e-6)
+AssertionError: np.float64(605590.2092626924) not less than 1e-06
+
+======================================================================
+FAIL: test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [rad]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 168, in test_t4_15_the_page_reads_cunit
+    self.assertLess(np.max(sky_arcsec(o, WCS(fits.Header(c)).all_pix2world(pts, 0))), 1e-6)
+AssertionError: np.float64(595052.077748901) not less than 1e-06
+
+======================================================================
+FAIL: test_t4_15_the_page_reads_cunit (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_15_the_page_reads_cunit) [a unit the page does not know is refused]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 171, in test_t4_15_the_page_reads_cunit
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and 'CUNIT' in v, v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRVAL]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 145, in test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and word in v, v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRVAL2]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 145, in test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and word in v, v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no CRPIX]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 145, in test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and word in v, v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [no scale]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 145, in test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page
+    self.assertTrue(isinstance(v, str) and v != 'MEASURED' and word in v, v)
+AssertionError: False is not true : MEASURED
+
+======================================================================
+FAIL: test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page) [T1.22: a PC matrix without CDELT]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 152, in test_t4_1_t1_22_a_partial_wcs_is_refused_on_the_page
+    self.assertTrue(np.isfinite(g).all(), o)                 # e7051b4: NaN ("RA NaN")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: np.False_ is not true : [[None, None], [None, None], [None, None], [None, None]]
+
+======================================================================
+FAIL: test_t4_4_a_comma_in_a_name_is_noted (calibrator.tests.test_hardening_3_page.TestPageEngine3.test_t4_4_a_comma_in_a_name_is_noted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 176, in test_t4_4_a_comma_in_a_name_is_noted
+    self.assertTrue(any('comma' in n for n in o[0].get('notes') or []), o[0])   # e7051b4: no word of it
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'psv': '# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer, B. Other\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                            \n3I    |CCD |568|2025-12-12T21:21:02.00Z|168.7000000|+4.6000000|Gaia3 |zero-aperture extrapolated position\n', 'notes': []}
+
+======================================================================
+FAIL: test_judge_accepts_round_3s_page_records (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_judge_accepts_round_3s_page_records) [flc]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 341, in test_judge_accepts_round_3s_page_records
+    self.assertIn('# version=2022', s0['ades'])
+AssertionError: '# version=2022' not found in 'No ADES record: needs a sky position (lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does).'
+
+======================================================================
+FAIL: test_lookup_the_page_on_a_real_hubble_frame (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_lookup_the_page_on_a_real_hubble_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 326, in test_lookup_the_page_on_a_real_hubble_frame
+    self.assertIn('"/px', s0['info']); self.assertNotIn('not usable', s0['info'])   # e7051b4: "WCS not usable here: lookup-table ..."
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '"/px' not found in '2047×2050 px, WCS not usable here: lookup-table distortion (CPDIS, D2IMDIS: as in HST frames), which the page does not apply: the command line does (pixels only)'
+
+======================================================================
+FAIL: test_t1_3_a_later_load_wins (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_3_a_later_load_wins)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 293, in test_t1_3_a_later_load_wins
+    self.assertIn('41×41', s['info']); self.assertNotIn('71×71', s['info'])   # e7051b4: A's late parse shown under B's name
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '41×41' not found in '71×71 px, WCS 0.756"/px'
+
+======================================================================
+FAIL: test_t1_5_a_card_left_out_is_named_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_5_a_card_left_out_is_named_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 312, in test_t1_5_a_card_left_out_is_named_on_the_page
+    self.assertEqual(s0['tobs'], '', s0['hdrnote'])             # e7051b4: 2025-12-12T21:20:32.00Z, the start as the middle
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T21:20:32.00Z' != ''
+- 2025-12-12T21:20:32.00Z
++ 
+ : Time: obsTime from DATE-OBS (the start) + EXPTIME/2.
+
+======================================================================
+FAIL: test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) [a blank TIMESYS over the primary TT]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 318, in test_t1_6_a_blank_image_card_hides_nothing_on_the_page
+    self.assertEqual(s0['tobs'], ''); self.assertIn('TT', s0['hdrnote'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2025-12-12T21:21:02.00Z' != ''
+- 2025-12-12T21:21:02.00Z
++ 
+
+
+======================================================================
+FAIL: test_t1_6_a_blank_image_card_hides_nothing_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t1_6_a_blank_image_card_hides_nothing_on_the_page) [a blank EXPTIME over the primary's]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 321, in test_t1_6_a_blank_image_card_hides_nothing_on_the_page
+    self.assertEqual(s0['tobs'], '2025-12-12T21:21:02.00Z', s0['hdrnote'])
+AssertionError: '' != '2025-12-12T21:21:02.00Z'
++ 2025-12-12T21:21:02.00Z : Time: no exposure time (EXPTIME, EXPOSURE) and no DATE-AVG, MJD-AVG or DATE-END: the mid-exposure is unknown; type the mid-exposure (UTC) to get a record.
+
+======================================================================
+FAIL: test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [the clipboard took it]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 300, in test_t4_2_copy_says_whether_it_copied
+    self.assertRegex(s1['text'], re.compile('copied', re.I)); self.assertNotRegex(s1['text'], re.compile('could not copy', re.I))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Regex didn't match: 'copied' not found in 'Zero-aperture comet astrometry\nA FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded.\n1. The cutout\n \nHDU 0 (71×71)\n 71×71 px, WCS 0.756"/px\nTime: obsTime from DATE-OBS (the start) + EXPTIME/2.\nClick the comet to set the start (default: the brightest 5×5 pixel).\nstart x  y  (0-based pixels: x = column, y = row)\n2. The method\nestimator \nG: symmetric Gaussian fit\nM: moment photocentre\n radii from  to  step  px\nbackground \nannulus 2.5r–5r\nknown value\n \n3. The record (every value is yours; nothing defaults)\nstation  designation  mode \nchoose\nCCD\nCMO (CMOS)\nVID (video)\nTDI\n catalogue \nsubmitter  measurers  observers \ntelescope design  aperture (m)  detector  observatory name \nmid-exposure (UTC) \nMeasure done\n4. The answer\n0\nr = 6 px\n0.009\n-0.001\nx\ny\nphotocentre minus zero-aperture position (px), x and y\nr (px)\tx\ty\t\n2.0\t35.271\t34.852\t\n2.5\t35.273\t34.849\t\n3.0\t35.275\t34.849\t\n3.5\t35.277\t34.849\t\n4.0\t35.278\t34.850\t\n4.5\t35.278\t34.849\t\n5.0\t35.278\t34.849\t\n5.5\t35.279\t34.849\t\n6.0\t35.279\t34.849\t\nZero-aperture position: x = 35.2693, y = 34.8502 px (G); at r = 2: (35.2708, 34.8522); trend per px of radius: (0.00184, -0.00015). RA 168.6999433, Dec 4.5999685 deg. The r = 2 photocentre sits -0.001" E, 0.002" N of it.\n# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                     \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)\n\nCopy ADES\nWhat it does\nPhotocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000); any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where the method holds and where it stops is measured in the Castle\'s calibration study (archive/CALIBRATOR_2026-09-27.md). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+======================================================================
+FAIL: test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [copy_none]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 303, in test_t4_2_copy_says_whether_it_copied
+    self.assertRegex(self.steps(name, 2)[1]['text'], re.compile('could not copy', re.I))
+AssertionError: Regex didn't match: 'could not copy' not found in 'Zero-aperture comet astrometry\nA FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded.\n1. The cutout\n \nHDU 0 (71×71)\n 71×71 px, WCS 0.756"/px\nTime: obsTime from DATE-OBS (the start) + EXPTIME/2.\nClick the comet to set the start (default: the brightest 5×5 pixel).\nstart x  y  (0-based pixels: x = column, y = row)\n2. The method\nestimator \nG: symmetric Gaussian fit\nM: moment photocentre\n radii from  to  step  px\nbackground \nannulus 2.5r–5r\nknown value\n \n3. The record (every value is yours; nothing defaults)\nstation  designation  mode \nchoose\nCCD\nCMO (CMOS)\nVID (video)\nTDI\n catalogue \nsubmitter  measurers  observers \ntelescope design  aperture (m)  detector  observatory name \nmid-exposure (UTC) \nMeasure done\n4. The answer\n0\nr = 6 px\n0.009\n-0.001\nx\ny\nphotocentre minus zero-aperture position (px), x and y\nr (px)\tx\ty\t\n2.0\t35.271\t34.852\t\n2.5\t35.273\t34.849\t\n3.0\t35.275\t34.849\t\n3.5\t35.277\t34.849\t\n4.0\t35.278\t34.850\t\n4.5\t35.278\t34.849\t\n5.0\t35.278\t34.849\t\n5.5\t35.279\t34.849\t\n6.0\t35.279\t34.849\t\nZero-aperture position: x = 35.2693, y = 34.8502 px (G); at r = 2: (35.2708, 34.8522); trend per px of radius: (0.00184, -0.00015). RA 168.6999433, Dec 4.5999685 deg. The r = 2 photocentre sits -0.001" E, 0.002" N of it.\n# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                     \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)\n\nCopy ADES\nWhat it does\nPhotocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000); any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where the method holds and where it stops is measured in the Castle\'s calibration study (archive/CALIBRATOR_2026-09-27.md). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+======================================================================
+FAIL: test_t4_2_copy_says_whether_it_copied (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_2_copy_says_whether_it_copied) [copy_refused]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 303, in test_t4_2_copy_says_whether_it_copied
+    self.assertRegex(self.steps(name, 2)[1]['text'], re.compile('could not copy', re.I))
+AssertionError: Regex didn't match: 'could not copy' not found in 'Zero-aperture comet astrometry\nA FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded.\n1. The cutout\n \nHDU 0 (71×71)\n 71×71 px, WCS 0.756"/px\nTime: obsTime from DATE-OBS (the start) + EXPTIME/2.\nClick the comet to set the start (default: the brightest 5×5 pixel).\nstart x  y  (0-based pixels: x = column, y = row)\n2. The method\nestimator \nG: symmetric Gaussian fit\nM: moment photocentre\n radii from  to  step  px\nbackground \nannulus 2.5r–5r\nknown value\n \n3. The record (every value is yours; nothing defaults)\nstation  designation  mode \nchoose\nCCD\nCMO (CMOS)\nVID (video)\nTDI\n catalogue \nsubmitter  measurers  observers \ntelescope design  aperture (m)  detector  observatory name \nmid-exposure (UTC) \nMeasure done\n4. The answer\n0\nr = 6 px\n0.009\n-0.001\nx\ny\nphotocentre minus zero-aperture position (px), x and y\nr (px)\tx\ty\t\n2.0\t35.271\t34.852\t\n2.5\t35.273\t34.849\t\n3.0\t35.275\t34.849\t\n3.5\t35.277\t34.849\t\n4.0\t35.278\t34.850\t\n4.5\t35.278\t34.849\t\n5.0\t35.278\t34.849\t\n5.5\t35.279\t34.849\t\n6.0\t35.279\t34.849\t\nZero-aperture position: x = 35.2693, y = 34.8502 px (G); at r = 2: (35.2708, 34.8522); trend per px of radius: (0.00184, -0.00015). RA 168.6999433, Dec 4.5999685 deg. The r = 2 photocentre sits -0.001" E, 0.002" N of it.\n# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                     \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)\n\nCopy ADES\nWhat it does\nPhotocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000); any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where the method holds and where it stops is measured in the Castle\'s calibration study (archive/CALIBRATOR_2026-09-27.md). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+======================================================================
+FAIL: test_t4_4_a_comma_in_names_is_noted_on_the_page (calibrator.tests.test_hardening_3_page.TestPageInBrowser3.test_t4_4_a_comma_in_names_is_noted_on_the_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/tests/test_hardening_3_page.py", line 308, in test_t4_4_a_comma_in_names_is_noted_on_the_page
+    self.assertIn('comma', s0['text'])                          # e7051b4: one name, and no word of it
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'comma' not found in 'Zero-aperture comet astrometry\nA FITS cutout in; the photocentre-vs-aperture curve, the zero-aperture position and a draft ADES record out. Everything runs in this page; nothing is uploaded.\n1. The cutout\n \nHDU 0 (71×71)\n 71×71 px, WCS 0.756"/px\nTime: obsTime from DATE-OBS (the start) + EXPTIME/2.\nClick the comet to set the start (default: the brightest 5×5 pixel).\nstart x  y  (0-based pixels: x = column, y = row)\n2. The method\nestimator \nG: symmetric Gaussian fit\nM: moment photocentre\n radii from  to  step  px\nbackground \nannulus 2.5r–5r\nknown value\n \n3. The record (every value is yours; nothing defaults)\nstation  designation  mode \nchoose\nCCD\nCMO (CMOS)\nVID (video)\nTDI\n catalogue \nsubmitter  measurers  observers \ntelescope design  aperture (m)  detector  observatory name \nmid-exposure (UTC) \nMeasure done\n4. The answer\n0\nr = 6 px\n0.009\n-0.001\nx\ny\nphotocentre minus zero-aperture position (px), x and y\nr (px)\tx\ty\t\n2.0\t35.271\t34.852\t\n2.5\t35.273\t34.849\t\n3.0\t35.275\t34.849\t\n3.5\t35.277\t34.849\t\n4.0\t35.278\t34.850\t\n4.5\t35.278\t34.849\t\n5.0\t35.278\t34.849\t\n5.5\t35.279\t34.849\t\n6.0\t35.279\t34.849\t\nZero-aperture position: x = 35.2693, y = 34.8502 px (G); at r = 2: (35.2708, 34.8522); trend per px of radius: (0.00184, -0.00015). RA 168.6999433, Dec 4.5999685 deg. The r = 2 photocentre sits -0.001" E, 0.002" N of it.\n# version=2022\n# observatory\n! mpcCode 568\n# submitter\n! name A. N. Observer\n# measurers\n! name A. N. Observer, B. Other\n# telescope\n! design Reflector\n! aperture 0.5\n! detector CCD\npermID|mode|stn|obsTime                |ra         |dec       |astCat|remarks                                                     \n3I    |CCD |568|2025-12-27T16:05:29.00Z|168.6999433|+4.5999685|Gaia3 |zero-aperture extrapolated (G, 41 of 41 radii, r 2.0-6.0 px)\n\nCopy ADES\nWhat it does\nPhotocentres in circular apertures of radius 2.0–6.0 px in 0.1 px steps, a straight line through x(r) and y(r), and its value at r = 0: the published form of the shrinking-aperture method (Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1; D. J. Tholen). G fits a circular pixel-integrated Gaussian inside each aperture, weighted by exact pixel overlaps, with the background from the 2.5r–5r annulus (the paper\'s default); M is the first moment, re-centred until it stops moving. The paper does not publish its fitting function, so both are offered. Pixels are 0-based. A radius that does not converge has no position; the table gives its reason, and the line is fitted to the rest. The WCS reader handles TAN and TAN-SIP in ICRS (or FK5 at J2000); any other WCS gives pixels only. The ADES record (version 2022) is written only from the header\'s time and your own values, and is a draft for the MPC\'s validator. Where the method holds and where it stops is measured in the Castle\'s calibration study (archive/CALIBRATOR_2026-09-27.md). For 3I/ATLAS it helped on sharp images (≤ 0.44″/px) and made the position worse in many coarse ones (≥ 0.7″/px): look at the curve before trusting the intercept.'
+
+----------------------------------------------------------------------
+Ran 144 tests in 67.096s
+
+FAILED (failures=75)

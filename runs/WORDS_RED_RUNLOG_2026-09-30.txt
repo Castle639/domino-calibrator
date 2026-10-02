@@ -1,0 +1,9 @@
+# words bar 2026-09-30 11:54:49 UTC | HEAD c3a627d
+W0  FAIL  clean: D0 green, K16 absent | an <img> from another site: D0 absent | a link to another site: K16 absent
+W1  FAIL  test_k15_: absent
+W2  FAIL  test_k16_: absent
+W3  FAIL  test_k17_: absent
+W4  FAIL  W6 on calibrator/: green | on a copy naming nowhere/at_all.py: absent
+W5  FAIL  strict: FAIL (228 run, 14 failures, 0 errors, 0 skipped: 0 allowed, 0 not) | exit 1, 160 s | words_bar/suite_W5.txt
+# words bar: NOT MET, 0 of 6 (failing: W0 W1 W2 W3 W4 W5)
+exit 0

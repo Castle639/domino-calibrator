@@ -1,0 +1,6 @@
+# release bar 2026-09-30 23:39:46 UTC | HEAD ec5593f | the folder release/domino-calibrator
+S0  PASS  63 patterns, each hitting its control: yes | each found where its bare form is planted, in a copy of the folder (a runs/ log and a tools/ script): yes
+S1  FAIL  320 files, missing 7, extra 0 | the checksum list: 30 lines, the positions file's 30 frames: True | the tools name their source and commit: True
+S2  FAIL  modules byte-identical but: ades.py differs (NOT only curated lines); cli.py differs (NOT only curated lines); hst.py differs (each differing line held a pattern); hstpsf.py differs (each differing line held a pattern)
+S3  FAIL  patterns matching in the folder: [the trims' labels, not public]
+# release bar: NOT MET, 1 of 4 (failing: S1 S2 S3)

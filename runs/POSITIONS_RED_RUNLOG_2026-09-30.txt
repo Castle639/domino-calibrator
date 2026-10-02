@@ -1,0 +1,4 @@
+# positions bar 2026-09-30 12:04:19 UTC | HEAD 87595c0
+Q0  PASS  the ground against itself: 0 of 31 lines differ; against the planted copy: 1
+Q1  FAIL  paths above the repository in H0: '..', ROOT, 'tools', 'data' | the file: absent, 0 frames, sorted and distinct: True, two decimals: True
+# positions bar: NOT MET, 1 of 2 (failing: Q1)

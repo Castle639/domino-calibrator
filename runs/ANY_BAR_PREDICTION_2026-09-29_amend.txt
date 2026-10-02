@@ -1,0 +1,4 @@
+# Launch step 1's bar as amended (7f399b0), B0 and B1 re-run on the tests as f05c06d left them: the prediction, written before the run
+B0 PASS: inside `unshare -n`, curl through the proxy, curl without it and pip download all fail; outside, the control HTTP 200
+B1 FAIL: 5 failures (K6 x2 'pip install from the folder', K8 x3), 0 errors, 0 skipped; nothing else fails inside the namespace (the least certain: Chromium with no network at all)
+# written 2026-09-29 19:40:08 UTC, sha256 of the lines above: 8bd6b66ac7ffc9d0

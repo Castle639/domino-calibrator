@@ -1,0 +1,10 @@
+# S0(a) 2026-09-27 18:02:13 UTC | calibrator/runs/s0_controls.py | commit dcdeddc
+S0(a): pipeline M vs the toy; render psf=None sub=1 (exact pixel integrals), 301x301, known background 0
+  nucleus (150.0, 150.0) a 0.1 | c/c_toy at r=2,4,6: 0.89652 0.97265 0.98780 | r=20..60: 0.999379 0.999716 0.999845 0.999897 0.999931 | y offsets max 2.8e-14 | fit 20-60: slope/toy 1.000200 intercept -0.00076 px | PASS
+  nucleus (150.0, 150.0) a 0.3 | c/c_toy at r=2,4,6: 0.90709 0.98797 0.99405 | r=20..60: 0.999407 0.999698 0.999854 0.999892 0.999936 | y offsets max 2.8e-14 | fit 20-60: slope/toy 1.000197 intercept -0.00221 px | PASS
+  nucleus (150.0, 150.0) a 0.6 | c/c_toy at r=2,4,6: 0.94626 0.98350 0.99395 | r=20..60: 0.999382 0.999715 0.999847 0.999905 0.999931 | y offsets max 2.8e-14 | fit 20-60: slope/toy 1.000202 intercept -0.00418 px | PASS
+  nucleus (150.3, 149.8) a 0.1 | c/c_toy at r=2,4,6: 0.35338 0.86296 0.94564 | r=20..60: 0.994522 0.997759 0.998650 0.999187 0.999404 | y offsets max 5.0e-02 | fit 20-60: slope/toy 1.001741 intercept -0.00654 px | PASS
+  nucleus (150.3, 149.8) a 0.3 | c/c_toy at r=2,4,6: 0.82459 0.95642 0.97824 | r=20..60: 0.998089 0.999214 0.999531 0.999714 0.999794 | y offsets max 5.0e-02 | fit 20-60: slope/toy 1.000610 intercept -0.00671 px | PASS
+  nucleus (150.3, 149.8) a 0.6 | c/c_toy at r=2,4,6: 0.90905 0.97341 0.98918 | r=20..60: 0.999047 0.999568 0.999748 0.999842 0.999893 | y offsets max 4.8e-02 | fit 20-60: slope/toy 1.000303 intercept -0.00642 px | PASS
+S0(a) verdict: PASS
+# done in 7 s

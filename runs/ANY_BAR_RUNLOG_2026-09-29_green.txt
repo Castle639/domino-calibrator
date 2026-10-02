@@ -1,0 +1,28 @@
+# the bar for launch step 1, 2026-09-29 19:49:22 UTC
+# the record (pyproject.toml): Python 3.11, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# tested   Python 3.11.15, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7
+# pick311  Python 3.11.15, numpy 2.4.6, scipy 1.17.1, astropy 8.0.1
+# pick313  Python 3.13.12, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+# pick314  Python 3.14.7, numpy 2.5.3, scipy 1.18.1, astropy 8.0.1
+
+A0         PASS  the tested setup: {'Python': '3.11.15', 'numpy': '2.2.6', 'scipy': '1.15.3', 'astropy': '6.1.7'}
+A.tested   PASS  ran 224, failures 0, errors 0, skipped 0 (239 s) | K13 ran: True | K6 tested leg: ('3.11.15', '2.2.6', '1.15.3', '6.1.7')
+A.pick311  PASS  ran 224, failures 0, errors 0, skipped 0 (230 s) | K13 ran: True | K6 tested leg: ('3.11.15', '2.2.6', '1.15.3', '6.1.7')
+A.pick313  PASS  ran 224, failures 0, errors 0, skipped 0 (233 s) | K13 ran: True | K6 tested leg: ('3.11.15', '2.2.6', '1.15.3', '6.1.7')
+A.pick314  PASS  ran 224, failures 0, errors 0, skipped 0 (232 s) | K13 ran: True | K6 tested leg: ('3.11.15', '2.2.6', '1.15.3', '6.1.7')
+B0         PASS  inside the namespace: curl through the proxy exit 6 (curl: (6) Could not resolve host: pypi.org), curl without it exit 6 (curl: (6) Could not resolve host: pypi.org), pip download exit 1 | outside, the control: HTTP 200
+B1         PASS  no network: ran 224, failures 0, errors 0, skipped 2 (150 s) | skipped: test_k6_pip_installs_the_folder_and_the_command_line_runs_on_a_test_image: pip cannot reach PyPI from here (pip download pip: ERROR: No matching ; test_k8_the_readmes_install_block_as_written_installs_where_pep_668_refuses_a_plain_pip_install: pip cannot reach PyPI from here (pip download pip: ERROR: No matching 
+B2         PASS  no validator: ran 224, failures 0, errors 0, skipped 14 (215 s) | K6 among the skipped: True | reasons: ['the MPC judge needs ADES_PYLIB and ADES_MASTER', 'the MPC judge needs ADES_PYLIB and ADES_MASTER (see test_har', 'the MPC judge needs ADES_PYLIB and ADES_MASTER (see the docs']
+C0         PASS  imports the copy: True | tested test_k5_ green; tested test_k7_ green; tested test_k13 green; tested test_w4_ green; tested test_t1_ green; tested test_03_ green; pick311 (no flag) test_k13 green; scan green
+M1         PASS  the README's tested numpy changed (tested, the flag set): test_k5_ red, test_w4_ red
+M2         PASS  the CI's numpy pin changed (tested, the flag set): test_k7_ red
+M3         PASS  the CI's Python changed (tested, the flag set): test_k7_ red
+M4         PASS  pyproject's numpy minimum changed alone (tested, the flag set): test_k5_ red, test_k7_ red, test_k13 red
+M5         PASS  the tested-versions flag set on what pip picks on 3.11 (pick311, the flag set): test_k13 red
+M6         PASS  the scatter's generator seeded one off (tested, the flag set): test_t1_ red
+M7         PASS  each noise redraw laid down transposed (tested, the flag set): test_t1_ red
+M8         PASS  G's amplitude check removed (tested, the flag set): test_03_ red
+M9         PASS  an invalid escape in __init__.py's docstring: the scan lists ['[a session]/scratchpad/any_bar/mutants/M9/calibrator/__init__.py:1 "\\d" is an invalid escape sequence. Did you mean "\\\\d"? A raw string is also an option.']
+D          PASS  62 files compiled on 3.14.7 | failing: none
+
+THE BAR: MET (19 of 19 clauses pass)

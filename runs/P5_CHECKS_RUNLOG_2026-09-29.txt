@@ -1,0 +1,67 @@
+# The fifth refuter pass, the check's runs (29 Sept 2026, the calibrator's ninth room). Kit: [the kit] (Python 3.11.15, numpy 2.2.6, scipy 1.15.3, astropy 6.1.7), Node v22.22.2; bytecode writing off; the folder unchanged. Scripts and files in the scratchpad.
+# E1 and E5 (both faces on six headers): wcs_cases.py, its first run at 11:18 UTC, as logged then:
+== cd_only
+   astropy direct : 168.698718330 4.599154069  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669780 from DATE-OBS'."]
+   page (node)    : 168.698718330 4.599154069  | page - astropy: 3.04e-12 deg, -3.55e-14 deg
+   cli sky line   : ['# sky (ICRS): RA 168.6987183, Dec +4.5991541 deg, the zero-aperture position'] | exit 0
+   page time      : 2025-12-27T16:05:29.00Z None
+== pc_only
+   astropy direct : 168.698842419 4.599120036  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669780 from DATE-OBS'."]
+   page (node)    : 168.698842419 4.599120036  | page - astropy: 2.90e-12 deg, 1.25e-13 deg
+   cli sky line   : ['# sky (ICRS): RA 168.6988424, Dec +4.5991200 deg, the zero-aperture position'] | exit 0
+   page time      : 2025-12-27T16:05:29.00Z None
+== cd_and_pc
+   astropy direct : 168.698842419 4.599120036  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669780 from DATE-OBS'."]
+   page (node)    : 168.698718330 4.599154069  | page - astropy: -1.24e-04 deg, 3.40e-05 deg
+   cli sky line   : ['# sky (ICRS): RA 168.6988424, Dec +4.5991200 deg, the zero-aperture position'] | exit 0
+   page time      : 2025-12-27T16:05:29.00Z None
+== cd_and_pc_no_cdelt
+   astropy direct : 174.433157523 0.207760327  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669780 from DATE-OBS'."]
+   page (node)    : 168.698718330 4.599154069  | page - astropy: -5.73e+00 deg, 4.39e+00 deg
+   cli sky line   : ['# sky (ICRS): RA 174.4331575, Dec +0.2077603 deg, the zero-aperture position'] | exit 0
+   page time      : 2025-12-27T16:05:29.00Z None
+== cd_and_cdelt
+   astropy direct : 168.698718330 4.599154069  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669780 from DATE-OBS'."]
+   page (node)    : 168.698718330 4.599154069  | page - astropy: 3.04e-12 deg, -3.55e-14 deg
+   cli sky line   : ['# sky (ICRS): RA 168.6987183, Dec +4.5991541 deg, the zero-aperture position'] | exit 0
+   page time      : 2025-12-27T16:05:29.00Z None
+== astrometry_net
+   astropy direct : 168.698718254 4.599154059  | warnings: ["'datfix' made the change 'Set MJD-OBS to 61036.669783 from DATE-OBS'."]
+   page (node)    : 168.698718254 4.599154059  | page - astropy: 3.01e-12 deg, -3.38e-14 deg
+   cli sky line   : ['# sky (ICRS): RA 168.6987183, Dec +4.5991541 deg, the zero-aperture position'] | exit 0
+   cli note       : # WCS note: frame FK5 J2000 (no RADESYS, EQUINOX 2000), taken as ICRS
+   page time      : 2025-12-27T16:05:29.25Z None
+
+# E1: wcslib's own words (astropy v6.1.7, cextern/wcslib/C/wcs.h l. 1382-1383):
+*       While CDi_ja may not formally co-exist with PCi_ja, it may co-exist
+*       with CDELTia and CROTAi which are to be ignored.
+
+# The runs below were re-run at 11:23:42 UTC for this log; the first runs (11:21-11:22 UTC) printed the same lines.
+# E11, the mutant: the README's D4.1 sentence removed from a copy (git archive HEAD), then the words test:
+Ran 10 tests in 0.044s
+
+OK
+# E11's control, the unmutated copy:
+Ran 10 tests in 0.029s
+
+OK
+# E17: a sound gzip (gzip -t passes) of the cutout cut to half its bytes (12960 of 25920), then the same cut uncompressed:
+gzip -t: intact
+# cannot measure: TypeError: buffer is too small for requested array
+exit 1
+WARNING: File may have been truncated: actual file length (12960) is smaller than the expected size (25920) [astropy.io.fits.file]
+# cannot measure: HDU 0: the file ends before its data does (10080 of 20164 bytes): it is truncated
+exit 1
+# Not settled by reading, run: the cutout without its final padding (23044 of 25920 bytes), the command line and the page's engine:
+WARNING: File may have been truncated: actual file length (23044) is smaller than the expected size (25920) [astropy.io.fits.file]
+# zero aperture: x 35.2693 y 34.8502 | slope per px of radius: (+0.00184, -0.00015) | r=2: (35.2708, 34.8522)
+# sky (ICRS): RA 168.6987183, Dec +4.5991541 deg, the zero-aperture position
+page engine: x0 35.2693 y0 34.8502 radec [168.69871833000911, 4.599154068910759]
+# Not settled by reading, run: the cutout xz-compressed:
+# cannot measure: No SIMPLE card found, this file does not appear to be a valid FITS file. If this is really a FITS file, try with ignore_missing_simple=True
+exit 1
+# E4 (b): H3 cells meeting both the WORKS and the FAILS rule (h3_report.py tests FAILS first; the README lists WORKS first):
+cells per variant: {'G': 130, 'M': 130, 'Ga': 50} | meeting both rules: none
+# E18 (11:25 UTC): the cutout with DATE-OBS '2025-12-27T16:04' (no seconds), EXPTIME 120, on both faces:
+# time: 2025-12-27T16:05:00.00Z (obsTime from DATE-OBS (the start) + EXPTIME/2)
+page engine: time None | error DATE-OBS 2025-12-27T16:04 is not a FITS date-time

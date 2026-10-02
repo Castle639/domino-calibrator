@@ -1,0 +1,46 @@
+# fix_f2_bar | HEAD 875db62 | its sha256 91c7a2c599eee5171da1e9fbb3ce82d9ddf1d4e8bff2fa4ec87a856badb5862d | tests/test_fix_f2.py 15c69cdb5448644cda56e16e92713e88a3f0907d3cf7a82a97403b80be6b2fad
+Q0  PASS  astropy fails on the three corrupt headers: bitpix12 KeyError, naxis1_float TypeError, simple_f AttributeError | the two-HDU file: the extension has no WCS and no INHERIT, its primary a WCS: True | the scatter depends on its draws (seed 1 against 2): True | the automatic start takes the brighter source on both faces: True | a closed pipe raises BrokenPipeError in a child: True
+Q1  FAIL  tests.test_fix_f2.F2_5_SkyRing: 3 run, 2 faults
+    test_a_cutout_and_its_whole_frame_draw_from_the_same_noise:        [2.45416998e-06, 4.45665038e-06]]), 'rms_n': (20, 20), 'sd_px': (0.0026638655156879386, 0.0021110780141958985), 'rms': (0.0026638656215465573, 0.0021110778806224355, -0.4364032915930834), 'ades_error': "needs the record's v
+    test_too_few_sky_pixels_no_scatter_with_the_reason:        [-4.16502712e-06,  7.16561511e-06]]), 'rms_n': (5, 5), 'sd_px': (0.0018985741510481704, 0.0026768666599186848), 'rms': (0.0018985739804014978, 0.00267686678102616, 0.8195274814691474), 'ades_error': "needs a comet measured 
+Q2  FAIL  tests.test_fix_f2.F2_9_Inherit: 2 run, 1 fault
+    test_the_primarys_wcs_only_with_inherit:        1.97723587]), 'estimator': 'G', 'nbad': 0, 'x0': 30.288510703856886, 'sx': 0.001527312963045577, 'y0': 32.69889265150239, 'sy': -0.0002157058217616717, 'x2': np.float64(30.2858115683842), 'y2': np.float64(32.69997466675465)
+Q3  FAIL  tests.test_fix_f2.F2_10_CorruptHeaders: 1 run, 5 faults
+    test_each_is_named_at_the_header_stage_on_both_faces (face='command line', file='bitpix12'): AssertionError: 'BITPIX 12, not a FITS pixel type (8, 16, 32, 64, -32 or -64)' not found in '# cannot measure: KeyError: 12\n'
+    test_each_is_named_at_the_header_stage_on_both_faces (face='command line', file='naxis1_float'): AssertionError: 'NAXIS1 = 64.0 is not a size: the header is corrupt' not found in "# cannot measure: TypeError: 'float' object cannot be interpreted as an integer\n"
+    test_each_is_named_at_the_header_stage_on_both_faces (face='command line', file='simple_f'): AssertionError: 'not a FITS file (it does not begin with SIMPLE = T)' not found in "# cannot measure: AttributeError: '_NonstandardHDU' object has no attribute 'fileinfo'\n"
+    test_each_is_named_at_the_header_stage_on_both_faces (face='page', file='bitpix12'): AssertionError: 'BITPIX 12, not a FITS pixel type (8, 16, 32, 64, -32 or -64)' not found in 'BITPIX 12, not a FITS pixel type'
+    test_each_is_named_at_the_header_stage_on_both_faces (face='page', file='naxis1_float'): AssertionError: True is not false : {'unreadable': '', 'readable': True}
+Q4  FAIL  tests.test_fix_f2.F2_10_ExitCodes: 1 run, 4 faults
+    test_the_three_codes [no comet]: AssertionError: 0 != 2 : ('no comet', '(+0.00000, +0.00000) | r=2: (nan, nan)\n# sky (ICRS): RA 168.7091962, Dec +4.5908333 deg, the zero-aperture position\n# time: 2025-12-12T21:21:02.00Z (obsTime from DATE-OBS (the start) + EXPT
+    test_the_three_codes [the WCS refused]: AssertionError: 0 != 2 : ('the WCS refused', '1) | r=2: (35.0837, 34.9498)\n# no sky position: the WCS matrix is all zero or cannot be inverted\n# no ADES record: needs a sky position (the WCS matrix is all zero or cannot be inver
+    test_the_three_codes [no WCS]: AssertionError: 0 != 2 : ('no WCS', 'e solved file\n# no ADES record: needs a sky position (no WCS in the header: the image is not plate-solved; plate-solve it (with astrometry.net or ASTAP, say) and measure the solved file); a mi
+    test_the_three_codes [an unknown option]: AssertionError: 2 != 1 : ('an unknown option', '', ' [--observer OBSERVER] [--telescope-design TELESCOPE_DESIGN]\n              [--telescope-aperture TELESCOPE_APERTURE]\n              [--telescope-detector TELESCOPE_DETECTOR]\n  
+Q5  FAIL  tests.test_fix_f2.F2_11_ClosedPipe: 1 run, 1 fault
+    test_a_closed_pipe_ends_quietly: AssertionError: 'Traceback' unexpectedly found in 'Traceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "[the checkout]
+Q6  FAIL  tests.test_fix_f2.F2_12_Estimate: 2 run, 2 faults
+    test_the_command_line_prints_it_and_the_limit_stands: AssertionError: Regex didn't match: '# --rms-noise 5: about \\d' not found in '' :
+    test_the_estimate_comes_before_the_redraws: TypeError: measure_file() got an unexpected keyword argument 'progress'
+Q7  FAIL  tests.test_fix_f2.F2_14_ZeroBased: 3 run, 6 faults
+    test_the_automatic_starts_other_source_on_both_faces: AssertionError: 'another at least a fifth as bright is at (80, 80; 0-based; add 1 for ds9)' not found in "the automatic start took the brightest source, and another at least a fifth as bright is at (80, 80): give the comet's x and
+    test_the_command_line_says_it_beside_every_position (line='# start ('): AssertionError: '0-based; add 1 for ds9' not found in '# start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0' : # start (35.00, 35.00) | estimator G | radii 2.0-6.0 px (41) | unconverged radii 0
+    test_the_command_line_says_it_beside_every_position (line='# r_px'): AssertionError: '0-based; add 1 for ds9' not found in '# r_px  x  y   (a radius that did not converge has no position; its reason follows)' : # r_px  x  y   (a radius that did not converge has no position; its reason follows)
+    test_the_command_line_says_it_beside_every_position (line='# zero aperture:'): AssertionError: '0-based; add 1 for ds9' not found in '# zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)' : # zero aperture: x 35.0773 y 34.9500 | slope per px of radius:
+    test_the_command_line_says_it_beside_every_position: AssertionError: 0 != 2 : # zero aperture: x 35.0773 y 34.9500 | slope per px of radius: (+0.00473, -0.00001) | r=2: (35.0837, 34.9498)
+    test_the_page_says_it_beside_every_position: AssertionError: False is not true : (0-based pixels: x = column, y = row)
+Q8  FAIL  the page in Chromium: the corrupt header named on loading: False | the two-HDU file without INHERIT: no record, Copy disabled, INHERIT named: False | the zero-aperture line carries the words twice and the page at least three times: False
+    corrupt: 64×64 px, no WCS (pixels only): the image is not plate-solved; plate-solve it (with astrometry.net or ASTAP, say) and load the solved file | zero: Zero-aperture position: x = 35.0773, y = 34.9500 px (G); at r = 2: (35.0837, 34.9498); trend per px of radius: (0.00473, -0.00001). RA 168.6999785, Dec 4.5999861 deg. The r = 2 photocentre sits -0.006
+Q9  FAIL  the whole suite: strict: FAIL (271 run, 20 failures, 1 errors, 0 skipped: 0 allowed, 0 not)
+    test_the_estimate_comes_before_the_redraws tests.test_fix_f2.F2_12_Estimate.test_the_estimate_comes_before_the_redraws
+    test_each_is_named_at_the_header_stage_on_both_faces tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces
+    test_each_is_named_at_the_header_stage_on_both_faces tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces
+    test_each_is_named_at_the_header_stage_on_both_faces tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces
+    test_each_is_named_at_the_header_stage_on_both_faces tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces
+    test_each_is_named_at_the_header_stage_on_both_faces tests.test_fix_f2.F2_10_CorruptHeaders.test_each_is_named_at_the_header_stage_on_both_faces
+    test_the_three_codes tests.test_fix_f2.F2_10_ExitCodes.test_the_three_codes
+    test_the_three_codes tests.test_fix_f2.F2_10_ExitCodes.test_the_three_codes
+    test_the_three_codes tests.test_fix_f2.F2_10_ExitCodes.test_the_three_codes
+    test_the_three_codes tests.test_fix_f2.F2_10_ExitCodes.test_the_three_codes
+    test_a_closed_pipe_ends_quietly tests.test_fix_f2.F2_11_ClosedPipe.test_a_closed_pipe_ends_quietly
+    test_the_command_line_prints_it_and_the_limit_stands tests.test_fix_f2.F2_12_Estimate.test_the_command_line_prints_it_and_the_limit_stands
+# fix f2 bar: NOT MET, 1 of 10 (failing: Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9)

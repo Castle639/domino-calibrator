@@ -1,0 +1,12 @@
+# fix_f2_bar | HEAD a8ae09c | its sha256 91c7a2c599eee5171da1e9fbb3ce82d9ddf1d4e8bff2fa4ec87a856badb5862d | tests/test_fix_f2.py 15c69cdb5448644cda56e16e92713e88a3f0907d3cf7a82a97403b80be6b2fad
+Q0  PASS  astropy fails on the three corrupt headers: bitpix12 KeyError, naxis1_float TypeError, simple_f AttributeError | the two-HDU file: the extension has no WCS and no INHERIT, its primary a WCS: True | the scatter depends on its draws (seed 1 against 2): True | the automatic start takes the brighter source on both faces: True | a closed pipe raises BrokenPipeError in a child: True
+Q1  PASS  tests.test_fix_f2.F2_5_SkyRing: 3 run
+Q2  PASS  tests.test_fix_f2.F2_9_Inherit: 2 run
+Q3  PASS  tests.test_fix_f2.F2_10_CorruptHeaders: 1 run
+Q4  PASS  tests.test_fix_f2.F2_10_ExitCodes: 1 run
+Q5  PASS  tests.test_fix_f2.F2_11_ClosedPipe: 1 run
+Q6  PASS  tests.test_fix_f2.F2_12_Estimate: 2 run
+Q7  PASS  tests.test_fix_f2.F2_14_ZeroBased: 3 run
+Q8  PASS  the page in Chromium: the corrupt header named on loading: True | the two-HDU file without INHERIT: no record, Copy disabled, INHERIT named: True | the zero-aperture line carries the words twice and the page at least three times: True
+Q9  PASS  the whole suite: strict: PASS (271 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# fix f2 bar: MET, 10 of 10

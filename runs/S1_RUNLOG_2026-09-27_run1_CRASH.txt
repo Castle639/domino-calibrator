@@ -1,0 +1,40 @@
+# S1 2026-09-27 18:11:43 UTC | calibrator/runs/s1_grid.py | commit 2cdb6c1
+# stage 1: 2592 renders in 356 s
+# stage 2: 2592 noiseless measures in 284 s
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/runs/s1_grid.py", line 68, in do_noisy
+    return (key[0], snr), measure(img, xt, yt)
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/runs/s1_grid.py", line 49, in measure
+    o = shrink(img, p['x'], p['y'], radii=PUBLISHED_RADII, estimator=est)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/shrink.py", line 43, in shrink
+    o = moment_centroid(img, sx0, sy0, r, bkg=b, tol=tol_m)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/estimators.py", line 69, in moment_centroid
+    sl, A, Mx, My = circle_moments(xc, yc, r, img.shape)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[the checkout]/calibrator/apertures.py", line 86, in circle_moments
+    raise ValueError('aperture (%.3f, %.3f, r=%.3f) leaves the image %s' % (xc, yc, r, shape))
+ValueError: aperture (80.068, 36.801, r=2.000) leaves the image (71, 71)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "[the checkout]/calibrator/runs/s1_grid.py", line 110, in <module>
+    for key, val in pool.imap_unordered(do_noisy, ntasks, chunksize=8):
+  File "/usr/lib/python3.11/multiprocessing/pool.py", line 451, in <genexpr>
+    return (item for chunk in result for item in chunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/pool.py", line 873, in next
+    raise value
+ValueError: aperture (80.068, 36.801, r=2.000) leaves the image (71, 71)

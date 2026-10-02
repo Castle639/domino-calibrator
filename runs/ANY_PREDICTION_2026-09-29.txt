@@ -1,0 +1,8 @@
+# Step 1's first measurement: the prediction, written before the run (29 Sept 2026, the thirteenth room)
+3.11.15 (numpy 2.4.6, scipy 1.17.1, astropy 8.0.1): 223 run; 7 failures (K5 x2, K7 x3, W4 x1, test_03 x1), 0 errors, 0 skipped
+3.13.12 (numpy 2.5.3, scipy 1.18.1, astropy 8.0.1): 223 run; 15 failures (K5 x3, K7 x4, W4 x1, T1.8 x6, test_03 x1), 0 errors, 2 skipped (K8; K10's distro subtest)
+Anything outside this is a new finding.
+# written 2026-09-29 18:58:26 UTC, sha256 of the lines above: 049fbbe590a73259
+# Added before the 3.14 run, after his yes to 3.14 inside the bar:
+3.14.7 (numpy 2.5.3, scipy 1.18.1, astropy 8.0.1): 223 run; 15 failures (K5 x3, K7 x4, W4 x1, T1.8 x6, test_03 x1), 0 errors, 2 skipped (K8; K10's distro subtest)
+# written 2026-09-29 19:12:40 UTC, sha256 of the line above: ab0e2b828aff0113

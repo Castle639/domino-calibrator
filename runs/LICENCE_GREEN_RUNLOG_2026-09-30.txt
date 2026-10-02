@@ -1,0 +1,7 @@
+# licence_bar | HEAD 264d14b | its sha256 35da837b163c4a5b0487ce172fcab66dd3e9c9d62cc3ef183619d466638b2e5c
+L0  PASS  the plain MIT text passes: True | with the credit planted in its notice, it fails: True
+L1  PASS  LICENSE is SPDX's MIT exactly: True | the credit in it: False
+L2  PASS  K1: OK | K3 and K4: OK
+L3  PASS  K25: OK
+L4  PASS  the whole suite: strict: PASS (239 run, 0 failures, 0 errors, 0 skipped: 0 allowed, 0 not)
+# licence bar: MET, 5 of 5

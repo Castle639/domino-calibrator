@@ -1,0 +1,1 @@
+# C1 and C2 on b69416c (the engine byte-identical to f05c06d), predicted before the run: C1 bit for bit, PASS, 0 unequal on every line; C2 0 FITTED and the same 43 REPORTING. Written 2026-09-29 20:04:31 UTC

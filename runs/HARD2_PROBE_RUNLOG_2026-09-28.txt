@@ -1,0 +1,41 @@
+# sub-case probe 2026-09-28 15:46:46 UTC | HEAD b5b6be4, the code as merged
+1.5 --x=inf                                                rc 1 | # cannot measure: OverflowError: cannot convert float infinity to integer
+1.5 --x=-inf                                               rc 1 | # cannot measure: OverflowError: cannot convert float infinity to integer
+1.5 --x=nan                                                rc 0 | 2.00 nan nan  # unconverged: aperture leaves the image
+1.5 shrink(inf)                                            OverflowError: cannot convert float infinity to integer
+1.11 case 1 page | python                                  2025-12-12T21:20:32.00Z | refused (ValueError)
+1.11 case 2 page | python                                  2025-12-12T21:20:32.00Z | 2025-12-12T21:21:32.00Z
+1.11 case 3 page | python                                  1858-11-17T00:00:30.00Z | refused (TypeError)
+1.11 case 4 page | python                                  refused: DATE-AVG 0 is not a FITS date-time | refused (ValueError)
+1.12 PCOUNT -3100                                          ['node failed (exit -6): V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/opt/node22/bin/node]']
+1.12 PCOUNT -100000                                        ['node failed (exit 1):   at Function._load (node:internal/modules/cjs/loader:1263:12)']
+4.5 page parse rgb: unreadable                             [None]
+4.5 CLI on the .fz: x0                                     20.203586234401822
+4.6 page WCS RA---TPV                                      projection TPV: the page reads TAN and TAN-SIP only
+4.6 page WCS RA---ZPN                                      projection ZPN: the page reads TAN and TAN-SIP only
+4.6 page WCS 1.0                                           PV distortion terms, which the page does not apply
+4.6 page WCS 2                                             SIP coefficients without -SIP in CTYPE (astropy would apply them; the page would not)
+4.6 page WCS DEC--TAN                                      the WCS is not RA/Dec in that order (CTYPE DEC--TAN, RA---TAN)
+4.6 page WCS LOOKUP                                        MEASURED
+4.6 page WCS FK4                                           frame FK4 at equinox 1950: only ICRS, or FK5 at J2000, can be written as ICRS
+4.6 page TIMESYS TT                                        {'error': 'TIMESYS TT: the page reads UTC only; type the mid-exposure (UTC)'}
+4.6 page mode empty                                        mode: not one of the MPC's current modes for an image (CCD, CMO, VID, TDI)
+4.6 page BITPIX 64                                         BITPIX 64
+judge case 1 (edge): a record?                             True
+browser newfile step 0                                     copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser newfile step 1                                     copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: no time in the header (DATE-AVG, MJD-AVG, DATE-OBS, MJ"
+browser badfile step 0                                     copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser badfile step 1                                     copy ON | ades "# version=2022" | status "done" | info "Could not read: no 2-D image in this file" | note "Time: obsTime from DATE-OBS (the start) + E
+browser badfile step 2                                     copy ON | ades "# version=2022" | status "Error: Cannot read properties of undefin" | info "Could not read: no 2-D image in this file" | note "Time: o
+browser field step 0                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser field step 1                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser start step 0                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser start step 1                                       copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser method step 0                                      copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser method step 1                                      copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser edgefull step 0                                    copy ON | ades "# version=2022" | status "8 of 41 radii did not converge (left out" | info "41×41 px, WCS 0.756"/px" | note "Time: obsTime from DATE-O
+browser tyc2 step 0                                        copy ON | ades "# version=2022" | status "done" | info "71×71 px, WCS 0.756"/px" | note "Time: obsTime from DATE-OBS (the start) + EXPTIME/2."
+browser fz step 0                                          copy off | ades "" | status "" | info "Could not read: no 2-D image in this file" | note ""
+browser rgb step 0                                         copy off | ades "" | status "" | info "Could not read: no 2-D image in this file" | note ""
+browser bigtime step 0                                     copy off | ades "" | status "" | info "Could not read: Invalid time value" | note ""
+browser tt step 0                                          copy off | ades "" | status "" | info "71×71 px, WCS 0.756"/px" | note "Time: TIMESYS TT: the page reads UTC only; type the mid-expo"

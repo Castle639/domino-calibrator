@@ -1,0 +1,5 @@
+# H4 null 2026-09-27 21:55:21 UTC | calibrator/runs/h4_arcsec.py | commit f8096a8 | NREAL 30
+# frames: ifle03geq ifle04pdq ifle05qlq ifle06tjq ifle22f7q
+# 2080 records in 265 s (0 errors)
+# raw: ../../..[a session]/scratchpad/H4_RAW_null_2026-09-27.json.gz
+# done in 265 s

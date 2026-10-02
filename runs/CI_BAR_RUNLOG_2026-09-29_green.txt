@@ -1,0 +1,21 @@
+# the bar for launch step 2, 2026-09-29 20:39:10 UTC
+W1    PASS  actionlint on the workflow: exit 0, nothing found | ShellCheck version: 0.11.0 | control, "runs-on" misspelt: exit 1, 2 finding line(s)
+W2    PASS  the actions and what they run on: actions/cache@v6 node24, actions/checkout@v7 node24, actions/setup-node@v7 node24, actions/setup-python@v7 node24
+W3    PASS  K7 on the workflow as written: green
+W3.wm1 PASS  K7 on the mutant: red
+W3.wm2 PASS  K7 on the mutant: red
+W3.wm3 PASS  K7 on the mutant: red
+W3.wm4 PASS  K7 on the mutant: red
+W3.wm5 PASS  K7 on the mutant: red
+W3.wm6 PASS  K7 on the mutant: red
+W3.wm7 PASS  K7 on the mutant: red
+W3.wm8 PASS  K7 on the mutant: red
+W3.wm9 PASS  K7 on the mutant: red
+W3.wm10 PASS  K7 on the mutant: red
+W4    PASS  a pass alone: exit 0 | an unallowed skip: exit 1 | an allowed skip: exit 0 | a failure: exit 1
+W5    PASS  here (Linux): exit 0, the answer with the version and the credit | the Windows reading: exactly K11's three | control, the block broken (1 place): exit 1
+W6    PASS  K14 on the calibrator: green | on a copy with an invalid escape: red
+W7    PASS  the tested setup, the flag set: exit 0, ran 225, OK (239 s) | pick314: exit 0, ran 225, OK (240 s)
+W8    PASS  THE BAR: MET (19 of 19 clauses pass)
+
+THE BAR: MET (18 of 18 clauses pass)

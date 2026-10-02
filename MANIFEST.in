@@ -1,0 +1,7 @@
+# The sdist holds the package and its documents, and nothing else (the launch room's should-fix 32: it shipped 27 of the
+# tests without the rest of tests/). The tests, the study (runs/), the page and the workflows are in the repository.
+include LICENSE README.md CHANGELOG.md CITATION.cff pyproject.toml
+prune tests
+prune runs
+prune page
+prune .github

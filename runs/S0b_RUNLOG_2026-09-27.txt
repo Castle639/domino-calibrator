@@ -1,0 +1,33 @@
+# S0(b) 2026-09-27 18:02:32 UTC | calibrator/runs/s0_controls.py | commit dcdeddc
+S0(b): noiseless symmetric nulls, 36 symmetric phases; biases in px; mean over phases (the bar) and max |.| over phases (beside)
+  1008 renders+measures in 135 s
+  FWHM 1.0 gauss  eta 0.0 | M mean 6.1e-15 max|b0| 0.0017 max|b2| 0.0187 nbad 0 ok | G mean 2.3e-11 max|b0| 0.0216 max|b2| 0.0198 nbad 0 ok | P mean 2.0e-16 max|b| 0.1189 ok 36/36 ok
+  FWHM 1.0 gauss  eta 0.1 | M mean 5.7e-15 max|b0| 0.0030 max|b2| 0.0182 nbad 0 ok | G mean 5.7e-15 max|b0| 0.0337 max|b2| 0.0323 nbad 0 ok | P mean 2.0e-16 max|b| 0.1298 ok 36/36 ok
+  FWHM 1.0 gauss  eta 1.0 | M mean 4.9e-15 max|b0| 0.0087 max|b2| 0.0160 nbad 0 ok | G mean 6.9e-15 max|b0| 0.0563 max|b2| 0.0564 nbad 0 ok | P mean 5.9e-16 max|b| 0.1636 ok 36/36 ok
+  FWHM 1.0 gauss  point   | M mean 3.2e-15 max|b0| 0.0131 max|b2| 0.0135 nbad 0 ok | G mean 3.2e-15 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 0.0e+00 max|b| 0.1870 ok 36/36 ok
+  FWHM 1.5 gauss  eta 0.0 | M mean 6.1e-15 max|b0| 0.0006 max|b2| 0.0229 nbad 0 ok | G mean 1.2e-11 max|b0| 0.0002 max|b2| 0.0063 nbad 0 ok | P mean 0.0e+00 max|b| 0.0748 ok 36/36 ok
+  FWHM 1.5 gauss  eta 0.1 | M mean 9.1e-15 max|b0| 0.0007 max|b2| 0.0213 nbad 0 ok | G mean 1.9e-12 max|b0| 0.0013 max|b2| 0.0034 nbad 0 ok | P mean 0.0e+00 max|b| 0.0787 ok 36/36 ok
+  FWHM 1.5 gauss  eta 1.0 | M mean 9.7e-15 max|b0| 0.0018 max|b2| 0.0162 nbad 0 ok | G mean 8.3e-15 max|b0| 0.0108 max|b2| 0.0114 nbad 0 ok | P mean 0.0e+00 max|b| 0.0979 ok 36/36 ok
+  FWHM 1.5 gauss  point   | M mean 1.0e-14 max|b0| 0.0034 max|b2| 0.0124 nbad 0 ok | G mean 4.7e-15 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 2.0e-16 max|b| 0.1086 ok 36/36 ok
+  FWHM 2.0 gauss  eta 0.0 | M mean 5.9e-15 max|b0| 0.0019 max|b2| 0.0280 nbad 0 ok | G mean 5.0e-12 max|b0| 0.0003 max|b2| 0.0065 nbad 0 ok | P mean 0.0e+00 max|b| 0.0635 ok 36/36 ok
+  FWHM 2.0 gauss  eta 0.1 | M mean 8.3e-15 max|b0| 0.0011 max|b2| 0.0274 nbad 0 ok | G mean 1.3e-11 max|b0| 0.0003 max|b2| 0.0065 nbad 0 ok | P mean 7.9e-16 max|b| 0.0681 ok 36/36 ok
+  FWHM 2.0 gauss  eta 1.0 | M mean 6.7e-15 max|b0| 0.0012 max|b2| 0.0257 nbad 0 ok | G mean 2.0e-12 max|b0| 0.0001 max|b2| 0.0019 nbad 0 ok | P mean 0.0e+00 max|b| 0.0797 ok 36/36 ok
+  FWHM 2.0 gauss  point   | M mean 4.5e-15 max|b0| 0.0027 max|b2| 0.0247 nbad 0 ok | G mean 4.7e-15 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 2.0e-16 max|b| 0.0860 ok 36/36 ok
+  FWHM 3.0 gauss  eta 0.0 | M mean 1.7e-14 max|b0| 0.0058 max|b2| 0.0297 nbad 0 ok | G mean 2.3e-11 max|b0| 0.0011 max|b2| 0.0014 nbad 0 ok | P mean 0.0e+00 max|b| 0.0375 ok 36/36 ok
+  FWHM 3.0 gauss  eta 0.1 | M mean 1.3e-14 max|b0| 0.0052 max|b2| 0.0299 nbad 0 ok | G mean 6.1e-12 max|b0| 0.0010 max|b2| 0.0017 nbad 0 ok | P mean 0.0e+00 max|b| 0.0408 ok 36/36 ok
+  FWHM 3.0 gauss  eta 1.0 | M mean 8.5e-15 max|b0| 0.0037 max|b2| 0.0304 nbad 0 ok | G mean 8.5e-12 max|b0| 0.0004 max|b2| 0.0014 nbad 0 ok | P mean 0.0e+00 max|b| 0.0482 ok 36/36 ok
+  FWHM 3.0 gauss  point   | M mean 6.1e-15 max|b0| 0.0028 max|b2| 0.0306 nbad 0 ok | G mean 4.7e-15 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 2.0e-16 max|b| 0.0516 ok 36/36 ok
+  FWHM 4.0 gauss  eta 0.0 | M mean 3.8e-14 max|b0| 0.0081 max|b2| 0.0285 nbad 0 ok | G mean 3.9e-11 max|b0| 0.0008 max|b2| 0.0003 nbad 0 ok | P mean 5.9e-16 max|b| 0.0231 ok 36/36 ok
+  FWHM 4.0 gauss  eta 0.1 | M mean 2.1e-14 max|b0| 0.0077 max|b2| 0.0288 nbad 0 ok | G mean 1.9e-11 max|b0| 0.0007 max|b2| 0.0003 nbad 0 ok | P mean 2.0e-16 max|b| 0.0252 ok 36/36 ok
+  FWHM 4.0 gauss  eta 1.0 | M mean 2.4e-14 max|b0| 0.0067 max|b2| 0.0294 nbad 0 ok | G mean 9.3e-12 max|b0| 0.0003 max|b2| 0.0003 nbad 0 ok | P mean 3.9e-16 max|b| 0.0296 ok 36/36 ok
+  FWHM 4.0 gauss  point   | M mean 1.5e-14 max|b0| 0.0061 max|b2| 0.0296 nbad 0 ok | G mean 1.1e-14 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 3.9e-16 max|b| 0.0315 ok 36/36 ok
+  FWHM 6.0 gauss  eta 0.0 | M mean 1.1e-13 max|b0| 0.0104 max|b2| 0.0266 nbad 0 ok | G mean 1.8e-11 max|b0| 0.0003 max|b2| 0.0001 nbad 0 ok | P mean 2.0e-16 max|b| 0.0109 ok 36/36 ok
+  FWHM 6.0 gauss  eta 0.1 | M mean 8.3e-14 max|b0| 0.0102 max|b2| 0.0268 nbad 0 ok | G mean 2.5e-11 max|b0| 0.0003 max|b2| 0.0001 nbad 0 ok | P mean 5.9e-16 max|b| 0.0119 ok 36/36 ok
+  FWHM 6.0 gauss  eta 1.0 | M mean 6.4e-14 max|b0| 0.0096 max|b2| 0.0272 nbad 0 ok | G mean 4.5e-12 max|b0| 0.0001 max|b2| 0.0000 nbad 0 ok | P mean 3.9e-16 max|b| 0.0139 ok 36/36 ok
+  FWHM 6.0 gauss  point   | M mean 9.5e-14 max|b0| 0.0093 max|b2| 0.0273 nbad 0 ok | G mean 2.6e-13 max|b0| 0.0000 max|b2| 0.0000 nbad 0 ok | P mean 5.9e-16 max|b| 0.0147 ok 36/36 ok
+  FWHM 3.0 moffat eta 0.0 | M mean 2.7e-14 max|b0| 0.0060 max|b2| 0.0288 nbad 0 ok | G mean 4.0e-11 max|b0| 0.0019 max|b2| 0.0025 nbad 0 ok | P mean 2.0e-16 max|b| 0.0386 ok 36/36 ok
+  FWHM 3.0 moffat eta 0.1 | M mean 1.3e-14 max|b0| 0.0053 max|b2| 0.0288 nbad 0 ok | G mean 8.5e-12 max|b0| 0.0018 max|b2| 0.0034 nbad 0 ok | P mean 0.0e+00 max|b| 0.0429 ok 36/36 ok
+  FWHM 3.0 moffat eta 1.0 | M mean 1.2e-14 max|b0| 0.0036 max|b2| 0.0287 nbad 0 ok | G mean 3.5e-13 max|b0| 0.0008 max|b2| 0.0047 nbad 0 ok | P mean 3.9e-16 max|b| 0.0524 ok 36/36 ok
+  FWHM 3.0 moffat point   | M mean 4.7e-15 max|b0| 0.0025 max|b2| 0.0287 nbad 0 ok | G mean 5.7e-15 max|b0| 0.0001 max|b2| 0.0039 nbad 0 ok | P mean 0.0e+00 max|b| 0.0569 ok 36/36 ok
+S0(b) verdict: PASS
+# done in 135 s
