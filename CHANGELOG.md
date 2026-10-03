@@ -1,8 +1,8 @@
 # Changes
 
-## 0.1.0 — not yet released
+## 0.1.0 — released
 
-*Not yet on PyPI, with no DOI, and its page not yet on GitHub Pages.*
+*On PyPI as `domino-calibrator`: this release's own workflow uploads it when a human approves the upload. Archived on Zenodo, which gives it a DOI. Its page is on GitHub Pages: https://castle639.github.io/domino-calibrator/.*
 
 The first release of domino-calibrator: open zero-aperture comet astrometry. It is the shrinking-aperture method (D. J. Tholen; published form in Farnocchia et al. 2016, Icarus, arXiv:1507.01980), as a Python package with a command line and a plain page: the same method, ported and checked against the Python.
 

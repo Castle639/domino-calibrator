@@ -5,7 +5,7 @@
 
 # domino-calibrator: open zero-aperture comet astrometry
 
-Version 0.1.0. MIT license (`LICENSE`); to cite it, `CITATION.cff`. The files named here are in its repository, https://github.com/Castle639/domino-calibrator; the installed package holds the code only.
+Version 0.1.0. MIT license (`LICENSE`); to cite it, `CITATION.cff`, or its DOI, https://doi.org/10.5281/zenodo.23112591 (all its versions, on Zenodo). The files named here are in its repository, https://github.com/Castle639/domino-calibrator; the installed package holds the code only.
 
 A comet's photocentre is not its nucleus: an asymmetric coma pulls the centroid off, by an amount that depends on seeing, pixel scale, aperture and signal-to-noise. The *shrinking-aperture* method (D. J. Tholen; published form in Farnocchia et al. 2016, Icarus, arXiv:1507.01980, §2.1 and §3.1) measures the photocentre in synthetic apertures of radius 2.0–6.0 px in steps of 0.1 px, fits a straight line to x(r) and y(r), and takes its value at r = 0.
 
